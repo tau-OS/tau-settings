@@ -242,6 +242,10 @@ update_list_title (CcWindow *self)
       title = g_strdup (_("Privacy"));
       break;
 
+    case CC_PANEL_LIST_DETAILS:
+      title = g_strdup (_("Details"));
+      break;
+
     case CC_PANEL_LIST_MAIN:
       title = g_strdup (_("Settings"));
       break;
