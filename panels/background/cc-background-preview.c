@@ -28,7 +28,7 @@ struct _CcBackgroundPreview
 
   GtkWidget        *drawing_area;
   GtkWidget        *light_dark_window;
-  GtkWidget        *dark_window;
+  GtkWidget        *light_dark_window_back;
 
   GnomeDesktopThumbnailFactory *thumbnail_factory;
 
@@ -89,7 +89,7 @@ cc_background_preview_dispose (GObject *object)
 
   g_clear_pointer (&self->drawing_area, gtk_widget_unparent);
   g_clear_pointer (&self->light_dark_window, gtk_widget_unparent);
-  g_clear_pointer (&self->dark_window, gtk_widget_unparent);
+  g_clear_pointer (&self->light_dark_window_back, gtk_widget_unparent);
 
   G_OBJECT_CLASS (cc_background_preview_parent_class)->dispose (object);
 }
@@ -115,11 +115,15 @@ set_is_dark (CcBackgroundPreview *self,
     {
       gtk_widget_add_css_class (self->light_dark_window, "dark");
       gtk_widget_remove_css_class (self->light_dark_window, "light");
+      gtk_widget_add_css_class (self->light_dark_window_back, "dark");
+      gtk_widget_remove_css_class (self->light_dark_window_back, "light");
     }
   else
     {
       gtk_widget_add_css_class (self->light_dark_window, "light");
       gtk_widget_remove_css_class (self->light_dark_window, "dark");
+      gtk_widget_add_css_class (self->light_dark_window_back, "light");
+      gtk_widget_remove_css_class (self->light_dark_window_back, "dark");
     }
 }
 
@@ -273,7 +277,7 @@ cc_background_preview_size_allocate (GtkWidget *widget,
                                                          margin_y));
 
   gtk_widget_allocate (self->drawing_area, width, height, baseline, NULL);
-  gtk_widget_allocate (self->dark_window, window_width, window_height,
+  gtk_widget_allocate (self->light_dark_window_back, window_width, window_height,
                        baseline, back_transform);
   gtk_widget_allocate (self->light_dark_window, window_width, window_height,
                        baseline, front_transform);
@@ -312,7 +316,7 @@ cc_background_preview_class_init (CcBackgroundPreviewClass *klass)
 
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPreview, drawing_area);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPreview, light_dark_window);
-  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPreview, dark_window);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPreview, light_dark_window_back);
 
   gtk_widget_class_set_css_name (widget_class, "background-preview");
 }
