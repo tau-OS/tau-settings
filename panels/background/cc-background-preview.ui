@@ -13,12 +13,12 @@
 
     <!-- Always dark window -->
     <child>
-      <object class="AdwBin" id="dark_window">
+      <object class="AdwBin" id="light_dark_window_back">
         <property name="overflow">hidden</property>
         <style>
           <class name="window"/>
           <class name="back"/>
-          <class name="dark"/>
+          <class name="light"/>
         </style>
         <child>
           <object class="AdwBin">
