@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Extensions
+Comment=Manage GNOME Extensions
+Exec=gnome-control-center extensions
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+Icon=application-x-addon-symbolic
+Terminal=false
+Type=Application
+NoDisplay=true
+StartupNotify=true
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalizationSettings;
+OnlyShowIn=GNOME;
+# Translators: Search terms to find the Appearance panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=Extensions;

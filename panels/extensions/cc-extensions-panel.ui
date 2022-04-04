@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CcExtensionsPanel" parent="CcPanel">
+    <child type="content">
+      <object class="AdwPreferencesPage">
+                    <child>
+                      <object class="AdwPreferencesGroup" id="userGroup">
+                        <property name="title" translatable="yes">Manually Installed</property>
+                        <property name="description" translatable="yes">To find and add extensions, visit &lt;a href="https://extensions.gnome.org"&gt;extensions.gnome.org&lt;/a&gt;.</property>
+                        <child>
+                          <object class="GtkListBox" id="userList">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup" id="systemGroup">
+                        <property name="title" translatable="yes">Built-In</property>
+                        <child>
+                          <object class="GtkListBox" id="systemList">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+
+    </child>
+  </template>
+</interface>

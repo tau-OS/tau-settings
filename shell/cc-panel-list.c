@@ -398,6 +398,7 @@ static const gchar * const panel_order[] = {
   "bluetooth",
   "background",
   "dock",
+  "extensions",
   "notifications",
   "search",
   "multitasking",

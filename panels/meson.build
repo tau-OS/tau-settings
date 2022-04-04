@@ -10,6 +10,7 @@ panels = [
   'diagnostics',
   'display',
   'dock',
+  'extensions',
   'info-overview',
   'keyboard',
   'location',
