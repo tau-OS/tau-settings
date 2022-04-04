@@ -426,14 +426,14 @@ static const gchar * const panel_order[] = {
   "color",
 
   /* Details page */
-  "info-overview",
   "details",
+  "info-overview",
+  "datetime",
   "region",
   "universal-access",
   "user-accounts",
   "default-apps",
   "reset-settings",
-  "datetime",
 };
 
 static guint
