@@ -49,9 +49,10 @@
                 <property name="model">
                   <object class="GtkStringList">
                     <items>
-                      <item>Foo</item>
-                      <item>Bar</item>
-                      <item>Baz</item>
+                      <item>Top</item>
+                      <item>Right</item>
+                      <item>Bottom</item>
+                      <item>Left</item>
                     </items>
                   </object>
                 </property>
@@ -67,6 +68,7 @@
       <property name="upper">128</property>
       <property name="step-increment">1</property>
       <property name="page-increment">10</property>
+      <signal name="value-changed" handler="on_icon_size_adjustment_value_changed" object="CcDockPanel" swapped="yes"/>
     </object>
   </template>
 </interface>

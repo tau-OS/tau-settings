@@ -41,6 +41,7 @@ struct _CcDockPanel {
   GtkSwitch               *dock_autohide_switch;
   GtkAdjustment           *icon_size_adjustment;
   GtkScale                *icon_size_scale;
+  AdwComboRow             *dock_position_combo;
 
   GSettings               *dock_settings;
   GDBusProxy              *extension_proxy;
@@ -103,12 +104,6 @@ icon_size_widget_refresh (CcDockPanel *self)
   gtk_adjustment_set_value (self->icon_size_adjustment, (gdouble) value / 2);
 }
 
-static gchar *
-on_icon_size_format_value (CcDockPanel *self, gdouble value)
-{
-  return g_strdup_printf ("%d", (int)value * 2);
-}
-
 static void
 on_icon_size_adjustment_value_changed (CcDockPanel *self)
 {
@@ -133,7 +128,6 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
 
   gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_adjustment_value_changed);
-  gtk_widget_class_bind_template_callback (widget_class, on_icon_size_format_value);
 }
 
 static void
@@ -163,6 +157,10 @@ cc_dock_panel_init (CcDockPanel *self)
   gtk_scale_add_mark (self->icon_size_scale, DEFAULT_ICONSIZE / 2, GTK_POS_BOTTOM, NULL);
 
   icon_size_widget_refresh (self);
+
+  g_settings_bind (self->dock_settings, "dock-position",
+                   self->dock_position_combo, "selected",
+                   G_SETTINGS_BIND_DEFAULT);
   
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
