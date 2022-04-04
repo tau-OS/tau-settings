@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CcDockPanel" parent="CcPanel">
+    <child type="content">
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">General</property>
+            <property name="header-suffix">
+              <object class="GtkButton">
+                <property name="label" translatable="yes">View Advanced Settings</property>
+                <signal name="clicked" handler="on_view_dock_settings_clicked_cb" object="CcDockPanel" swapped="yes" />
+                <style>
+                  <class name="regular"/>
+                </style>
+              </object>
+            </property>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Intelligent autohide</property>
+                <property name="subtitle" translatable="yes">Hide the dock when it obstructs a window of the current application.</property>
+                <child>
+                  <object class="GtkSwitch" id="dock_autohide_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Icon Size</property>
+                <child>
+                  <object class="GtkScale" id="icon_size_scale">
+                    <property name="draw-value">1</property>
+                    <property name="valign">baseline</property>
+                    <property name="hexpand">1</property>
+                    <property name="adjustment">icon_size_adjustment</property>
+                    <property name="round_digits">1</property>
+                    <property name="digits">0</property>
+                    <property name="value_pos">right</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwComboRow" id="dock_position_combo">
+                <property name="title" translatable="yes">Position on screen</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item>Foo</item>
+                      <item>Bar</item>
+                      <item>Baz</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <object class="GtkAdjustment" id="icon_size_adjustment">
+      <property name="lower">16</property>
+      <property name="upper">128</property>
+      <property name="step-increment">1</property>
+      <property name="page-increment">10</property>
+    </object>
+  </template>
+</interface>

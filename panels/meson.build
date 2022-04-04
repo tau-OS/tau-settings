@@ -9,6 +9,7 @@ panels = [
   'default-apps',
   'diagnostics',
   'display',
+  'dock',
   'info-overview',
   'keyboard',
   'location',
@@ -28,7 +29,7 @@ panels = [
   'universal-access',
   'usage',
   'user-accounts',
- 'wwan',
+  'wwan',
 ]
 
 if host_is_linux
