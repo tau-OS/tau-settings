@@ -48,6 +48,7 @@
 
 #define INTERFACE_PATH_ID "org.gnome.desktop.interface"
 #define INTERFACE_COLOR_SCHEME_KEY "color-scheme"
+#define INTERFACE_GTK_THEME_KEY "gtk-theme"
 
 struct _CcBackgroundPanel
 {
@@ -155,9 +156,19 @@ static void
 on_light_dark_toggle_active_cb (CcBackgroundPanel *self)
 {
   if (gtk_toggle_button_get_active (self->light_toggle))
-    set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_DEFAULT);
+    {
+      set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_DEFAULT);
+      g_settings_set_string (self->interface_settings,
+                             INTERFACE_GTK_THEME_KEY,
+                             "adw-gtk3");
+    }
   else if (gtk_toggle_button_get_active (self->dark_toggle))
-    set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_PREFER_DARK);
+    {
+      set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_PREFER_DARK);
+      g_settings_set_string (self->interface_settings,
+                             INTERFACE_GTK_THEME_KEY,
+                             "adw-gtk3-dark");
+    }
 }
 
 static void
