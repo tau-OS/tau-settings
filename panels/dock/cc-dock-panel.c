@@ -30,10 +30,17 @@
 #include "shell/cc-application.h"
 #include "shell/cc-object-storage.h"
 
+#define MIN_ICONSIZE 16.0
+#define MAX_ICONSIZE 64.0
+#define DEFAULT_ICONSIZE 48.0
+#define ICONSIZE_KEY "dash-max-icon-size"
+
 struct _CcDockPanel {
   CcPanel                 parent_instance;
 
   GtkSwitch               *dock_autohide_switch;
+  GtkAdjustment           *icon_size_adjustment;
+  GtkScale                *icon_size_scale;
 
   GSettings               *dock_settings;
   GDBusProxy              *extension_proxy;
@@ -90,6 +97,27 @@ on_view_dock_settings_clicked_cb (CcDockPanel *self)
 }
 
 static void
+icon_size_widget_refresh (CcDockPanel *self)
+{
+  gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
+  gtk_adjustment_set_value (self->icon_size_adjustment, (gdouble) value / 2);
+}
+
+static gchar *
+on_icon_size_format_value (CcDockPanel *self, gdouble value)
+{
+  return g_strdup_printf ("%d", (int)value * 2);
+}
+
+static void
+on_icon_size_adjustment_value_changed (CcDockPanel *self)
+{
+  gint value = (gint)gtk_adjustment_get_value (self->icon_size_adjustment) * 2;
+  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+}
+
+static void
 cc_dock_panel_class_init (CcDockPanelClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -100,8 +128,12 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
   gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/dock/cc-dock-panel.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, dock_autohide_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_adjustment);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_scale);
 
-    gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_icon_size_adjustment_value_changed);
+  gtk_widget_class_bind_template_callback (widget_class, on_icon_size_format_value);
 }
 
 static void
@@ -121,7 +153,17 @@ cc_dock_panel_init (CcDockPanel *self)
     }
 
   self->dock_settings = g_settings_new_full (schema, NULL, NULL);
+  g_signal_connect_object (self->dock_settings, "changed::" ICONSIZE_KEY,
+                           G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
 
+  /* Icon size change - we halve the sizes so we can only get even values */
+  gtk_adjustment_set_value (self->icon_size_adjustment, DEFAULT_ICONSIZE / 2);
+  gtk_adjustment_set_lower (self->icon_size_adjustment, MIN_ICONSIZE / 2);
+  gtk_adjustment_set_upper (self->icon_size_adjustment, MAX_ICONSIZE / 2);
+  gtk_scale_add_mark (self->icon_size_scale, DEFAULT_ICONSIZE / 2, GTK_POS_BOTTOM, NULL);
+
+  icon_size_widget_refresh (self);
+  
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
                    G_SETTINGS_BIND_INVERT_BOOLEAN);
