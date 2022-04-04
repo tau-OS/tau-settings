@@ -95,6 +95,22 @@
 
         <child>
           <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Dock</property>
+            <property name="header-suffix">
+              <object class="GtkButton">
+                <property name="label" translatable="yes">View Dock Settings</property>
+                <signal name="clicked" handler="on_view_dock_settings_clicked_cb" object="CcBackgroundPanel" swapped="yes" />
+                <style>
+                  <class name="regular"/>
+                </style>
+              </object>
+            </property>
+
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Background</property>
             <property name="header-suffix">
               <object class="GtkButton">

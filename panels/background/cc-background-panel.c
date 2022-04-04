@@ -19,11 +19,13 @@
  */
 
 #include <config.h>
+#include <stdio.h>
 
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
 #include <glib/gstdio.h>
+#include <gdk/gdk.h>
 
 #include <gdesktop-enums.h>
 
@@ -59,6 +61,7 @@ struct _CcBackgroundPanel
 
   GnomeDesktopThumbnailFactory *thumb_factory;
   GDBusProxy *proxy;
+  GDBusProxy *extension_proxy;
 
   CcBackgroundItem *current_background;
 
@@ -168,6 +171,23 @@ got_transition_proxy_cb (GObject      *source_object,
   self->proxy = g_dbus_proxy_new_for_bus_finish (res, &error);
 
   if (self->proxy == NULL)
+    {
+      g_warning ("Error creating proxy: %s", error->message);
+      return;
+    }
+}
+
+static void
+got_extension_proxy_cb (GObject      *source_object,
+                        GAsyncResult *res,
+                        gpointer      data)
+{
+  g_autoptr(GError) error = NULL;
+  CcBackgroundPanel *self = data;
+
+  self->extension_proxy = g_dbus_proxy_new_for_bus_finish (res, &error);
+
+  if (self->extension_proxy == NULL)
     {
       g_warning ("Error creating proxy: %s", error->message);
       return;
@@ -341,6 +361,26 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
   cc_background_chooser_select_file (self->background_chooser);
 }
 
+static void
+on_view_dock_settings_clicked_cb (CcBackgroundPanel *self)
+{
+  g_autoptr (GError) error = NULL;
+
+  if (!self->extension_proxy)
+    return;
+
+  g_dbus_proxy_call_sync (self->extension_proxy,
+                          "OpenExtensionPrefs",
+                          g_variant_new("(ssa{sv})", "dash-to-dock@tauos.co", "", NULL),
+                          0,
+                          -1,
+                          NULL,
+                          &error);
+
+  if (error)
+    g_warning ("Error opening extension settings: %s", error->message);
+}
+
 static const char *
 cc_background_panel_get_help_uri (CcPanel *panel)
 {
@@ -397,6 +437,7 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_callback (widget_class, on_color_scheme_toggle_active_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_chooser_background_chosen_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_add_picture_button_clicked_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
 }
 
 static void
@@ -449,6 +490,16 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                             "org.gnome.Shell",
                             NULL,
                             got_transition_proxy_cb,
+                            panel);
+  
+  g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+                            G_DBUS_PROXY_FLAGS_NONE,
+                            NULL,
+                            "org.gnome.Shell.Extensions",
+                            "/org/gnome/Shell/Extensions",
+                            "org.gnome.Shell.Extensions",
+                            NULL,
+                            got_extension_proxy_cb,
                             panel);
 
   load_custom_css (panel);
