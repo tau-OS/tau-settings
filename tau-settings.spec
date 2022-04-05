@@ -150,8 +150,8 @@ git submodule add $(cat .gitmodules | grep "url = " | sed 's/url = //g') subproj
 %meson \
   -Ddocumentation=true \
 %if 0%{?fedora}
-  -Ddistributor_logo=%{_datadir}/pixmaps/fedora_logo_med.png \
-  -Ddark_mode_distributor_logo=%{_datadir}/pixmaps/fedora_whitelogo_med.png \
+  -Ddistributor_logo=%{_datadir}/pixmaps/tau-banner.png \
+  -Ddark_mode_distributor_logo=%{_datadir}/pixmaps/tau-banner.png \
   -Dmalcontent=true \
 %endif
   %{nil}
