@@ -179,6 +179,61 @@
               </object>
             </child>
 
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">Touchpad Mouse Click Emulation</property>
+
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="name">fingers</property>
+                    <property name="activatable-widget">mce_fingers_radio</property>
+                    <property name="title" translatable="yes">Fingers</property>
+                    <property name="subtitle" translatable="yes">Click the touchpad with two fingers for right-click and three fingers for middle-click.</property>
+                    <property name="use_underline">True</property>
+                    <child type="prefix">
+                      <object class="GtkCheckButton" id="mce_fingers_radio">
+                        <property name="valign">center</property>
+                        <signal name="toggled" handler="mce_toggled_cb" object="CcMousePanel" swapped="yes"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="name">areas</property>
+                    <property name="activatable-widget">mce_area_radio</property>
+                    <property name="title" translatable="yes">Area</property>
+                    <property name="subtitle" translatable="yes">Click the bottom right of the touchpad for right-click and the bottom middle for middle-click.</property>
+                    <property name="use_underline">True</property>
+                    <child type="prefix">
+                      <object class="GtkCheckButton" id="mce_area_radio">
+                        <property name="valign">center</property>
+                        <property name="group">mce_fingers_radio</property>
+                        <signal name="toggled" handler="mce_toggled_cb" object="CcMousePanel" swapped="yes"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="name">none</property>
+                    <property name="activatable-widget">mce_disabled_radio</property>
+                    <property name="title" translatable="yes">Disabled</property>
+                    <property name="subtitle" translatable="yes">Don’t use mouse click emulation.</property>
+                    <property name="use_underline">True</property>
+                    <child type="prefix">
+                      <object class="GtkCheckButton" id="mce_disabled_radio">
+                        <property name="valign">center</property>
+                        <property name="group">mce_fingers_radio</property>
+                        <signal name="toggled" handler="mce_toggled_cb" object="CcMousePanel" swapped="yes"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
         <child>
