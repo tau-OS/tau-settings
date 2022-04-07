@@ -183,6 +183,17 @@
                     </child>
                   </object>
                 </child>
+                <child>
+                  <object class="AdwActionRow" id="disable_while_typing_row">
+                    <property name="title" translatable="yes">Disable while Typing</property>
+                    <child>
+                      <object class="GtkSwitch" id="disable_while_typing_switch">
+                        <property name="valign">center</property>
+                        <signal name="state-set" handler="disable_while_typing_changed_event" object="CcMousePanel" swapped="yes"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
 

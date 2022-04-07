@@ -37,6 +37,8 @@ struct _CcMousePanel
 
   GtkListBoxRow     *edge_scrolling_row;
   GtkSwitch         *edge_scrolling_switch;
+  GtkListBoxRow     *disable_while_typing_row;
+  GtkSwitch         *disable_while_typing_switch;
   AdwPreferencesGroup *mouse_group;
   GtkSwitch         *mouse_natural_scrolling_switch;
   GtkScale          *mouse_speed_scale;
@@ -126,6 +128,14 @@ edge_scrolling_changed_event (CcMousePanel *self,
   /* Disable two-finger scrolling if edge scrolling is enabled */
   if (state && gtk_widget_get_visible (GTK_WIDGET (self->two_finger_scrolling_row)))
     gtk_switch_set_active (self->two_finger_scrolling_switch, FALSE);
+}
+
+static void
+disable_while_typing_changed_event (CcMousePanel *self,
+                                    gboolean      state)
+{
+  /* Updating the setting will cause the "state" of the switch to be updated. */
+  g_settings_set_boolean (self->touchpad_settings, "disable-while-typing", state);
 }
 
 static gboolean
@@ -281,6 +291,13 @@ setup_dialog (CcMousePanel *self)
                                 touchpad_enabled_set_mapping,
                                 NULL, NULL);
 
+  g_settings_bind_with_mapping (self->touchpad_settings, "send-events",
+                                self->disable_while_typing_row, "sensitive",
+                                G_SETTINGS_BIND_GET,
+                                touchpad_enabled_get_mapping,
+                                touchpad_enabled_set_mapping,
+                                NULL, NULL);
+
   g_settings_bind (self->touchpad_settings, "natural-scroll",
                          self->touchpad_natural_scrolling_switch, "active",
                          G_SETTINGS_BIND_DEFAULT);
@@ -299,6 +316,10 @@ setup_dialog (CcMousePanel *self)
 
   g_settings_bind (self->touchpad_settings, "edge-scrolling-enabled",
                    self->edge_scrolling_switch, "state",
+                   G_SETTINGS_BIND_GET);
+  
+  g_settings_bind (self->touchpad_settings, "disable-while-typing",
+                   self->disable_while_typing_switch, "state",
                    G_SETTINGS_BIND_GET);
 
   setup_touchpad_options (self);
@@ -387,6 +408,8 @@ cc_mouse_panel_class_init (CcMousePanelClass *klass)
 
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, edge_scrolling_row);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, edge_scrolling_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcMousePanel, disable_while_typing_row);
+  gtk_widget_class_bind_template_child (widget_class, CcMousePanel, disable_while_typing_switch);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mouse_group);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mouse_natural_scrolling_switch);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mouse_speed_scale);
@@ -409,6 +432,7 @@ cc_mouse_panel_class_init (CcMousePanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, two_finger_scrolling_switch);
 
   gtk_widget_class_bind_template_callback (widget_class, edge_scrolling_changed_event);
+  gtk_widget_class_bind_template_callback (widget_class, disable_while_typing_changed_event);
   gtk_widget_class_bind_template_callback (widget_class, test_button_toggled_cb);
   gtk_widget_class_bind_template_callback (widget_class, two_finger_scrolling_changed_event);
 }
