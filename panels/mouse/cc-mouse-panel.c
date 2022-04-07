@@ -60,6 +60,10 @@ struct _CcMousePanel
   GtkListBoxRow     *two_finger_scrolling_row;
   GtkSwitch         *two_finger_scrolling_switch;
 
+  GtkCheckButton    *mce_fingers_radio;
+  GtkCheckButton    *mce_area_radio;
+  GtkCheckButton    *mce_disabled_radio;
+
   GSettings         *mouse_settings;
   GSettings         *touchpad_settings;
 
@@ -213,6 +217,18 @@ handle_secondary_button (CcMousePanel    *self,
   gtk_widget_add_controller (GTK_WIDGET (button), GTK_EVENT_CONTROLLER (gesture));
 }
 
+static void
+mce_toggled_cb (CcMousePanel *self)
+{
+  if (gtk_check_button_get_active (self->mce_area_radio)) {
+    g_settings_set_enum (self->touchpad_settings, "click-method", 2);
+  } else if (gtk_check_button_get_active (self->mce_disabled_radio)) {
+    g_settings_set_enum (self->touchpad_settings, "click-method", 1);
+  } else {
+    g_settings_set_enum (self->touchpad_settings, "click-method", 3);
+  }
+}
+
 /* Set up the property editors in the dialog. */
 static void
 setup_dialog (CcMousePanel *self)
@@ -322,6 +338,14 @@ setup_dialog (CcMousePanel *self)
                    self->disable_while_typing_switch, "state",
                    G_SETTINGS_BIND_GET);
 
+  if (g_settings_get_enum (self->touchpad_settings, "click-method") == 2) {
+    gtk_check_button_set_active (self->mce_area_radio, true);
+  } else if (g_settings_get_enum (self->touchpad_settings, "click-method") == 1) {
+    gtk_check_button_set_active (self->mce_disabled_radio, true);
+  } else {
+    gtk_check_button_set_active (self->mce_fingers_radio, true);
+  }
+
   setup_touchpad_options (self);
 }
 
@@ -430,9 +454,13 @@ cc_mouse_panel_class_init (CcMousePanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, touchpad_toggle_switch);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, two_finger_scrolling_row);
   gtk_widget_class_bind_template_child (widget_class, CcMousePanel, two_finger_scrolling_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mce_fingers_radio);
+  gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mce_area_radio);
+  gtk_widget_class_bind_template_child (widget_class, CcMousePanel, mce_disabled_radio);
 
   gtk_widget_class_bind_template_callback (widget_class, edge_scrolling_changed_event);
   gtk_widget_class_bind_template_callback (widget_class, disable_while_typing_changed_event);
   gtk_widget_class_bind_template_callback (widget_class, test_button_toggled_cb);
   gtk_widget_class_bind_template_callback (widget_class, two_finger_scrolling_changed_event);
+  gtk_widget_class_bind_template_callback (widget_class, mce_toggled_cb);
 }
