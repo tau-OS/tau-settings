@@ -95,7 +95,7 @@
               <object class="CcListRow" id="os_name_row">
                 <property name="activatable">False</property>
                 <property name="title" translatable="yes"
-                          comments="translators: this field contains the distro name and version">OS Name</property>
+                          comments="translators: this field contains the distro name and version">tauOS Version</property>
               </object>
             </child>
 
@@ -112,7 +112,7 @@
             <child>
               <object class="CcListRow" id="os_type_row">
                 <property name="activatable">False</property>
-                <property name="title" translatable="yes">OS Type</property>
+                <property name="title" translatable="yes">System Architecture</property>
               </object>
             </child>
 

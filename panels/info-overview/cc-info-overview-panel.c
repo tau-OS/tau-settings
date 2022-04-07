@@ -304,13 +304,23 @@ get_os_name (void)
   g_autofree gchar *name = NULL;
   g_autofree gchar *version_id = NULL;
   g_autofree gchar *pretty_name = NULL;
+  g_autofree gchar *build_id = NULL;
+  g_autofree gchar *name_version = NULL;
+  g_autofree gchar *codename = NULL;
+  g_autofree gchar *version = NULL;
+  gchar *result = NULL;
 
   name = g_get_os_info (G_OS_INFO_KEY_NAME);
   version_id = g_get_os_info (G_OS_INFO_KEY_VERSION_ID);
   pretty_name = g_get_os_info (G_OS_INFO_KEY_PRETTY_NAME);
+  build_id = g_get_os_info ("BUILD_ID");
+  codename = g_get_os_info (G_OS_INFO_KEY_VERSION_CODENAME);
+  version = g_get_os_info (G_OS_INFO_KEY_VERSION);
 
-  if (pretty_name)
-    return g_steal_pointer (&pretty_name);
+  if (codename && version)
+    name_version = g_strdup_printf ("%s (%s)", version, codename);
+  else if (pretty_name)
+    name_version = g_strdup (pretty_name);
   else if (name && version_id)
     return g_strdup_printf ("%s %s", name, version_id);
   else
