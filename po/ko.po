@@ -30,9 +30,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-05 18:50+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
@@ -97,8 +96,8 @@ msgstr "파일 시스템"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "설정"
@@ -184,8 +183,8 @@ msgstr "시스템 검색을 받아서 결과를 보냅니다."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -288,13 +287,13 @@ msgstr "파일 및 링크 연결"
 msgid "Storage"
 msgstr "저장 공간"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "결과가 없습니다"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "다르게 검색해 보십시오"
 
@@ -344,7 +343,6 @@ msgstr "캐시 지우기…"
 msgid "Control various application permissions and settings"
 msgstr "여러가지 프로그램 권한과 설정 조정"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -359,7 +357,7 @@ msgstr "사진을 고르십시오"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -409,7 +407,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "바탕 화면 배경 없음"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "현재 배경"
 
@@ -527,7 +525,6 @@ msgstr "카메라 접근을 요청한 프로그램이 없습니다"
 msgid "Protect your pictures"
 msgstr "내 사진을 보호합니다"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -767,7 +764,7 @@ msgstr "이 측정 장치는 프린터 프로파일링을 지원하지 않습니
 msgid "The device type is not currently supported."
 msgstr "이 종류의 장치는 현재 지원하지 않습니다."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "화면 보정"
 
@@ -881,13 +878,13 @@ msgstr "쓰기 가능 미디어 필요"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
-"<a href=\"linux\">GNU/리눅스</a>, <a href=\"osx\">애플 OS X</a> 및 <a href="
-"\"windows\">마이크로소프트 윈도우Microsoft Windows</a> 시스템의 프로파일 사용"
-"법 안내를 읽어보면 도움이 됩니다."
+"<a href=\"linux\">GNU/리눅스</a>, <a href=\"osx\">애플 OS X</a> 및 <a "
+"href=\"windows\">마이크로소프트 윈도우Microsoft Windows</a> 시스템의 프로파"
+"일 사용법 안내를 읽어보면 도움이 됩니다."
 
 #: panels/color/cc-color-panel.ui:335
 msgid "Add Profile"
@@ -1522,7 +1519,6 @@ msgstr "진단"
 msgid "Report your problems"
 msgstr "문제점 보고하기"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1754,9 +1750,9 @@ msgstr ""
 "color;색;sunset;일몰;sunrise;일출;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "알 수 없음"
@@ -1765,32 +1761,32 @@ msgstr "알 수 없음"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s, 빌드 ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64비트"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32비트"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "웨일랜드"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "알 수 없음"
@@ -1830,12 +1826,13 @@ msgstr "계산 중…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "운영 체제 이름"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "그놈 버전"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "운영 체제 종류"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1865,7 +1862,7 @@ msgstr ""
 "장치 이름은 네트워크나 블루투스 페어링할 때 이 장치를 식별하는데 사용되는 이"
 "름입니다."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "이름 바꾸기(_R)"
 
@@ -2073,9 +2070,9 @@ msgstr "키보드 배치 표시"
 msgid "Remove"
 msgstr "제거"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "바로 가기 사용자 설정"
 
@@ -2310,7 +2307,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "이름"
@@ -2390,7 +2387,6 @@ msgstr "위치 정보를 요청한 프로그램이 없습니다"
 msgid "Protect your location information"
 msgstr "위치 정보를 보호합니다"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2542,7 +2538,6 @@ msgstr "화면 잠금"
 msgid "Lock your screen"
 msgstr "화면 잠그기"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "마이크가 꺼져 있습니다"
@@ -2572,7 +2567,6 @@ msgstr "마이크 접근을 요청한 프로그램이 없습니다"
 msgid "Protect your conversations"
 msgstr "대화를 보호합니다"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "설정 검사(_S)"
@@ -2635,6 +2629,39 @@ msgstr "두손가락 스크롤"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "가장자리 스크롤"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+msgid "Disable while Typing"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "지문"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3147,6 +3174,7 @@ msgid "Remove VPN"
 msgstr "VPN(가상사설망) 제거"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "자세히 보기"
 
@@ -4021,7 +4049,7 @@ msgstr "사용자 이름(_U)"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "암호(_P)"
 
@@ -5580,7 +5608,7 @@ msgid "Your Account"
 msgstr "내 계정"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "언어(_L)"
 
@@ -7014,7 +7042,6 @@ msgstr "파일 사용 내역 및 휴지통"
 msgid "Don't leave traces"
 msgstr "흔적 남기지 않기"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "로그인을 제공하는 곳의 웹 주소."
@@ -7588,23 +7615,23 @@ msgid "Restart Now"
 msgstr "지금 다시 시작"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "지문 로그인(_F)"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "자동 로그인(_U)"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "계정 활동"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "관리자(_A)"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
@@ -7612,32 +7639,32 @@ msgstr ""
 "관리자는 다른 사용자를 추가하거나 제거할 수 있고, 모든 사용자에 대한 설정을 "
 "바꿀 수 있습니다."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "자녀 보호 기능(_P)"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "자녀 보호 기능 프로그램을 엽니다."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "사용자 제거…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "기타 사용자"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "사용자 추가…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "사용자가 없습니다"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "사용자 계정을 추가하려면 잠금을 푸십시오."
 
@@ -7879,17 +7906,6 @@ msgstr ""
 #: panels/wacom/button-mapping.ui:66
 msgid "_Close"
 msgstr "닫기(_C)"
-
-# tablet - 디지타이저
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr "디지타이저를 보정하려면 화면에 나타난 표시를 누르십시오."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "잘못된 누름이 감지되었습니다, 다시 시작중…"
 
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
@@ -8465,7 +8481,6 @@ msgstr "휴대전화 네트워크"
 msgid "Configure Telephony and mobile data connections"
 msgstr "텔레포니 및 휴대전화 데이터 연결 설정"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8480,23 +8495,7 @@ msgstr "그놈 데스크톱 설정 프로그램"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "설정은 시스템을 설정하는 주요 인터페이스 프로그램입니다."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "그놈 설정 소리 패널"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "그놈 설정 마우스 및 터치패드 패널"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "그놈 설정 배경 패널"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "그놈 설정 키보드 패널"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
@@ -8532,7 +8531,7 @@ msgstr "[패널] [인수…]"
 msgid "Privacy"
 msgstr "개인 정보"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "사용 가능 패널:"
 
@@ -8646,3 +8645,30 @@ msgstr[0] "%u개 입력"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "시스템 사운드"
+
+#~ msgid "OS Name"
+#~ msgstr "운영 체제 이름"
+
+#~ msgid "OS Type"
+#~ msgstr "운영 체제 종류"
+
+# tablet - 디지타이저
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr "디지타이저를 보정하려면 화면에 나타난 표시를 누르십시오."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "잘못된 누름이 감지되었습니다, 다시 시작중…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "그놈 설정 소리 패널"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "그놈 설정 마우스 및 터치패드 패널"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "그놈 설정 배경 패널"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "그놈 설정 키보드 패널"

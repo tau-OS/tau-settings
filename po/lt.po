@@ -14,9 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-07 18:34+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
@@ -24,8 +23,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Gtranslator 40.0\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Project-Style: gnome\n"
@@ -84,8 +83,8 @@ msgstr "Failų sistema"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Nustatymai"
@@ -172,8 +171,8 @@ msgstr "Gauti sistemos paieškas bei siųsti rezultatus."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -274,13 +273,13 @@ msgstr "Failų bei saitų susiejimai"
 msgid "Storage"
 msgstr "Saugykla"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Nerasta rezultatų"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Bandykite kitą paiešką"
 
@@ -330,7 +329,6 @@ msgstr "Išvalyti podėlį…"
 msgid "Control various application permissions and settings"
 msgstr "Valdyti įvairius programos leidimus bei nustatymus"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -344,7 +342,7 @@ msgstr "Pasirinkite paveikslėlį"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -394,7 +392,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Nėra darbalaukio fono"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Dabartinis fonas"
 
@@ -510,7 +508,6 @@ msgstr "Jokia programa neprašė prieigos prie kameros"
 msgid "Protect your pictures"
 msgstr "Apsaugokite savo paveikslėlius"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -751,7 +748,7 @@ msgstr "Matavimo prietaisas nepalaiko spausdintuvo profiliavimo."
 msgid "The device type is not currently supported."
 msgstr "Įrenginio tipas šiuo metu nepalaikomas."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Ekrano kalibravimas"
 
@@ -865,9 +862,9 @@ msgstr "Reikalauja įrašomos laikmenos"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Gali būti naudingos instrukcijos, kaip naudoti profilį <a href=\"linux\">GNU/"
 "Linux</a>, <a href=\"osx\">Apple OS X</a> ar <a href=\"windows\">Microsoft "
@@ -1511,7 +1508,6 @@ msgstr "Diagnostika"
 msgid "Report your problems"
 msgstr "Pranešti apie jūsų problemas"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1740,9 +1736,9 @@ msgstr ""
 "Apšvietimas;rausvumas;spalva;saulėtekis;saulėlydis;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Nežinomas"
@@ -1751,32 +1747,32 @@ msgstr "Nežinomas"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Sukūrimo ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bitų"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bitų"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Nežinoma"
@@ -1816,12 +1812,13 @@ msgstr "Skaičiuojama..."
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "OS pavadinimas"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME versija"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "OS tipas"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1851,7 +1848,7 @@ msgstr ""
 "Įrenginio pavadinimas yra naudojamas šiam įrenginiui identifikuoti, kai jis "
 "matomas per tinklą arba poruojant su Bluetooth įrenginiais."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "_Pervadinti"
 
@@ -2058,9 +2055,9 @@ msgstr "Rodyti klaviatūros išdėstymą"
 msgid "Remove"
 msgstr "Pašalinti"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "Pasirinktiniai susiejimai"
 
@@ -2297,7 +2294,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "Pavadinimas"
@@ -2376,7 +2373,6 @@ msgstr "Jokia programa neprašė  prieigos prie vietos informacijos"
 msgid "Protect your location information"
 msgstr "Apsaugoti savo vietos informaciją"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2531,7 +2527,6 @@ msgstr "Ekrano užrakinimas"
 msgid "Lock your screen"
 msgstr "Užrakinti ekraną"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofonas yra išjungtas"
@@ -2561,7 +2556,6 @@ msgstr "Jokia programa neprašė prieigos prie mikrofono"
 msgid "Protect your conversations"
 msgstr "Apsaugokite savo pokalbius"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Tikrinkite savo _nustatymus"
@@ -2624,6 +2618,40 @@ msgstr "Slinktis dviem pirštais"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Slinkimas kraštuose"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Spausdinimo _metu išjungti"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "_Piršto atspaudas"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3141,6 +3169,7 @@ msgid "Remove VPN"
 msgstr "Pašalinti VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Išsamiau"
 
@@ -4011,7 +4040,7 @@ msgstr "_Naudotojo vardas"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "_Slaptažodis"
 
@@ -5592,7 +5621,7 @@ msgid "Your Account"
 msgstr "Jūsų paskyra"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "_Kalba"
 
@@ -5929,7 +5958,6 @@ msgstr "Nuotolinis prisijungimas"
 
 #: panels/sharing/cc-sharing-panel.ui:250
 #: panels/sharing/cc-sharing-panel.ui:267
-#| msgid "Remote Login"
 msgid "Remote Desktop"
 msgstr "Nuotolinis darbalaukis"
 
@@ -5942,22 +5970,18 @@ msgstr ""
 "kompiuterio."
 
 #: panels/sharing/cc-sharing-panel.ui:268
-#| msgid "Enable or disable remote login"
 msgid "Enable or disable remote desktop connections to this computer."
 msgstr "Įjungti arba išjungti nuotolinius ryšius su šiuo kompiuteriu."
 
 #: panels/sharing/cc-sharing-panel.ui:280
-#| msgid "_Allow Remote Control"
 msgid "Remote Control"
 msgstr "Nuotolinį valdymas"
 
 #: panels/sharing/cc-sharing-panel.ui:281
-#| msgid "_Allow connections to control the screen"
 msgid "Allows remote connections to control the screen."
 msgstr "Leidžia nuotoliniams ryšiams valdyti ekraną."
 
 #: panels/sharing/cc-sharing-panel.ui:294
-#| msgid "Forget Connection"
 msgid "How to Connect"
 msgstr "Kaip prisijungti"
 
@@ -5969,12 +5993,10 @@ msgstr ""
 "nuotolinio darbalaukio adresą."
 
 #: panels/sharing/cc-sharing-panel.ui:323
-#| msgid "Delete Address"
 msgid "Remote Desktop Address"
 msgstr "Nuotolinio darbalaukio adresas"
 
 #: panels/sharing/cc-sharing-panel.ui:350
-#| msgid "Au_thentication"
 msgid "Authentication"
 msgstr "Tapatybės patvirtinimas"
 
@@ -5985,7 +6007,6 @@ msgstr ""
 "slaptažodis."
 
 #: panels/sharing/cc-sharing-panel.ui:355
-#| msgid "Username"
 msgid "User Name"
 msgstr "Naudotojo vardas"
 
@@ -5994,7 +6015,6 @@ msgid "Verify Encryption"
 msgstr "Patikrinti šifravimą"
 
 #: panels/sharing/cc-sharing-panel.ui:430
-#| msgid "Fingerprint"
 msgid "Encryption Fingerprint"
 msgstr "Šifravimo piršto atspaudas"
 
@@ -7045,7 +7065,6 @@ msgstr "Failų istorija ir šiukšlinė"
 msgid "Don't leave traces"
 msgstr "Nepalikti pėdsakų"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Turi atitikti jūsų paskyros teikėjo žiniatinklio adresą."
@@ -7626,23 +7645,23 @@ msgid "Restart Now"
 msgstr "Perleisti dabar"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "Prisijungimas _piršto atspaudu"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "A_utomatinis prisijungimas"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "Paskyros veikla"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "_Administratorius"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
@@ -7650,32 +7669,32 @@ msgstr ""
 "Administratoriai gali pridėti bei šalinti naudotojos ir keisti visų "
 "naudotojų nustatymus."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "_Tėvų kontrolė"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "Atverti tėvų kontrolės programą."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "Pašalinti naudotoją…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "Kiti naudotojai"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "Pridėti naudotoją…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "Nerasta naudotojų"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "Atrakinti naujos paskyros sukūrimui."
 
@@ -7920,18 +7939,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Užverti"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Palieskite taikinio žymeklius jiems pasirodžius ekrane planšetės "
-"kalibravimui."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Aptiktas klaidingas paspaudimas, perleidžiama…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8013,7 +8020,6 @@ msgid "No tablet detected"
 msgstr "Planšetė nerasta"
 
 #: panels/wacom/cc-wacom-panel.ui:57
-#| msgid "Please plug in or turn on your Wacom tablet"
 msgid "Please plug in or turn on your Wacom tablet."
 msgstr "Prašau prijungti ar įjungti savo Wacom planšetę."
 
@@ -8506,7 +8512,6 @@ msgstr "Mobilusis tinklas"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Konfigūruoti telefonijos ir mobiliųjų duomenų ryšius"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8520,23 +8525,7 @@ msgstr "Įrankis GNOME grafinės aplinkos konfigūravimui"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Nustatymai yra pirminė sąsaja jūsų sistemos konfigūravimui."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "GNOME nustatymų garso skydelis"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "GNOME nustatymų pelės ir jutiklinio kilimėlio skydelis"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "GNOME nustatymų fono skydelis"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "GNOME nustatymų klaviatūros skydelis"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
@@ -8568,7 +8557,7 @@ msgstr "[SKYDELIS] [ARGUMENTAS…]"
 msgid "Privacy"
 msgstr "Privatumas"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Prieinami skydeliai:"
 
@@ -8687,6 +8676,34 @@ msgstr[2] "%u įvesčių"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Sistemos garsai"
+
+#~ msgid "OS Name"
+#~ msgstr "OS pavadinimas"
+
+#~ msgid "OS Type"
+#~ msgstr "OS tipas"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Palieskite taikinio žymeklius jiems pasirodžius ekrane planšetės "
+#~ "kalibravimui."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Aptiktas klaidingas paspaudimas, perleidžiama…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "GNOME nustatymų garso skydelis"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "GNOME nustatymų pelės ir jutiklinio kilimėlio skydelis"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "GNOME nustatymų fono skydelis"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "GNOME nustatymų klaviatūros skydelis"
 
 #~ msgid " "
 #~ msgstr " "
@@ -8881,11 +8898,11 @@ msgstr "Sistemos garsai"
 #~ msgstr "Negalima keisti"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
-#~ "Pavienius programų leidimų galima peržiūrėti <a href=\"privacy"
-#~ "\">privatumo</a> nustatymuose."
+#~ "Pavienius programų leidimų galima peržiūrėti <a "
+#~ "href=\"privacy\">privatumo</a> nustatymuose."
 
 #~ msgid "Integration"
 #~ msgstr "Integracija"
@@ -10854,9 +10871,6 @@ msgstr "Sistemos garsai"
 
 #~ msgid "China"
 #~ msgstr "Kinija"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "Spausdinimo _metu išjungti"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr "Sistemos tinklo tarnybos nesuderinamos su šia versija."

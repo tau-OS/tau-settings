@@ -13,9 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.8\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-04 22:01+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.gnome.org/teams/pt/>\n"
@@ -83,8 +82,8 @@ msgstr "Sistema de ficheiros"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Definições"
@@ -171,8 +170,8 @@ msgstr "Receber as pesquisas do sistema e enviar os resultados."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -273,13 +272,13 @@ msgstr "Associações de ficheiros e ligações"
 msgid "Storage"
 msgstr "Armazenamento de dados"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Sem resultados"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Tente uma procura diferente"
 
@@ -330,7 +329,6 @@ msgstr "Limpar cache…"
 msgid "Control various application permissions and settings"
 msgstr "Controlar várias permissões e definições de aplicações"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -344,7 +342,7 @@ msgstr "Selecionar uma foto"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -394,7 +392,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Nenhum fundo de área de trabalho"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Fundo atual"
 
@@ -517,7 +515,6 @@ msgstr "Nenhuma aplicação requisitou acesso à câmara"
 msgid "Protect your pictures"
 msgstr "Proteja as suas fotos"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -762,7 +759,7 @@ msgstr "O instrumento de medição não suporta traçar o perfil da impressora."
 msgid "The device type is not currently supported."
 msgstr "O tipo de dispositivo não é atualmente suportado."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Calibração de ecrã"
 
@@ -879,9 +876,9 @@ msgstr "Requer suporte em que se possa escrever"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Poderá considerar úteis estas instruções em como utilizar o perfil em "
 "sistemas <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> e "
@@ -896,8 +893,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Problemas detetados. O perfil poderá não funcionar corretamente. <a href="
-"\"\">Ver detalhes.</a>"
+"Problemas detetados. O perfil poderá não funcionar corretamente. <a "
+"href=\"\">Ver detalhes.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1523,7 +1520,6 @@ msgstr "Diagnósticos"
 msgid "Report your problems"
 msgstr "Relate os seus problemas"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1752,9 +1748,9 @@ msgstr ""
 "anoitecer;amanhecer;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Desconhecido"
@@ -1763,32 +1759,32 @@ msgstr "Desconhecido"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID da versão: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Desconhecido"
@@ -1828,12 +1824,13 @@ msgstr "A calcular…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Nome do SO"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Versão do GNOME"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Tipo do SO"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1863,7 +1860,7 @@ msgstr ""
 "O nome do dispositivo é utilizado para identificá-lo quando este for visto "
 "pela rede, ou quando a emparelhar dispositivos Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "_Mudar o nome"
 
@@ -2069,9 +2066,9 @@ msgstr "Ver disposição do teclado"
 msgid "Remove"
 msgstr "Remover"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "Atalhos personalizados"
 
@@ -2309,7 +2306,7 @@ msgstr "Prima Esc para cancelar ou Backspace para desativar a tecla de atalho."
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "Nome"
@@ -2388,7 +2385,6 @@ msgstr "Nenhuma aplicação requisitou acesso à localização"
 msgid "Protect your location information"
 msgstr "Proteger os seus dados de localização"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2543,7 +2539,6 @@ msgstr "Bloqueio de ecrã"
 msgid "Lock your screen"
 msgstr "Bloquear o seu ecrã"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Microfone desligado"
@@ -2574,7 +2569,6 @@ msgstr "Nenhuma aplicação requisitou acesso ao microfone"
 msgid "Protect your conversations"
 msgstr "Proteja as suas conversas"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Teste as _suas definições"
@@ -2637,6 +2631,40 @@ msgstr "Deslocamento com dois dedos"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Deslocamento lateral"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Desativar a imagem"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Impressão digital"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3153,6 +3181,7 @@ msgid "Remove VPN"
 msgstr "Eliminar VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Detalhes"
 
@@ -4028,7 +4057,7 @@ msgstr "_Utilizador"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "P_alavra-passe"
 
@@ -5605,7 +5634,7 @@ msgid "Your Account"
 msgstr "A sua Conta"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "_Idioma"
 
@@ -7054,7 +7083,6 @@ msgstr "Histórico de ficheiros e Lixo"
 msgid "Don't leave traces"
 msgstr "Não deixar rastros"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Deve coincidir com o endereço Web do seu fornecedor de conta."
@@ -7638,23 +7666,23 @@ msgid "Restart Now"
 msgstr "Reiniciar agora"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "Início de sessão com _impressão digital"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "Início de sessão a_utomático"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "_Atividade da conta"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "_Administrador"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
@@ -7662,32 +7690,32 @@ msgstr ""
 "Administradores podem adicionar ou remover outros utilizadores e podem mudar "
 "as definições de todos eles."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "_Controlo Parental"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "Abrir a aplicação de Controlo Parental."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "Remover utilizador…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "Outros Utilizadores"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "Adicionar Utilizador…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "Sem utilizadores"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "Desbloquear para criar uma conta de utilizador."
 
@@ -7933,18 +7961,6 @@ msgstr ""
 #: panels/wacom/button-mapping.ui:66
 msgid "_Close"
 msgstr "Fe_char"
-
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Toque nos respetivos marcadores à medida que surgem no ecrã para calibrar o "
-"tablet."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Detetada uma falha de clique, a reiniciar…"
 
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
@@ -8522,7 +8538,6 @@ msgstr "Rede móvel"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Configurar ligações telefónicas e de dados móveis"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8536,23 +8551,7 @@ msgstr "Utilitários para configurar o ambiente de trabalho GNOME"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Definições é a sua interface principal para configurar o seu sistema."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Painel de som das definições GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Painel do Rato e Painel tátil das Definições GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Painel de fundo das definições GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Painel de teclado das definições GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Projeto GNOME"
 
@@ -8584,7 +8583,7 @@ msgstr "[PAINEL] [ARGUMENTO…]"
 msgid "Privacy"
 msgstr "Privacidade"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Painéis disponíveis:"
 
@@ -8707,6 +8706,34 @@ msgstr[1] "%u entradas"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Sons do sistema"
+
+#~ msgid "OS Name"
+#~ msgstr "Nome do SO"
+
+#~ msgid "OS Type"
+#~ msgstr "Tipo do SO"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Toque nos respetivos marcadores à medida que surgem no ecrã para calibrar "
+#~ "o tablet."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Detetada uma falha de clique, a reiniciar…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Painel de som das definições GNOME"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Painel do Rato e Painel tátil das Definições GNOME"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Painel de fundo das definições GNOME"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Painel de teclado das definições GNOME"
 
 #~ msgid " "
 #~ msgstr " "
@@ -9019,8 +9046,8 @@ msgstr "Sons do sistema"
 #~ msgstr "Impossível alterar"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
 #~ "Permissões individuais para aplicações podem ser revistas nas Definições "
 #~ "de <a href=\"privacy\">Privacidade</a>."
@@ -10112,9 +10139,6 @@ msgstr "Sons do sistema"
 #~ msgctxt "login history week label"
 #~ msgid "%s - %s"
 #~ msgstr "%s - %s"
-
-#~ msgid "Disable image"
-#~ msgstr "Desativar a imagem"
 
 #~ msgid "Browse for more pictures…"
 #~ msgstr "Procurar por mais imagens…"

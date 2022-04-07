@@ -24,9 +24,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-07 17:29+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-09 20:16+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
@@ -93,8 +92,8 @@ msgstr "Tiedostojärjestelmä"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Asetukset"
@@ -182,8 +181,8 @@ msgstr "Vastaanota hakuja järjestelmältä ja lähetä tuloksia."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -284,13 +283,13 @@ msgstr "Tiedosto- ja linkkisidokset"
 msgid "Storage"
 msgstr "Tallennustila"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Tuloksia ei löytynyt"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Yritä eri hakuehdoilla"
 
@@ -341,7 +340,6 @@ msgstr "Tyhjennä välimuisti…"
 msgid "Control various application permissions and settings"
 msgstr "Hallitse sovellusten eri oikeuksia ja asetuksia"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -405,7 +403,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Ei työpöydän taustaa"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Nykyinen taustakuva"
 
@@ -522,7 +520,6 @@ msgstr "Mikään sovellus ei ole pyytänyt kameran käyttöoikeutta"
 msgid "Protect your pictures"
 msgstr "Suojaa kuvasi"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -762,7 +759,7 @@ msgstr "Mittalaite ei tue tulostimien profilointia."
 msgid "The device type is not currently supported."
 msgstr "Laitetyyppi ei ole tällä hetkellä tuettu."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Näytön kalibrointi"
 
@@ -876,9 +873,9 @@ msgstr "Vaatii median, johon on mahdollista kirjoittaa"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Näistä ohjeista profiilin käyttöön <a href=\"linux\">GNU/Linuxilla</a>, <a "
 "href=\"osx\">Apple OS X:llä</a> ja <a href=\"windows\">Windowsilla</a> "
@@ -893,8 +890,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Ongelmia havaittu. Profiili ei välttämättä toimi kunnolla. <a href="
-"\"\">Näytä tiedot.</a>"
+"Ongelmia havaittu. Profiili ei välttämättä toimi kunnolla. <a "
+"href=\"\">Näytä tiedot.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1518,7 +1515,6 @@ msgstr "Diagnostiikka"
 msgid "Report your problems"
 msgstr "Ilmoita ongelmista"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1749,9 +1745,9 @@ msgstr ""
 "Virkistystaajuus;yövalo;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Tuntematon"
@@ -1760,32 +1756,32 @@ msgstr "Tuntematon"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; koontitunniste: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Tuntematon"
@@ -1825,12 +1821,13 @@ msgstr "Lasketaan…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Käyttöjärjestelmän nimi"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Gnomen versio"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Käyttöjärjestelmän tyyppi"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2389,7 +2386,6 @@ msgstr "Mikään sovellus ei ole pyytänyt sijainnin käyttöoikeutta"
 msgid "Protect your location information"
 msgstr "Suojaa sijaintitietoasi"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2544,7 +2540,6 @@ msgstr "Näytön lukitus"
 msgid "Lock your screen"
 msgstr "Lukitse näyttö"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofoni on pois päältä"
@@ -2575,7 +2570,6 @@ msgstr "Mikään sovellus ei ole pyytänyt mikrofonin käyttöoikeutta"
 msgid "Protect your conversations"
 msgstr "Suojaa keskustelusi"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "_Testaa asetukset"
@@ -2639,6 +2633,40 @@ msgstr "Kahden sormen vieritys"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Reunavieritys"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "_Poista kosketuslevy käytöstä kirjoitettaessa"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Sormenjälki"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3155,6 +3183,7 @@ msgid "Remove VPN"
 msgstr "Poista VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Tiedot"
 
@@ -7056,7 +7085,6 @@ msgstr "Tiedostohistoria ja roskakori"
 msgid "Don't leave traces"
 msgstr "Älä jätä jälkiä"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Tulisi vastata kirjautumistilisi myöntäjän verkko-osoitetta."
@@ -7936,16 +7964,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Sulje"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr "Kosketa näytöllä näkyviä kohdemerkkejä piirtopöydän kalibroimiseksi."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Tunnistettiin ohi mennyt kosketus, aloitetaan alusta…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8518,7 +8536,6 @@ msgstr "Mobiiliverkko"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Määritä puhelinverkko- ja mobiilidatayhteydet"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8534,23 +8551,7 @@ msgstr ""
 "Asetukset on ensisijainen käyttöliittymä järjestelmäsi asetusten "
 "määrittämiseen."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Gnomen asetusten äänipaneeli"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Gnomen asetusten hiiri- ja kosketuslevypaneeli"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Gnomen asetusten taustakuvapaneeli"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Gnomen asetusten näppäimistöpaneeli"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
@@ -8582,7 +8583,7 @@ msgstr "[PANEELI] [ARGUMENTTI…]"
 msgid "Privacy"
 msgstr "Yksityisyys"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Käytettävissä olevat paneelit:"
 
@@ -8704,6 +8705,33 @@ msgstr[1] "%u sisääntuloa"
 msgid "System Sounds"
 msgstr "Järjestelmän äänet"
 
+#~ msgid "OS Name"
+#~ msgstr "Käyttöjärjestelmän nimi"
+
+#~ msgid "OS Type"
+#~ msgstr "Käyttöjärjestelmän tyyppi"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Kosketa näytöllä näkyviä kohdemerkkejä piirtopöydän kalibroimiseksi."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Tunnistettiin ohi mennyt kosketus, aloitetaan alusta…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Gnomen asetusten äänipaneeli"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Gnomen asetusten hiiri- ja kosketuslevypaneeli"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Gnomen asetusten taustakuvapaneeli"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Gnomen asetusten näppäimistöpaneeli"
+
 #~ msgid "Web Links"
 #~ msgstr "Verkkolinkit"
 
@@ -8757,11 +8785,11 @@ msgstr "Järjestelmän äänet"
 #~ msgstr "Ei voi muuttaa"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
-#~ "Sovellusten yksittäiset oikeudet on mahdollista katselmoida <a href="
-#~ "\"privacy\">yksityisyysasetuksissa</a>."
+#~ "Sovellusten yksittäiset oikeudet on mahdollista katselmoida <a "
+#~ "href=\"privacy\">yksityisyysasetuksissa</a>."
 
 #~ msgid "Integration"
 #~ msgstr "Integraatio"
@@ -9565,8 +9593,8 @@ msgstr "Järjestelmän äänet"
 #~ msgid ""
 #~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 #~ msgstr ""
-#~ "Yhteyspisteen käyttöönotto katkaisee yhteyden langattomaan verkkoon <b>"
-#~ "%s</b>."
+#~ "Yhteyspisteen käyttöönotto katkaisee yhteyden langattomaan verkkoon "
+#~ "<b>%s</b>."
 
 #~ msgid ""
 #~ "It is not possible to access the Internet through your wireless while the "
@@ -10598,8 +10626,8 @@ msgstr "Järjestelmän äänet"
 #~ "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
 #~ "disabled."
 #~ msgstr ""
-#~ "Jos siirrät pikanäppäimen toimintoon \"%s\", poistetaan pikanäppäin \"%s"
-#~ "\" käytöstä."
+#~ "Jos siirrät pikanäppäimen toimintoon \"%s\", poistetaan pikanäppäin "
+#~ "\"%s\" käytöstä."
 
 #~ msgid "_Reassign"
 #~ msgstr "_Siirrä"
@@ -10834,9 +10862,6 @@ msgstr "Järjestelmän äänet"
 
 #~ msgid "China"
 #~ msgstr "Kiina"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "_Poista kosketuslevy käytöstä kirjoitettaessa"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr ""

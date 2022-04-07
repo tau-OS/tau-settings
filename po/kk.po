@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-11 12:34+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-12 19:05+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -73,8 +72,8 @@ msgstr "Файлдық жүйе"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Баптаулар"
@@ -161,8 +160,8 @@ msgstr "Жүйелік іздеулерді алу және нәтижелерд
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -263,13 +262,13 @@ msgstr "Файлдар мен сілтемелер ассоциациялары"
 msgid "Storage"
 msgstr "Сақтау құрылғылары"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Нәтижелер табылмады"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Басқа сөздерді іздеп көріңіз"
 
@@ -319,7 +318,6 @@ msgstr "Кэшті тазарту…"
 msgid "Control various application permissions and settings"
 msgstr "Қолданбалардың түрлі рұқсаттарын және баптауларын басқару"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -383,7 +381,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Түсқағаз жоқ"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Ағымдағы фон"
 
@@ -502,7 +500,6 @@ msgstr "Ешбір қолданба Камераға қатынау рұқсат
 msgid "Protect your pictures"
 msgstr "Суреттерді қорғау"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -742,7 +739,7 @@ msgstr "Өлшеу құрылғысы принтерлерді профильд�
 msgid "The device type is not currently supported."
 msgstr "Құрылғының бұл түріне ағымда қолдау жоқ."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Экран калибрациясы"
 
@@ -858,9 +855,9 @@ msgstr "Жазуға болатын тасушыны талап етеді"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Түс профилін <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> "
 "және <a href=\"windows\">Microsoft Windows</a> жүйелерінде қалай пайдалану "
@@ -875,8 +872,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Мәселелер анықталды. Профиль дұрыс жұмыс жасамауы мүмкін. <a href="
-"\"\">Ақпаратын көрсету.</a>"
+"Мәселелер анықталды. Профиль дұрыс жұмыс жасамауы мүмкін. <a "
+"href=\"\">Ақпаратын көрсету.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1503,7 +1500,6 @@ msgstr "Диагностика"
 msgid "Report your problems"
 msgstr "Мәселелер туралы хабарлау"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1734,9 +1730,9 @@ msgstr ""
 "Жаңарту;Монитор;Түн;Жарық;Көк;түс;күннің шығуы;күннің батуы;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Белгісіз"
@@ -1745,32 +1741,32 @@ msgstr "Белгісіз"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Жинақ ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-биттік"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-биттік"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Белгісіз"
@@ -1810,12 +1806,13 @@ msgstr "Есептеу…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "ОЖ атауы"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME нұсқасы"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "ОЖ түрі"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2373,7 +2370,6 @@ msgstr "Ешбір қолданба Орналасуға қатынау рұқс
 msgid "Protect your location information"
 msgstr "Орналасу ақпаратын қорғау"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2529,7 +2525,6 @@ msgstr "Экранды блоктау"
 msgid "Lock your screen"
 msgstr "Экранды бұғаттау"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Микрофон сөндірулі тұр"
@@ -2559,7 +2554,6 @@ msgstr "Ешбір қолданба Микрофонға қатынау рұқс
 msgid "Protect your conversations"
 msgstr "Сөйлесулерді қорғау"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Ба_птауларды тексеру"
@@ -2622,6 +2616,40 @@ msgstr "Қос саусақпен айналдыру"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Бұрышпен айналдыру"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "_Теру кезінде сөндіру"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Саусақ ізі"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3137,6 +3165,7 @@ msgid "Remove VPN"
 msgstr "VPN өшіру"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Көбірек білу"
 
@@ -7034,7 +7063,6 @@ msgstr "Файлдар тарихы және қоқыс шелегі"
 msgid "Don't leave traces"
 msgstr "Із қалдырмау"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Логинді ұсынушының веб адресіне сәйкес болуы тиіс."
@@ -7916,18 +7944,6 @@ msgstr ""
 msgid "_Close"
 msgstr "Жа_бу"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Планшетті калибрациялау үшін, экранда пайда болатын маркерлерге шертіп "
-"отырыңыз."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Қате шерту анықталды, қайтадан бастау…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8498,7 +8514,6 @@ msgstr "Мобильді желі"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Телефония және мобильді деректер байланыстарын баптау"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8513,23 +8528,7 @@ msgid "Settings is the primary interface for configuring your system."
 msgstr ""
 "Баптаулар қолданбасы жүйеңізді баптаудың негізгі сайманы болып табылады."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "GNOME баптаулары дыбыс панелі"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "GNOME баптаулары тышқан және тачпад панелі"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "GNOME баптаулары фон панелі"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "GNOME баптаулары пернетақта панелі"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME жобасы"
 
@@ -8561,7 +8560,7 @@ msgstr "[ПАНЕЛЬ] [АРГУМЕНТ…]"
 msgid "Privacy"
 msgstr "Жекелік"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Қолжетерлік панельдер:"
 
@@ -8681,6 +8680,34 @@ msgstr[0] "%u кіріс"
 msgid "System Sounds"
 msgstr "Жүйелік дыбыстар"
 
+#~ msgid "OS Name"
+#~ msgstr "ОЖ атауы"
+
+#~ msgid "OS Type"
+#~ msgstr "ОЖ түрі"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Планшетті калибрациялау үшін, экранда пайда болатын маркерлерге шертіп "
+#~ "отырыңыз."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Қате шерту анықталды, қайтадан бастау…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "GNOME баптаулары дыбыс панелі"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "GNOME баптаулары тышқан және тачпад панелі"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "GNOME баптаулары фон панелі"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "GNOME баптаулары пернетақта панелі"
+
 #~ msgid "Web Links"
 #~ msgstr "Веб сілтемелері"
 
@@ -8734,8 +8761,8 @@ msgstr "Жүйелік дыбыстар"
 #~ msgstr "Зарядтау мүмкін емес"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
 #~ "Қолданбалардың жеке-жеке рұқсаттарын <a href=\"privacy\">Жекелік</a> "
 #~ "баптауларында қарауға болады."
@@ -10760,9 +10787,6 @@ msgstr "Жүйелік дыбыстар"
 
 #~ msgid "China"
 #~ msgstr "Қытай"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "_Теру кезінде сөндіру"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr "Жүйелік желілік қызметтер бұл нұсқасымен үйлеспейді."

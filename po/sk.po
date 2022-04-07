@@ -11,9 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-07 17:29+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-09 10:43+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -86,8 +85,8 @@ msgstr "Systém súborov"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Nastavenia"
@@ -147,13 +146,11 @@ msgstr "Nainštalovať nejaké…"
 
 #: panels/applications/cc-applications-panel.ui:84
 #: panels/network/wireless-security/ws-file-chooser-button.c:96
-#| msgid "_Open"
 msgid "Open"
 msgstr "Otvoriť"
 
 # GtkButton label
 #: panels/applications/cc-applications-panel.ui:94
-#| msgid "_View details"
 msgid "View Details"
 msgstr "Zobraziť podrobnosti"
 
@@ -184,8 +181,8 @@ msgstr "Prijíma systémové hľadania a odosiela výsledky."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -199,7 +196,6 @@ msgid "Notifications"
 msgstr "Oznámenia"
 
 #: panels/applications/cc-applications-panel.ui:127
-#| msgid "preferences-system-notifications"
 msgid "Show system notifications."
 msgstr "Zobrazuje systémové oznámenia."
 
@@ -213,12 +209,10 @@ msgstr "Umožňuje aktivitu, keď je aplikácia zavretá."
 
 # radio_button
 #: panels/applications/cc-applications-panel.ui:140
-#| msgid "Wallpapers"
 msgid "Change Wallpaper"
 msgstr "Zmeniť tapetu"
 
 #: panels/applications/cc-applications-panel.ui:141
-#| msgid "preferences-desktop-wallpaper"
 msgid "Change the desktop wallpaper."
 msgstr "Mení tapetu pracovnej plochy"
 
@@ -235,13 +229,11 @@ msgstr "Reprodukuje zvuky."
 
 # tab
 #: panels/applications/cc-applications-panel.ui:161
-#| msgid "Set Shortcut"
 msgid "Inhibit Shortcuts"
 msgstr "Potlačenie skratiek"
 
 # GtkLabel label
 #: panels/applications/cc-applications-panel.ui:162
-#| msgid "Inhibit system keyboard shortcuts"
 msgid "Block standard keyboard shortcuts."
 msgstr "Blokuje štandardné klávesové skratky."
 
@@ -276,7 +268,6 @@ msgstr "Služby umiestnenia"
 # GtkButton label
 #: panels/applications/cc-applications-panel.ui:197
 #: panels/applications/cc-applications-panel.ui:204
-#| msgid "Access your location"
 msgid "Access device location data."
 msgstr "Pristupuje k údajom umiestnenia zariadenia."
 
@@ -286,7 +277,6 @@ msgid "Built-in Permissions"
 msgstr "Zabudované oprávnenia"
 
 #: panels/applications/cc-applications-panel.ui:216
-#| msgid "System features used by this application."
 msgid "System access that is required by the app"
 msgstr "Systémový prístup, ktorý je vyžadovaný aplikáciou"
 
@@ -299,13 +289,13 @@ msgstr "Priradenia súborov a odkazov"
 msgid "Storage"
 msgstr "Úložisko"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Nenašli sa žiadne výsledky"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Skúste vyhľadať niečo iné"
 
@@ -316,13 +306,11 @@ msgstr "Priradenie súborov a odkazov"
 # Overenie totožnosti
 # GtkListStore item
 #: panels/applications/cc-applications-panel.ui:367
-#| msgid "File System"
 msgid "File Types"
 msgstr "Typy súborov"
 
 # GtkLabel label
 #: panels/applications/cc-applications-panel.ui:373
-#| msgid "Link speed"
 msgid "Link Types"
 msgstr "Typy odkazov"
 
@@ -363,7 +351,6 @@ msgstr "Vymazať vyrovnávaciu pamäť…"
 msgid "Control various application permissions and settings"
 msgstr "Ovláda rozličné oprávnenia a nastavenia aplikácií"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -429,17 +416,15 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Bez pozadia plochy"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Aktuálne pozadie"
 
 #: panels/background/cc-background-panel.ui:9
-#| msgid "Stylus"
 msgid "Style"
 msgstr "Štýl"
 
 #: panels/background/cc-background-panel.ui:45
-#| msgid "Right"
 msgid "Light"
 msgstr "Svetlý"
 
@@ -458,20 +443,17 @@ msgid "Add Picture…"
 msgstr "Pridať obrázok…"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
-#| msgid "France"
 msgid "Appearance"
 msgstr "Vzhľad"
 
 # desktop entry comment
 #: panels/background/gnome-background-panel.desktop.in.in:4
-#| msgid "Change your background image to a wallpaper or photo"
 msgid "Change your background image or the UI colors"
 msgstr "Mení obrázok vášho pozadia alebo farby používateľského rozhrania"
 
 # desktop entry keywords
 #. Translators: Search terms to find the Appearance panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:15
-#| msgid "Wallpaper;Screen;Desktop;"
 msgid "Background;Wallpaper;Screen;Desktop;Style;Light;Dark;"
 msgstr "Pozadie;Tapeta;Obrazovka;Plocha;Pozadie;Štýl;Svetlý;Tmavý;"
 
@@ -494,7 +476,6 @@ msgstr "Zapnite ho, ak chcete pripojiť zariadenia a prijať prenosy súborov."
 
 # label
 #: panels/bluetooth/cc-bluetooth-panel.ui:35
-#| msgid "Airplane Mode is on"
 msgid "Airplane Mode is On"
 msgstr "Režim v lietadle je zapnutý"
 
@@ -509,7 +490,6 @@ msgstr "Vypnúť režim v lietadle"
 
 # label
 #: panels/bluetooth/cc-bluetooth-panel.ui:53
-#| msgid "Hardware Airplane Mode is on"
 msgid "Hardware Airplane Mode is On"
 msgstr "Hardvérový režim v lietadle je zapnutý"
 
@@ -537,7 +517,6 @@ msgstr ""
 "sprístupnenie;bluetooth;obex;"
 
 #: panels/camera/cc-camera-panel.ui:21
-#| msgid "Camera is turned off"
 msgid "Camera is Turned Off"
 msgstr "Kamera je vypnutá"
 
@@ -547,9 +526,6 @@ msgid "No applications can capture photos or video."
 msgstr "Žiadne aplikácie nemôžu zachytávať fotografie alebo videá."
 
 #: panels/camera/cc-camera-panel.ui:36
-#| msgid ""
-#| "Use of the camera allows applications to capture photos and video. "
-#| "Disabling the camera may cause some applications to not function properly."
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
 "the camera may cause some applications to not function properly.\n"
@@ -571,7 +547,6 @@ msgstr "Žiadne aplikácie si nevyžiadali prístup ku kamere"
 msgid "Protect your pictures"
 msgstr "Ochráňte vaše obrázky"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -824,7 +799,7 @@ msgid "The device type is not currently supported."
 msgstr "Typ zariadenia momentálne nie je podporovaný."
 
 # GtkAssistant title
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Kalibrovanie obrazovky"
 
@@ -959,9 +934,9 @@ msgstr "Vyžaduje zapisovateľný nosič"
 # GtkLabel label
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Tieto inštrukcie môžete nájsť v sekcii ako užitočne využívať profil v "
 "systémoch <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> a "
@@ -1567,7 +1542,6 @@ msgid "Search for a city"
 msgstr "Vyhľadajte mesto"
 
 #: panels/datetime/cc-datetime-panel.ui:164
-#| msgid "Automatic _Date & Time"
 msgid "Automatic _Date &amp; Time"
 msgstr "Automatický _dátum a čas"
 
@@ -1578,7 +1552,6 @@ msgstr "Vyžaduje prístup na internet"
 
 # desktop entry name
 #: panels/datetime/cc-datetime-panel.ui:177
-#| msgid "Date & _Time"
 msgid "Date &amp; _Time"
 msgstr "_Dátum a čas"
 
@@ -1698,7 +1671,6 @@ msgstr "Diagnostika"
 msgid "Report your problems"
 msgstr "Nahláste vaše problémy"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1755,7 +1727,6 @@ msgid "_Apply"
 msgstr "_Použiť"
 
 #: panels/display/cc-display-panel.ui:97
-#| msgid "Bluetooth is disabled"
 msgid "Display Settings Disabled"
 msgstr "Nastavenia displeja sú zakázané"
 
@@ -1769,7 +1740,6 @@ msgstr "Rozloženie displejov"
 
 # atkobject
 #: panels/display/cc-display-panel.ui:124
-#| msgid "Decouple Display"
 msgid "Multiple Displays"
 msgstr "Viacero displejov"
 
@@ -1945,9 +1915,9 @@ msgstr ""
 # * https://bugzilla.gnome.org/show_bug.cgi?id=695517
 # grafika, AP typ
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Neznámy"
@@ -1956,43 +1926,42 @@ msgstr "Neznámy"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID zostavy: %s"
 
 # Typ OS
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bitový"
 
 # Typ OS
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bitový"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=695517
 # grafika, AP typ
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Neznámy"
 
 # KeyListEntries name
 #: panels/info-overview/cc-info-overview-panel.ui:17
-#| msgid "System"
 msgid "System Logo"
 msgstr "Systémové logo"
 
@@ -2031,16 +2000,15 @@ msgstr "Kapacita disku"
 msgid "Calculating…"
 msgstr "Počíta sa…"
 
-# tree view column
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Názov OS"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Verzia prostredia GNOME"
 
-# GtkLabel label
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Typ OS"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2651,7 +2619,6 @@ msgstr ""
 "kontrast;vstup;vstupný;zdroj;zámok;uzamknutie;hlasitosť;"
 
 #: panels/location/cc-location-panel.ui:20
-#| msgid "Location services turned off"
 msgid "Location Services Turned Off"
 msgstr "Služby umiestnenia sú vypnuté"
 
@@ -2681,7 +2648,6 @@ msgstr "Ochráňte informácie o vašom umiestnení"
 
 # GtkListStore item
 # Uzamknut obrazovku pri necinnosti za
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2894,9 +2860,7 @@ msgstr "Uzamknutie obrazovky"
 msgid "Lock your screen"
 msgstr "Uzamknúť vašu obrazovku"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
-#| msgid "Microphone is turned off"
 msgid "Microphone Turned Off"
 msgstr "Mikrofón je vypnutý"
 
@@ -2905,10 +2869,6 @@ msgid "No applications can record sound."
 msgstr "Žiadne aplikácie nedokážu nahrávať zvuk."
 
 #: panels/microphone/cc-microphone-panel.ui:34
-#| msgid ""
-#| "Use of the microphone allows applications to record and listen to audio. "
-#| "Disabling the microphone may cause some applications to not function "
-#| "properly."
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
@@ -2930,7 +2890,6 @@ msgid "Protect your conversations"
 msgstr "Ochráňte vaše konverzácie"
 
 # toggle button
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "_Vyskúšať vaše nastavenia"
@@ -3002,6 +2961,42 @@ msgstr "Rolovať dvoma prstami"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Rolovať hranou"
+
+# GtkCheckButton label
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Zakázať počas _písania"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+# GtkLabel
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Odtlačok prsta"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 # GtkLabel label
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
@@ -3219,7 +3214,6 @@ msgstr "Musí obsahovať minimálne 8 znakov"
 
 #: panels/network/cc-wifi-hotspot-dialog.c:271
 #, c-format
-#| msgid "Must have a maximum of %d characters"
 msgid "Must have a maximum of %d character"
 msgid_plural "Must have a maximum of %d characters"
 msgstr[0] "Musí obsahovať maximálne %d znakov"
@@ -3567,6 +3561,7 @@ msgstr "Odstrániť VPN"
 
 # 1.desktop entry name;2. page; 3. GtkListStore item
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Podrobnosti"
 
@@ -4772,7 +4767,6 @@ msgstr "_Overenie totožnosti"
 
 # file chooser dialog title
 #: panels/network/wireless-security/ws-file-chooser-button.c:49
-#| msgid "Select a File…"
 msgid "Select a file"
 msgstr "Vybrať súbor"
 
@@ -6181,9 +6175,6 @@ msgstr "Pridať tlačiareň…"
 
 #. Translators: The CUPS server is not running (we can not connect to it).
 #: panels/printers/printers.ui:204
-#| msgid ""
-#| "Sorry! The system printing service\n"
-#| "doesn’t seem to be available."
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
@@ -6205,7 +6196,6 @@ msgstr "Späť"
 
 # GtkDialog title
 #: panels/region/cc-format-chooser.ui:76
-#| msgid "Search locales..."
 msgid "Search locales…"
 msgstr "Vyhľadajte miestne nastavenia…"
 
@@ -6278,7 +6268,6 @@ msgid "Logout…"
 msgstr "Odhlásiť sa…"
 
 #: panels/region/cc-region-panel.ui:45
-#| msgid "The format used for numbers, dates, and currencies."
 msgid ""
 "The language setting is used for interface text and web pages. Formats is "
 "used for numbers, dates, and currencies."
@@ -6287,7 +6276,6 @@ msgstr ""
 "použitý pre čísla, dátumy a meny."
 
 #: panels/region/cc-region-panel.ui:51
-#| msgid "Your account"
 msgid "Your Account"
 msgstr "Váš účet"
 
@@ -6539,13 +6527,11 @@ msgid "Bookmarks"
 msgstr "Záložky"
 
 #: panels/search/cc-search-locations-dialog.ui:48
-#| msgid "Other"
 msgid "Others"
 msgstr "Ostatné"
 
 # GtkLabel label
 #: panels/search/cc-search-locations-dialog.ui:55
-#| msgid "Location"
 msgid "Add Location"
 msgstr "Pridať umiestnenie"
 
@@ -6555,24 +6541,18 @@ msgstr "Nenašli sa žiadne aplikácie"
 
 # tab
 #: panels/search/cc-search-panel.ui:10
-#| msgid "Application Switching"
 msgid "Application Search"
 msgstr "Vyhľadávanie aplikácií"
 
 #: panels/search/cc-search-panel.ui:11
-#| msgid "Include applications from all _workspaces"
 msgid "Include application-provided search results."
 msgstr "Zahŕňa výsledky vyhľadávania poskytnuté aplikáciami."
 
 #: panels/search/cc-search-panel.ui:23
-#| msgid ""
-#| "Folders which are searched by system applications, such as Files, Photos "
-#| "and Videos."
 msgid "Folders which are searched by system applications."
 msgstr "Priečinky, ktoré sú prehľadávané systémovými aplikáciami."
 
 #: panels/search/cc-search-panel.ui:37
-#| msgid "No Search Results"
 msgid "Search Results"
 msgstr "Výsledky vyhľadávania"
 
@@ -6699,7 +6679,6 @@ msgstr "Vzdialené prihlásenie"
 # GtkDialog title
 #: panels/sharing/cc-sharing-panel.ui:250
 #: panels/sharing/cc-sharing-panel.ui:267
-#| msgid "Remote Login"
 msgid "Remote Desktop"
 msgstr "Vzdialená pracovná plocha"
 
@@ -6713,7 +6692,6 @@ msgstr ""
 
 #  policy action description
 #: panels/sharing/cc-sharing-panel.ui:268
-#| msgid "Enable or disable remote login"
 msgid "Enable or disable remote desktop connections to this computer."
 msgstr ""
 "Povoľuje alebo zakazuje vzdialené pripojenia k pracovnej ploche tohto "
@@ -6721,18 +6699,15 @@ msgstr ""
 
 # GtkLabel label
 #: panels/sharing/cc-sharing-panel.ui:280
-#| msgid "_Allow Remote Control"
 msgid "Remote Control"
 msgstr "Vzdialené ovládanie"
 
 #: panels/sharing/cc-sharing-panel.ui:281
-#| msgid "_Allow connections to control the screen"
 msgid "Allows remote connections to control the screen."
 msgstr "Umožňuje vzdialené pripojenia na ovládanie obrazovky."
 
 # gtk button
 #: panels/sharing/cc-sharing-panel.ui:294
-#| msgid "Forget Connection"
 msgid "How to Connect"
 msgstr "Ako sa pripojiť"
 
@@ -6745,13 +6720,11 @@ msgstr ""
 
 # button atk
 #: panels/sharing/cc-sharing-panel.ui:323
-#| msgid "Delete Address"
 msgid "Remote Desktop Address"
 msgstr "Adresa vzdialenej pracovnej plochy"
 
 # GtkLabel label
 #: panels/sharing/cc-sharing-panel.ui:350
-#| msgid "Au_thentication"
 msgid "Authentication"
 msgstr "Overenie totožnosti"
 
@@ -6761,7 +6734,6 @@ msgstr "Na pripojenie k tomuto počítaču sa vyžaduje meno používateľa a he
 
 # GtkLabel label
 #: panels/sharing/cc-sharing-panel.ui:355
-#| msgid "Username"
 msgid "User Name"
 msgstr "Meno používateľa"
 
@@ -6771,7 +6743,6 @@ msgstr "Overiť šifrovanie"
 
 # GtkLabel
 #: panels/sharing/cc-sharing-panel.ui:430
-#| msgid "Fingerprint"
 msgid "Encryption Fingerprint"
 msgstr "Odtlačok prsta pre overenie totožnosti"
 
@@ -7109,12 +7080,10 @@ msgid "Error switching direct mode: %s"
 msgstr "Chyba počas prepínania priameho režimu: %s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:103
-#| msgid "No Thunderbolt support"
 msgid "No Thunderbolt Support"
 msgstr "Žiadna podpora zariadení Thunderbolt"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:104
-#| msgid "Couldn’t connect to the %s domain: %s"
 msgid "Could not connect to the thunderbolt subsystem."
 msgstr "Nepodarilo sa pripojiť k podsystému rozhrania thunderbolt."
 
@@ -7506,7 +7475,6 @@ msgid "_Typing Assist (AccessX)"
 msgstr "Asistované _písanie (AccessX)"
 
 #: panels/universal-access/cc-ua-panel.ui:240
-#| msgid "Pointing & Clicking"
 msgid "Pointing &amp; Clicking"
 msgstr "Ukazovanie a klikanie"
 
@@ -7772,11 +7740,6 @@ msgstr "Uľahčuje videnie, písanie, počúvanie, ukazovanie a klikanie"
 # desktorp entry keywords
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
-#| msgid ""
-#| "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
-#| "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
-#| "Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
-#| "audio;typing;"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7964,7 +7927,6 @@ msgstr "Vy_mazať históriu…"
 
 # 2 GtkDialog title
 #: panels/usage/cc-usage-panel.ui:63
-#| msgid "Trash & Temporary Files"
 msgid "Trash &amp; Temporary Files"
 msgstr "Kôš a dočasné súbory"
 
@@ -8009,7 +7971,6 @@ msgstr "História súborov a kôš"
 msgid "Don't leave traces"
 msgstr "Nezanechávajte stopy"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Mala by sa zhodovať s webovou adresou vášho poskytovateľa prihlásenia."
@@ -8073,9 +8034,6 @@ msgid "Administrator"
 msgstr "Správca"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:132
-#| msgid ""
-#| "Administrators can add and remove other users, and can change settings "
-#| "for all users."
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users. Parental controls cannot be applied to administrators."
@@ -8085,24 +8043,20 @@ msgstr ""
 
 # GtkListStore item
 #: panels/user-accounts/cc-add-user-dialog.ui:149
-#| msgid "Allow user to change their password on next login"
 msgid "User sets password on first login"
 msgstr "Používateľ si nastaví heslo pri prvom prihlásení"
 
 # GtkListStore item
 #: panels/user-accounts/cc-add-user-dialog.ui:161
-#| msgid "Set a password now"
 msgid "Set password now"
 msgstr "Nastaviť heslo teraz"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:224
-#| msgid "_Confirm"
 msgid "Confirm"
 msgstr "Potvrdiť"
 
 # GtkToggleButton label
 #: panels/user-accounts/cc-add-user-dialog.ui:278
-#| msgid "_Enterprise Login"
 msgid "Enterprise Login"
 msgstr "Podnikové prihlásenie"
 
@@ -8459,7 +8413,6 @@ msgstr "Zm_eniť"
 
 # GtkLabel
 #: panels/user-accounts/cc-password-dialog.ui:51
-#| msgid "Current _Password"
 msgid "Current Password"
 msgstr "Aktuálne heslo"
 
@@ -8682,13 +8635,11 @@ msgstr "Odstrániť používateľský účet…"
 
 # button
 #: panels/user-accounts/cc-user-panel.ui:340
-#| msgid "Other Files"
 msgid "Other Users"
 msgstr "Ostatní používatelia"
 
 # GtkToolButton label
 #: panels/user-accounts/cc-user-panel.ui:353
-#| msgid "_Add User…"
 msgid "Add User…"
 msgstr "Pridať používateľa…"
 
@@ -8955,18 +8906,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Zavrieť"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Prosím, dotknite sa cieľových značiek, tak ako sa objavujú na obrazovke, aby "
-"sa tablet nakalibroval."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Zistené kliknutie mimo, reštartuje sa…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -9022,7 +8961,6 @@ msgstr ""
 
 # GtkLabel
 #: panels/wacom/cc-wacom-page.ui:27
-#| msgid "Left-Handed Orientation"
 msgid "Left Hand Orientation"
 msgstr "Orientácia pre ľavákov"
 
@@ -9033,13 +8971,11 @@ msgstr ""
 # GtkButton
 #: panels/wacom/cc-wacom-page.ui:56
 #, fuzzy
-#| msgid "Map to Monitor…"
 msgctxt "display setting"
 msgid "Map to Monitor"
 msgstr "Priradiť k displeju…"
 
 #: panels/wacom/cc-wacom-page.ui:62
-#| msgid "Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "Zachovať pomer strán"
 
@@ -9049,7 +8985,6 @@ msgstr ""
 
 # GtkButton label
 #: panels/wacom/cc-wacom-page.ui:73
-#| msgid "Calibrate…"
 msgid "Calibrate"
 msgstr "Kalibrovať"
 
@@ -9068,19 +9003,16 @@ msgid "Tip Pressure Feel"
 msgstr "Pocit tlaku hrotu"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:54
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 1"
 msgstr "Tlačidlo č. 1"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:62
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 2"
 msgstr "Tlačidlo č. 2"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:70
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 3"
 msgstr "Tlačidlo č. 3"
@@ -9588,7 +9520,6 @@ msgstr "Mobilná sieť"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Nastavuje telefónne a mobilné dátové pripojenia"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -9603,23 +9534,7 @@ msgid "Settings is the primary interface for configuring your system."
 msgstr ""
 "Aplikácia Nastavenia je hlavným rozhraním na konfiguráciu vášho systému."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Panel so zvukom v nastaveniach prostredia GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Panel s myšou a touchpadom v nastaveniach prostredia GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Panel s pozadím v nastaveniach prostredia GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Panel s klávesnicou v nastaveniach prostredia GNOME"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -9659,7 +9574,7 @@ msgstr "[PANEL] [PARAMETER…]"
 msgid "Privacy"
 msgstr "Súkromie"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Dostupné panely:"
 
@@ -9786,6 +9701,36 @@ msgstr[2] "%u vstupy"
 msgid "System Sounds"
 msgstr "Systémové zvuky"
 
+# tree view column
+#~ msgid "OS Name"
+#~ msgstr "Názov OS"
+
+# GtkLabel label
+#~ msgid "OS Type"
+#~ msgstr "Typ OS"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Prosím, dotknite sa cieľových značiek, tak ako sa objavujú na obrazovke, "
+#~ "aby sa tablet nakalibroval."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Zistené kliknutie mimo, reštartuje sa…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Panel so zvukom v nastaveniach prostredia GNOME"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Panel s myšou a touchpadom v nastaveniach prostredia GNOME"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Panel s pozadím v nastaveniach prostredia GNOME"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Panel s klávesnicou v nastaveniach prostredia GNOME"
+
 #~ msgid "Web Links"
 #~ msgstr "Webové odkazy"
 
@@ -9845,11 +9790,11 @@ msgstr "Systémové zvuky"
 #~ msgstr "Nie je možné zmeniť"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
-#~ "Jednotlivé oprávnenia aplikácií môžu byť prezreté v nastaveniach <a href="
-#~ "\"privacy\">Súkromia</a>."
+#~ "Jednotlivé oprávnenia aplikácií môžu byť prezreté v nastaveniach <a "
+#~ "href=\"privacy\">Súkromia</a>."
 
 #~ msgid "Integration"
 #~ msgstr "Integrácia"
@@ -12215,10 +12160,6 @@ msgstr "Systémové zvuky"
 
 #~ msgid "China"
 #~ msgstr "Čína"
-
-# GtkCheckButton label
-#~ msgid "Disable while _typing"
-#~ msgstr "Zakázať počas _písania"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr "Sieťové služby systému nie sú kompatibilné s touto verziou."

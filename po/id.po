@@ -11,9 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-06 15:31+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
@@ -78,8 +77,8 @@ msgstr "Sistem Berkas"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Pengaturan"
@@ -164,8 +163,8 @@ msgstr "Menerima pencarian sistem dan mengirim hasil."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -266,13 +265,13 @@ msgstr "Asosiasi Berkas &amp; Tautan"
 msgid "Storage"
 msgstr "Penyimpanan"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Hasil tak ditemukan"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Cobalah pencarian lain"
 
@@ -323,7 +322,6 @@ msgstr "Bersihkan Tembolok…"
 msgid "Control various application permissions and settings"
 msgstr "Kontrol berbagai izin dan pengaturan aplikasi"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -337,7 +335,7 @@ msgstr "Pilih gambar"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -387,7 +385,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Tanpa Latar Belakang Desktop"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Latar belakang kini"
 
@@ -504,7 +502,6 @@ msgstr "Tidak Ada Aplikasi yang Meminta Akses Kamera"
 msgid "Protect your pictures"
 msgstr "Lindungi gambar Anda"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -745,7 +742,7 @@ msgstr "Instrumen pengukur tak mendukung pembuatan profil pencetak."
 msgid "The device type is not currently supported."
 msgstr "Jenis perangkat belum didukung."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Kalibrasi Layar"
 
@@ -861,13 +858,13 @@ msgstr "Memerlukan media yang dapat ditulisi"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
-"Mungkin instruksi tentang bagaimana memakai profil pada sistem <a href="
-"\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a>, dan <a href="
-"\"windows\">Microsoft Windows</a> ini berguna."
+"Mungkin instruksi tentang bagaimana memakai profil pada sistem <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a>, dan <a "
+"href=\"windows\">Microsoft Windows</a> ini berguna."
 
 #: panels/color/cc-color-panel.ui:335
 msgid "Add Profile"
@@ -878,8 +875,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Masalah terdeteksi. Profil mungkin tak bekerja dengan benar. <a href="
-"\"\">Tampilkan rincian.</a>"
+"Masalah terdeteksi. Profil mungkin tak bekerja dengan benar. <a "
+"href=\"\">Tampilkan rincian.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1499,7 +1496,6 @@ msgstr "Diagnostik"
 msgid "Report your problems"
 msgstr "Laporkan masalah Anda"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1728,9 +1724,9 @@ msgstr ""
 "redshift;warna;matahari terbit;matahari tenggelam;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Unknown"
@@ -1739,32 +1735,32 @@ msgstr "Unknown"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID Build: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Tidak diketahui"
@@ -1804,12 +1800,13 @@ msgstr "Menghitung…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Nama Sistem Operasi"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Versi GNOME"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Tipe Sistem Operasi"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1839,7 +1836,7 @@ msgstr ""
 "Nama perangkat digunakan untuk mengidentifikasi perangkat ini ketika dilihat "
 "dalam jaringan, atau ketika memadukan perangkat Bluetooth."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "U_bah Nama"
 
@@ -2045,9 +2042,9 @@ msgstr "Tampilkan Tata Letak Papan Tik"
 msgid "Remove"
 msgstr "Hapus"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "Tombol Pintas Gubahan"
 
@@ -2285,7 +2282,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "Nama"
@@ -2364,7 +2361,6 @@ msgstr "Tak Ada Aplikasi yang Meminta Akses Lokasi"
 msgid "Protect your location information"
 msgstr "Lindungi informasi lokasi Anda"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2518,7 +2514,6 @@ msgstr "Kunci Layar"
 msgid "Lock your screen"
 msgstr "Kunci layar Anda"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofon Dimatikan"
@@ -2549,7 +2544,6 @@ msgstr "Tak Ada Aplikasi yang Meminta Akses Mikrofon"
 msgid "Protect your conversations"
 msgstr "Lindungi percakapan Anda"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Uji Penga_turan Anda"
@@ -2612,6 +2606,39 @@ msgstr "Pengguliran Dua Jari"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Pengguliran Tepi"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+msgid "Disable while Typing"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Sidik Jari"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3122,6 +3149,7 @@ msgid "Remove VPN"
 msgstr "Hapus VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Rincian"
 
@@ -3993,7 +4021,7 @@ msgstr "Nama pengg_una"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "Kata _Sandi"
 
@@ -5559,7 +5587,7 @@ msgid "Your Account"
 msgstr "Akun Anda"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "_Bahasa"
 
@@ -6998,7 +7026,6 @@ msgstr "Riwayat Berkas dan Tempat Sampah"
 msgid "Don't leave traces"
 msgstr "Jangan tinggalkan jejak"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Mesti cocok dengan alamat web dari penyedia log masuk Anda."
@@ -7580,23 +7607,23 @@ msgid "Restart Now"
 msgstr "Nyalakan Ulang Sekarang"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "Log Masuk _Sidik Jari"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "Log Mas_uk Otomatis"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "Aktivitas Akun"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "_Administrator"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
@@ -7604,32 +7631,32 @@ msgstr ""
 "Administrator dapat menambah dan menghapus pengguna lain, dan dapat mengubah "
 "pengaturan untuk semua pengguna."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "_Pengawasan Orang Tua"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "Buka aplikasi Kontrol Orang Tua."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "Hapus Pengguna…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "Pengguna Lain"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "Tambah Pengguna…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "Tak Ditemukan Pengguna"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "Buka kunci untuk menambahkan akun pengguna."
 
@@ -7875,18 +7902,6 @@ msgstr ""
 #: panels/wacom/button-mapping.ui:66
 msgid "_Close"
 msgstr "_Tutup"
-
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Sentuhlah penanda target yang muncul pada layar untuk melakukan kalibrasi "
-"pada tablet."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Salah klik terdeteksi, memulai ulang…"
 
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
@@ -8456,7 +8471,6 @@ msgstr "Jaringan Seluler"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Mengkonfigurasi koneksi data seluler dan telefoni"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8470,23 +8484,7 @@ msgstr "Utilitas untuk mengonfigurasi destop GNOME"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Pengaturan adalah antarmuka utama untuk mengkonfigurasi sistem Anda."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Panel Suara GNOME Pengaturan"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Tetikus &amp; Panel Sentuh GNOME Pengaturan"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Panel Latar Belakang GNOME Pengaturan"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Panel Papan Tik GNOME Pengaturan"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
@@ -8518,7 +8516,7 @@ msgstr "[PANEL] [ARGUMEN…]"
 msgid "Privacy"
 msgstr "Privasi"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Panel yang tersedia:"
 
@@ -8640,6 +8638,34 @@ msgstr[0] "%u Masukan"
 msgid "System Sounds"
 msgstr "Suara Sistem"
 
+#~ msgid "OS Name"
+#~ msgstr "Nama Sistem Operasi"
+
+#~ msgid "OS Type"
+#~ msgstr "Tipe Sistem Operasi"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Sentuhlah penanda target yang muncul pada layar untuk melakukan kalibrasi "
+#~ "pada tablet."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Salah klik terdeteksi, memulai ulang…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Panel Suara GNOME Pengaturan"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Tetikus &amp; Panel Sentuh GNOME Pengaturan"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Panel Latar Belakang GNOME Pengaturan"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Panel Papan Tik GNOME Pengaturan"
+
 #~ msgid " "
 #~ msgstr " "
 
@@ -8760,11 +8786,11 @@ msgstr "Suara Sistem"
 #~ msgstr "Tidak bisa diubah"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
-#~ "Izin individual untuk aplikasi dapat ditinjau dalam Pengaturan <a href="
-#~ "\"privacy\">Privasi</a>."
+#~ "Izin individual untuk aplikasi dapat ditinjau dalam Pengaturan <a "
+#~ "href=\"privacy\">Privasi</a>."
 
 #~ msgid "Integration"
 #~ msgstr "Integrasi"

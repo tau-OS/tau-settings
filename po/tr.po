@@ -19,9 +19,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-05 00:37+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnometurk@gnome.org>\n"
@@ -86,8 +85,8 @@ msgstr "Dosya Sistemi"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Ayarlar"
@@ -172,8 +171,8 @@ msgstr "Sistem aramaları al ve sonuçları gönder."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -274,13 +273,13 @@ msgstr "Dosya ve Bağlantı İlişkileri"
 msgid "Storage"
 msgstr "Biriktirme"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Sonuç bulunamadı"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Başka arama dene"
 
@@ -331,7 +330,6 @@ msgstr "Önbelleği Temizle…"
 msgid "Control various application permissions and settings"
 msgstr "Türlü uygulama izinlerini ve ayarlarını denetle"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -345,7 +343,7 @@ msgstr "Resim seç"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -395,7 +393,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Masaüstü Arka Planı Yok"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Geçerli arka plan"
 
@@ -514,7 +512,6 @@ msgstr "Hiçbir Uygulama Kamera Erişimi İsteği Yapmadı"
 msgid "Protect your pictures"
 msgstr "Fotoğraflarınızı koruyun"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -753,7 +750,7 @@ msgstr "Ölçüm aygıtı yazıcı profillemeyi desteklemiyor."
 msgid "The device type is not currently supported."
 msgstr "Aygıt türü şu anda desteklenmiyor."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Ekran Kalibrasyonu"
 
@@ -867,9 +864,9 @@ msgstr "Yazılabilir ortam gerektirir"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Profili <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> ve "
 "<a href=\"windows\">Microsoft Windows</a> sistemleri üzerinde nasıl "
@@ -884,8 +881,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Bazı sorunlar saptandı. Bu profil düzgün çalışmayabilir. <a href="
-"\"\">Ayrıntıları göster.</a>"
+"Bazı sorunlar saptandı. Bu profil düzgün çalışmayabilir. <a "
+"href=\"\">Ayrıntıları göster.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1506,7 +1503,6 @@ msgstr "Tanılama"
 msgid "Report your problems"
 msgstr "Sorunları raporla"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1735,9 +1731,9 @@ msgstr ""
 "Işık;Mavi;redshift;renk;gün doğumu;gün batımı;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Bilinmeyen"
@@ -1746,32 +1742,32 @@ msgstr "Bilinmeyen"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; İnşa Kimliği: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Bilinmiyor"
@@ -1811,12 +1807,13 @@ msgstr "Hesaplanıyor…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "İşletim Sistemi Adı"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME Sürümü"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "İşletim Sistemi Türü"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1846,7 +1843,7 @@ msgstr ""
 "Aygıt adı, aygıt ağ üzerinden görüntülendiğinde veya Bluetooth aygıtları "
 "eşleştirirken tanımlamada kullanılır."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "Yeniden _Adlandır"
 
@@ -2053,9 +2050,9 @@ msgstr "Klavye Düzenini Gör"
 msgid "Remove"
 msgstr "Kaldır"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "Özel Kısayollar"
 
@@ -2293,7 +2290,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "Ad"
@@ -2371,7 +2368,6 @@ msgstr "Hiçbir Uygulama Konum Erişimi İsteği Yapmadı"
 msgid "Protect your location information"
 msgstr "Konum bilginizi koruyun"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2525,7 +2521,6 @@ msgstr "Ekran Kilidi"
 msgid "Lock your screen"
 msgstr "Ekranını kilitle"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofon Kapalı"
@@ -2555,7 +2550,6 @@ msgstr "Hiçbir Uygulama Mikrofon Erişimi İsteği Yapmadı"
 msgid "Protect your conversations"
 msgstr "Konuşmalarınızı koruyun"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "_Ayarlarınızı Sınayın"
@@ -2619,6 +2613,39 @@ msgstr "İki Parmak Kaydırma"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Kenar Kaydırma"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+msgid "Disable while Typing"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Parmak İzi"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3128,6 +3155,7 @@ msgid "Remove VPN"
 msgstr "VPN’yi Kaldır"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Ayrıntılar"
 
@@ -4001,7 +4029,7 @@ msgstr "K_ullanıcı adı"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "_Parola"
 
@@ -5568,7 +5596,7 @@ msgid "Your Account"
 msgstr "Hesabınız"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "Di_l"
 
@@ -7009,7 +7037,6 @@ msgstr "Dosya Geçmişi ve Çöp"
 msgid "Don't leave traces"
 msgstr "İz bırakma"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Hesap sağlayıcınızın web adresi ile aynı olmalıdır."
@@ -7590,23 +7617,23 @@ msgid "Restart Now"
 msgstr "Yeniden Başlat"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "_Parmak İziyle Giriş"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "_Kendiliğinden Giriş"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "Hesap Etkinliği"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "_Yönetici"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
@@ -7614,32 +7641,32 @@ msgstr ""
 "Yöneticiler diğer kullanıcıları ekleyebilir veya kaldırabilir ve diğer tüm "
 "kullanıcılar için ayarları değiştirebilir."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "_Ebeveyn Denetimleri"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "Ebeveyn Denetimleri uygulamasını aç."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "Kullanıcı Hesabını Kaldır…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "Diğer Kullanıcılar"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "Kullanıcı Ekle…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "Kullanıcı Bulunamadı"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "Kullanıcı hesabı eklemek için kilidi kaldır."
 
@@ -7885,18 +7912,6 @@ msgstr ""
 #: panels/wacom/button-mapping.ui:66
 msgid "_Close"
 msgstr "_Kapat"
-
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Tabletinizi kalibre etmek için lütfen ekranda göründükçe hedef imleçlerine "
-"dokunun."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Yanlış tıklama saptandı, yeniden başlatılıyor…"
 
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
@@ -8465,7 +8480,6 @@ msgstr "Mobil Ağ"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Telefon ve mobil veri bağlantılarını yapılandır"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8481,23 +8495,7 @@ msgstr "GNOME masaüstünü yapılandırma aracı"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Ayarlar, sisteminizi yapılandırmak için birincil arayüzdür."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "GNOME Ayarlar Ses Bölmesi"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "GNOME Ayarlar Fare ve Dokunmatik Yüzey Bölmesi"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "GNOME Ayarlar Arka Plan Bölmesi"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "GNOME Ayarlar Klavye Bölmesi"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -8529,7 +8527,7 @@ msgstr "[PANEL] [BAĞIMSIZ DEĞİŞKEN…]"
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Kullanılabilir Paneller:"
 
@@ -8647,6 +8645,34 @@ msgstr[0] "%u Girdi"
 msgid "System Sounds"
 msgstr "Sistem Sesleri"
 
+#~ msgid "OS Name"
+#~ msgstr "İşletim Sistemi Adı"
+
+#~ msgid "OS Type"
+#~ msgstr "İşletim Sistemi Türü"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Tabletinizi kalibre etmek için lütfen ekranda göründükçe hedef "
+#~ "imleçlerine dokunun."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Yanlış tıklama saptandı, yeniden başlatılıyor…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "GNOME Ayarlar Ses Bölmesi"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "GNOME Ayarlar Fare ve Dokunmatik Yüzey Bölmesi"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "GNOME Ayarlar Arka Plan Bölmesi"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "GNOME Ayarlar Klavye Bölmesi"
+
 #~ msgid " "
 #~ msgstr " "
 
@@ -8734,8 +8760,8 @@ msgstr "Sistem Sesleri"
 #~ msgstr "Değiştirilemez"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
 #~ "Uygulamalar için tekil izinler <a href=\"privacy\">Gizlilik</a> "
 #~ "Ayarlarında gözden geçirilebilir."

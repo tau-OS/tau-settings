@@ -11,9 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-12 06:46+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-13 06:07+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
@@ -21,8 +20,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 "X-Generator: Poedit 3.0.1\n"
 
@@ -80,8 +79,8 @@ msgstr "Систем датотека"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Подешавања"
@@ -170,8 +169,8 @@ msgstr "Примање системских претрага и слање ис�
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -272,13 +271,13 @@ msgstr "Подешавања датотека и веза"
 msgid "Storage"
 msgstr "Складиште"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Нисам нашао резултате"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Пробајте другачију претрагу"
 
@@ -327,7 +326,6 @@ msgstr "Очисти кеш…"
 msgid "Control various application permissions and settings"
 msgstr "Управља разним овлашћењима и подешавањима програма"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -394,7 +392,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Нема позадине за радну површ"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Тренутна позадина"
 
@@ -514,7 +512,6 @@ msgstr "Ниједан програм није затражио приступ �
 msgid "Protect your pictures"
 msgstr "Заштитите ваше слике"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -755,7 +752,7 @@ msgstr "Инструмент за мерење не подржава профи�
 msgid "The device type is not currently supported."
 msgstr "Тип уређаја тренутно није подржан."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Калибрација екрана"
 
@@ -870,13 +867,13 @@ msgstr "Захтева уписив диск"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
-"Можете увидети да су упутнице о коришћењу профила на системима <a href="
-"\"linux\">ГНУ/Линукса</a>, <a href=\"osx\">Ејпол ОС Икс-а</a> и <a href="
-"\"windows\">Мајкрософт Виндоуза</a> корисне."
+"Можете увидети да су упутнице о коришћењу профила на системима <a "
+"href=\"linux\">ГНУ/Линукса</a>, <a href=\"osx\">Ејпол ОС Икс-а</a> и <a "
+"href=\"windows\">Мајкрософт Виндоуза</a> корисне."
 
 #: panels/color/cc-color-panel.ui:335
 msgid "Add Profile"
@@ -1521,7 +1518,6 @@ msgstr "Дијагностика"
 msgid "Report your problems"
 msgstr "Пријавите ваше проблеме"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1755,9 +1751,9 @@ msgstr ""
 "redšift;boja;svitanje;sumrak;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Непознато"
@@ -1766,32 +1762,32 @@ msgstr "Непознато"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ИБ изградње: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-бита"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-бита"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "Икс-11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Вејленд"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Непознато"
@@ -1831,12 +1827,13 @@ msgstr "Израчунавам…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Назив ОС-а"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Издање Гнома"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Врста ОС-а"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2401,7 +2398,6 @@ msgstr "Ниједан програм није затражио податке �
 msgid "Protect your location information"
 msgstr "Заштитите ваше податке о месту становања"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2562,7 +2558,6 @@ msgstr "Закључавање екрана"
 msgid "Lock your screen"
 msgstr "Закључајте ваш екран"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Микрофон је искључен"
@@ -2593,7 +2588,6 @@ msgstr "Ниједан програм није затражио приступ �
 msgid "Protect your conversations"
 msgstr "Заштитите ваше разговоре"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Испробај _подешавања"
@@ -2656,6 +2650,40 @@ msgstr "Премицање са два прста"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Клизање по страни"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Искључи док _куцам"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Отисак прста"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3178,6 +3206,7 @@ msgid "Remove VPN"
 msgstr "Уклони ВПН"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Појединости"
 
@@ -7113,7 +7142,6 @@ msgstr "Историјат датотека и смеће"
 msgid "Don't leave traces"
 msgstr "Не остављај трагове"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Треба да подудари веб адресу вашег достављача пријављивања."
@@ -7991,18 +8019,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Затвори"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Молим лупните знаке мете који ће се појавити на екрану да калибришете "
-"таблицу."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Откривен је лош клик, почињем из почетка…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8575,7 +8591,6 @@ msgstr "Мобилна мрежа"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Подесите везе мобилних података и телефоније"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8589,23 +8604,7 @@ msgstr "Алатка за подешавање Гномовог радног о�
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Подешавања су главно средство за подешавање вашег система."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Површ звука Гномових Подешавања"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Површ Гномових Подешавања за миш и додирну таблу"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Површ позадине Гномових Подешавања"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Површ тастатуре Гномових Подешавања"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Гном пројекат"
 
@@ -8637,7 +8636,7 @@ msgstr "[ПОВРШ] [АРГУМЕНТ…]"
 msgid "Privacy"
 msgstr "Приватност"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Доступне површи:"
 
@@ -8763,6 +8762,34 @@ msgstr[3] "Један улаз"
 msgid "System Sounds"
 msgstr "Системски звуци"
 
+#~ msgid "OS Name"
+#~ msgstr "Назив ОС-а"
+
+#~ msgid "OS Type"
+#~ msgstr "Врста ОС-а"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Молим лупните знаке мете који ће се појавити на екрану да калибришете "
+#~ "таблицу."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Откривен је лош клик, почињем из почетка…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Површ звука Гномових Подешавања"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Површ Гномових Подешавања за миш и додирну таблу"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Површ позадине Гномових Подешавања"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Површ тастатуре Гномових Подешавања"
+
 #~ msgid "Web Links"
 #~ msgstr "Веб везе"
 
@@ -8815,11 +8842,11 @@ msgstr "Системски звуци"
 #~ msgstr "Непромењиво"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
-#~ "Појединачна овлашћења програма се могу погледати у одељку <a href="
-#~ "\"privacy\">Приватност</a>, у Подешавањима."
+#~ "Појединачна овлашћења програма се могу погледати у одељку <a "
+#~ "href=\"privacy\">Приватност</a>, у Подешавањима."
 
 #~ msgid "Integration"
 #~ msgstr "Уграђивање"
@@ -10807,9 +10834,6 @@ msgstr "Системски звуци"
 
 #~ msgid "China"
 #~ msgstr "Кина"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "Искључи док _куцам"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr "Мрежни сервис на систему није подржан у овој верзији."

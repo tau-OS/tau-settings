@@ -15,9 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-10 15:25+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-11 13:32+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -82,8 +81,8 @@ msgstr "Filsystem"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Inställningar"
@@ -169,8 +168,8 @@ msgstr "Ta emot systemsökningar och skicka resultat."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -271,13 +270,13 @@ msgstr "Fil- &amp; länkassociationer"
 msgid "Storage"
 msgstr "Lagring"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Inga resultat hittades"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Försök med en annan sökning"
 
@@ -327,7 +326,6 @@ msgstr "Töm cache…"
 msgid "Control various application permissions and settings"
 msgstr "Styr diverse behörigheter och inställningar för program"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -391,7 +389,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Ingen skrivbordsbakgrund"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Aktuell bakgrund"
 
@@ -508,7 +506,6 @@ msgstr "Inga program har bett om åtkomst till kameran"
 msgid "Protect your pictures"
 msgstr "Skydda dina bilder"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -748,7 +745,7 @@ msgstr "Mätinstrumentet saknar stöd för skrivarprofilering."
 msgid "The device type is not currently supported."
 msgstr "Enhetstypen stöds för närvarande inte."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Skärmkalibrering"
 
@@ -1503,7 +1500,6 @@ msgstr "Diagnostik"
 msgid "Report your problems"
 msgstr "Rapportera dina problem"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1736,9 +1732,9 @@ msgstr ""
 "redshift;färg;solnedgång;soluppgång;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Okänd"
@@ -1747,32 +1743,32 @@ msgstr "Okänd"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Bygg-ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bitars"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bitars"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Okänt"
@@ -1812,12 +1808,13 @@ msgstr "Beräknar…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "OS-namn"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME-version"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "OS-typ"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2374,7 +2371,6 @@ msgstr "Inga program har bett om platsåtkomst"
 msgid "Protect your location information"
 msgstr "Skydda din platsinformation"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2529,7 +2525,6 @@ msgstr "Skärmlås"
 msgid "Lock your screen"
 msgstr "Lås din skärm"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofonen är avstängd"
@@ -2560,7 +2555,6 @@ msgstr "Inga program har bett om åtkomst till mikrofonen"
 msgid "Protect your conversations"
 msgstr "Skydda dina konversationer"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Prova dina in_ställningar"
@@ -2623,6 +2617,40 @@ msgstr "Tvåfingersrullning"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Kantrullning"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Inaktivera bild"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Fingeravtryck"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3134,6 +3162,7 @@ msgid "Remove VPN"
 msgstr "Ta bort VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Detaljer"
 
@@ -7010,7 +7039,6 @@ msgstr "Filhistorik & papperskorg"
 msgid "Don't leave traces"
 msgstr "Lämna inga spår"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Ska matcha din inloggningsleverantörs webbadress."
@@ -7887,17 +7915,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Stäng"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Tryck på målmarkörerna när de visas på skärmen för att kalibrera ritplattan."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Felaktigt klick upptäcktes, startar om…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8469,7 +8486,6 @@ msgstr "Mobilnätverk"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Konfigurera telefoni och mobildataanslutningar"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8484,23 +8500,7 @@ msgid "Settings is the primary interface for configuring your system."
 msgstr ""
 "Inställningar är det primära gränssnittet för att konfigurera ditt system."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "Ljudpanelen i GNOME Inställningar"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "Mus &amp; styrplatta-panelen i GNOME Inställningar"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "Bakgrundspanelen i GNOME Inställningar"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "Tangentbordspanelen i GNOME Inställningar"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -8532,7 +8532,7 @@ msgstr "[PANEL] [ARGUMENT…]"
 msgid "Privacy"
 msgstr "Sekretess"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Tillgängliga paneler:"
 
@@ -8652,6 +8652,34 @@ msgstr[1] "%u ingångar"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Systemljud"
+
+#~ msgid "OS Name"
+#~ msgstr "OS-namn"
+
+#~ msgid "OS Type"
+#~ msgstr "OS-typ"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Tryck på målmarkörerna när de visas på skärmen för att kalibrera "
+#~ "ritplattan."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Felaktigt klick upptäcktes, startar om…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "Ljudpanelen i GNOME Inställningar"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "Mus &amp; styrplatta-panelen i GNOME Inställningar"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "Bakgrundspanelen i GNOME Inställningar"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "Tangentbordspanelen i GNOME Inställningar"
 
 #~ msgid "More Warm"
 #~ msgstr "Varmare"
@@ -10074,9 +10102,6 @@ msgstr "Systemljud"
 
 #~ msgid "Remove your finger, and try swiping your finger again"
 #~ msgstr "Ta bort ditt finger och prova att dra ditt finger igen"
-
-#~ msgid "Disable image"
-#~ msgstr "Inaktivera bild"
 
 #~ msgid "Browse for more pictures…"
 #~ msgstr "Bläddra efter fler bilder…"

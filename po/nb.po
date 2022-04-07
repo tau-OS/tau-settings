@@ -8,9 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center 3.40.x\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-03-07 17:29+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-10 16:23+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -75,8 +74,8 @@ msgstr "Filsystem"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Innstillinger"
@@ -162,8 +161,8 @@ msgstr ""
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -264,13 +263,13 @@ msgstr ""
 msgid "Storage"
 msgstr "Lagring"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Fant ingen resultater"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Prøv et annet søk"
 
@@ -320,7 +319,6 @@ msgstr "Tøm buffer …"
 msgid "Control various application permissions and settings"
 msgstr "Kontroller forskjellige rettigheter og innstillinger for programmer"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -384,7 +382,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Ingen skrivebordsbakgrunn"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Gjeldende bakgrunn"
 
@@ -487,7 +485,8 @@ msgid ""
 "\n"
 "Allow the applications below to use your camera."
 msgstr ""
-"Bruk av kamera lar programmer ta bilder og video. Hvis du slår av kamera vil noen programmer ikke lenger fungere korrekt.\n"
+"Bruk av kamera lar programmer ta bilder og video. Hvis du slår av kamera vil "
+"noen programmer ikke lenger fungere korrekt.\n"
 "\n"
 "Tillat at programmene under kan bruke ditt kamera."
 
@@ -499,7 +498,6 @@ msgstr "Ingen programmer har bedt om tilgang til kamera"
 msgid "Protect your pictures"
 msgstr "Beskytt bildene dine"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -737,7 +735,7 @@ msgstr "Måleinstrumentet støtter ikke profilering av skrivere."
 msgid "The device type is not currently supported."
 msgstr "Enhetstypen er ikke støttet."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Kalibrering av skjerm"
 
@@ -852,9 +850,9 @@ msgstr "Krever skrivbart medie"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Instruksjonene om hvordan profilen skal brukes på <a href=\"linux\">GNU/"
 "Linux</a>, <a href=\"osx\">Apple OS X</a> og <a href=\"windows\">Microsoft "
@@ -869,8 +867,8 @@ msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
 msgstr ""
-"Fant problemer. Profilen vil kanskje ikke fungere som den skal. <a href="
-"\"\">Vis detaljer.</a>"
+"Fant problemer. Profilen vil kanskje ikke fungere som den skal. <a "
+"href=\"\">Vis detaljer.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -1492,7 +1490,6 @@ msgstr "Diagnostikk"
 msgid "Report your problems"
 msgstr "Rapporter problemene dine"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1721,9 +1718,9 @@ msgstr ""
 "redshift;farge;solnedgang;soloppgang;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Ukjent"
@@ -1732,32 +1729,32 @@ msgstr "Ukjent"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; bygg-ID: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Ukjent"
@@ -1797,12 +1794,13 @@ msgstr "Beregner …"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Navn på operativsystem"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME versjon"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Type operativsystem"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -2308,7 +2306,9 @@ msgstr "Tastatur"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
-msgstr "Endre tastatursnarveier, endre skriveoppsett, tastaturutforming og inndatakilder"
+msgstr ""
+"Endre tastatursnarveier, endre skriveoppsett, tastaturutforming og "
+"inndatakilder"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
@@ -2345,7 +2345,6 @@ msgstr "Ingen programmer har bedt om stedsinformasjon"
 msgid "Protect your location information"
 msgstr "Beskytt din stedsinformasjon"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2500,7 +2499,6 @@ msgstr "Lås skjerm"
 msgid "Lock your screen"
 msgstr "Lås skjermen"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofonen er slått av"
@@ -2517,7 +2515,8 @@ msgid ""
 "\n"
 "Allow the applications below to use your microphone."
 msgstr ""
-"Bruk av mikrofonen lar programmer ta opp og lytte til lyd. Hvis du slår av mikrofonen kan dette medføre at noen programmer ikke fungerer slik de skal.\n"
+"Bruk av mikrofonen lar programmer ta opp og lytte til lyd. Hvis du slår av "
+"mikrofonen kan dette medføre at noen programmer ikke fungerer slik de skal.\n"
 "\n"
 "Tillat at programmene under kan bruke din mikrofon."
 
@@ -2529,7 +2528,6 @@ msgstr "Ingen programmer har bedt om tilgang til mikrofonen"
 msgid "Protect your conversations"
 msgstr "Beskytt samtalene dine"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Test inn_stillinger"
@@ -2592,6 +2590,39 @@ msgstr "Rulling med to fingre"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Kantrulling"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+msgid "Disable while Typing"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Fingeravtrykk"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -3102,6 +3133,7 @@ msgid "Remove VPN"
 msgstr "Fjern VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Detaljer"
 
@@ -5526,7 +5558,6 @@ msgstr ""
 
 #: panels/region/cc-region-panel.ui:45
 #, fuzzy
-#| msgid "The format used for numbers, dates, and currencies."
 msgid ""
 "The language setting is used for interface text and web pages. Formats is "
 "used for numbers, dates, and currencies."
@@ -5555,8 +5586,6 @@ msgstr "Region og språk"
 
 #: panels/region/gnome-region-panel.desktop.in.in:4
 #, fuzzy
-#| msgid ""
-#| "Select your display language, formats, keyboard layouts and input sources"
 msgid "Select your display language and formats"
 msgstr "Velg språk for visning, formater, tastaturutforminger og inndatakilder"
 
@@ -5761,9 +5790,6 @@ msgstr ""
 
 #: panels/search/cc-search-panel.ui:23
 #, fuzzy
-#| msgid ""
-#| "Folders which are searched by system applications, such as Files, Photos "
-#| "and Videos."
 msgid "Folders which are searched by system applications."
 msgstr ""
 "Mapper som brukes av systemprogrammer, slik som filer, bilder og videoer."
@@ -5893,7 +5919,6 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:268
 #, fuzzy
-#| msgid "Enable or disable remote login"
 msgid "Enable or disable remote desktop connections to this computer."
 msgstr "Slå på eller av ekstern pålogging"
 
@@ -5903,13 +5928,11 @@ msgstr "Ekstern kontroll"
 
 #: panels/sharing/cc-sharing-panel.ui:281
 #, fuzzy
-#| msgid "_Allow connections to control the screen"
 msgid "Allows remote connections to control the screen."
 msgstr "Till_at tilkoblinger å kontrollere skjermen"
 
 #: panels/sharing/cc-sharing-panel.ui:294
 #, fuzzy
-#| msgid "Forget Connection"
 msgid "How to Connect"
 msgstr "Glem tilkobling"
 
@@ -5920,7 +5943,6 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:323
 #, fuzzy
-#| msgid "Delete Address"
 msgid "Remote Desktop Address"
 msgstr "Slett adresse"
 
@@ -6799,11 +6821,6 @@ msgstr "Gjør det lettere å se, høre, skrive og peke og klikke"
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
 #, fuzzy
-#| msgid ""
-#| "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
-#| "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
-#| "Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
-#| "audio;typing;"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -6989,7 +7006,6 @@ msgstr "Filhistorikk og papirkurv"
 msgid "Don't leave traces"
 msgstr "Ikke etterlat spor"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Skal være lik kontotilbyders nettstedsadresse."
@@ -7052,9 +7068,6 @@ msgstr "Administrator"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:132
 #, fuzzy
-#| msgid ""
-#| "Administrators can add and remove other users, and can change settings "
-#| "for all users."
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users. Parental controls cannot be applied to administrators."
@@ -7867,17 +7880,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Lukk"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Trykk på målmarkørene når de vises på skjermen for å kalibrere tegnebrettet."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Feil klikk oppdaget. Starter på nytt …"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -7913,7 +7915,6 @@ msgstr ""
 
 #: panels/wacom/cc-wacom-device.c:435
 #, fuzzy
-#| msgid "No tablet detected"
 msgid "External tablet device"
 msgstr "Fant ingen tegnebrett"
 
@@ -7961,7 +7962,6 @@ msgstr "Fant ingen tegnebrett"
 
 #: panels/wacom/cc-wacom-panel.ui:57
 #, fuzzy
-#| msgid "Please plug in or turn on your Wacom tablet"
 msgid "Please plug in or turn on your Wacom tablet."
 msgstr "Slå på eller koble til Wacom-tegnebrett"
 
@@ -8087,7 +8087,6 @@ msgstr "Eget nummer"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:151
 #, fuzzy
-#| msgid "Printer Details"
 msgid "Device Details"
 msgstr "Detaljer for skriver"
 
@@ -8161,7 +8160,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device.c:1043
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Network mode"
 msgid "Unknown"
 msgstr "Ukjent"
@@ -8268,13 +8266,11 @@ msgstr "Avansert"
 
 #: panels/wwan/cc-wwan-device-page.ui:146
 #, fuzzy
-#| msgid "Access Options"
 msgid "_Access Point Names"
 msgstr "Alternativer for tilgang"
 
 #: panels/wwan/cc-wwan-device-page.ui:155
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "_SIM Lock"
 msgstr "Lås skjerm"
 
@@ -8284,19 +8280,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:165
 #, fuzzy
-#| msgid "%s Details"
 msgid "M_odem Details"
 msgstr "Detaljer for %s"
 
 #: panels/wwan/cc-wwan-errors-private.h:40
 #, fuzzy
-#| msgid "PIN check failed"
 msgid "Phone failure"
 msgstr "PIN-sjekk mislyktes"
 
 #: panels/wwan/cc-wwan-errors-private.h:41
 #, fuzzy
-#| msgid "Turn VPN connection off"
 msgid "No connection to phone"
 msgstr "Slå av VPN-forbindelse"
 
@@ -8310,19 +8303,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:48
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM not inserted"
 msgstr "SIM-kort er ikke satt inn"
 
 #: panels/wwan/cc-wwan-errors-private.h:49
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN required"
 msgstr "Pin for SIM kreves"
 
 #: panels/wwan/cc-wwan-errors-private.h:50
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK required"
 msgstr "Pin for SIM kreves"
 
@@ -8336,43 +8326,36 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:54
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Incorrect password"
 msgstr "Gjeldende _passord"
 
 #: panels/wwan/cc-wwan-errors-private.h:55
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN2 required"
 msgstr "Pin for SIM kreves"
 
 #: panels/wwan/cc-wwan-errors-private.h:56
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK2 required"
 msgstr "Pin for SIM kreves"
 
 #: panels/wwan/cc-wwan-errors-private.h:59
 #, fuzzy
-#| msgid "No stylus found"
 msgid "Not found"
 msgstr "Fant ingen penn"
 
 #: panels/wwan/cc-wwan-errors-private.h:61
 #, fuzzy
-#| msgid "Networks"
 msgid "No network service"
 msgstr "Nettverk"
 
 #: panels/wwan/cc-wwan-errors-private.h:62
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network timeout"
 msgstr "Nettverksnavn"
 
 #: panels/wwan/cc-wwan-errors-private.h:75
 #, fuzzy
-#| msgid "AutoIP service failed"
 msgid "GPRS services not allowed"
 msgstr "AutoIP-tjeneste mislyktes"
 
@@ -8386,8 +8369,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:91
 #, fuzzy
-#| msgctxt "print job"
-#| msgid "Canceled"
 msgid "Action Cancelled"
 msgstr "Avbrutt"
 
@@ -8397,13 +8378,11 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:103
 #, fuzzy
-#| msgid "Unknown error"
 msgid "Unknown Error"
 msgstr "Ukjent feil"
 
 #: panels/wwan/cc-wwan-mode-dialog.ui:5
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network Mode"
 msgstr "Nettverksnavn"
 
@@ -8437,49 +8416,41 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-panel.ui:10
 #, fuzzy
-#| msgid "_Enable by Keyboard"
 msgid "Enable Mobile Network"
 msgstr "Slå _på via tastatur"
 
 #: panels/wwan/cc-wwan-panel.ui:94
 #, fuzzy
-#| msgid "No Wi-Fi Adapter Found"
 msgid "No WWAN Adapter Found"
 msgstr "Fant ingen trådløse kort"
 
 #: panels/wwan/cc-wwan-panel.ui:104
 #, fuzzy
-#| msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgid "Make sure you have a Wireless Wan/Cellular device"
 msgstr "Sjekk at du har et Wi-Fi-kort som er satt inn og slått på"
 
 #: panels/wwan/cc-wwan-panel.ui:145
 #, fuzzy
-#| msgid "Bluetooth is disabled when airplane mode is on."
 msgid "Wireless Wan is disabled when airplane mode is on"
 msgstr "Bluetooth er slått av når flymodus er på."
 
 #: panels/wwan/cc-wwan-panel.ui:153
 #, fuzzy
-#| msgid "Turn Off Airplane Mode"
 msgid "_Turn off Airplane Mode"
 msgstr "Slå av flymodus"
 
 #: panels/wwan/cc-wwan-panel.ui:184
 #, fuzzy
-#| msgid "Forget Connection"
 msgid "Data Connection"
 msgstr "Glem tilkobling"
 
 #: panels/wwan/cc-wwan-panel.ui:185
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM card used for internet"
 msgstr "SIM-kort er ikke satt inn"
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:9
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "SIM Lock"
 msgstr "Lås skjerm"
 
@@ -8493,7 +8464,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:138
 #, fuzzy
-#| msgid "Ch_ange"
 msgid "Change PIN"
 msgstr "_Endre"
 
@@ -8503,17 +8473,14 @@ msgstr ""
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:3
 #, fuzzy
-#| msgid "Visible Networks"
 msgid "Mobile Network"
 msgstr "Synlige nettverk"
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Configure Removable Media settings"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Konfigurer innstillinger for avtagbare medier"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8527,29 +8494,7 @@ msgstr "Verktøy som lar deg tilpasse GNOME-skrivebordet"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Innstillinger er primærgrensesnittet for å konfigurere systemet ditt."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-#, fuzzy
-#| msgid "GNOME Settings"
-msgid "GNOME Settings Sound Panel"
-msgstr "GNOME kontrollpanel"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr ""
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-#, fuzzy
-#| msgid "GNOME Settings"
-msgid "GNOME Settings Background Panel"
-msgstr "GNOME kontrollpanel"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-#, fuzzy
-#| msgid "GNOME Settings"
-msgid "GNOME Settings Keyboard Panel"
-msgstr "GNOME kontrollpanel"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME prosjektet"
 
@@ -8581,7 +8526,7 @@ msgstr "[PANEL] [ARGUMENT …]"
 msgid "Privacy"
 msgstr "Personvern"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Tilgjengelige paneler:"
 
@@ -8695,3 +8640,34 @@ msgstr[1] "%u innganger"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Systemlyder"
+
+#~ msgid "OS Name"
+#~ msgstr "Navn på operativsystem"
+
+#~ msgid "OS Type"
+#~ msgstr "Type operativsystem"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Trykk på målmarkørene når de vises på skjermen for å kalibrere "
+#~ "tegnebrettet."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Feil klikk oppdaget. Starter på nytt …"
+
+#, fuzzy
+#~| msgid "GNOME Settings"
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "GNOME kontrollpanel"
+
+#, fuzzy
+#~| msgid "GNOME Settings"
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "GNOME kontrollpanel"
+
+#, fuzzy
+#~| msgid "GNOME Settings"
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "GNOME kontrollpanel"

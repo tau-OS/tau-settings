@@ -8,9 +8,10 @@
 # Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2013, 2019, 2020, 2021, 2022.
 #
 msgid ""
-msgstr "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/issues\n"
-"POT-Creation-Date: 2022-03-04 15:37+0000\n"
+msgstr ""
+"Project-Id-Version: gnome-control-center master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2022-03-04 14:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
@@ -74,8 +75,8 @@ msgstr "Fitxategi-sistema"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Ezarpenak"
@@ -89,7 +90,10 @@ msgstr "Ezarpenak aldatu ditzake"
 msgid ""
 "%s has the following permissions built-in. These cannot be altered. If you "
 "are concerned about these permissions, consider removing this application."
-msgstr "%s aplikazioak honako baimenak ditu integratuta. Baimen horiek ezin dira aldatu. Baimen horien inguruko kezkaren bat baduzu, beharbada aplikazio hori kendu beharko zenuke."
+msgstr ""
+"%s aplikazioak honako baimenak ditu integratuta. Baimen horiek ezin dira "
+"aldatu. Baimen horien inguruko kezkaren bat baduzu, beharbada aplikazio hori "
+"kendu beharko zenuke."
 
 #: panels/applications/cc-applications-panel.c:1164
 #, c-format
@@ -101,7 +105,8 @@ msgstr[1] "Aplikazioak irekitzen dituen %u fitxategi eta esteka motak"
 #: panels/applications/cc-applications-panel.c:1171
 #, c-format
 msgid "<b>%s</b> is used to open the following types of files and links."
-msgstr "<b>%s</b> hurrengo fitxategi motak eta estekak irekitzeko erabiltzen da."
+msgstr ""
+"<b>%s</b> hurrengo fitxategi motak eta estekak irekitzeko erabiltzen da."
 
 #. Translators: '%s' is the formatted size, e.g. "26.2 MB"
 #: panels/applications/cc-applications-panel.c:1223
@@ -159,8 +164,8 @@ msgstr "Jaso sistemaren bilaketak eta bidali emaitzak."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
 #: subprojects/gvc/gvc-mixer-control.c:1900
@@ -261,13 +266,13 @@ msgstr "Fitxategi- &amp; esteka-elkarketak"
 msgid "Storage"
 msgstr "Biltegiratzea"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Ez da emaitzarik aurkitu"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Saiatu bestelako bilaketa"
 
@@ -290,7 +295,8 @@ msgstr "Berrezarri"
 #: panels/applications/cc-applications-panel.ui:410
 msgid ""
 "How much disk space this application is occupying with app data and caches."
-msgstr "Diskoko zenbat espazio betetzen ari den aplikazio hau datuekin eta cacheekin."
+msgstr ""
+"Diskoko zenbat espazio betetzen ari den aplikazio hau datuekin eta cacheekin."
 
 #: panels/applications/cc-applications-panel.ui:413
 msgid "Application"
@@ -316,7 +322,6 @@ msgstr "Garbitu cachea…"
 msgid "Control various application permissions and settings"
 msgstr "Kontrolatu aplikazioen baimenak eta ezarpenak"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -330,7 +335,7 @@ msgstr "Hautatu argazki bat"
 #: panels/color/cc-color-calibrate.ui:22 panels/color/cc-color-panel.c:284
 #: panels/color/cc-color-panel.c:844 panels/common/cc-language-chooser.ui:21
 #: panels/display/cc-display-panel.ui:31
-#: panels/info-overview/cc-info-overview-panel.ui:197
+#: panels/info-overview/cc-info-overview-panel.ui:198
 #: panels/keyboard/cc-input-chooser.ui:11
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
@@ -380,7 +385,7 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Mahaigaineko atzeko planorik ez"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Uneko atzeko planoa"
 
@@ -482,7 +487,10 @@ msgid ""
 "the camera may cause some applications to not function properly.\n"
 "\n"
 "Allow the applications below to use your camera."
-msgstr "Kamera erabilita, aplikazioek argazkiak eta bideoak kaptura ditzakete. Kamera desgaitzen bada, beharbada zenbait aplikaziok ez dute behar den moduan funtzionatuko.\n"
+msgstr ""
+"Kamera erabilita, aplikazioek argazkiak eta bideoak kaptura ditzakete. "
+"Kamera desgaitzen bada, beharbada zenbait aplikaziok ez dute behar den "
+"moduan funtzionatuko.\n"
 "\n"
 "Baimendu beheko aplikazioei zure kamera erabiltzea."
 
@@ -494,19 +502,22 @@ msgstr "Ez dago aplikaziorik kamera erabiltzeko baimena eskatu duenik"
 msgid "Protect your pictures"
 msgstr "Babestu zure irudiak"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
-msgstr "pantaila;blokeoa;diagnostikoa;kraskadura;pribatua;azkena;aldi baterako;tmp;izena;sarea;identitatea;"
+msgstr ""
+"pantaila;blokeoa;diagnostikoa;kraskadura;pribatua;azkena;aldi baterako;tmp;"
+"izena;sarea;identitatea;"
 
 #. TRANSLATORS: The user has to attach the sensor to the screen
 #: panels/color/cc-color-calibrate.c:347
 msgid "Place your calibration device over the square and press “Start”"
-msgstr "Jarri kalibrazioaren gailua karratuaren gainean eta egin klik \"Hasi\" botoian"
+msgstr ""
+"Jarri kalibrazioaren gailua karratuaren gainean eta egin klik \"Hasi\" "
+"botoian"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -514,7 +525,9 @@ msgstr "Jarri kalibrazioaren gailua karratuaren gainean eta egin klik \"Hasi\" b
 #: panels/color/cc-color-calibrate.c:353
 msgid ""
 "Move your calibration device to the calibrate position and press “Continue”"
-msgstr "Mugitu kalibrazioaren gailua posizioa kalibratzeko eta egin klik  \"Jarraitu\" botoian"
+msgstr ""
+"Mugitu kalibrazioaren gailua posizioa kalibratzeko eta egin klik  "
+"\"Jarraitu\" botoian"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -522,7 +535,9 @@ msgstr "Mugitu kalibrazioaren gailua posizioa kalibratzeko eta egin klik  \"Jarr
 #: panels/color/cc-color-calibrate.c:359
 msgid ""
 "Move your calibration device to the surface position and press “Continue”"
-msgstr "Mugitu kalibrazioaren gailua gainazalaren posiziora eta egin klik  \"Jarraitu\" botoian"
+msgstr ""
+"Mugitu kalibrazioaren gailua gainazalaren posiziora eta egin klik  "
+"\"Jarraitu\" botoian"
 
 #. TRANSLATORS: on some hardware e.g. Lenovo W700 the sensor
 #. * is built into the palmrest and we need to fullscreen the
@@ -717,7 +732,9 @@ msgstr "Sortu kolore-profil bat hautatutako gailuarentzako"
 msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
-msgstr "Ez da neurgailurik detektatu. Ziurtatu zaitez piztuta eta ongi konektatuta dagoela."
+msgstr ""
+"Ez da neurgailurik detektatu. Ziurtatu zaitez piztuta eta ongi konektatuta "
+"dagoela."
 
 #. TRANSLATORS: this is when the button is insensitive
 #: panels/color/cc-color-panel.c:1195
@@ -729,7 +746,7 @@ msgstr "Neurgailuak ez du inprimagailuaren profilarik onartzen"
 msgid "The device type is not currently supported."
 msgstr "Gailu mota ez dago oraingoz onartuta."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Pantailaren kalibrazioa"
 
@@ -742,7 +759,10 @@ msgid ""
 "Calibration will produce a profile that you can use to color manage your "
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
-msgstr "Kalibrazioak profil bat sortuko du pantailaren kolorea kudeatzeko. Kalibrazioa zenbat eta sakonagoa izan, kolore-profilaren kalitatea hobea izango da."
+msgstr ""
+"Kalibrazioak profil bat sortuko du pantailaren kolorea kudeatzeko. "
+"Kalibrazioa zenbat eta sakonagoa izan, kolore-profilaren kalitatea hobea "
+"izango da."
 
 #: panels/color/cc-color-panel.ui:28
 msgid ""
@@ -783,7 +803,9 @@ msgstr "Profilaren puntu zuria"
 msgid ""
 "Select a display target white point. Most displays should be calibrated to a "
 "D65 illuminant."
-msgstr "Hautatu helburuko pantailaren puntu zuria. Pantaila gehienak D65 argitasunera doitu beharko lirateke."
+msgstr ""
+"Hautatu helburuko pantailaren puntu zuria. Pantaila gehienak D65 "
+"argitasunera doitu beharko lirateke."
 
 #: panels/color/cc-color-panel.ui:187
 msgid "Display Brightness"
@@ -793,13 +815,17 @@ msgstr "Pantailaren distira"
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
-msgstr "Ezarri pantailan zuretzako ohikoa den distira. Kolorearen kudeaketa zehatzagoa izango da distiraren maila horretan."
+msgstr ""
+"Ezarri pantailan zuretzako ohikoa den distira. Kolorearen kudeaketa "
+"zehatzagoa izango da distiraren maila horretan."
 
 #: panels/color/cc-color-panel.ui:202
 msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
-msgstr "Bestela, gailu honen beste profiletariko batekin erabilitako distiraren maila erabil dezakezu"
+msgstr ""
+"Bestela, gailu honen beste profiletariko batekin erabilitako distiraren "
+"maila erabil dezakezu"
 
 #: panels/color/cc-color-panel.ui:214
 msgid "Profile Name"
@@ -809,7 +835,9 @@ msgstr "Profilaren izena"
 msgid ""
 "You can use a color profile on different computers, or even create profiles "
 "for different lighting conditions."
-msgstr "KOlore-profila bat erabil dezakezu ordenagailu desberdinetan, edo argitasun baldintza desberdinetarako profilak sor ditzakezu baita ere."
+msgstr ""
+"KOlore-profila bat erabil dezakezu ordenagailu desberdinetan, edo argitasun "
+"baldintza desberdinetarako profilak sor ditzakezu baita ere."
 
 #: panels/color/cc-color-panel.ui:229
 msgid "Profile Name:"
@@ -833,10 +861,14 @@ msgstr "Euskarri idazgarria behar da"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
-msgstr "You may find these instructions on how to use the profile on Profila <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> eta <a href=\"windows\">Microsoft Windows</a> sistemetan nola erabil daitekeen buruzko informazioa lagungarri gerta dakizuke."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
+msgstr ""
+"You may find these instructions on how to use the profile on Profila <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> eta <a "
+"href=\"windows\">Microsoft Windows</a> sistemetan nola erabil daitekeen "
+"buruzko informazioa lagungarri gerta dakizuke."
 
 #: panels/color/cc-color-panel.ui:335
 msgid "Add Profile"
@@ -846,7 +878,9 @@ msgstr "Gehitu profila"
 msgid ""
 "Problems detected. The profile may not work correctly. <a href=\"\">Show "
 "details.</a>"
-msgstr "Arazoak aurkitu dira. Baliteke profilak ongi ez funtzionatzea. <a href=\"\">Erakutsi xehetasunak.</a>"
+msgstr ""
+"Arazoak aurkitu dira. Baliteke profilak ongi ez funtzionatzea. <a "
+"href=\"\">Erakutsi xehetasunak.</a>"
 
 #: panels/color/cc-color-panel.ui:384
 msgid "_Import File…"
@@ -861,7 +895,8 @@ msgstr "_Gehitu"
 
 #: panels/color/cc-color-panel.ui:424
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr "Gailu bakoitzak koloreen profilaren eguneratzea behar du koloreak kudeatzeko."
+msgstr ""
+"Gailu bakoitzak koloreen profilaren eguneratzea behar du koloreak kudeatzeko."
 
 #. translators: Text used in link to privacy policy
 #: panels/color/cc-color-panel.ui:434
@@ -1376,7 +1411,9 @@ msgstr "Ordu-_zona automatikoa"
 
 #: panels/datetime/cc-datetime-panel.ui:202
 msgid "Requires location services enabled and internet access"
-msgstr "Kokaleku-zerbitzuek gaituta egon behar dute eta Interneterako sarbide eduki behar da"
+msgstr ""
+"Kokaleku-zerbitzuek gaituta egon behar dute eta Interneterako sarbide eduki "
+"behar da"
 
 #: panels/datetime/cc-datetime-panel.ui:214
 msgid "Time Z_one"
@@ -1401,7 +1438,9 @@ msgstr "Aldatu sistemaren ordua eta dataren ezarpenak"
 
 #: panels/datetime/org.gnome.controlcenter.datetime.policy.in:12
 msgid "To change time or date settings, you need to authenticate."
-msgstr "Sistemaren ordua eta dataren ezarpenak aldatzeko, autentifikatu egin behar zara."
+msgstr ""
+"Sistemaren ordua eta dataren ezarpenak aldatzeko, autentifikatu egin behar "
+"zara."
 
 #: panels/default-apps/cc-default-apps-panel.ui:23
 msgid "_Web"
@@ -1447,7 +1486,9 @@ msgstr "lehenetsia;aplikazioa;hobetsia;euskarria;"
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
-msgstr "Arazo teknikoei buruzko txostenak bidaltzean %s hobetzen laguntzen diguzu. Txostenak modu anonimoan bidaltzen dira eta ez dute datu pertsonalik. %s"
+msgstr ""
+"Arazo teknikoei buruzko txostenak bidaltzean %s hobetzen laguntzen diguzu. "
+"Txostenak modu anonimoan bidaltzen dira eta ez dute datu pertsonalik. %s"
 
 #: panels/diagnostics/cc-diagnostics-panel.ui:8
 msgid "Problem Reporting"
@@ -1465,7 +1506,6 @@ msgstr "Diagnostikoa"
 msgid "Report your problems"
 msgstr "Eman zure arazoen berri"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1474,7 +1514,9 @@ msgstr "Eman zure arazoen berri"
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
-msgstr "pantaila;blokeoa;diagnostikoa;kraskadura;pribatua;azkena;aldi baterakoa;tmp;indizea;izena;sarea;identitatea;pribatutasuna;"
+msgstr ""
+"pantaila;blokeoa;diagnostikoa;kraskadura;pribatua;azkena;aldi baterakoa;tmp;"
+"indizea;izena;sarea;identitatea;pribatutasuna;"
 
 #: panels/display/cc-display-panel.c:512
 #: panels/notifications/cc-notifications-panel.c:217
@@ -1614,7 +1656,9 @@ msgstr "Berrabiarazi iragazkia"
 msgid ""
 "Night light makes the screen color warmer. This can help to prevent eye "
 "strain and sleeplessness."
-msgstr "Gaueko argiaren moduak pantailaren kolorea epeltzen du. Horrek begien estresa eta lo arazoak saihesten lagun dezake."
+msgstr ""
+"Gaueko argiaren moduak pantailaren kolorea epeltzen du. Horrek begien "
+"estresa eta lo arazoak saihesten lagun dezake."
 
 #: panels/display/cc-night-light-page.ui:91
 msgid "Schedule"
@@ -1685,12 +1729,14 @@ msgstr "Aldatu konektatutako pantaila eta proiektagailuak nola erabiliko diren"
 msgid ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Night;Light;Blue;"
 "redshift;color;sunset;sunrise;"
-msgstr "Panela;Proiektagailua;xrandr;Pantaila;Bereizmena;Freskatu;Monitorea;Gaua;Argia;Urdina;kolorea;egunsentia;ilunabarra;"
+msgstr ""
+"Panela;Proiektagailua;xrandr;Pantaila;Bereizmena;Freskatu;Monitorea;Gaua;"
+"Argia;Urdina;kolorea;egunsentia;ilunabarra;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Ezezaguna"
@@ -1699,32 +1745,32 @@ msgstr "Ezezaguna"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; eraikitze-IDa: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64 bit"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32 bit"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Ezezaguna"
@@ -1764,12 +1810,13 @@ msgstr "Kalkulatzen…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "SE izena"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "GNOME bertsioa"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "SE mota"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1795,9 +1842,11 @@ msgstr "Aldatu gailuaren izena"
 msgid ""
 "The device name is used to identify this device when it is viewed over the "
 "network, or when pairing Bluetooth devices."
-msgstr "Gailuaren izena hura identifikatzeko erabiltzen da sarean barrena bistaratzen denean, edo Bluetooth gailuekin parekatzen denean."
+msgstr ""
+"Gailuaren izena hura identifikatzeko erabiltzen da sarean barrena "
+"bistaratzen denean, edo Bluetooth gailuekin parekatzen denean."
 
-#: panels/info-overview/cc-info-overview-panel.ui:189
+#: panels/info-overview/cc-info-overview-panel.ui:190
 msgid "_Rename"
 msgstr "_Aldatu izena"
 
@@ -1818,7 +1867,10 @@ msgstr "Ikusi sistemari buruzko informazioa"
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
-msgstr "gailua;sistema;informazioa;ostalari-izena;memoria;prozesadorea;bertsioa;lehenetsia;aplikazioa;hobetsia;cd;dvd;usb;audioa;bideoa;diskoa;aldagarria;euskarria;auto-exekuzioa;"
+msgstr ""
+"gailua;sistema;informazioa;ostalari-izena;memoria;prozesadorea;bertsioa;"
+"lehenetsia;aplikazioa;hobetsia;cd;dvd;usb;audioa;bideoa;diskoa;aldagarria;"
+"euskarria;auto-exekuzioa;"
 
 #: panels/keyboard/00-multimedia.xml.in:2
 msgid "Sound and Media"
@@ -2001,9 +2053,9 @@ msgstr "Bistaratu teklatuaren diseinua"
 msgid "Remove"
 msgstr "Kendu"
 
-#: panels/keyboard/cc-keyboard-manager.c:483
-#: panels/keyboard/cc-keyboard-manager.c:491
-#: panels/keyboard/cc-keyboard-manager.c:757
+#: panels/keyboard/cc-keyboard-manager.c:485
+#: panels/keyboard/cc-keyboard-manager.c:493
+#: panels/keyboard/cc-keyboard-manager.c:922
 msgid "Custom Shortcuts"
 msgstr "Laster-tekla pertsonalizatuak"
 
@@ -2016,7 +2068,9 @@ msgstr "Ordezko karaktereen tekla"
 msgid ""
 "The alternate characters key can be used to enter additional characters. "
 "These are sometimes printed as a third-option on your keyboard."
-msgstr "Ordezko karaktereen tekla karaktere gehigarriak sartzeko erabil daiteke. Batzuetan hirugarren aukera gisa inprimatuta ageri dira zure teklatuan."
+msgstr ""
+"Ordezko karaktereen tekla karaktere gehigarriak sartzeko erabil daiteke. "
+"Batzuetan hirugarren aukera gisa inprimatuta ageri dira zure teklatuan."
 
 #: panels/keyboard/cc-keyboard-panel.c:67
 #: panels/keyboard/cc-keyboard-panel.c:85
@@ -2065,7 +2119,12 @@ msgid ""
 "it, press compose then a sequence of characters.  For example, compose key "
 "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by "
 "<b>'</b> will enter <b>á</b>."
-msgstr "Compose teklak mota askotako karaktereak sartzea ahalbidetzen du. Hura erabiltzeko, sakatu Compose tekla eta, ondoren, karaktereen sekuentzia bat. Adibidez, Compose tekla sakatuta, eta ondoren <b>C</b> eta <b>o</b> erabilita, <b>©</b> sartuko du; <b>a</b> eta ondoren <b>'</b> erabilita, <b>á</b> sartuko du."
+msgstr ""
+"Compose teklak mota askotako karaktereak sartzea ahalbidetzen du. Hura "
+"erabiltzeko, sakatu Compose tekla eta, ondoren, karaktereen sekuentzia bat. "
+"Adibidez, Compose tekla sakatuta, eta ondoren <b>C</b> eta <b>o</b> "
+"erabilita, <b>©</b> sartuko du; <b>a</b> eta ondoren <b>'</b> erabilita, "
+"<b>á</b> sartuko du."
 
 #: panels/keyboard/cc-keyboard-panel.c:91
 msgctxt "keyboard key"
@@ -2087,7 +2146,8 @@ msgstr "Pantaila inprimatzeko tekla"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
-msgstr "Sarrerako iturburuak %s lasterbidea erabilita txandakatu daitezke.\n"
+msgstr ""
+"Sarrerako iturburuak %s lasterbidea erabilita txandakatu daitezke.\n"
 "Lasterbide hori ezarpenetan aldatu daiteke."
 
 #: panels/keyboard/cc-keyboard-panel.ui:17
@@ -2143,7 +2203,9 @@ msgstr "Berrezarri lasterbide guztiak?"
 msgid ""
 "Resetting the shortcuts may affect your custom shortcuts. This cannot be "
 "undone."
-msgstr "Lasterbideak berrezartzeak zure lasterbide pertsonalizatuei eragin diezaieke. Hori ezin da desegin."
+msgstr ""
+"Lasterbideak berrezartzeak zure lasterbide pertsonalizatuei eragin "
+"diezaieke. Hori ezin da desegin."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:467
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:23
@@ -2171,7 +2233,9 @@ msgstr "Gehitu laster-tekla pertsonalizatuak"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:151
 msgid "Set up custom shortcuts for launching apps, running scripts, and more."
-msgstr "Konfiguratu laster-tekla pertsonalizatuak aplikazioak abiarazteko, scriptak exekutatzeko eta gehiagorako."
+msgstr ""
+"Konfiguratu laster-tekla pertsonalizatuak aplikazioak abiarazteko, scriptak "
+"exekutatzeko eta gehiagorako."
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:157
 msgid "Add Shortcut"
@@ -2184,7 +2248,9 @@ msgstr "Ez da teklatuaren laster-teklarik aurkitu"
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:392
 #, c-format
 msgid "%s is already being used for %s. If you replace it, %s will be disabled"
-msgstr "%s dagoeneko erabilia izaten ari da %s(e)rako. Hura ordezten baduzu, %s desgaitu egingo da"
+msgstr ""
+"%s dagoeneko erabilia izaten ari da %s(e)rako. Hura ordezten baduzu, %s "
+"desgaitu egingo da"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:536
 msgid "Enter the new shortcut"
@@ -2223,12 +2289,14 @@ msgstr "Ezarri"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:98
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr "Sakatu Esc tekla laster-tekla bertan behera uzteko edo atzera-tekla desgaitzeko."
+msgstr ""
+"Sakatu Esc tekla laster-tekla bertan behera uzteko edo atzera-tekla "
+"desgaitzeko."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
 #: panels/user-accounts/cc-add-user-dialog.ui:68
-#: panels/user-accounts/cc-user-panel.ui:122
+#: panels/user-accounts/cc-user-panel.ui:132
 #: panels/wwan/cc-wwan-apn-dialog.ui:96
 msgid "Name"
 msgstr "Izena"
@@ -2261,13 +2329,17 @@ msgstr "Teklatua"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
-msgstr "Aldatu teklatuko lasterbideak eta ezarri idazte-hobespenak, teklatu-diseinuak eta sarrerako iturburuak"
+msgstr ""
+"Aldatu teklatuko lasterbideak eta ezarri idazte-hobespenak, teklatu-"
+"diseinuak eta sarrerako iturburuak"
 
 #. Translators: Search terms to find the Keyboard panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:19
 msgid ""
 "Shortcut;Workspace;Window;Resize;Zoom;Contrast;Input;Source;Lock;Volume;"
-msgstr "Laster-tekla;Laneko area;Leihoa;Tamaina aldatzea;Zooma;Kontrastea;Sarrera;Iturburua;Blokeatu;Bolumena;"
+msgstr ""
+"Laster-tekla;Laneko area;Leihoa;Tamaina aldatzea;Zooma;Kontrastea;Sarrera;"
+"Iturburua;Blokeatu;Bolumena;"
 
 #: panels/location/cc-location-panel.ui:20
 msgid "Location Services Turned Off"
@@ -2286,9 +2358,13 @@ msgid ""
 "com/privacy'>Privacy Policy</a>\n"
 "\n"
 "Allow the applications below to determine your location."
-msgstr "Kokaleku-zerbitzuek aplikazioek zure kokalekua ezagutzea baimentzen dute. Haririk gabekoa eta mugikorren banda zabala erabiltzeak zehaztasuna handiagotzen du.\n"
+msgstr ""
+"Kokaleku-zerbitzuek aplikazioek zure kokalekua ezagutzea baimentzen dute. "
+"Haririk gabekoa eta mugikorren banda zabala erabiltzeak zehaztasuna "
+"handiagotzen du.\n"
 "\n"
-"Mozilla Location Service erabiltzen du: <a href='https://location.services.mozilla.com/privacy'>Pribatutasun-politika</a>\n"
+"Mozilla Location Service erabiltzen du: <a href='https://location.services."
+"mozilla.com/privacy'>Pribatutasun-politika</a>\n"
 "\n"
 "Baimendu beheko aplikazioei zure kokalekua ezagutu dezaten."
 
@@ -2300,7 +2376,6 @@ msgstr "Ez dago aplikaziorik kokalekua erabiltzea eskatu duenik"
 msgid "Protect your location information"
 msgstr "Babestu zure kokalekuaren informazioa"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2407,7 +2482,9 @@ msgstr "Inoiz ere ez"
 msgid ""
 "Automatically locking the screen prevents others from accessing the computer "
 "while you're away."
-msgstr "Pantaila automatikoki blokeatuta, beste batzuk zure ordenagailura sar daitezen eragozten da zu kanpoan zauden bitartean."
+msgstr ""
+"Pantaila automatikoki blokeatuta, beste batzuk zure ordenagailura sar "
+"daitezen eragozten da zu kanpoan zauden bitartean."
 
 #: panels/lock/cc-lock-panel.ui:13
 msgid "Blank Screen Delay"
@@ -2427,7 +2504,9 @@ msgstr "Pantailaren blokeo _automatikoaren atzerapena"
 
 #: panels/lock/cc-lock-panel.ui:47
 msgid "Period after the screen blanks when the screen is automatically locked."
-msgstr "Pantaila automatikoki blokeatuta dagoenean pantaila belzteko igaroko den denbora-tartea."
+msgstr ""
+"Pantaila automatikoki blokeatuta dagoenean pantaila belzteko igaroko den "
+"denbora-tartea."
 
 #: panels/lock/cc-lock-panel.ui:65
 msgid "Show _Notifications on Lock Screen"
@@ -2441,7 +2520,9 @@ msgstr "Debekatu _USB gailu berriak"
 msgid ""
 "Prevent new USB devices from interacting with the system when the screen is "
 "locked."
-msgstr "Eragotzi USB gailu berriek sistemarekin lan egin dezaten pantaila blokeatuta dagoenean."
+msgstr ""
+"Eragotzi USB gailu berriek sistemarekin lan egin dezaten pantaila blokeatuta "
+"dagoenean."
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:3
 msgid "Screen Lock"
@@ -2451,7 +2532,6 @@ msgstr "Pantailaren blokeoa"
 msgid "Lock your screen"
 msgstr "Blokeatu zure pantaila"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 msgid "Microphone Turned Off"
 msgstr "Mikrofonoa itzalita"
@@ -2467,7 +2547,10 @@ msgid ""
 "properly.\n"
 "\n"
 "Allow the applications below to use your microphone."
-msgstr "Mikrofonoa erabilita, aplikazioek audioa grabatu dezakete. Mikrofonoa desgaitzen bada, beharbada zenbait aplikaziok ez dute behar den moduan funtzionatuko.\n"
+msgstr ""
+"Mikrofonoa erabilita, aplikazioek audioa grabatu dezakete. Mikrofonoa "
+"desgaitzen bada, beharbada zenbait aplikaziok ez dute behar den moduan "
+"funtzionatuko.\n"
 "\n"
 "Baimendu beheko aplikazioei zure kamera erabiltzea."
 
@@ -2479,7 +2562,6 @@ msgstr "Ez dago aplikaziorik mikrofonoa erabiltzea eskatu duenik"
 msgid "Protect your conversations"
 msgstr "Babestu zure hizketaldiak"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Probatu zure _ezarpenak"
@@ -2543,6 +2625,39 @@ msgstr "Bi hatzeko korritzea"
 msgid "Edge Scrolling"
 msgstr "Ertzaren korritzea"
 
+#: panels/mouse/cc-mouse-panel.ui:170
+msgid "Disable while Typing"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Hatz-marka"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
+
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
 msgstr "Saiatu klik, klik bikoitza egiten, korritzen"
@@ -2582,7 +2697,9 @@ msgstr "Sagua eta ukipen-panela"
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:4
 msgid ""
 "Change your mouse or touchpad sensitivity and select right or left-handed"
-msgstr "Aldatu saguaren edo ukipen-panelaren sentikortasuna eta hautatu eskuin edo ezkerreko eskuarekin erabiltzea"
+msgstr ""
+"Aldatu saguaren edo ukipen-panelaren sentikortasuna eta hautatu eskuin edo "
+"ezkerreko eskuarekin erabiltzea"
 
 #. Translators: Search terms to find the Mouse and Touchpad panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/mouse/gnome-mouse-panel.desktop.in.in:19
@@ -2604,7 +2721,9 @@ msgstr "Pantailaren ertz _aktiboak"
 #: panels/multitasking/cc-multitasking-panel.ui:43
 msgid ""
 "Drag windows against the top, left, and right screen edges to resize them."
-msgstr "Arrastatu leihoak pantailaren goiko, ezkerreko eta eskuineko ertzetara haien tamaina aldatzeko."
+msgstr ""
+"Arrastatu leihoak pantailaren goiko, ezkerreko eta eskuineko ertzetara haien "
+"tamaina aldatzeko."
 
 #: panels/multitasking/cc-multitasking-panel.ui:70
 msgid "Workspaces"
@@ -2669,7 +2788,8 @@ msgstr "Aldi bereko zereginak;Produktibitatea:Pertsonalizazioa;Mahaigaina;"
 
 #: panels/network/cc-network-panel.c:662 panels/network/cc-wifi-panel.ui:300
 msgid "Oops, something has gone wrong. Please contact your software vendor."
-msgstr "Zerbait gaizki joan da. Jar zaitez harremanetan softwarearen sortzailearekin."
+msgstr ""
+"Zerbait gaizki joan da. Jar zaitez harremanetan softwarearen sortzailearekin."
 
 #: panels/network/cc-network-panel.c:669
 msgid "NetworkManager needs to be running."
@@ -2733,7 +2853,9 @@ msgstr "Aukerak…"
 msgid ""
 "Turning on the hotspot will disconnect from %s, and it will not be possible "
 "to access the internet through Wi-Fi."
-msgstr "Wifigunea aktibatzen bada, gailua %s saretik deskonektatuko da eta ezin izango da internetera sartu wifi bidez."
+msgstr ""
+"Wifigunea aktibatzen bada, gailua %s saretik deskonektatuko da eta ezin "
+"izango da internetera sartu wifi bidez."
 
 #: panels/network/cc-wifi-hotspot-dialog.c:266
 msgid "Must have a minimum of 8 characters"
@@ -2755,7 +2877,10 @@ msgid ""
 "Wi-Fi hotspot allows others to share your internet connection, by creating a "
 "Wi-Fi network that they can connect to. To do this, you must have an "
 "internet connection through a source other than Wi-Fi."
-msgstr "Wifiguneari esker, zure internet-konexioa beste batzuekin partekatuko duzu, haiek konektatu ahal izango diren wifi-sare bat sortuko baituzu. Hori egiteko, wifi bidezkoa ez den interneteko konexio bat izan behar duzu."
+msgstr ""
+"Wifiguneari esker, zure internet-konexioa beste batzuekin partekatuko duzu, "
+"haiek konektatu ahal izango diren wifi-sare bat sortuko baituzu. Hori "
+"egiteko, wifi bidezkoa ez den interneteko konexio bat izan behar duzu."
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:51
 msgid "Network Name"
@@ -2812,7 +2937,8 @@ msgstr "Ez da haririk gabeko moldagailurik aurkitu"
 
 #: panels/network/cc-wifi-panel.ui:120
 msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
-msgstr "Ziurtatu zaitez haririk gabeko moldagailua entxufatuta eta piztuta edukitzeaz"
+msgstr ""
+"Ziurtatu zaitez haririk gabeko moldagailua entxufatuta eta piztuta edukitzeaz"
 
 #: panels/network/cc-wifi-panel.ui:152 panels/wwan/cc-wwan-panel.ui:135
 msgid "Airplane Mode On"
@@ -2873,7 +2999,10 @@ msgid ""
 "The MAC address entered here will be used as hardware address for the "
 "network device this connection is activated on. This feature is known as MAC "
 "cloning or spoofing. Example: 00:11:22:33:44:55"
-msgstr "Hemen sartutako MAC helbidea erabiliko da konexio hau aktibatzen den sareko gailuaren hardwarearen helbide gisa. Eginbide hau MAC helbidea klonatzea edo iruzurtzea bezala ezagutzen da. Adibidea: 00:11:22:33:44:55"
+msgstr ""
+"Hemen sartutako MAC helbidea erabiliko da konexio hau aktibatzen den sareko "
+"gailuaren hardwarearen helbide gisa. Eginbide hau MAC helbidea klonatzea edo "
+"iruzurtzea bezala ezagutzen da. Adibidea: 00:11:22:33:44:55"
 
 #: panels/network/connection-editor/ce-page.c:399
 #, c-format
@@ -3042,6 +3171,7 @@ msgid "Remove VPN"
 msgstr "Kendu VPNa"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Xehetasunak"
 
@@ -3148,12 +3278,15 @@ msgstr "Egin erabilgarri beste _erabiltzaileentzako"
 
 #: panels/network/connection-editor/details-page.ui:412
 msgid "_Metered connection: has data limits or can incur charges"
-msgstr "_Neurtutako konexioa: datu-mugak ditu edo ordainketaren bat eragin dezake"
+msgstr ""
+"_Neurtutako konexioa: datu-mugak ditu edo ordainketaren bat eragin dezake"
 
 #: panels/network/connection-editor/details-page.ui:421
 msgid ""
 "Software updates and other large downloads will not be started automatically."
-msgstr "Software eguneratzeak eta beste deskarga handi batzuk ez dira automatikoki abiaraziko."
+msgstr ""
+"Software eguneratzeak eta beste deskarga handi batzuk ez dira automatikoki "
+"abiaraziko."
 
 #: panels/network/connection-editor/ethernet-page.ui:21
 #: panels/network/connection-editor/vpn-page.ui:17
@@ -3318,7 +3451,9 @@ msgid ""
 "connection information\n"
 "\n"
 "Error: %s."
-msgstr "Ezin izan da “%s” fitxategia irakurri, edo ez dauka VPN konexioaren informazio ezagunik.\n"
+msgstr ""
+"Ezin izan da “%s” fitxategia irakurri, edo ez dauka VPN konexioaren "
+"informazio ezagunik.\n"
 "\n"
 "Errorea: %s."
 
@@ -3350,7 +3485,8 @@ msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
-msgstr "The VPN connection “%s” could not be exported to %s.\n"
+msgstr ""
+"The VPN connection “%s” could not be exported to %s.\n"
 "\n"
 "Error: %s."
 
@@ -3422,7 +3558,9 @@ msgstr "Gehitu konexio berria"
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
-msgstr "Hautatutako sareen xehetasunak, pasahitzak eta konfigurazio pertsonalizatuak barne, galdu egingo dira."
+msgstr ""
+"Hautatutako sareen xehetasunak, pasahitzak eta konfigurazio pertsonalizatuak "
+"barne, galdu egingo dira."
 
 #: panels/network/net-device-wifi.c:861
 msgid "_Forget"
@@ -3450,7 +3588,9 @@ msgstr "Haririk gabeko gailuak ez du wifigunearen modua onartzen"
 #: panels/network/net-proxy.c:112
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
-msgstr "Webeko proxy-autoaurkitzailea erabiltzen da konfigurazioaren URLa ez denean ematen."
+msgstr ""
+"Webeko proxy-autoaurkitzailea erabiltzen da konfigurazioaren URLa ez denean "
+"ematen."
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3903,7 +4043,7 @@ msgstr "_Erabiltzaile-izena:"
 #: panels/network/wireless-security/ws-sae.ui:10
 #: panels/network/wireless-security/ws-wpa-psk.ui:10
 #: panels/sharing/cc-sharing-panel.ui:152
-#: panels/user-accounts/cc-user-panel.ui:165
+#: panels/user-accounts/cc-user-panel.ui:175
 msgid "_Password"
 msgstr "_Pasahitza"
 
@@ -4004,7 +4144,10 @@ msgid ""
 "password-protected private key.\n"
 "\n"
 "(You can password-protect your private key with openssl)"
-msgstr "Hautatutako gako pribatua ez dirudi pasahitz batekin babestuta dagoenik. Horrek zure segurtasun-kredentzialak arriskuan jar ditzake. Hautatu pasahitzarekin babestutako gako pribatu bat.\n"
+msgstr ""
+"Hautatutako gako pribatua ez dirudi pasahitz batekin babestuta dagoenik. "
+"Horrek zure segurtasun-kredentzialak arriskuan jar ditzake. Hautatu "
+"pasahitzarekin babestutako gako pribatu bat.\n"
 "\n"
 "(Zure gako pribatua pasahitz batekin babes dezakezu openssl-rekin)"
 
@@ -4125,20 +4268,26 @@ msgstr "wep gakoa falta da"
 #: panels/network/wireless-security/ws-wep-key.c:123
 #, c-format
 msgid "invalid wep-key: key with a length of %zu must contain only hex-digits"
-msgstr "baliogabeko wep gakoa: %zu luzera duen gakoak soilik digitu hamaseitarrak eduki ditzake"
+msgstr ""
+"baliogabeko wep gakoa: %zu luzera duen gakoak soilik digitu hamaseitarrak "
+"eduki ditzake"
 
 #: panels/network/wireless-security/ws-wep-key.c:131
 #, c-format
 msgid ""
 "invalid wep-key: key with a length of %zu must contain only ascii characters"
-msgstr "baliogabeko wep gakoa: %zu luzera duen gakoak soilik ascii karaktereak eduki ditzake"
+msgstr ""
+"baliogabeko wep gakoa: %zu luzera duen gakoak soilik ascii karaktereak eduki "
+"ditzake"
 
 #: panels/network/wireless-security/ws-wep-key.c:137
 #, c-format
 msgid ""
 "invalid wep-key: wrong key length %zu. A key must be either of length 5/13 "
 "(ascii) or 10/26 (hex)"
-msgstr "baliogabeko wep gakoa: gakoak okerreko %zu luzera du. Gako baten luzerak 5/13 (ascii) edo 10/26 (hamaseitarra) izan behar du"
+msgstr ""
+"baliogabeko wep gakoa: gakoak okerreko %zu luzera du. Gako baten luzerak "
+"5/13 (ascii) edo 10/26 (hamaseitarra) izan behar du"
 
 #: panels/network/wireless-security/ws-wep-key.c:144
 msgid "invalid wep-key: passphrase must be non-empty"
@@ -4146,7 +4295,9 @@ msgstr "baliogabeko wep gakoa: pasaesaldia ezin da hutsik egon behar"
 
 #: panels/network/wireless-security/ws-wep-key.c:146
 msgid "invalid wep-key: passphrase must be shorter than 64 characters"
-msgstr "baliogabeko wep gakoa: pasaesaldiak 64 karaktere baino gutxiago izan behar ditu"
+msgstr ""
+"baliogabeko wep gakoa: pasaesaldiak 64 karaktere baino gutxiago izan behar "
+"ditu"
 
 #: panels/network/wireless-security/ws-wep-key.ui:11
 msgid "1 (Default)"
@@ -4177,11 +4328,15 @@ msgstr "WEP _indizea"
 msgid ""
 "invalid wpa-psk: invalid key-length %zu. Must be [8,63] bytes or 64 hex "
 "digits"
-msgstr "baliogabeko wpa-psk: gakoaren %zu luzera baliogabea. [8,63] byte edo 64 digitu hamaseitarrekoa izan behar du"
+msgstr ""
+"baliogabeko wpa-psk: gakoaren %zu luzera baliogabea. [8,63] byte edo 64 "
+"digitu hamaseitarrekoa izan behar du"
 
 #: panels/network/wireless-security/ws-wpa-psk.c:86
 msgid "invalid wpa-psk: cannot interpret key with 64 bytes as hex"
-msgstr "baliogabeko wepwpa-psk: ezin da hamaseitar gisa 64 byte dituen gakoa interpretatu"
+msgstr ""
+"baliogabeko wepwpa-psk: ezin da hamaseitar gisa 64 byte dituen gakoa "
+"interpretatu"
 
 #. This is the per application switch for message tray usage.
 #: panels/notifications/cc-app-notifications-dialog.ui:15
@@ -4204,7 +4359,9 @@ msgstr "_Jakinarazpenen laster-leihoak"
 msgid ""
 "Notifications will continue to appear in the notification list when popups "
 "are disabled."
-msgstr "Jakinarazpenak jakinarazpenen zerrendan agertzen jarraituko dute laster-leihoak desgaituta daudenean."
+msgstr ""
+"Jakinarazpenak jakinarazpenen zerrendan agertzen jarraituko dute laster-"
+"leihoak desgaituta daudenean."
 
 #. Popups here refers to message tray notifications in the middle of the screen.
 #: panels/notifications/cc-app-notifications-dialog.ui:56
@@ -4232,7 +4389,8 @@ msgstr "Pantaila b_lokeatzearen jakinarazpenak"
 
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:4
 msgid "Control which notifications are displayed and what they show"
-msgstr "Kontrolatu jakinarazpenak nola bistaratzen diren eta zer erakusten duten"
+msgstr ""
+"Kontrolatu jakinarazpenak nola bistaratzen diren eta zer erakusten duten"
 
 #. Translators: Search terms to find the Notifications panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/notifications/gnome-notifications-panel.desktop.in.in:20
@@ -4268,7 +4426,9 @@ msgstr "Konektatu zure datuak lainoan"
 
 #: panels/online-accounts/cc-online-accounts-panel.ui:66
 msgid "No internet connection — connect to set up new online accounts"
-msgstr "Ez dago Interneteko konexiorik — konektatu lineako kontu berriak konfiguratzeko"
+msgstr ""
+"Ez dago Interneteko konexiorik — konektatu lineako kontu berriak "
+"konfiguratzeko"
 
 #: panels/online-accounts/cc-online-accounts-panel.ui:93
 msgid "Add an account"
@@ -4291,7 +4451,8 @@ msgstr "Lineako kontuak"
 
 #: panels/online-accounts/gnome-online-accounts-panel.desktop.in.in:4
 msgid "Connect to your online accounts and decide what to use them for"
-msgstr "Konektatu lineako zure kontuetara eta erabaki zertarako erabiliko dituzun"
+msgstr ""
+"Konektatu lineako zure kontuetara eta erabaki zertarako erabiliko dituzun"
 
 #. Translators: Search terms to find the Online Accounts panel.
 #. Do NOT translate or localize the semicolons!
@@ -4301,7 +4462,9 @@ msgstr "Konektatu lineako zure kontuetara eta erabaki zertarako erabiliko dituzu
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
-msgstr "Google;Facebook;Twitter;Yahoo;Weba;Linean;Berriketa;Egutegia;Posta;Kontaktua;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
+msgstr ""
+"Google;Facebook;Twitter;Yahoo;Weba;Linean;Berriketa;Egutegia;Posta;Kontaktua;"
+"ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 
 #: panels/power/cc-battery-row.c:80
 msgid "Unknown time"
@@ -4488,13 +4651,17 @@ msgstr "Eseki automatikoki"
 #: panels/power/cc-power-panel.c:1030
 msgid ""
 "Performance mode temporarily disabled due to high operating temperature."
-msgstr "Errendimendu modua desgaitu egin da aldi batez laneko tenperatura asko igo delako."
+msgstr ""
+"Errendimendu modua desgaitu egin da aldi batez laneko tenperatura asko igo "
+"delako."
 
 #: panels/power/cc-power-panel.c:1032
 msgid ""
 "Lap detected: performance mode temporarily unavailable. Move the device to a "
 "stable surface to restore."
-msgstr "Eramangarria detektatu da: errendimendu modua ez dago erabilgarri momentu honetan. Eraman gailua gainazal egonkor batera hura leheneratzeko."
+msgstr ""
+"Eramangarria detektatu da: errendimendu modua ez dago erabilgarri momentu "
+"honetan. Eraman gailua gainazal egonkor batera hura leheneratzeko."
 
 #: panels/power/cc-power-panel.c:1034
 msgid "Performance mode temporarily disabled."
@@ -4504,7 +4671,9 @@ msgstr "Errendimendu modua desgaitu egin da aldi batez."
 msgid ""
 "Low battery: power saver enabled. Previous mode will be restored when "
 "battery is sufficiently charged."
-msgstr "Bateria gutxi: energia aurrezteko modua gaitu da. Bateria nahiko kargatuta dagoenean aurreko modua leheneratuko da."
+msgstr ""
+"Bateria gutxi: energia aurrezteko modua gaitu da. Bateria nahiko kargatuta "
+"dagoenean aurreko modua leheneratuko da."
 
 #. translators: "%s" is an application name
 #: panels/power/cc-power-panel.c:1084
@@ -4628,7 +4797,8 @@ msgstr "Eseki _automatikoki"
 
 #: panels/power/cc-power-panel.ui:174
 msgid "Pauses the computer after a period of inactivity."
-msgstr "Ordenagailua pausatzen du aktibitaterik gabe denbora batez egon ondoren."
+msgstr ""
+"Ordenagailua pausatzen du aktibitaterik gabe denbora batez egon ondoren."
 
 #: panels/power/cc-power-panel.ui:199
 msgid "Po_wer Button Behavior"
@@ -4695,7 +4865,9 @@ msgstr "Ikusi bateriaren egoera eta aldatu energia aurrezteko ezarpenak"
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
-msgstr "Argindarra;Lo egin;Eseki;Hibernatu;Bateria;Distira;Itzali;Belztu;Monitorea;DPMS;Inaktibo;Energia;"
+msgstr ""
+"Argindarra;Lo egin;Eseki;Hibernatu;Bateria;Distira;Itzali;Belztu;Monitorea;"
+"DPMS;Inaktibo;Energia;"
 
 #. Translators: %s is the printer name
 #: panels/printers/cc-printers-panel.c:676
@@ -4724,7 +4896,9 @@ msgstr "Inprimagailuak"
 
 #: panels/printers/gnome-printers-panel.desktop.in.in:4
 msgid "Add printers, view printer jobs and decide how you want to print"
-msgstr "Gehitu inprimagailuak, ikusi inprimatze-lanak eta erabaki zer inprimatzea nahi duzun"
+msgstr ""
+"Gehitu inprimagailuak, ikusi inprimatze-lanak eta erabaki zer inprimatzea "
+"nahi duzun"
 
 #. Translators: Search terms to find the Printers panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/printers/gnome-printers-panel.desktop.in.in:16
@@ -4793,7 +4967,9 @@ msgstr "Hautatu PPD fitxategia"
 msgid ""
 "PostScript Printer Description files (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *."
 "PPD.GZ)"
-msgstr "PostScript Printer Description fitxategiak (*.ppd, *.PPD, *.ppd.gz, *.PPD.gz, *.PPD.GZ)"
+msgstr ""
+"PostScript Printer Description fitxategiak (*.ppd, *.PPD, *.ppd.gz, *.PPD."
+"gz, *.PPD.GZ)"
 
 #: panels/printers/pp-details-dialog.ui:65 panels/printers/printer-entry.ui:215
 msgid "Location"
@@ -4996,7 +5172,9 @@ msgstr "Desblokeatu %s."
 #: panels/printers/pp-new-printer-dialog.c:278
 #, c-format
 msgid "Enter username and password to view printers on %s."
-msgstr "Sartu zure erabiltzaile-izena eta pasahitza %s kokalekuan dauden inprimagailuak ikusteko."
+msgstr ""
+"Sartu zure erabiltzaile-izena eta pasahitza %s kokalekuan dauden "
+"inprimagailuak ikusteko."
 
 #: panels/printers/pp-new-printer-dialog.c:578
 msgid "Searching for Printers"
@@ -5358,7 +5536,8 @@ msgstr "Gehitu inprimagailua…"
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
-msgstr "Badirudi sistemako inprimatzeko\n"
+msgstr ""
+"Badirudi sistemako inprimatzeko\n"
 "    zerbitzua ez dagoela erabilgarri."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:196
@@ -5436,14 +5615,16 @@ msgstr "Amaitu saioa…"
 msgid ""
 "The language setting is used for interface text and web pages. Formats is "
 "used for numbers, dates, and currencies."
-msgstr "Hizkuntza-ezarpena interfazearen testuan eta web-orrietan erabiliko da. Formatuak zenbakietarako, datetarako eta monetetarako erabiliko da."
+msgstr ""
+"Hizkuntza-ezarpena interfazearen testuan eta web-orrietan erabiliko da. "
+"Formatuak zenbakietarako, datetarako eta monetetarako erabiliko da."
 
 #: panels/region/cc-region-panel.ui:51
 msgid "Your Account"
 msgstr "Zure kontua"
 
 #: panels/region/cc-region-panel.ui:56 panels/region/cc-region-panel.ui:95
-#: panels/user-accounts/cc-user-panel.ui:289
+#: panels/user-accounts/cc-user-panel.ui:299
 msgid "_Language"
 msgstr "_Hizkuntza"
 
@@ -5494,7 +5675,8 @@ msgstr "Hautatu aplikazioa bideo DVDentzako"
 
 #: panels/removable-media/cc-removable-media-panel.c:354
 msgid "Select an application to run when a music player is connected"
-msgstr "Hautatu aplikazio bat exekutatzeko musika erreproduzigailu bat konektatzean"
+msgstr ""
+"Hautatu aplikazio bat exekutatzeko musika erreproduzigailu bat konektatzean"
 
 #: panels/removable-media/cc-removable-media-panel.c:355
 msgid "Select an application to run when a camera is connected"
@@ -5610,7 +5792,9 @@ msgstr "Konfiguratu euskarri aldagarriaren ezarpenak"
 msgid ""
 "device;system;default;application;preferred;cd;dvd;usb;audio;video;disc;"
 "removable;media;autorun;"
-msgstr "gailua;sistema;lehenetsia;aplikazioa;hobetsia;cd;dvd;usb;audioa;bideoa;diskoa;aldagarria;euskarria;exekuzioa;"
+msgstr ""
+"gailua;sistema;lehenetsia;aplikazioa;hobetsia;cd;dvd;usb;audioa;bideoa;"
+"diskoa;aldagarria;euskarria;exekuzioa;"
 
 #: panels/search/cc-search-locations-dialog.c:674
 msgid "Select Location"
@@ -5629,7 +5813,9 @@ msgstr "Bilatu kokalekuak"
 msgid ""
 "Folders which are searched by system applications, such as Files, Photos and "
 "Videos."
-msgstr "Sistema-aplikazioek zein karpetetan egingo dituzten bilaketak, adibidez 'Fitxategiak', 'Argazkiak' eta 'Bideoak' karpetetan"
+msgstr ""
+"Sistema-aplikazioek zein karpetetan egingo dituzten bilaketak, adibidez "
+"'Fitxategiak', 'Argazkiak' eta 'Bideoak' karpetetan"
 
 #: panels/search/cc-search-locations-dialog.ui:18
 msgid "Places"
@@ -5674,7 +5860,9 @@ msgstr "Emaitzak zerrenda-ordenaren arabera bistaratuko dira."
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr "Kontrolatu zer aplikaziok erakusten dituzten bilaketen emaitzak Jardueren ikuspegian"
+msgstr ""
+"Kontrolatu zer aplikaziok erakusten dituzten bilaketen emaitzak Jardueren "
+"ikuspegian"
 
 #. Translators: Search terms to find the Search panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/search/gnome-search-panel.desktop.in.in:19
@@ -5720,7 +5908,9 @@ msgstr "Aukeratu karpeta"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
-msgstr "Fitxategiak partekatzeak zure uneko sareko beste erabiltzaileek zure 'Publikoa' karpeta ikustea ahalbidetzen du honakoa erabilita: %s"
+msgstr ""
+"Fitxategiak partekatzeak zure uneko sareko beste erabiltzaileek zure "
+"'Publikoa' karpeta ikustea ahalbidetzen du honakoa erabilita: %s"
 
 #. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
 #: panels/sharing/cc-sharing-panel.c:754
@@ -5729,7 +5919,9 @@ msgid ""
 "When remote login is enabled, remote users can connect using the Secure "
 "Shell command:\n"
 "%s"
-msgstr "Urruneko saio-hasiera gaituta dagoenean, urruneko erabiltzaileek konekta daitezke Shell Seguruko komandoa erabiliz: \n"
+msgstr ""
+"Urruneko saio-hasiera gaituta dagoenean, urruneko erabiltzaileek konekta "
+"daitezke Shell Seguruko komandoa erabiliz: \n"
 "%s"
 
 #: panels/sharing/cc-sharing-panel.ui:9
@@ -5779,7 +5971,9 @@ msgstr "Urruneko mahaigaina"
 msgid ""
 "Remote desktop allows viewing and controlling your desktop from another "
 "computer."
-msgstr "Urruneko mahaigainari esker, zure mahaigaina beste ordenagailu batetik kontrolatu dezakezu."
+msgstr ""
+"Urruneko mahaigainari esker, zure mahaigaina beste ordenagailu batetik "
+"kontrolatu dezakezu."
 
 #: panels/sharing/cc-sharing-panel.ui:268
 msgid "Enable or disable remote desktop connections to this computer."
@@ -5800,7 +5994,9 @@ msgstr "Nola konektatu"
 #: panels/sharing/cc-sharing-panel.ui:295
 msgid ""
 "Connect to this computer using the device name or remote desktop address."
-msgstr "Konektatu ordenagailu honekin gailuaren izena edo urruneko mahaigainaren helbidea erabilita."
+msgstr ""
+"Konektatu ordenagailu honekin gailuaren izena edo urruneko mahaigainaren "
+"helbidea erabilita."
 
 #: panels/sharing/cc-sharing-panel.ui:323
 msgid "Remote Desktop Address"
@@ -5812,7 +6008,8 @@ msgstr "Autentifikazioa"
 
 #: panels/sharing/cc-sharing-panel.ui:351
 msgid "The user name and password are required to connect to this computer."
-msgstr "Erabiltzaile-izena eta pasahitza behar dira ordenagailu honekin konektatzeko."
+msgstr ""
+"Erabiltzaile-izena eta pasahitza behar dira ordenagailu honekin konektatzeko."
 
 #: panels/sharing/cc-sharing-panel.ui:355
 msgid "User Name"
@@ -5830,7 +6027,9 @@ msgstr "Zifratzearen hatz-marka"
 msgid ""
 "The encryption fingerprint can be seen in connecting clients and should be "
 "identical"
-msgstr "Zifratzearen hatz-marka bezeroak konektatzean ikusten da eta berdina izan behar du"
+msgstr ""
+"Zifratzearen hatz-marka bezeroak konektatzean ikusten da eta berdina izan "
+"behar du"
 
 #: panels/sharing/cc-sharing-panel.ui:463
 msgid "Media Sharing"
@@ -5853,7 +6052,9 @@ msgstr "Kontrolatu besteekin zer partekatzea nahi duzun"
 msgid ""
 "share;sharing;ssh;host;name;remote;desktop;media;audio;video;pictures;photos;"
 "movies;server;renderer;"
-msgstr "partekatu;partekatzea;ssh;ostalaria;izena;urrunekoa;mahaigaina;multimedia;bideoa;irudiak;argazkiak;filmak;zerbitzaria;errendatzea;"
+msgstr ""
+"partekatu;partekatzea;ssh;ostalaria;izena;urrunekoa;mahaigaina;multimedia;"
+"bideoa;irudiak;argazkiak;filmak;zerbitzaria;errendatzea;"
 
 #: panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in:11
 msgid "Enable or disable remote login"
@@ -5969,7 +6170,9 @@ msgstr "Aldatu soinuaren bolumena, sarrerak, irteerak eta eta alerten soinuak"
 #: panels/sound/gnome-sound-panel.desktop.in.in:20
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
-msgstr "Txartela;Mikrofonoa;Bolumena;Iraungi;Balantzea;Bluetooth-a;Entzungailua;Audioa;Irteera;Sarrera;"
+msgstr ""
+"Txartela;Mikrofonoa;Bolumena;Iraungi;Balantzea;Bluetooth-a;Entzungailua;"
+"Audioa;Irteera;Sarrera;"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:92
 #: panels/thunderbolt/cc-bolt-device-entry.c:123
@@ -6081,12 +6284,15 @@ msgstr "Baimendua"
 #: panels/thunderbolt/cc-bolt-panel.c:169
 msgid ""
 "The Thunderbolt subsystem (boltd) is not installed or not set up properly."
-msgstr "Thunderbolt azpisistema (boltd) ez dago instalatuta edo gaizki konfiguratuta dago."
+msgstr ""
+"Thunderbolt azpisistema (boltd) ez dago instalatuta edo gaizki konfiguratuta "
+"dago."
 
 #: panels/thunderbolt/cc-bolt-panel.c:425
 #: panels/thunderbolt/cc-bolt-panel.ui:157
 msgid "Allow direct access to devices such as docks and external GPUs."
-msgstr "Sarbide zuzena baimentzen du atrakeak eta kanpoko GPUak bezalako gailuetara."
+msgstr ""
+"Sarbide zuzena baimentzen du atrakeak eta kanpoko GPUak bezalako gailuetara."
 
 #: panels/thunderbolt/cc-bolt-panel.c:426
 msgid "Only USB and Display Port devices can attach."
@@ -6097,8 +6303,10 @@ msgid ""
 "Thunderbolt could not be detected.\n"
 "Either the system lacks Thunderbolt support, it has been disabled in the "
 "BIOS or is set to an unsupported security level in the BIOS."
-msgstr "Thunderbolt ezin izan da detektatu.\n"
-"Sistemak ez dauka Thunderbolt euskarririk, BIOSean desgaitu egin da edo onartzen ez den segurtasun-maila batean ezarri da BIOSean."
+msgstr ""
+"Thunderbolt ezin izan da detektatu.\n"
+"Sistemak ez dauka Thunderbolt euskarririk, BIOSean desgaitu egin da edo "
+"onartzen ez den segurtasun-maila batean ezarri da BIOSean."
 
 #: panels/thunderbolt/cc-bolt-panel.c:505
 msgid "Thunderbolt support has been disabled in the BIOS."
@@ -6170,7 +6378,9 @@ msgstr "Kurtsorearen tamaina"
 #: panels/universal-access/cc-cursor-size-dialog.ui:22
 msgid ""
 "Cursor size can be combined with zoom to make it easier to see the cursor."
-msgstr "Kurtsorearen tamaina zoomarekin erabil daiteke kurtsorea errazago ikus ahal izateko."
+msgstr ""
+"Kurtsorearen tamaina zoomarekin erabil daiteke kurtsorea errazago ikus ahal "
+"izateko."
 
 #: panels/universal-access/cc-pointing-dialog.ui:5
 msgid "Click Assist"
@@ -6246,7 +6456,8 @@ msgstr "Errepikatze-teklak"
 
 #: panels/universal-access/cc-repeat-keys-dialog.ui:29
 msgid "Key presses repeat when key is held down."
-msgstr "Tekla sakatuta dagoen bitartean, tekla hori behin eta berriz errepikatzen da."
+msgstr ""
+"Tekla sakatuta dagoen bitartean, tekla hori behin eta berriz errepikatzen da."
 
 #: panels/universal-access/cc-repeat-keys-dialog.ui:85
 msgid "Repeat keys delay"
@@ -6401,7 +6612,9 @@ msgstr "Pantaila _irakurlea"
 
 #: panels/universal-access/cc-ua-panel.ui:71
 msgid "The screen reader reads displayed text as you move the focus."
-msgstr "Pantailaren irakurleak bistaratutako testua irakurtzen du fokua mugitzen duzun arabera."
+msgstr ""
+"Pantailaren irakurleak bistaratutako testua irakurtzen du fokua mugitzen "
+"duzun arabera."
 
 #: panels/universal-access/cc-ua-panel.ui:83
 msgid "_Sound Keys"
@@ -6409,7 +6622,9 @@ msgstr "_Teklak soinuarekin"
 
 #: panels/universal-access/cc-ua-panel.ui:84
 msgid "Beep when Num Lock or Caps Lock are turned on or off."
-msgstr "Jo soinua zenbakiak blokeatzeko edo maiuskulak blokeatzeko teklak aktibatzen edo desaktibatzen direnean."
+msgstr ""
+"Jo soinua zenbakiak blokeatzeko edo maiuskulak blokeatzeko teklak aktibatzen "
+"edo desaktibatzen direnean."
 
 #: panels/universal-access/cc-ua-panel.ui:96
 msgid "C_ursor Size"
@@ -6667,7 +6882,8 @@ msgstr "Kolore-efektuak"
 
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:4
 msgid "Make it easier to see, hear, type, point and click"
-msgstr "Egin errazagoa ikusteko, entzuteko, idazteko, kokatzeko eta klik egiteko"
+msgstr ""
+"Egin errazagoa ikusteko, entzuteko, idazteko, kokatzeko eta klik egiteko"
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
@@ -6676,7 +6892,12 @@ msgid ""
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
 "Bounce;Mouse;Double;click;Delay;Speed;Assist;Repeat;Blink;visual;hearing;"
 "audio;typing;animations;"
-msgstr "Teklatua;Sagua;a11y;Irisgarritasuna;Irisgarritasun Unibertsala;Kontrastea;Kurtsorea;Soinua;Zooma;Pantaila;Irakurgailua;handia;altua;handia;testua;letra-tipoa;tamaina;AccessX;Itsaskorra;Teklak;Geldoa;Errebotea;Sagua;Bikoitza;klik;Atzerapena;Abiadura;Lagundu;Errepikatu;Keinua;bisuala;entzumena;audioa;idazketa;animazioak;"
+msgstr ""
+"Teklatua;Sagua;a11y;Irisgarritasuna;Irisgarritasun Unibertsala;Kontrastea;"
+"Kurtsorea;Soinua;Zooma;Pantaila;Irakurgailua;handia;altua;handia;testua;"
+"letra-tipoa;tamaina;AccessX;Itsaskorra;Teklak;Geldoa;Errebotea;Sagua;"
+"Bikoitza;klik;Atzerapena;Abiadura;Lagundu;Errepikatu;Keinua;bisuala;"
+"entzumena;audioa;idazketa;animazioak;"
 
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:55
@@ -6795,7 +7016,10 @@ msgid ""
 "File history keeps a record of files that you have used. This information is "
 "shared between applications, and makes it easier to find files that you "
 "might want to use."
-msgstr "Fitxategien historiak zuk erabilitako fitxategien erregistro bat gordetzen du. Informazio hori aplikazioen artean partekatzen da, eta errazago bihurtzen du erabili nahi dituzun fitxategiak aurkitzeko lana."
+msgstr ""
+"Fitxategien historiak zuk erabilitako fitxategien erregistro bat gordetzen "
+"du. Informazio hori aplikazioen artean partekatzen da, eta errazago "
+"bihurtzen du erabili nahi dituzun fitxategiak aurkitzeko lana."
 
 #: panels/usage/cc-usage-panel.ui:13
 msgid "File H_istory"
@@ -6817,7 +7041,10 @@ msgstr "Zakarrontziko eta aldi baterako fitxategiak"
 msgid ""
 "Trash and temporary files can sometimes include personal or sensitive "
 "information. Automatically deleting them can help to protect privacy."
-msgstr "Zakarrontziko eta aldi baterako fitxategiek zenbaitetan informazio pertsonala edo sentikorra izan dezakete. Automatikoki ezabatzen badira, pribatutasuna babesten lagundu dezakete."
+msgstr ""
+"Zakarrontziko eta aldi baterako fitxategiek zenbaitetan informazio "
+"pertsonala edo sentikorra izan dezakete. Automatikoki ezabatzen badira, "
+"pribatutasuna babesten lagundu dezakete."
 
 #: panels/usage/cc-usage-panel.ui:67
 msgid "Automatically Delete _Trash Content"
@@ -6847,7 +7074,6 @@ msgstr "Fitxategien historia eta zakarrontzia"
 msgid "Don't leave traces"
 msgstr "Ez utzi aztarnarik"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Zure kontuaren hornitzailearen web helbidearekin bat etorri behar du."
@@ -6879,14 +7105,16 @@ msgstr "Huts egin du domeinuarekin elkartzean"
 msgid ""
 "That login name didn’t work.\n"
 "Please try again."
-msgstr "Saioaren hasierako izenak ez du funtzionatzen.\n"
+msgstr ""
+"Saioaren hasierako izenak ez du funtzionatzen.\n"
 "Saiatu berriro."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1181
 msgid ""
 "That login password didn’t work.\n"
 "Please try again."
-msgstr "Saioaren hasierako pasahitzak ez du funtzionatzen.\n"
+msgstr ""
+"Saioaren hasierako pasahitzak ez du funtzionatzen.\n"
 "Saiatu berriro."
 
 #: panels/user-accounts/cc-add-user-dialog.c:1189
@@ -6910,7 +7138,10 @@ msgstr "Administratzailea"
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users. Parental controls cannot be applied to administrators."
-msgstr "Administratzaileek beste erabiltzaile batzuk gehitu edo kendu ditzakete, eta erabiltzaile guztien ezarpenak aldatu ditzakete. Administratzaileei ezin zaizkie guraso-kontrolak aplikatu."
+msgstr ""
+"Administratzaileek beste erabiltzaile batzuk gehitu edo kendu ditzakete, eta "
+"erabiltzaile guztien ezarpenak aldatu ditzakete. Administratzaileei ezin "
+"zaizkie guraso-kontrolak aplikatu."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:149
 msgid "User sets password on first login"
@@ -6941,7 +7172,10 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device. You can also use this account to access company "
 "resources on the internet."
-msgstr "Enpresako saio-hasieran baimenduta dago erabiltzaileen kontu zentralizatua erabiltzea gailu honetan. Kontu hau enpresaren interneteko baliabideak atzitzeko ere erabil dezakezu."
+msgstr ""
+"Enpresako saio-hasieran baimenduta dago erabiltzaileen kontu zentralizatua "
+"erabiltzea gailu honetan. Kontu hau enpresaren interneteko baliabideak "
+"atzitzeko ere erabil dezakezu."
 
 #: panels/user-accounts/cc-avatar-chooser.c:164
 msgid "Browse for more pictures"
@@ -6971,7 +7205,9 @@ msgstr "_Bai"
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
-msgstr "Erregistratutako zure hatz-markak ezabatze nahi duzu, hatz-marken bidezko saio-hasiera desgaituz?"
+msgstr ""
+"Erregistratutako zure hatz-markak ezabatze nahi duzu, hatz-marken bidezko "
+"saio-hasiera desgaituz?"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:172
 msgid "No fingerprint device"
@@ -7002,7 +7238,9 @@ msgstr "Hatz-marken bidezko saio-hasiera"
 msgid ""
 "Fingerprint login allows you to unlock and log into your computer with your "
 "finger"
-msgstr "Hatz-marken bidezko saio-hasierak hatza erabilita ordenagailua desblokeatzea eta saioa hastea ahalbidetzen du."
+msgstr ""
+"Hatz-marken bidezko saio-hasierak hatza erabilita ordenagailua desblokeatzea "
+"eta saioa hastea ahalbidetzen du."
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:276
 msgid "_Delete Fingerprints"
@@ -7130,7 +7368,9 @@ msgstr "Huts egin du erregistroa gelditzeak: %s"
 msgid ""
 "Repeatedly lift and place your finger on the reader to enroll your "
 "fingerprint"
-msgstr "Altxatu eta kokatu hatza irakurgailuan behin eta berriro, zure hatz-marka erregistratzeko"
+msgstr ""
+"Altxatu eta kokatu hatza irakurgailuan behin eta berriro, zure hatz-marka "
+"erregistratzeko"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1047
 msgid "_Re-enroll this finger…"
@@ -7260,7 +7500,8 @@ msgstr "Berretsi pasahitza"
 
 #: panels/user-accounts/cc-password-dialog.ui:175
 msgid "Allow user to change their password on next login"
-msgstr "Baimendu erabiltzaileei hurrengo saio-hasieran haien pasahitzak ezartzea"
+msgstr ""
+"Baimendu erabiltzaileei hurrengo saio-hasieran haien pasahitzak ezartzea"
 
 #: panels/user-accounts/cc-password-dialog.ui:186
 msgid "Set a password now"
@@ -7312,7 +7553,9 @@ msgstr "%s oraindik saioan sartuta dago"
 msgid ""
 "Deleting a user while they are logged in can leave the system in an "
 "inconsistent state."
-msgstr "Erabiltzailea ezabatzen bada saioan sartuta dagoen bitartean, sistema egoera inkoherentean utz daiteke."
+msgstr ""
+"Erabiltzailea ezabatzen bada saioan sartuta dagoen bitartean, sistema egoera "
+"inkoherentean utz daiteke."
 
 #: panels/user-accounts/cc-user-panel.c:570
 #, c-format
@@ -7323,7 +7566,9 @@ msgstr "%s(r)en fitxategiak mantentzea nahi dituzu?"
 msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
-msgstr "Karpeta nagusia, postaren ilara eta aldi baterako fitxategiak gordetzeko aukera dago erabiltzaile baten kontua ezabatzean."
+msgstr ""
+"Karpeta nagusia, postaren ilara eta aldi baterako fitxategiak gordetzeko "
+"aukera dago erabiltzaile baten kontua ezabatzean."
 
 #: panels/user-accounts/cc-user-panel.c:577
 msgid "_Delete Files"
@@ -7336,7 +7581,8 @@ msgstr "_Mantendu fitxategiak"
 #: panels/user-accounts/cc-user-panel.c:592
 #, c-format
 msgid "Are you sure you want to revoke remotely managed %s’s account?"
-msgstr "Ziur zaude urrunetik kudeatutako “%s”(r)en kontua errebokatzea nahi duzula?"
+msgstr ""
+"Ziur zaude urrunetik kudeatutako “%s”(r)en kontua errebokatzea nahi duzula?"
 
 #: panels/user-accounts/cc-user-panel.c:596
 msgid "_Delete"
@@ -7389,7 +7635,8 @@ msgstr "Ezabatu hautatutako erabiltzailearen kontua"
 msgid ""
 "To delete the selected user account,\n"
 "click the * icon first"
-msgstr "Hautatutako erabiltzailearen kontua ezabatzeko\n"
+msgstr ""
+"Hautatutako erabiltzailearen kontua ezabatzeko\n"
 "aurrenik egin klik * ikonoan"
 
 #: panels/user-accounts/cc-user-panel.c:1423
@@ -7410,54 +7657,56 @@ msgid "Restart Now"
 msgstr "Berrabiarazi orain"
 
 #. FIXME
-#: panels/user-accounts/cc-user-panel.ui:185
+#: panels/user-accounts/cc-user-panel.ui:195
 msgid "_Fingerprint Login"
 msgstr "_Hatz-markarekin saioa-hastea"
 
-#: panels/user-accounts/cc-user-panel.ui:208
+#: panels/user-accounts/cc-user-panel.ui:218
 msgid "A_utomatic Login"
 msgstr "Saio-hasiera _automatikoa"
 
-#: panels/user-accounts/cc-user-panel.ui:221
+#: panels/user-accounts/cc-user-panel.ui:231
 msgid "Account Activity"
 msgstr "Kontuaren jarduera"
 
-#: panels/user-accounts/cc-user-panel.ui:249
+#: panels/user-accounts/cc-user-panel.ui:259
 msgid "_Administrator"
 msgstr "_Administratzailea"
 
-#: panels/user-accounts/cc-user-panel.ui:250
+#: panels/user-accounts/cc-user-panel.ui:260
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users."
-msgstr "Administratzaileek beste erabiltzaile batzuk gehitu edo kendu ditzakete, eta erabiltzaile guztien ezarpenak aldatu ditzakete."
+msgstr ""
+"Administratzaileek beste erabiltzaile batzuk gehitu edo kendu ditzakete, eta "
+"erabiltzaile guztien ezarpenak aldatu ditzakete."
 
-#: panels/user-accounts/cc-user-panel.ui:266
+#: panels/user-accounts/cc-user-panel.ui:276
 msgid "_Parental Controls"
 msgstr "_Gurasoen kontrola"
 
-#: panels/user-accounts/cc-user-panel.ui:267
+#: panels/user-accounts/cc-user-panel.ui:277
 msgid "Open the Parental Controls application."
 msgstr "Ireki gurasoen kontrolerako aplikazioa."
 
-#: panels/user-accounts/cc-user-panel.ui:318
+#: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
 msgstr "Kendu erabiltzailea…"
 
-#: panels/user-accounts/cc-user-panel.ui:330
+#: panels/user-accounts/cc-user-panel.ui:340
 msgid "Other Users"
 msgstr "Beste erabiltzaileak"
 
-#: panels/user-accounts/cc-user-panel.ui:343
+#: panels/user-accounts/cc-user-panel.ui:353
 msgid "Add User…"
 msgstr "Gehitu erabiltzailea…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
-#: panels/user-accounts/cc-user-panel.ui:371
+#: panels/user-accounts/cc-user-panel.ui:381
 msgid "No Users Found"
 msgstr "Ez da erabiltzailerik aurkitu"
 
-#: panels/user-accounts/cc-user-panel.ui:380
+#: panels/user-accounts/cc-user-panel.ui:390
 msgid "Unlock to add a user account."
 msgstr "Desblokeatu erabiltzaile-kontu bat gehitzeko."
 
@@ -7470,7 +7719,10 @@ msgstr "Gehitu edo kendu erabiltzaileak eta aldatu zure pasahitza"
 msgid ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental Controls;Screen "
 "Time;App Restrictions;Web Restrictions;Usage;Usage Limit;Kid;Child;"
-msgstr "Saio-hasiera;Izena;Hatz-marka;Avatarra;Logotipoa;Aurpegia;Pasahitza;Guraso-kontrolak;Pantaila-denbora;Aplikazio-mugak;Web mugak;Erabilera;Erabilera-muga;Gaztea;Haurra;"
+msgstr ""
+"Saio-hasiera;Izena;Hatz-marka;Avatarra;Logotipoa;Aurpegia;Pasahitza;Guraso-"
+"kontrolak;Pantaila-denbora;Aplikazio-mugak;Web mugak;Erabilera;Erabilera-"
+"muga;Gaztea;Haurra;"
 
 #. Translators: This button enrolls the computer in the domain in order to use enterprise logins.
 #: panels/user-accounts/data/join-dialog.ui:30
@@ -7486,7 +7738,8 @@ msgid ""
 "In order to use enterprise logins, this computer needs to be\n"
 "enrolled in the domain. Please have your network administrator\n"
 "type their domain password here."
-msgstr "Enpresako saioa erabil ahal izateko, ordenagailu honek\n"
+msgstr ""
+"Enpresako saioa erabil ahal izateko, ordenagailu honek\n"
 "domeinun erregistratuta egon behar du. Eskatu iezaiozu sareko\n"
 "administratzaileari domeinuaren bere pasahitza idazteko hemen."
 
@@ -7524,7 +7777,8 @@ msgstr "Saiatu pasahitza piska bat gehiago aldatzen."
 #: panels/user-accounts/pw-utils.c:100
 msgctxt "Password hint"
 msgid "A password without your user name would be stronger."
-msgstr "Zure erabiltzaile-izenik gabeko pasahitz bat askoz ere sendoagoa litzateke."
+msgstr ""
+"Zure erabiltzaile-izenik gabeko pasahitz bat askoz ere sendoagoa litzateke."
 
 #: panels/user-accounts/pw-utils.c:102
 msgctxt "Password hint"
@@ -7564,7 +7818,8 @@ msgstr "Saiatu hizki minuskulak gehiago erabiltzea."
 #: panels/user-accounts/pw-utils.c:118
 msgctxt "Password hint"
 msgid "Try to use more special characters, like punctuation."
-msgstr "Saiatu karaktere berezi gehiago erabiltzea, harridura ikurra bezalakoak."
+msgstr ""
+"Saiatu karaktere berezi gehiago erabiltzea, harridura ikurra bezalakoak."
 
 #: panels/user-accounts/pw-utils.c:120
 msgctxt "Password hint"
@@ -7581,7 +7836,9 @@ msgctxt "Password hint"
 msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
-msgstr "Saiatu karaktere mota berdina errepikatzea saihestea: hizki, zenbaki eta ikurrak nahastu behar dituzu."
+msgstr ""
+"Saiatu karaktere mota berdina errepikatzea saihestea: hizki, zenbaki eta "
+"ikurrak nahastu behar dituzu."
 
 #: panels/user-accounts/pw-utils.c:126
 msgctxt "Password hint"
@@ -7593,12 +7850,15 @@ msgctxt "Password hint"
 msgid ""
 "Password needs to be longer. Try to add more letters, numbers and "
 "punctuation."
-msgstr "Pasahitzak luzeagoa izan behar du. Saiatu hizki, zenbaki eta ikurren arteko nahasketa gehiagorekin."
+msgstr ""
+"Pasahitzak luzeagoa izan behar du. Saiatu hizki, zenbaki eta ikurren arteko "
+"nahasketa gehiagorekin."
 
 #: panels/user-accounts/pw-utils.c:130
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and try to use a number or two."
-msgstr "Nahastu hizki maiuskulak eta minuskulak eta erabili zenbaki bat edo bi."
+msgstr ""
+"Nahastu hizki maiuskulak eta minuskulak eta erabili zenbaki bat edo bi."
 
 #: panels/user-accounts/pw-utils.c:132
 msgctxt "Password hint"
@@ -7660,7 +7920,9 @@ msgstr "Errore ezezaguna"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
-msgstr "Erabiltzaile-izenak honako karaktereak soilik eduki ditzake:  alfabetoko a-z arteko hizki minuskulak, digituak eta '.', '-' eta '_' karaktereak."
+msgstr ""
+"Erabiltzaile-izenak honako karaktereak soilik eduki ditzake:  alfabetoko a-z "
+"arteko hizki minuskulak, digituak eta '.', '-' eta '_' karaktereak."
 
 #: panels/user-accounts/user-utils.c:148
 msgid "Sorry, that user name isn’t available. Please try another."
@@ -7682,21 +7944,14 @@ msgstr "Mapatu botoiak funtzioetara"
 msgid ""
 "To edit a shortcut, choose the “Send Keystroke” action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
-msgstr "Laster-tekla bat editatzeko: aukeratu \"Bidali tekla sakatzea\" ekintza, sakatu teklatuaren laster-teklaren botoia eta eduki sakatuta tekla berriak edo sakatu Atzera-tekla garbitzeko."
+msgstr ""
+"Laster-tekla bat editatzeko: aukeratu \"Bidali tekla sakatzea\" ekintza, "
+"sakatu teklatuaren laster-teklaren botoia eta eduki sakatuta tekla berriak "
+"edo sakatu Atzera-tekla garbitzeko."
 
 #: panels/wacom/button-mapping.ui:66
 msgid "_Close"
 msgstr "It_xi"
-
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr "Ukitu helburuko markatzaileak pantailan agertzen diren ordenan taula kalibratzeko."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Okerreko klik detektatuta, berrabiarazten…"
 
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
@@ -7767,7 +8022,9 @@ msgstr "Mantendu aspektu-erlazioa"
 
 #: panels/wacom/cc-wacom-page.ui:63
 msgid "Only use a portion of the tablet surface to keep monitor aspect ratio"
-msgstr "Erabili tableta-gainazalaren zati bat soilik, pantailaren aspektu-erlazioa mantentzeko"
+msgstr ""
+"Erabili tableta-gainazalaren zati bat soilik, pantailaren aspektu-erlazioa "
+"mantentzeko"
 
 #: panels/wacom/cc-wacom-page.ui:73
 msgid "Calibrate"
@@ -7806,11 +8063,14 @@ msgstr "Borragomaren presioaren sentikortasuna"
 
 #: panels/wacom/cc-wacom-tool.c:321
 msgid "Airbrush stylus with pressure, tilt, and integrated slider"
-msgstr "Airbrush stylus gailua presioarekin, inklinazioarekin eta integratutako graduatzailearekin"
+msgstr ""
+"Airbrush stylus gailua presioarekin, inklinazioarekin eta integratutako "
+"graduatzailearekin"
 
 #: panels/wacom/cc-wacom-tool.c:323
 msgid "Airbrush stylus with pressure, tilt, and rotation"
-msgstr "Airbrush stylus gailua presioarekin, inklinazioarekin eta biraketarekin"
+msgstr ""
+"Airbrush stylus gailua presioarekin, inklinazioarekin eta biraketarekin"
 
 #: panels/wacom/cc-wacom-tool.c:325
 msgid "Standard stylus with pressure and tilt"
@@ -7826,7 +8086,9 @@ msgstr "Wacom taula"
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:4
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
-msgstr "Ezarri botoi-mapatzea eta doitu arkatzaren sentikortasuna taula grafikoentzako"
+msgstr ""
+"Ezarri botoi-mapatzea eta doitu arkatzaren sentikortasuna taula "
+"grafikoentzako"
 
 #. Translators: Search terms to find the Wacom Tablet panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:19
@@ -8266,7 +8528,6 @@ msgstr "Sare mugikorra"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Konfiguratu telefoniako eta datu mugikorreko konexioak"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8280,23 +8541,7 @@ msgstr "GNOME mahaigaina konfiguratzeko utilitatea"
 msgid "Settings is the primary interface for configuring your system."
 msgstr "Ezarpenak zure sistema konfiguratzeko interfaze nagusia da."
 
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:17
-msgid "GNOME Settings Sound Panel"
-msgstr "GNOMEren ezarpenen soinu-panela"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:21
-msgid "GNOME Settings Mouse &amp; Touchpad Panel"
-msgstr "GNOMEren ezarpenen ukipen-panelaren eta saguaren panela"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:25
-msgid "GNOME Settings Background Panel"
-msgstr "GNOMEren ezarpenen atzeko planoaren panela"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:29
-msgid "GNOME Settings Keyboard Panel"
-msgstr "GNOMEren ezarpenen teklatuaren panela"
-
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:38
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
@@ -8328,7 +8573,7 @@ msgstr "[PANELA] [ARGUMENTUA…]"
 msgid "Privacy"
 msgstr "Pribatutasuna"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Panel erabilgarriak:"
 
@@ -8349,7 +8594,10 @@ msgid ""
 "This version of Settings should only be used for development purposes. You "
 "may experience incorrect system behavior, data loss, and other unexpected "
 "issues. "
-msgstr "Ezarpenen bertsio hau garapenerako soilik erabili beharko litzateke. Sistemaren portaera okerra, datuen galera eta espero gabeko beste arazo batzuk gerta daitezke. "
+msgstr ""
+"Ezarpenen bertsio hau garapenerako soilik erabili beharko litzateke. "
+"Sistemaren portaera okerra, datuen galera eta espero gabeko beste arazo "
+"batzuk gerta daitezke. "
 
 #: shell/cc-window.ui:164
 msgid "Help"
@@ -8398,7 +8646,9 @@ msgstr "Irekiko den ezarpenen azken panelaren identifikatzailea"
 msgid ""
 "The identifier for the last Settings panel to be opened. Unrecognised values "
 "will be ignored and the first panel in the list selected."
-msgstr "Irekiko den ezarpenen azken panelaren identifikatzailea. Ezagutzen ez diren balioak ezikusi egingo dira eta zerrendako lehen panela hautatuko da."
+msgstr ""
+"Irekiko den ezarpenen azken panelaren identifikatzailea. Ezagutzen ez diren "
+"balioak ezikusi egingo dira eta zerrendako lehen panela hautatuko da."
 
 #: shell/org.gnome.Settings.gschema.xml:13
 msgid "Show warning when running a development build of Settings"
@@ -8407,7 +8657,9 @@ msgstr "Erakutsi abisu bat ezarpenen garapen-bertsio bat exekutatzean"
 #: shell/org.gnome.Settings.gschema.xml:14
 msgid ""
 "Whether Settings should show a warning when running a development build."
-msgstr "Ezarpenek abisu bat erakutsi behar duen ala ez garapen-bertsio bat exekutatzen denean."
+msgstr ""
+"Ezarpenek abisu bat erakutsi behar duen ala ez garapen-bertsio bat "
+"exekutatzen denean."
 
 #: shell/org.gnome.Settings.gschema.xml:20
 msgid "Initial state of the window"
@@ -8417,7 +8669,9 @@ msgstr "Leihoaren hasierako egoera"
 msgid ""
 "A tuple containing the initial width, height and maximized state of the "
 "application window."
-msgstr "Aplikazio-leihoaren hasierako zabalera, altuera eta egoera maximizatua dituen tuplea."
+msgstr ""
+"Aplikazio-leihoaren hasierako zabalera, altuera eta egoera maximizatua "
+"dituen tuplea."
 
 #. translators:
 #. * The number of sound outputs on a particular device
@@ -8440,6 +8694,34 @@ msgstr[1] "%u sarrera"
 #: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Sistemaren soinuak"
+
+#~ msgid "OS Name"
+#~ msgstr "SE izena"
+
+#~ msgid "OS Type"
+#~ msgstr "SE mota"
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Ukitu helburuko markatzaileak pantailan agertzen diren ordenan taula "
+#~ "kalibratzeko."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Okerreko klik detektatuta, berrabiarazten…"
+
+#~ msgid "GNOME Settings Sound Panel"
+#~ msgstr "GNOMEren ezarpenen soinu-panela"
+
+#~ msgid "GNOME Settings Mouse &amp; Touchpad Panel"
+#~ msgstr "GNOMEren ezarpenen ukipen-panelaren eta saguaren panela"
+
+#~ msgid "GNOME Settings Background Panel"
+#~ msgstr "GNOMEren ezarpenen atzeko planoaren panela"
+
+#~ msgid "GNOME Settings Keyboard Panel"
+#~ msgstr "GNOMEren ezarpenen teklatuaren panela"
 
 #~ msgid "More Warm"
 #~ msgstr "Beroago"
@@ -8631,8 +8913,8 @@ msgstr "Sistemaren soinuak"
 #~ msgstr "Ezin dira aldatu"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
 #~ "Aplikazioen banakako baimenak <a href=\"privacy\">Pribatutasuna</a> "
 #~ "ezarpenetan berrikusi daitezke."
