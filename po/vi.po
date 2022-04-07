@@ -5,15 +5,14 @@
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2004,2007,2010-2013.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
 # Ngô Chin <ndtrung4419@gmail.com>, 2011.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2013-2018, 2021-2022.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2013-2018, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-04-23 00:38+0000\n"
-"PO-Revision-Date: 2022-04-23 08:12+0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
+"PO-Revision-Date: 2021-09-24 09:02+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -77,8 +76,8 @@ msgstr "Hệ thống tập tin"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Cài đặt"
@@ -100,18 +99,18 @@ msgstr ""
 #, c-format
 msgid "%u file and link type that is opened by the app"
 msgid_plural "%u file and link types that are opened by the app"
-msgstr[0] "%u liên kết và tập tin cái mà được mở bởi ứng dụng"
+msgstr[0] ""
 
 #: panels/applications/cc-applications-panel.c:1171
 #, c-format
 msgid "<b>%s</b> is used to open the following types of files and links."
-msgstr "<b>%s</b> được sử dụng để mở các kiểu của tập tin và liên kết sau."
+msgstr ""
 
 #. Translators: '%s' is the formatted size, e.g. "26.2 MB"
 #: panels/applications/cc-applications-panel.c:1223
 #, c-format
 msgid "%s of disk space used"
-msgstr "%s đĩa đã được sử dụng"
+msgstr ""
 
 #. List of applications.
 #: panels/applications/cc-applications-panel.c:1387
@@ -131,12 +130,14 @@ msgstr "Cài đặt một số…"
 
 #: panels/applications/cc-applications-panel.ui:84
 #: panels/network/wireless-security/ws-file-chooser-button.c:96
+#, fuzzy
 msgid "Open"
-msgstr "Mở"
+msgstr "_Mở"
 
 #: panels/applications/cc-applications-panel.ui:94
+#, fuzzy
 msgid "View Details"
-msgstr "Hiện chi tiết"
+msgstr "_Hiện chi tiết"
 
 #: panels/applications/cc-applications-panel.ui:112
 #: panels/applications/cc-applications-panel.ui:119
@@ -148,7 +149,7 @@ msgstr "Tìm kiếm"
 #: panels/applications/cc-applications-panel.ui:113
 #: panels/applications/cc-applications-panel.ui:120
 msgid "Receive system searches and send results."
-msgstr "Để hệ thống tìm kiếm và gửi kết quả."
+msgstr ""
 
 #. This label is displayed in a treeview cell displaying
 #. * a disabled accelerator key combination.
@@ -163,11 +164,11 @@ msgstr "Để hệ thống tìm kiếm và gửi kết quả."
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
-#: subprojects/gvc/gvc-mixer-control.c:1908
+#: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "Tắt"
 
@@ -177,8 +178,9 @@ msgid "Notifications"
 msgstr "Thông báo"
 
 #: panels/applications/cc-applications-panel.ui:127
+#, fuzzy
 msgid "Show system notifications."
-msgstr "Hiện thông báo hệ thống."
+msgstr "preferences-system-notifications"
 
 #: panels/applications/cc-applications-panel.ui:133
 msgid "Run in background"
@@ -186,15 +188,17 @@ msgstr "Chạy dưới nền hệ thống"
 
 #: panels/applications/cc-applications-panel.ui:134
 msgid "Allow activity when the app is closed."
-msgstr "Cho phép hoạt động khi ứng dụng đã bị đóng lại."
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:140
+#, fuzzy
 msgid "Change Wallpaper"
-msgstr "Đổi hình nền"
+msgstr "Ảnh nền"
 
 #: panels/applications/cc-applications-panel.ui:141
+#, fuzzy
 msgid "Change the desktop wallpaper."
-msgstr "Đổi hình nền trên màn hình máy tính để bàn."
+msgstr "preferences-desktop-wallpaper"
 
 #: panels/applications/cc-applications-panel.ui:147
 #: panels/applications/cc-applications-panel.ui:154
@@ -204,15 +208,17 @@ msgstr "Âm thanh"
 #: panels/applications/cc-applications-panel.ui:148
 #: panels/applications/cc-applications-panel.ui:155
 msgid "Reproduce sounds."
-msgstr "Tái sinh âm thanh."
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:161
+#, fuzzy
 msgid "Inhibit Shortcuts"
-msgstr "Chặn phím tắt"
+msgstr "Đặt phím tắt"
 
 #: panels/applications/cc-applications-panel.ui:162
+#, fuzzy
 msgid "Block standard keyboard shortcuts."
-msgstr "Ngăn cản phím tắt bàn phím tiêu chuẩn."
+msgstr "Ngăn cản phím tắt bàn phím hệ thống"
 
 #: panels/applications/cc-applications-panel.ui:168
 #: panels/applications/cc-applications-panel.ui:175
@@ -223,7 +229,7 @@ msgstr "Máy ảnh"
 #: panels/applications/cc-applications-panel.ui:169
 #: panels/applications/cc-applications-panel.ui:176
 msgid "Take pictures with the camera."
-msgstr "Chụp ảnh bằng máy ảnh."
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:182
 #: panels/applications/cc-applications-panel.ui:189
@@ -234,7 +240,7 @@ msgstr "Micrô"
 #: panels/applications/cc-applications-panel.ui:183
 #: panels/applications/cc-applications-panel.ui:190
 msgid "Record audio with the microphone."
-msgstr "Ghi âm với míc."
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:196
 #: panels/applications/cc-applications-panel.ui:203
@@ -245,7 +251,7 @@ msgstr "Dịch vụ vị trí"
 #: panels/applications/cc-applications-panel.ui:197
 #: panels/applications/cc-applications-panel.ui:204
 msgid "Access device location data."
-msgstr "Truy cập dữ liệu vị trí thiết bị."
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:215
 #: panels/applications/cc-applications-panel.ui:319
@@ -253,39 +259,42 @@ msgid "Built-in Permissions"
 msgstr "Quyền tích-hợp"
 
 #: panels/applications/cc-applications-panel.ui:216
+#, fuzzy
 msgid "System access that is required by the app"
-msgstr "Ứng dụng yêu cầu truy cập hệ thống"
+msgstr "Tính năng hệ thống được sử dụng bởi ứng dụng này."
 
 #: panels/applications/cc-applications-panel.ui:224
 msgid "File &amp; Link Associations"
-msgstr "Kết hợp Tập tin &amp; Liên kết"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:232
 #: panels/applications/cc-applications-panel.ui:399
 msgid "Storage"
 msgstr "Lưu trữ"
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Không tìm thấy kết quả nào"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Thử tìm kiếm khác"
 
 #: panels/applications/cc-applications-panel.ui:344
 msgid "File & Link Associations"
-msgstr "Kết hợp Tập tin & Liên kết"
+msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:367
+#, fuzzy
 msgid "File Types"
-msgstr "Kiểu tập tin"
+msgstr "Hệ thống tập tin"
 
 #: panels/applications/cc-applications-panel.ui:373
+#, fuzzy
 msgid "Link Types"
-msgstr "Kiểu liên kết"
+msgstr "Tốc độ đường truyền"
 
 #: panels/applications/cc-applications-panel.ui:383
 msgid "Reset"
@@ -322,7 +331,6 @@ msgstr "Xóa bộ nhớ truy cập nhanh…"
 msgid "Control various application permissions and settings"
 msgstr "Điều khiển các phân quyền và cài đặt của ứng dụng nhiều thứ khác nhau"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -343,8 +351,8 @@ msgstr "Chọn một ảnh"
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
 #: panels/network/connection-editor/connection-editor.ui:14
-#: panels/network/connection-editor/vpn-helpers.c:221
-#: panels/network/connection-editor/vpn-helpers.c:341
+#: panels/network/connection-editor/vpn-helpers.c:226
+#: panels/network/connection-editor/vpn-helpers.c:346
 #: panels/network/net-device-wifi.c:860
 #: panels/printers/new-printer-dialog.ui:50
 #: panels/printers/pp-details-dialog.c:263
@@ -366,7 +374,7 @@ msgid "_Cancel"
 msgstr "T_hôi"
 
 #: panels/background/cc-background-chooser.c:311
-#: panels/network/connection-editor/vpn-helpers.c:222
+#: panels/network/connection-editor/vpn-helpers.c:227
 #: panels/printers/pp-details-dialog.c:264
 #: panels/sharing/cc-sharing-panel.c:524
 #: panels/user-accounts/cc-avatar-chooser.c:168
@@ -388,44 +396,46 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Không có ảnh nền"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "Ảnh nền hiện tại"
 
 #: panels/background/cc-background-panel.ui:9
+#, fuzzy
 msgid "Style"
-msgstr "Kiểu"
+msgstr "Bút trỏ"
 
 #: panels/background/cc-background-panel.ui:45
+#, fuzzy
 msgid "Light"
-msgstr "Sáng"
+msgstr "Phải"
 
 #: panels/background/cc-background-panel.ui:72
 msgid "Dark"
-msgstr "Tối"
+msgstr ""
 
 #: panels/background/cc-background-panel.ui:91
 msgid "Background"
-msgstr "Màu nền"
+msgstr "Ảnh nền"
 
 #: panels/background/cc-background-panel.ui:97
 msgid "Add Picture…"
-msgstr "Thêm ảnh chụp…"
+msgstr "Thêm ảnh…"
 
 #: panels/background/gnome-background-panel.desktop.in.in:3
 msgid "Appearance"
-msgstr "Diện mạo"
+msgstr ""
 
 #: panels/background/gnome-background-panel.desktop.in.in:4
+#, fuzzy
 msgid "Change your background image or the UI colors"
-msgstr "Thay đổi ảnh nền màn hình hay màu UI của bạn"
+msgstr "Thay đổi ảnh nền màn hình"
 
 #. Translators: Search terms to find the Appearance panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:15
+#, fuzzy
 msgid "Background;Wallpaper;Screen;Desktop;Style;Light;Dark;"
-msgstr ""
-"Background;Wallpaper;Ảnh;nền;Anh;nen;Screen;Màn;hình;Man;hinh;Desktop;Style;"
-"Light;Dark;Sáng;Sang;Tối;Toi;Kiểu;Kieu;"
+msgstr "Wallpaper;Ảnh;nền;Anh;nen;Screen;Màn;hình;Man;hinh;Desktop;"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:21
 msgid "No Bluetooth Found"
@@ -444,8 +454,9 @@ msgid "Turn on to connect devices and receive file transfers."
 msgstr "Bật để kết nối các thiết bị và nhận các tập tin được truyền."
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:35
+#, fuzzy
 msgid "Airplane Mode is On"
-msgstr "Chế độ máy bay đang bật"
+msgstr "Chế độ máy bay được bật"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:36
 msgid "Bluetooth is disabled when airplane mode is on."
@@ -456,8 +467,9 @@ msgid "Turn Off Airplane Mode"
 msgstr "Tắt chế độ máy bay"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:53
+#, fuzzy
 msgid "Hardware Airplane Mode is On"
-msgstr "Chế độ máy bay phần cứng được bật"
+msgstr "Chế độ máy bay được bật"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:54
 msgid "Turn off the Airplane mode switch to enable Bluetooth."
@@ -479,6 +491,7 @@ msgid "share;sharing;bluetooth;obex;"
 msgstr "share;chia sẻ;chia se;sharing;bluetooth;obex;"
 
 #: panels/camera/cc-camera-panel.ui:21
+#, fuzzy
 msgid "Camera is Turned Off"
 msgstr "Máy ảnh bị tắt"
 
@@ -487,6 +500,7 @@ msgid "No applications can capture photos or video."
 msgstr "Không có ứng dụng nào có thể chụp ảnh hoặc quay phim."
 
 #: panels/camera/cc-camera-panel.ui:36
+#, fuzzy
 msgid ""
 "Use of the camera allows applications to capture photos and video. Disabling "
 "the camera may cause some applications to not function properly.\n"
@@ -494,9 +508,7 @@ msgid ""
 "Allow the applications below to use your camera."
 msgstr ""
 "Sử dụng máy ảnh cho phép các ứng dụng chụp ảnh và quay phim. Vô hiệu hóa máy "
-"ảnh có thể khiến một số ứng dụng không hoạt động bình thường.\n"
-"\n"
-"Cho phép các ứng dụng dưới đây sử dụng máy ảnh của bạn."
+"ảnh có thể khiến một số ứng dụng không hoạt động bình thường."
 
 #: panels/camera/cc-camera-panel.ui:52
 msgid "No Applications Have Asked for Camera Access"
@@ -506,7 +518,6 @@ msgstr "Không có ứng dụng nào yêu cầu truy cập máy ảnh"
 msgid "Protect your pictures"
 msgstr "Bảo vệ các ảnh của bạn"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -618,7 +629,7 @@ msgstr "_Xong"
 #. TRANSLATORS: This refers to the TFT display on a laptop
 #: panels/color/cc-color-common.c:41
 msgid "Laptop Screen"
-msgstr "Màn hình máy tính xách tay"
+msgstr "Màn hình laptop"
 
 #. TRANSLATORS: This refers to the embedded webcam on a laptop
 #: panels/color/cc-color-common.c:50
@@ -719,7 +730,7 @@ msgid "Save Profile"
 msgstr "Lưu hồ sơ"
 
 #: panels/color/cc-color-panel.c:845
-#: panels/network/connection-editor/vpn-helpers.c:342
+#: panels/network/connection-editor/vpn-helpers.c:347
 #: panels/wwan/cc-wwan-apn-dialog.ui:43
 msgid "_Save"
 msgstr "_Lưu"
@@ -748,7 +759,7 @@ msgstr "Thiết bị đo không hỗ trợ tạo hồ sơ màu cho máy in."
 msgid "The device type is not currently supported."
 msgstr "Kiểu thiết bị này hiện chưa được hỗ trợ."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Cân chỉnh màn hình"
 
@@ -792,11 +803,11 @@ msgstr "Chọn thiết bị dò tìm bạn muốn dùng cho việc cân chỉnh.
 
 #: panels/color/cc-color-panel.ui:117
 msgid "Display Type"
-msgstr "Kiểu màn hình"
+msgstr "Kiểu hiển thị"
 
 #: panels/color/cc-color-panel.ui:125
 msgid "Select the type of display that is connected."
-msgstr "Chọn kiểu của màn hình cái mà nó đã được kết nối."
+msgstr "Chọn kiểu của bộ hiển thị cái mà nó đã được kết nối."
 
 #: panels/color/cc-color-panel.ui:152
 msgid "Profile Whitepoint"
@@ -807,20 +818,20 @@ msgid ""
 "Select a display target white point. Most displays should be calibrated to a "
 "D65 illuminant."
 msgstr ""
-"Chọn điểm trắng màn hình đích. Phần lớn màn hình có thể được cân chỉnh bằng "
-"một vật chiếu sáng D65."
+"Chọn điểm trắng bộ hiển thị đích. Phần lớn bộ hiển thị có thể được cân chỉnh "
+"bằng một vật chiếu sáng D65."
 
 #: panels/color/cc-color-panel.ui:187
 msgid "Display Brightness"
-msgstr "Độ sáng màn hình"
+msgstr "Độ sáng hiển thị"
 
 #: panels/color/cc-color-panel.ui:195
 msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
 msgstr ""
-"Xin hãy đặt màn hình thành sáng nhất cái mà đặc trưng dành cho bạn. Quản lý "
-"màu sẽ làm chính xác nhất tại mức sáng này."
+"Xin hãy đặt bộ hiển thị thành sáng nhất cái mà đặc trưng dành cho bạn. Quản "
+"lý màu sẽ làm chính xác nhất tại mức sáng này."
 
 #: panels/color/cc-color-panel.ui:202
 msgid ""
@@ -864,9 +875,9 @@ msgstr "Yêu cầu ổ đĩa có thể ghi được"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Bạn có thể tìm thấy các chỉ dẫn để làm thế nào có thể sử dụng hồ sơ trên hệ "
 "thống <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> và <a "
@@ -1119,7 +1130,8 @@ msgstr "Màu sắc"
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
 msgstr ""
-"Cân chỉnh màu sắc của thiết bị của bạn, như là màn hình, máy ảnh hay máy in"
+"Cân chỉnh màu sắc của thiết bị của bạn, như là bộ hiển thị, máy ảnh hay máy "
+"in"
 
 #. Translators: Search terms to find the Color panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/color/gnome-color-panel.desktop.in.in:19
@@ -1134,7 +1146,7 @@ msgstr "Khác…"
 
 #: panels/common/cc-language-chooser.ui:5
 msgid "Select Language"
-msgstr "Chọn ngôn ngữ"
+msgstr "Chọn Ngôn ngữ"
 
 #: panels/common/cc-language-chooser.ui:13
 msgid "_Select"
@@ -1397,16 +1409,18 @@ msgid "Search for a city"
 msgstr "Tìm thành phố"
 
 #: panels/datetime/cc-datetime-panel.ui:164
+#, fuzzy
 msgid "Automatic _Date &amp; Time"
-msgstr "Ngà_y &amp; Giờ tự động"
+msgstr "Ngà_y & Giờ tự động"
 
 #: panels/datetime/cc-datetime-panel.ui:165
 msgid "Requires internet access"
 msgstr "Cần nối mạng internet"
 
 #: panels/datetime/cc-datetime-panel.ui:177
+#, fuzzy
 msgid "Date &amp; _Time"
-msgstr "Ngày &amp; _Giờ"
+msgstr "Ngày & _Giờ"
 
 #: panels/datetime/cc-datetime-panel.ui:201
 msgid "Automatic Time _Zone"
@@ -1509,7 +1523,6 @@ msgstr "Chẩn đoán"
 msgid "Report your problems"
 msgstr "Báo cáo vấn đề trục trặc của bạn"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
@@ -1527,22 +1540,22 @@ msgstr ""
 #: panels/display/cc-display-panel.c:512
 #: panels/notifications/cc-notifications-panel.c:217
 #: panels/power/cc-power-panel.c:734 panels/power/cc-power-panel.c:741
-#: panels/universal-access/cc-ua-panel.c:336
-#: panels/universal-access/cc-ua-panel.c:468
-#: panels/universal-access/cc-ua-panel.c:478
-#: panels/universal-access/cc-ua-panel.c:490
-#: panels/universal-access/cc-ua-panel.c:526
+#: panels/universal-access/cc-ua-panel.c:337
+#: panels/universal-access/cc-ua-panel.c:469
+#: panels/universal-access/cc-ua-panel.c:479
+#: panels/universal-access/cc-ua-panel.c:491
+#: panels/universal-access/cc-ua-panel.c:527
 msgid "On"
 msgstr "Bật"
 
 #: panels/display/cc-display-panel.c:514 panels/network/net-proxy.c:69
 #: panels/notifications/cc-notifications-panel.c:217
 #: panels/power/cc-power-panel.c:728 panels/power/cc-power-panel.c:739
-#: panels/universal-access/cc-ua-panel.c:336
-#: panels/universal-access/cc-ua-panel.c:468
-#: panels/universal-access/cc-ua-panel.c:478
-#: panels/universal-access/cc-ua-panel.c:490
-#: panels/universal-access/cc-ua-panel.c:526
+#: panels/universal-access/cc-ua-panel.c:337
+#: panels/universal-access/cc-ua-panel.c:469
+#: panels/universal-access/cc-ua-panel.c:479
+#: panels/universal-access/cc-ua-panel.c:491
+#: panels/universal-access/cc-ua-panel.c:527
 msgid "Off"
 msgstr "Tắt"
 
@@ -1564,21 +1577,23 @@ msgid "_Apply"
 msgstr "Á_p dụng"
 
 #: panels/display/cc-display-panel.ui:97
+#, fuzzy
 msgid "Display Settings Disabled"
-msgstr "Cài đặt hiển thị bị tắt"
+msgstr "Bluetooth bị tắt"
 
 #: panels/display/cc-display-panel.ui:113
 msgid "Display Arrangement"
 msgstr "Sắp xếp màn hình"
 
 #: panels/display/cc-display-panel.ui:124
+#, fuzzy
 msgid "Multiple Displays"
-msgstr "Nhiều màn hình"
+msgstr "Hiển thị riêng rẽ"
 
 #. 'Join' as in 'Join displays'
 #: panels/display/cc-display-panel.ui:133
 msgid "Join"
-msgstr "Ghép nối"
+msgstr ""
 
 #: panels/display/cc-display-panel.ui:140
 msgid "Mirror"
@@ -1742,9 +1757,9 @@ msgstr ""
 "sunrise;bình minh;binh minh;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Chưa biết"
@@ -1753,39 +1768,40 @@ msgstr "Chưa biết"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; Mã số biên dịch: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-bít"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-bít"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr "X11"
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Chưa biết"
 
 #: panels/info-overview/cc-info-overview-panel.ui:17
+#, fuzzy
 msgid "System Logo"
-msgstr "Logo hệ thống"
+msgstr "Hệ thống"
 
 #: panels/info-overview/cc-info-overview-panel.ui:32
 #: panels/sharing/cc-sharing-panel.ui:299
@@ -1818,12 +1834,13 @@ msgstr "Đang tính toán…"
 
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
-msgid "OS Name"
-msgstr "Tên HĐH"
+#, fuzzy
+msgid "tauOS Version"
+msgstr "Phiên bản GNOME"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-msgid "OS Type"
-msgstr "Kiểu HĐH"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 msgid "GNOME Version"
@@ -1831,7 +1848,7 @@ msgstr "Phiên bản GNOME"
 
 #: panels/info-overview/cc-info-overview-panel.ui:123
 msgid "Windowing System"
-msgstr "Hệ thống Cửa sổ"
+msgstr "Hệ thống Windows"
 
 #: panels/info-overview/cc-info-overview-panel.ui:131
 msgid "Virtualization"
@@ -1839,7 +1856,7 @@ msgstr "Ảo hóa"
 
 #: panels/info-overview/cc-info-overview-panel.ui:139
 msgid "Software Updates"
-msgstr "Cập nhật phần mềm"
+msgstr "Bản cập nhật phần mềm"
 
 #: panels/info-overview/cc-info-overview-panel.ui:158
 msgid "Rename Device"
@@ -2131,8 +2148,7 @@ msgid ""
 msgstr ""
 "Phím tổ hợp cho phép nhập nhiều ký tự khác nhau. Để sử dụng nó, nhấn compose "
 "sau đó một chuỗi các ký tự. Ví dụ: phím compose tiếp theo là <b>C</b> và "
-"<b>o</b> sẽ nhập <b>©</b>, <b>a</b> tiếp theo là <b>'</b> sẽ nhập <b>á</"
-"b>."
+"<b>o</b> sẽ nhập <b>©</b>, <b>a</b> tiếp theo là <b>'</b> sẽ nhập <b>á</b>."
 
 #: panels/keyboard/cc-keyboard-panel.c:91
 msgctxt "keyboard key"
@@ -2192,7 +2208,7 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:319
 #: panels/keyboard/cc-keyboard-shortcut-dialog.c:334 shell/cc-window.ui:160
 msgid "Keyboard Shortcuts"
-msgstr "Phím tắt"
+msgstr "Phím tắt bàn phím"
 
 #: panels/keyboard/cc-keyboard-panel.ui:100
 msgid "View and Customize Shortcuts"
@@ -2250,7 +2266,7 @@ msgstr "Thêm phím tắt"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:189
 msgid "No keyboard shortcut found"
-msgstr "Không tìm thấy phím tắt bàn phím nào"
+msgstr "Không tìm thấy phím tắt bàn phím"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:392
 #, c-format
@@ -2294,7 +2310,7 @@ msgstr "Đặt"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:98
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
-msgstr "Nhấn Esc để thôi hoặc Backspace để tắt phím tắt bàn phím."
+msgstr "Nhấn Esc để thôi hoặc Backspace để đặt lại phím tắt."
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:153
 #: panels/printers/pp-details-dialog.ui:39
@@ -2347,6 +2363,7 @@ msgstr ""
 "lượng;am luong;"
 
 #: panels/location/cc-location-panel.ui:20
+#, fuzzy
 msgid "Location Services Turned Off"
 msgstr "Dịch vụ vị trí bị tắt"
 
@@ -2364,13 +2381,6 @@ msgid ""
 "\n"
 "Allow the applications below to determine your location."
 msgstr ""
-"Dịch vụ vị tri cho phép các ứng dụng biết vị trí của bạn. Sử dụng Wi-Fi và "
-"thiết bị di động để gia tăng độ chính xác.\n"
-"\n"
-"Sử dụng dịch vụ vị trí Mozilla: <a href='https://location.services.mozilla."
-"com/privacy'>Chính sách riêng tư</a>\n"
-"\n"
-"Cho phép các ứng dụng phía dưới dò tìm vị trí của bạn."
 
 #: panels/location/cc-location-panel.ui:53
 msgid "No Applications Have Asked for Location Access"
@@ -2380,7 +2390,6 @@ msgstr "Không có ứng dụng nào từng hỏi quyền truy cập vị trí c
 msgid "Protect your location information"
 msgstr "Bảo vệ thông tin vị trí của bạn"
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 msgctxt "lock_screen"
@@ -2406,16 +2415,10 @@ msgid "2 minutes"
 msgstr "2 phút"
 
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
-#: panels/lock/cc-lock-panel.c:74
+#: panels/lock/cc-lock-panel.c:74 panels/lock/cc-lock-panel.c:77
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 phút"
-
-#. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
-#: panels/lock/cc-lock-panel.c:77
-msgctxt "lock_screen"
-msgid "5 minutes"
-msgstr "5 phút"
 
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:80
@@ -2539,8 +2542,8 @@ msgstr "Khóa màn hình"
 msgid "Lock your screen"
 msgstr "Khóa màn hình của bạn"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
+#, fuzzy
 msgid "Microphone Turned Off"
 msgstr "Míc đang bị tắt"
 
@@ -2549,6 +2552,7 @@ msgid "No applications can record sound."
 msgstr "Không tìm thấy ứng dụng nào có thể ghi âm."
 
 #: panels/microphone/cc-microphone-panel.ui:34
+#, fuzzy
 msgid ""
 "Use of the microphone allows applications to record and listen to audio. "
 "Disabling the microphone may cause some applications to not function "
@@ -2557,9 +2561,7 @@ msgid ""
 "Allow the applications below to use your microphone."
 msgstr ""
 "Việc sử dụng micrô cho phép các ứng dụng ghi lại và nghe âm thanh. Vô hiệu "
-"hóa micrô có thể khiến một số ứng dụng không hoạt động bình thường.\n"
-"\n"
-"Cho phép các ứng dụng dưới đây sử dụng míc của bạn."
+"hóa micrô có thể khiến một số ứng dụng không hoạt động bình thường."
 
 #: panels/microphone/cc-microphone-panel.ui:51
 msgid "No Applications Have Asked for Microphone Access"
@@ -2569,7 +2571,6 @@ msgstr "Không có ứng dụng nào từng hỏi quyền truy cập míc của 
 msgid "Protect your conversations"
 msgstr "Bảo vệ các cuộc chuyện trò của bạn"
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "_Kiểm tra cài đặt của bạn"
@@ -2632,6 +2633,40 @@ msgstr "Cuộn hai-ngón"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Cuộn cạnh"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "_Tắt khi đang gõ"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+#, fuzzy
+msgid "Fingers"
+msgstr "Vân tay"
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -2697,7 +2732,7 @@ msgstr "_Kích hoạt cạnh màn hình"
 msgid ""
 "Drag windows against the top, left, and right screen edges to resize them."
 msgstr ""
-"Kéo cửa sổ vào đỉnh, trái, và phải màn hình để thay đổi kích thước của chúng."
+"Kéo cửa sổ và đỉnh, trái, và phải màn hình để thayddooir kích cỡ chúng."
 
 #: panels/multitasking/cc-multitasking-panel.ui:70
 msgid "Workspaces"
@@ -2838,7 +2873,7 @@ msgid "Must have a minimum of 8 characters"
 msgstr "Mật khẩu phải dài ít nhất 8 ký tự"
 
 #: panels/network/cc-wifi-hotspot-dialog.c:271
-#, c-format
+#, fuzzy, c-format
 msgid "Must have a maximum of %d character"
 msgid_plural "Must have a maximum of %d characters"
 msgstr[0] "Mật khẩu phải dài tối đa %d ký tự"
@@ -3145,6 +3180,7 @@ msgid "Remove VPN"
 msgstr "Xóa VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Chi tiết"
 
@@ -3252,8 +3288,8 @@ msgstr "Cho người dùng _khác sử dụng"
 #: panels/network/connection-editor/details-page.ui:412
 msgid "_Metered connection: has data limits or can incur charges"
 msgstr ""
-"Kết nối Đ_o dung lượng: có giới hạn dữ liệu hoặc có thể phải tính phí theo "
-"dung lượng sử dụng"
+"Kết nối _Meter: có giới hạn dữ liệu hoặc có thể phải tính phí theo dung "
+"lượng sử dụng"
 
 #: panels/network/connection-editor/details-page.ui:421
 msgid ""
@@ -3317,7 +3353,7 @@ msgstr "Chia sẻ với máy khác"
 #: panels/network/connection-editor/ip4-page.ui:98
 #: panels/network/connection-editor/ip6-page.ui:108
 msgid "Addresses"
-msgstr "Các địa chỉ"
+msgstr "Địa chỉ"
 
 #: panels/network/connection-editor/ip4-page.ui:112
 #: panels/network/connection-editor/ip4-page.ui:246
@@ -3414,11 +3450,11 @@ msgstr "Thêm VPN"
 msgid "S_ecurity"
 msgstr "_An ninh"
 
-#: panels/network/connection-editor/vpn-helpers.c:186
+#: panels/network/connection-editor/vpn-helpers.c:191
 msgid "Cannot import VPN connection"
 msgstr "Không thể nhập kết nối VPN"
 
-#: panels/network/connection-editor/vpn-helpers.c:188
+#: panels/network/connection-editor/vpn-helpers.c:193
 #, c-format
 msgid ""
 "The file “%s” could not be read or does not contain recognized VPN "
@@ -3431,29 +3467,29 @@ msgstr ""
 "\n"
 "Lỗi: %s."
 
-#: panels/network/connection-editor/vpn-helpers.c:218
+#: panels/network/connection-editor/vpn-helpers.c:223
 msgid "Select file to import"
 msgstr "Chọn tập tin cần nhập"
 
-#: panels/network/connection-editor/vpn-helpers.c:271
+#: panels/network/connection-editor/vpn-helpers.c:276
 #, c-format
 msgid "A file named “%s” already exists."
 msgstr "Đã có tập tin tên “%s” rồi."
 
-#: panels/network/connection-editor/vpn-helpers.c:273
+#: panels/network/connection-editor/vpn-helpers.c:278
 msgid "_Replace"
 msgstr "_Thay thế"
 
-#: panels/network/connection-editor/vpn-helpers.c:275
+#: panels/network/connection-editor/vpn-helpers.c:280
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr "Bạn có muốn thay thế %s bằng kết nối này?"
 
-#: panels/network/connection-editor/vpn-helpers.c:310
+#: panels/network/connection-editor/vpn-helpers.c:315
 msgid "Cannot export VPN connection"
 msgstr "Không thể xuất kết nối VPN"
 
-#: panels/network/connection-editor/vpn-helpers.c:312
+#: panels/network/connection-editor/vpn-helpers.c:317
 #, c-format
 msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
@@ -3464,7 +3500,7 @@ msgstr ""
 "\n"
 "Lỗi: %s."
 
-#: panels/network/connection-editor/vpn-helpers.c:338
+#: panels/network/connection-editor/vpn-helpers.c:343
 msgid "Export VPN connection"
 msgstr "Xuất kết nối VPN"
 
@@ -3504,7 +3540,7 @@ msgstr ""
 
 #: panels/network/net-device-ethernet.c:93
 msgid "never"
-msgstr "không bao giờ"
+msgstr "chưa bao giờ"
 
 #: panels/network/net-device-ethernet.c:101
 msgid "today"
@@ -3804,7 +3840,7 @@ msgstr "Lỗi dịch vụ AutoIP"
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:168
 msgid "AutoIP service failed"
-msgstr "Dịch vụ AutoIP gặp lỗi"
+msgstr "Lỗi dịch vụ AutoIP"
 
 #. TRANSLATORS: device status reason
 #: panels/network/panel-common.c:172
@@ -4221,8 +4257,9 @@ msgid "Au_thentication"
 msgstr "_Xác thực"
 
 #: panels/network/wireless-security/ws-file-chooser-button.c:49
+#, fuzzy
 msgid "Select a file"
-msgstr "Chọn một tập tin"
+msgstr "Chọn một tập tin…"
 
 #: panels/network/wireless-security/ws-leap.c:66
 msgid "missing leap-username"
@@ -4413,12 +4450,12 @@ msgstr "Thêm tài khoản"
 
 #. translators: This is the title of the "Show Account" dialog. The
 #. * %s is the name of the provider. e.g., 'Google'.
-#: panels/online-accounts/gnome-control-center-goa-helper.c:428
+#: panels/online-accounts/gnome-control-center-goa-helper.c:426
 #, c-format
 msgid "%s Account"
 msgstr "Tài khoản %s"
 
-#: panels/online-accounts/gnome-control-center-goa-helper.c:431
+#: panels/online-accounts/gnome-control-center-goa-helper.c:429
 msgid "Remove Account"
 msgstr "Xóa tài khoản"
 
@@ -4616,11 +4653,11 @@ msgstr "Khi cắm dây nguồn"
 #: panels/power/cc-power-panel.c:853
 msgctxt "Idle time"
 msgid "Never"
-msgstr "Không bao giờ"
+msgstr "Chưa bao giờ"
 
 #: panels/power/cc-power-panel.c:937
 msgid "Automatic suspend"
-msgstr "Tự động ngưng"
+msgstr "Tự động tạm dừng"
 
 #: panels/power/cc-power-panel.c:1030
 msgid ""
@@ -5081,7 +5118,7 @@ msgstr "Hoàn tất"
 #. Translators: Clicking this button prioritizes printing of this print job
 #: panels/printers/pp-job-row.c:176
 msgid "Move this job to the top of the queue"
-msgstr "Di chuyển công việc này lên đỉnh của hàng đợi"
+msgstr ""
 
 #. Translators: This label shows how many jobs of this printer needs to be authenticated to be printed.
 #: panels/printers/pp-jobs-dialog.c:318
@@ -5501,27 +5538,27 @@ msgstr "Thêm máy in…"
 
 #. Translators: The CUPS server is not running (we can not connect to it).
 #: panels/printers/printers.ui:204
+#, fuzzy
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
 msgstr ""
 "Rất tiếc! Dịch vụ in hệ thống\n"
-"    hình như không sẵn sàng."
+"hình như không sẵn sàng."
 
 #: panels/region/cc-format-chooser.c:148 panels/region/cc-format-chooser.c:196
 #: panels/region/cc-format-chooser.ui:4
 msgid "Formats"
 msgstr "Định dạng"
 
-#: panels/region/cc-format-chooser.ui:37
-#: panels/wacom/cc-wacom-stylus-page.ui:136
-#: panels/wwan/cc-wwan-apn-dialog.ui:21
+#: panels/region/cc-format-chooser.ui:37 panels/wwan/cc-wwan-apn-dialog.ui:21
 msgid "Back"
 msgstr "Kế trước"
 
 #: panels/region/cc-format-chooser.ui:76
+#, fuzzy
 msgid "Search locales…"
-msgstr "Tìm địa phương…"
+msgstr "Tìm địa phương..."
 
 #: panels/region/cc-format-chooser.ui:113
 msgid "Common Formats"
@@ -5564,7 +5601,7 @@ msgstr "Ngày & giờ"
 
 #: panels/region/cc-format-preview.ui:71
 msgid "Numbers"
-msgstr "Con số"
+msgstr "Cách ghi số"
 
 #: panels/region/cc-format-preview.ui:89
 msgid "Measurement"
@@ -5576,21 +5613,21 @@ msgstr "Giấy"
 
 #: panels/region/cc-region-panel.ui:19
 msgid "Language and format will be changed after next login"
-msgstr "Ngôn ngữ và định dạng sẽ thay đổi sau lần đăng nhập tới"
+msgstr ""
 
 #: panels/region/cc-region-panel.ui:29
 msgid "Logout…"
-msgstr "Đăng xuất…"
+msgstr ""
 
 #: panels/region/cc-region-panel.ui:45
+#, fuzzy
 msgid ""
 "The language setting is used for interface text and web pages. Formats is "
 "used for numbers, dates, and currencies."
-msgstr ""
-"Cài đặt ngôn ngữ để sử dụng cho chữ trong giao diện và các trang web. Định "
-"dạng dùng cho con số, ngày tháng, và tiền tệ."
+msgstr "Định dạng dùng cho con số, ngày tháng, và tiền tệ."
 
 #: panels/region/cc-region-panel.ui:51
+#, fuzzy
 msgid "Your Account"
 msgstr "Tài khoản của bạn"
 
@@ -5689,7 +5726,7 @@ msgstr "Đĩa phim Blu-ray"
 
 #: panels/removable-media/cc-removable-media-panel.c:374
 msgid "e-book reader"
-msgstr "máy đọc e-book"
+msgstr "trình đọc e-book"
 
 #: panels/removable-media/cc-removable-media-panel.c:375
 msgid "HD DVD video disc"
@@ -5802,36 +5839,44 @@ msgid "Bookmarks"
 msgstr "Đánh dấu"
 
 #: panels/search/cc-search-locations-dialog.ui:48
+#, fuzzy
 msgid "Others"
 msgstr "Khác"
 
 #: panels/search/cc-search-locations-dialog.ui:55
+#, fuzzy
 msgid "Add Location"
-msgstr "Thêm địa điểm"
+msgstr "Vị trí"
 
 #: panels/search/cc-search-panel.c:165
 msgid "No applications found"
 msgstr "Không tìm thấy ứng dụng"
 
 #: panels/search/cc-search-panel.ui:10
+#, fuzzy
 msgid "Application Search"
-msgstr "Tìm kiếm ứng dụng"
+msgstr "Chuyển ứng dụng"
 
 #: panels/search/cc-search-panel.ui:11
+#, fuzzy
 msgid "Include application-provided search results."
-msgstr "Bao gồm các kết quả tìm kiếm được cung cấp bởi ứng dụng."
+msgstr "Bao gồm các ứng dụng từ mọi _không gian việc"
 
 #: panels/search/cc-search-panel.ui:23
+#, fuzzy
 msgid "Folders which are searched by system applications."
-msgstr "Các thư mục được tìm kiếm bởi các ứng dụng hệ thống."
+msgstr ""
+"Các thư mục được tìm kiếm bởi các ứng dụng hệ thống, chẳng hạn như Tập tin, "
+"Ảnh và Phim."
 
 #: panels/search/cc-search-panel.ui:37
+#, fuzzy
 msgid "Search Results"
-msgstr "Kết quả tìm kiếm"
+msgstr "Không tìm thấy kết quả nào"
 
 #: panels/search/cc-search-panel.ui:38
 msgid "Results are displayed according to the list order."
-msgstr "Kết quả được hiển thị tuân theo thứ tự liệt kê."
+msgstr ""
 
 #: panels/search/gnome-search-panel.desktop.in.in:4
 msgid ""
@@ -5887,8 +5932,8 @@ msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
 msgstr ""
-"Chia sẻ Tập tin cho phép bạn chia sẻ thư mục Công khai với những máy khác "
-"trong mạng hiện đang sử dụng: %s"
+"Chia sẻ Tập tin cho phép bạn chia sẻ thư mục Công với những máy khác trong "
+"mạng hiện tại sử dụng: %s"
 
 #. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
 #: panels/sharing/cc-sharing-panel.c:754
@@ -5917,7 +5962,7 @@ msgstr "Chia sẻ _tập tin"
 
 #: panels/sharing/cc-sharing-panel.ui:65
 msgid "Remote _Desktop"
-msgstr "Điều khiển máy tính từ _xa"
+msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:72
 msgid "_Media Sharing"
@@ -5942,80 +5987,84 @@ msgstr "Đăng nhập từ xa"
 
 #: panels/sharing/cc-sharing-panel.ui:250
 #: panels/sharing/cc-sharing-panel.ui:267
+#, fuzzy
 msgid "Remote Desktop"
-msgstr "Điều khiển máy tính từ xa"
+msgstr "Đăng nhập từ xa"
 
 #: panels/sharing/cc-sharing-panel.ui:263
 msgid ""
 "Remote desktop allows viewing and controlling your desktop from another "
 "computer."
 msgstr ""
-"Điều khiển máy tính từ xa cho phép xem và điều khiển máy tính của bạn từ máy "
-"tính khác."
 
 #: panels/sharing/cc-sharing-panel.ui:268
+#, fuzzy
 msgid "Enable or disable remote desktop connections to this computer."
-msgstr "Bật hoặc tắt điều khiển máy tính từ xa cho máy tính này."
+msgstr "Bật hoặc tắt đăng nhập từ xa"
 
 #: panels/sharing/cc-sharing-panel.ui:280
+#, fuzzy
 msgid "Remote Control"
-msgstr "Điều khiển từ xa"
+msgstr "_Cho phép điều khiển từ xa"
 
 #: panels/sharing/cc-sharing-panel.ui:281
+#, fuzzy
 msgid "Allows remote connections to control the screen."
-msgstr "Cho phép các kết nối điều khiển màn hinh."
+msgstr "Cho _phép các kết nối điều khiển màn hinh"
 
 #: panels/sharing/cc-sharing-panel.ui:294
+#, fuzzy
 msgid "How to Connect"
-msgstr "Kết nối như thế nào"
+msgstr "Quên kết nối"
 
 #: panels/sharing/cc-sharing-panel.ui:295
 msgid ""
 "Connect to this computer using the device name or remote desktop address."
 msgstr ""
-"Kết nối đến máy tính này sử dụng tên thiết bị hoặc địa chỉ máy tính từ xa."
 
 #: panels/sharing/cc-sharing-panel.ui:323
+#, fuzzy
 msgid "Remote Desktop Address"
-msgstr "Địa chỉ máy tính điều khiển từ xa"
+msgstr "Xóa địa chỉ"
 
 #: panels/sharing/cc-sharing-panel.ui:350
+#, fuzzy
 msgid "Authentication"
-msgstr "Xác thực"
+msgstr "_Xác thực"
 
 #: panels/sharing/cc-sharing-panel.ui:351
 msgid "The user name and password are required to connect to this computer."
-msgstr "Cần tài khoản và mật khẩu để kết nối đến máy tính này."
+msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:355
+#, fuzzy
 msgid "User Name"
 msgstr "Tên người dùng"
 
 #: panels/sharing/cc-sharing-panel.ui:401
 msgid "Verify Encryption"
-msgstr "Xác thực mã hóa"
+msgstr ""
 
-#: panels/sharing/cc-sharing-panel.ui:434
+#: panels/sharing/cc-sharing-panel.ui:430
+#, fuzzy
 msgid "Encryption Fingerprint"
-msgstr "Vân tay mã hóa"
+msgstr "Vân tay"
 
-#: panels/sharing/cc-sharing-panel.ui:435
+#: panels/sharing/cc-sharing-panel.ui:431
 msgid ""
 "The encryption fingerprint can be seen in connecting clients and should be "
 "identical"
 msgstr ""
-"Dấu vân tay mã hóa có thể được thấy trong kết nối máy khách và nên là định "
-"danh duy nhất"
 
-#: panels/sharing/cc-sharing-panel.ui:467
+#: panels/sharing/cc-sharing-panel.ui:463
 msgid "Media Sharing"
 msgstr "Chia sẻ phương tiện"
 
-#: panels/sharing/cc-sharing-panel.ui:489
+#: panels/sharing/cc-sharing-panel.ui:485
 msgid "Share music, photos and videos over the network."
 msgstr "Chia sẻ nhạc, ảnh, phim với những người khác qua mạng."
 
-#: panels/sharing/cc-sharing-panel.ui:502
+#: panels/sharing/cc-sharing-panel.ui:498
 msgid "Folders"
 msgstr "Thư mục"
 
@@ -6077,11 +6126,11 @@ msgstr "Đang kiểm tra “%s”"
 
 #: panels/sound/cc-output-test-dialog.ui:131
 msgid "Click a speaker to test"
-msgstr "Nhấn vào “hình chiếc loa” để nghe thử"
+msgstr "Nhấn vào “hình chiếc loa” để bắt đầu kiểm tra"
 
 #: panels/sound/cc-sound-panel.ui:8
 msgid "System Volume"
-msgstr "Âm lượng hệ thống"
+msgstr "Phân vùng hệ thống"
 
 #: panels/sound/cc-sound-panel.ui:25
 msgid "Volume Levels"
@@ -6299,12 +6348,14 @@ msgid "Error switching direct mode: %s"
 msgstr "Lỗi chế độ chuyển trực tiếp: %s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:103
+#, fuzzy
 msgid "No Thunderbolt Support"
 msgstr "Không hỗ trợ Thunderbolt"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:104
+#, fuzzy
 msgid "Could not connect to the thunderbolt subsystem."
-msgstr "Không thể kết nối đến hệ thống con thunderbolt."
+msgstr "Không thể kết nối đến miền %s: %s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:153
 msgid "Direct Access"
@@ -6529,32 +6580,32 @@ msgstr "Bật các tính năng hỗ trợ bằng bàn phím"
 
 #. translators: the labels will read:
 #. * Cursor Size: Default
-#: panels/universal-access/cc-ua-panel.c:356
+#: panels/universal-access/cc-ua-panel.c:357
 msgctxt "cursor size"
 msgid "Default"
 msgstr "Mặc định"
 
-#: panels/universal-access/cc-ua-panel.c:359
+#: panels/universal-access/cc-ua-panel.c:360
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "Trung bình"
 
-#: panels/universal-access/cc-ua-panel.c:362
+#: panels/universal-access/cc-ua-panel.c:363
 msgctxt "cursor size"
 msgid "Large"
 msgstr "Lớn"
 
-#: panels/universal-access/cc-ua-panel.c:365
+#: panels/universal-access/cc-ua-panel.c:366
 msgctxt "cursor size"
 msgid "Larger"
 msgstr "Lớn hơn"
 
-#: panels/universal-access/cc-ua-panel.c:368
+#: panels/universal-access/cc-ua-panel.c:369
 msgctxt "cursor size"
 msgid "Largest"
 msgstr "Lớn nhất"
 
-#: panels/universal-access/cc-ua-panel.c:372
+#: panels/universal-access/cc-ua-panel.c:373
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
@@ -6631,8 +6682,9 @@ msgid "_Typing Assist (AccessX)"
 msgstr "_Hỗ trợ nhập liệu (AccessX)"
 
 #: panels/universal-access/cc-ua-panel.ui:240
+#, fuzzy
 msgid "Pointing &amp; Clicking"
-msgstr "Trỏ &amp; Nhấn"
+msgstr "Trỏ & Nhấn"
 
 #: panels/universal-access/cc-ua-panel.ui:243
 msgid "_Mouse Keys"
@@ -6856,6 +6908,7 @@ msgstr "Làm cho việc xem, nghe, gõ, di và bấm chuột trở nên dễ dà
 
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
+#, fuzzy
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -6868,9 +6921,8 @@ msgstr ""
 "Bộ đọc;Bo doc;Màn hình;Man hinh;big;lớn;high;cao;large;rộng;text;chữ;chu;"
 "font;phông;phong;size;Kích thước;Kich thuoc;AccessX;Sticky;Dính;Dinh;Keys;"
 "phím;Slow;Chậm;Cham;Bounce;Dội;Doi;Mouse;Double;Đúp;click;Bấm;Delay;Speed;"
-"Tốc độ;Toc do;Assist;Trợ lý;Tro ly;Repeat;Lặp;Lap;Blink;Nháy;Nhay;visual;ảo;"
-"hearing;nghe;audio;Âm thanh;Am thanh;typing;gõ;go;animations;hoạt hình;hoat "
-"hinh;"
+"Tốc độ; Toc do;Assist;Trợ lý;Tro ly;Repeat;Lặp;Lap;Blink;Nháy;Nhay;visual;ảo;"
+"hearing;nghe;audio;Âm thanh;Am thanh;typing;gõ;go;"
 
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:55
@@ -7007,8 +7059,9 @@ msgid "_Clear History…"
 msgstr "Xóa lịch _sử…"
 
 #: panels/usage/cc-usage-panel.ui:63
+#, fuzzy
 msgid "Trash &amp; Temporary Files"
-msgstr "Thùng rác &amp; Tập tin tạm"
+msgstr "Thùng rác & Tập tin tạm"
 
 #: panels/usage/cc-usage-panel.ui:64
 msgid ""
@@ -7020,7 +7073,7 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:67
 msgid "Automatically Delete _Trash Content"
-msgstr "Tự động xóa nội dung trong _thùng rác"
+msgstr "Tự động Xóa nội dung trong _thùng rác"
 
 #: panels/usage/cc-usage-panel.ui:79
 msgid "Automatically Delete Temporary _Files"
@@ -7046,7 +7099,6 @@ msgstr "Lịch sử tập tin & Thùng rác"
 msgid "Don't leave traces"
 msgstr "Đừng để lại dấu vết"
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr "Nên khớp với địa chỉ web của nhà cung cấp tài khoản cho bạn."
@@ -7056,7 +7108,7 @@ msgid "Failed to add account"
 msgstr "Gặp lỗi khi thêm tài khoản"
 
 #: panels/user-accounts/cc-add-user-dialog.c:679
-#: panels/user-accounts/cc-password-dialog.c:260
+#: panels/user-accounts/cc-password-dialog.c:258
 msgid "The passwords do not match."
 msgstr "Mật khẩu không khớp nhau."
 
@@ -7108,33 +7160,37 @@ msgid "Administrator"
 msgstr "Quản trị"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:132
+#, fuzzy
 msgid ""
 "Administrators can add and remove other users, and can change settings for "
 "all users. Parental controls cannot be applied to administrators."
 msgstr ""
 "Quản trị viên có thể thêm và loại bỏ người dùng khác và có thể thay đổi các "
-"cài đặt cho tất cả người dùng. Quản lý cha mẹ không thể được áp dụng cho "
-"quản trị viên."
+"cài đặt cho tất cả người dùng."
 
 #: panels/user-accounts/cc-add-user-dialog.ui:149
+#, fuzzy
 msgid "User sets password on first login"
-msgstr "Người dùng thay đổi mật khẩu khi họ đăng nhập lần đầu tiên"
+msgstr "Cho phép người dùng thay đổi mật khẩu khi họ đăng nhập lần kế tiếp"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:161
+#, fuzzy
 msgid "Set password now"
-msgstr "Đặt mật khẩu ngay"
+msgstr "Đặt mật khẩu mới ngay"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:224
+#, fuzzy
 msgid "Confirm"
-msgstr "Xác nhận"
+msgstr "Xá_c nhận"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:278
+#, fuzzy
 msgid "Enterprise Login"
-msgstr "Đăng nhập kiểu công ty"
+msgstr "Đăng nhập _Kiểu doanh nghiệp"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:279
 msgid "User accounts which are managed by a company or organisation."
-msgstr "Các tài khản người dùng cái mà được quản lý bởi công ty hay tổ chức."
+msgstr ""
 
 #: panels/user-accounts/cc-add-user-dialog.ui:385
 msgid "You are Offline"
@@ -7459,16 +7515,19 @@ msgid "Ch_ange"
 msgstr "Đổ_i"
 
 #: panels/user-accounts/cc-password-dialog.ui:51
+#, fuzzy
 msgid "Current Password"
-msgstr "Mật khẩu hiện tại"
+msgstr "_Mật khẩu hiện tại"
 
 #: panels/user-accounts/cc-password-dialog.ui:76
+#, fuzzy
 msgid "New Password"
-msgstr "Mật khẩu mới"
+msgstr "Mật khẩu _mới"
 
 #: panels/user-accounts/cc-password-dialog.ui:121
+#, fuzzy
 msgid "Confirm Password"
-msgstr "Xác nhận mật khẩu mới"
+msgstr "Xá_c nhận mật khẩu mới"
 
 #: panels/user-accounts/cc-password-dialog.ui:175
 msgid "Allow user to change their password on next login"
@@ -7592,7 +7651,7 @@ msgstr "Hãy kiểm tra xem AccountService có cài và được bật không."
 
 #: panels/user-accounts/cc-user-panel.c:1197
 msgid "This panel must be unlocked to change this setting"
-msgstr "Bảng này phải được bỏ khóa mới thay đổi được cài đặt này"
+msgstr ""
 
 #: panels/user-accounts/cc-user-panel.c:1264
 msgid "Delete the selected user account"
@@ -7609,7 +7668,7 @@ msgstr ""
 
 #: panels/user-accounts/cc-user-panel.c:1423
 msgid "Unlock to Add Users and Change Settings"
-msgstr "Mở khóa để Thêm người dùng và Thay đổi cài đặt"
+msgstr "Mở khóa để Thêm người dùng và thay đổi cài đặt"
 
 #: panels/user-accounts/cc-user-panel.ui:23
 #: panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in:3
@@ -7619,8 +7678,8 @@ msgstr "Người dùng"
 #: panels/user-accounts/cc-user-panel.ui:60
 msgid "Your session needs to be restarted for changes to take effect"
 msgstr ""
-"Phiên làm việc của bạn cần phải khởi động lại thì các thay đổi mới được áp "
-"dụng"
+"Phiên làm việc của bạn cần phải khởi động lại máy tính thì các thay đổi mới "
+"được áp dụng"
 
 #: panels/user-accounts/cc-user-panel.ui:67
 msgid "Restart Now"
@@ -7661,15 +7720,17 @@ msgstr "Mở ứng dụng dành cho cha mẹ quản lý con cái."
 
 #: panels/user-accounts/cc-user-panel.ui:328
 msgid "Remove User…"
-msgstr "Gỡ bỏ người dùng…"
+msgstr "Bỏ người dùng…"
 
 #: panels/user-accounts/cc-user-panel.ui:340
+#, fuzzy
 msgid "Other Users"
-msgstr "Người dùng khác"
+msgstr "Tập tin khác"
 
 #: panels/user-accounts/cc-user-panel.ui:353
+#, fuzzy
 msgid "Add User…"
-msgstr "Thêm người dùng…"
+msgstr "_Thêm người dùng…"
 
 #. Translators: This is the empty state page label which states that there are no users to show in the panel.
 #: panels/user-accounts/cc-user-panel.ui:381
@@ -7916,17 +7977,6 @@ msgstr ""
 msgid "_Close"
 msgstr "Đón_g"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Bấm vào đánh dấu đích khi xuất hiện trên màn hình để tinh chỉnh tablet."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Phát hiện ấn nhầm, đang khởi động lại…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -7954,133 +8004,111 @@ msgstr "Hiển thị Trợ giúp Trên-Màn-Hình"
 
 #: panels/wacom/cc-wacom-device.c:431
 msgid "Tablet mounted on laptop panel"
-msgstr "Bảng vẽ được gắn trên bảng máy tính xách tay"
+msgstr ""
 
 #: panels/wacom/cc-wacom-device.c:433
 msgid "Tablet mounted on external display"
-msgstr "Bảng vẽ được gắn trên màn hình ngoài"
+msgstr ""
 
 #: panels/wacom/cc-wacom-device.c:435
+#, fuzzy
 msgid "External tablet device"
-msgstr "Thiết bị bảng bên ngoài"
+msgstr "Không tìm thấy bảng vẽ"
 
 #. All displays item
 #: panels/wacom/cc-wacom-page.c:608
+#, fuzzy
 msgid "All Displays"
-msgstr "Mọi màn hình"
+msgstr "Màn hình"
 
 #: panels/wacom/cc-wacom-page.ui:16
+#, fuzzy
 msgid "Tablet Mode"
-msgstr "Chế độ máy tính bảng"
+msgstr "Máy tính bảng"
 
 #: panels/wacom/cc-wacom-page.ui:17
 msgid "Use absolute positioning for the pen"
-msgstr "Dùng vị trí tuyệt đối cho bút"
+msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:27
+#, fuzzy
 msgid "Left Hand Orientation"
-msgstr "Hướng thuận tay trái"
+msgstr "Hướng chuột thuận tay trái"
 
 #: panels/wacom/cc-wacom-page.ui:28
 msgid "Tablet and Express Keys™ are rotated for left hand use"
-msgstr "Bảng vẽ và Express Keys™ được xoay cho người sử dụng tay trái"
+msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:56
+#, fuzzy
 msgctxt "display setting"
 msgid "Map to Monitor"
-msgstr "Ánh xạ sang màn hình"
+msgstr "Ánh xạ sang màn hình…"
 
 #: panels/wacom/cc-wacom-page.ui:62
+#, fuzzy
 msgid "Keep Aspect Ratio"
-msgstr "Giữ nguyên tỷ lệ"
+msgstr "Tỷ lệ màn hình"
 
 #: panels/wacom/cc-wacom-page.ui:63
 msgid "Only use a portion of the tablet surface to keep monitor aspect ratio"
-msgstr "Chỉ dùng một vị trí của bề mặt bảng vẽ để giữ tỷ lệ hình dáng màn hình"
+msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:73
+#, fuzzy
 msgid "Calibrate"
-msgstr "Cân chỉnh"
+msgstr "Cân chỉnh…"
 
 #: panels/wacom/cc-wacom-panel.ui:56
 msgid "No tablet detected"
 msgstr "Không tìm thấy bảng vẽ"
 
 #: panels/wacom/cc-wacom-panel.ui:57
+#, fuzzy
 msgid "Please plug in or turn on your Wacom tablet."
-msgstr "Vui lòng cắm vào và bật bảng vẽ Wacom của bạn."
+msgstr "Vui lòng cắm vào và bật bảng vẽ Wacom"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:16
 msgid "Tip Pressure Feel"
 msgstr "Cảm giác ấn ngón"
 
-#: panels/wacom/cc-wacom-stylus-page.ui:21
-#: panels/wacom/cc-wacom-stylus-page.ui:82
-msgid "Soft"
-msgstr "Mềm"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:35
-msgid "Stylus tip pressure"
-msgstr "Áp lực đầu bút vẽ"
-
 #: panels/wacom/cc-wacom-stylus-page.ui:54
+#, fuzzy
 msgctxt "display setting"
 msgid "Button 1"
-msgstr "Nút 1"
+msgstr "Nút"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:62
+#, fuzzy
 msgctxt "display setting"
 msgid "Button 2"
-msgstr "Nút 2"
+msgstr "Nút"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:70
+#, fuzzy
 msgctxt "display setting"
 msgid "Button 3"
-msgstr "Nút 3"
+msgstr "Nút"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:77
 msgid "Eraser Pressure Feel"
 msgstr "Cảm giác ấn tẩy"
 
-#: panels/wacom/cc-wacom-stylus-page.ui:96
-msgid "Eraser pressure"
-msgstr "Cảm biến ấn tẩy"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:102
-msgid "Firm"
-msgstr "Cứng"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:133
-msgid "Default"
-msgstr "Mặc định"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:134
-msgid "Middle Mouse Button Click"
-msgstr "Nhấn nút chuột giữa"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:135
-msgid "Right Mouse Button Click"
-msgstr "Nhấn nút chuột phải"
-
-#: panels/wacom/cc-wacom-stylus-page.ui:137
-msgid "Forward"
-msgstr "Kế tiếp"
-
 #: panels/wacom/cc-wacom-tool.c:321
 msgid "Airbrush stylus with pressure, tilt, and integrated slider"
-msgstr "Bút vẽ tiêu chuẩn với áp lực, nghiêng và con trượt tích hợp"
+msgstr ""
 
 #: panels/wacom/cc-wacom-tool.c:323
 msgid "Airbrush stylus with pressure, tilt, and rotation"
-msgstr "Bút vẽ tiêu chuẩn với áp lực, nghiêng và xoay"
+msgstr ""
 
 #: panels/wacom/cc-wacom-tool.c:325
 msgid "Standard stylus with pressure and tilt"
-msgstr "Bút vẽ tiêu chuẩn với áp lực và nghiêng"
+msgstr ""
 
 #: panels/wacom/cc-wacom-tool.c:327
 msgid "Standard stylus with pressure"
-msgstr "Bút vẽ tiêu chuẩn với áp lực"
+msgstr ""
 
 #: panels/wacom/gnome-wacom-panel.desktop.in.in:3
 msgid "Wacom Tablet"
@@ -8297,6 +8325,7 @@ msgid "PIN code should be a 4-8 digit number"
 msgstr "Mã PIN phải là số có 4-8 chữ số"
 
 #: panels/wwan/cc-wwan-device-page.c:316
+#, fuzzy
 msgid "Unlocking…"
 msgstr "Mở khoá…"
 
@@ -8528,7 +8557,6 @@ msgstr "Mạng di động"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Cấu hình kết nối cho điện thoại và dữ liệu di động"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -8574,7 +8602,7 @@ msgstr "[BẢNG] [Đ.SỐ…]"
 msgid "Privacy"
 msgstr "Riêng tư"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Bảng điều khiển hiện có:"
 
@@ -8666,19 +8694,17 @@ msgstr ""
 
 #: shell/org.gnome.Settings.gschema.xml:20
 msgid "Initial state of the window"
-msgstr "Trạng thái cửa sổ ban đầu"
+msgstr ""
 
 #: shell/org.gnome.Settings.gschema.xml:21
 msgid ""
 "A tuple containing the initial width, height and maximized state of the "
 "application window."
 msgstr ""
-"Bộ dữ liệu chứa chiều rộng, cao và trạng thái phóng to ban đầu của cửa sổ "
-"ứng dụng."
 
 #. translators:
 #. * The number of sound outputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1915
+#: subprojects/gvc/gvc-mixer-control.c:1907
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
@@ -8686,13 +8712,13 @@ msgstr[0] "%u đầu ra"
 
 #. translators:
 #. * The number of sound inputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1925
+#: subprojects/gvc/gvc-mixer-control.c:1917
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
 msgstr[0] "%u đầu vào"
 
-#: subprojects/gvc/gvc-mixer-control.c:2876
+#: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Âm thanh hệ thống"
 
@@ -8750,8 +8776,8 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr "Không thể thay đổi"
 
 #~ msgid ""
-#~ "Individual permissions for applications can be reviewed in the <a href="
-#~ "\"privacy\">Privacy</a> Settings."
+#~ "Individual permissions for applications can be reviewed in the <a "
+#~ "href=\"privacy\">Privacy</a> Settings."
 #~ msgstr ""
 #~ "Bạn có thể xem xét các quyền riêng lẻ cho các ứng dụng trong Cài đặt <a "
 #~ "href=\"privacy\">quyền riêng tư</a>."
@@ -8807,7 +8833,7 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr "Cần có kết nối mạng Internet"
 
 #~ msgid "_Copy"
-#~ msgstr "_Sao chép"
+#~ msgstr "_Chép"
 
 #~ msgid "Select _All"
 #~ msgstr "Chọn _Tất cả"
@@ -8838,7 +8864,13 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr "Ấm hơn"
 
 #~ msgid "Less Warm"
-#~ msgstr "Ít ấm hơn"
+#~ msgstr "Giảm Ấm"
+
+#~ msgid "OS Name"
+#~ msgstr "Tên HĐH"
+
+#~ msgid "OS Type"
+#~ msgstr "Kiểu HĐH"
 
 #~ msgid "Screenshots"
 #~ msgstr "Chụp màn hình"
@@ -8886,6 +8918,10 @@ msgstr "Âm thanh hệ thống"
 
 #~ msgid "Allow the applications below to determine your location."
 #~ msgstr "Cho phép các ứng dụng phía dưới sử dụng vị trí của bạn."
+
+#~ msgctxt "lock_screen"
+#~ msgid "5 minutes"
+#~ msgstr "5 phút"
 
 #~ msgid "Allow the applications below to use your microphone."
 #~ msgstr "Cho phép các ứng dụng bên dưới sử dụng micrô của bạn."
@@ -8959,7 +8995,7 @@ msgstr "Âm thanh hệ thống"
 #~ "bạn bằng cách kết nối đến %s"
 
 #~ msgid "Copy"
-#~ msgstr "Sao chép"
+#~ msgstr "Chép"
 
 #~ msgid "_Screen Sharing"
 #~ msgstr "Chia sẻ _màn hình"
@@ -8998,7 +9034,7 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr "_Họ tên"
 
 #~ msgid "Standard"
-#~ msgstr "Tiêu chuẩn"
+#~ msgstr "Chuẩn"
 
 #~ msgid "Account _Type"
 #~ msgstr "Kiểu _tài khoản"
@@ -9039,6 +9075,15 @@ msgstr "Âm thanh hệ thống"
 #~ msgstr ""
 #~ "Cái này sẽ được dùng để đặt tên cho thư mục riêng của bạn và không thể "
 #~ "thay đổi nó được."
+
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Bấm vào đánh dấu đích khi xuất hiện trên màn hình để tinh chỉnh tablet."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Phát hiện ấn nhầm, đang khởi động lại…"
 
 # Name: don't translate / Tên: đừng dịch
 #~ msgid "Output:"
@@ -9084,6 +9129,18 @@ msgstr "Âm thanh hệ thống"
 #~ msgid "Adjust display resolution"
 #~ msgstr "Điều chỉnh độ phân giải"
 
+#~ msgid "Default"
+#~ msgstr "Mặc định"
+
+#~ msgid "Middle Mouse Button Click"
+#~ msgstr "Nhấn nút chuột giữa"
+
+#~ msgid "Right Mouse Button Click"
+#~ msgstr "Nhấn nút chuột phải"
+
+#~ msgid "Forward"
+#~ msgstr "Kế tiếp"
+
 #~ msgid "No stylus found"
 #~ msgstr "Không tìm thấy bút trỏ nào"
 
@@ -9091,6 +9148,12 @@ msgstr "Âm thanh hệ thống"
 #~ "Please move your stylus to the proximity of the tablet to configure it"
 #~ msgstr ""
 #~ "Vui lòng di chuyển bút trỏ của bạn đến lân cận của bảng để cấu hình nó"
+
+#~ msgid "Soft"
+#~ msgstr "Mềm"
+
+#~ msgid "Firm"
+#~ msgstr "Cứng"
 
 #~ msgid "Top Button"
 #~ msgstr "Nút cao"
@@ -10460,9 +10523,6 @@ msgstr "Âm thanh hệ thống"
 
 #~ msgid "Turns off wireless devices"
 #~ msgstr "Tắt thiết bị wireless (không dây)"
-
-#~ msgid "Disable while _typing"
-#~ msgstr "_Tắt khi đang gõ"
 
 #~ msgid "The system network services are not compatible with this version."
 #~ msgstr "Dịch vụ mạng hệ thống không tương thích với phiên bản này."

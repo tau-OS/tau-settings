@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-control-center/"
-"issues\n"
-"POT-Creation-Date: 2022-04-07 11:50+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-07 15:26-0700\n"
 "PO-Revision-Date: 2018-02-26 12:42+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -25,7 +24,6 @@ msgstr ""
 
 #: panels/applications/cc-applications-panel.c:803
 #, fuzzy
-#| msgid "System Sounds"
 msgid "System Bus"
 msgstr "Fuaimean an t-siostaim"
 
@@ -34,13 +32,11 @@ msgstr "Fuaimean an t-siostaim"
 #: panels/applications/cc-applications-panel.c:818
 #: panels/applications/cc-applications-panel.c:823
 #, fuzzy
-#| msgid "_Full Name"
 msgid "Full access"
 msgstr "Ainm _slàn"
 
 #: panels/applications/cc-applications-panel.c:805
 #, fuzzy
-#| msgid "Session Ended"
 msgid "Session Bus"
 msgstr "Thàinig an seisean gu crìoch"
 
@@ -63,7 +59,6 @@ msgstr "Lìonra"
 
 #: panels/applications/cc-applications-panel.c:813
 #, fuzzy
-#| msgid "Network Name"
 msgid "Has network access"
 msgstr "Ainm an lìonraidh"
 
@@ -76,22 +71,19 @@ msgstr "Dhachaigh"
 #: panels/applications/cc-applications-panel.c:820
 #: panels/applications/cc-applications-panel.c:825
 #, fuzzy
-#| msgctxt "printer state"
-#| msgid "Ready"
 msgid "Read-only"
 msgstr "Deiseil"
 
 #: panels/applications/cc-applications-panel.c:823
 #: panels/applications/cc-applications-panel.c:825
 #, fuzzy
-#| msgid "Open System"
 msgid "File System"
 msgstr "Siostam fosgailte"
 
 #: panels/applications/cc-applications-panel.c:829
 #: panels/keyboard/01-launchers.xml.in:6
-#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:246
-#: shell/cc-window.c:878 shell/cc-window.ui:22
+#: shell/appdata/org.gnome.Settings.appdata.xml.in:7 shell/cc-window.c:250
+#: shell/cc-window.c:882 shell/cc-window.ui:22
 #: shell/org.gnome.Settings.desktop.in.in:3
 msgid "Settings"
 msgstr "Roghainnean"
@@ -137,26 +129,22 @@ msgstr "Aplacaidean"
 
 #: panels/applications/cc-applications-panel.ui:31
 #, fuzzy
-#| msgid "No applications found"
 msgid "No applications"
 msgstr "Cha deach aplacaid sam bith a lorg"
 
 #: panels/applications/cc-applications-panel.ui:34
 #, fuzzy
-#| msgid "Install PPD File…"
 msgid "Install some…"
 msgstr "Stàlaich faidhle PPD…"
 
 #: panels/applications/cc-applications-panel.ui:84
 #: panels/network/wireless-security/ws-file-chooser-button.c:96
 #, fuzzy
-#| msgid "_Open"
 msgid "Open"
 msgstr "F_osgail"
 
 #: panels/applications/cc-applications-panel.ui:94
 #, fuzzy
-#| msgid "_View details"
 msgid "View Details"
 msgstr "_Seall am mion-fhiosrachadh"
 
@@ -185,11 +173,11 @@ msgstr ""
 #: panels/applications/cc-applications-panel.ui:205
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:118
 #: panels/keyboard/cc-xkb-modifier-dialog.c:344
-#: panels/keyboard/keyboard-shortcuts.c:367 panels/network/network-proxy.ui:105
-#: panels/user-accounts/cc-user-panel.c:789
+#: panels/keyboard/keyboard-shortcuts.c:367 panels/mouse/cc-mouse-panel.ui:223
+#: panels/network/network-proxy.ui:105 panels/user-accounts/cc-user-panel.c:789
 #: panels/user-accounts/cc-user-panel.c:879
 #: panels/wwan/cc-wwan-device-page.c:478
-#: subprojects/gvc/gvc-mixer-control.c:1908
+#: subprojects/gvc/gvc-mixer-control.c:1900
 msgid "Disabled"
 msgstr "À comas"
 
@@ -200,13 +188,11 @@ msgstr "Brathan"
 
 #: panels/applications/cc-applications-panel.ui:127
 #, fuzzy
-#| msgid "Show _Notifications"
 msgid "Show system notifications."
 msgstr "Seall _na brathan"
 
 #: panels/applications/cc-applications-panel.ui:133
 #, fuzzy
-#| msgid "Current background"
 msgid "Run in background"
 msgstr "An cùlaibh làithreach"
 
@@ -216,20 +202,17 @@ msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:140
 #, fuzzy
-#| msgid "Wallpapers"
 msgid "Change Wallpaper"
 msgstr "Pàipearan-balla"
 
 #: panels/applications/cc-applications-panel.ui:141
 #, fuzzy
-#| msgid "preferences-desktop-wallpaper"
 msgid "Change the desktop wallpaper."
 msgstr "preferences-desktop-wallpaper"
 
 #: panels/applications/cc-applications-panel.ui:147
 #: panels/applications/cc-applications-panel.ui:154
 #, fuzzy
-#| msgid "Sound"
 msgid "Sounds"
 msgstr "Fuaim"
 
@@ -240,13 +223,11 @@ msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:161
 #, fuzzy
-#| msgid "Set Shortcut"
 msgid "Inhibit Shortcuts"
 msgstr "Suidhich ath-ghoirid"
 
 #: panels/applications/cc-applications-panel.ui:162
 #, fuzzy
-#| msgid "No keyboard shortcut found"
 msgid "Block standard keyboard shortcuts."
 msgstr "Cha deach ath-ghoirid a’ mheur-chlàir a lorg"
 
@@ -254,7 +235,6 @@ msgstr "Cha deach ath-ghoirid a’ mheur-chlàir a lorg"
 #: panels/applications/cc-applications-panel.ui:175
 #: panels/camera/gnome-camera-panel.desktop.in.in:3
 #, fuzzy
-#| msgid "%s Camera"
 msgid "Camera"
 msgstr "Camara %s"
 
@@ -288,7 +268,6 @@ msgstr ""
 #: panels/applications/cc-applications-panel.ui:215
 #: panels/applications/cc-applications-panel.ui:319
 #, fuzzy
-#| msgid "Built-in Webcam"
 msgid "Built-in Permissions"
 msgstr "Camara-lìn ’na bhroinn"
 
@@ -305,13 +284,13 @@ msgstr ""
 msgid "Storage"
 msgstr ""
 
-#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:105
+#: panels/applications/cc-applications-panel.ui:294 shell/cc-panel-list.ui:150
 msgid "No results found"
 msgstr "Cha deach toradh a lorg"
 
 #: panels/applications/cc-applications-panel.ui:304
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:198
-#: shell/cc-panel-list.ui:114
+#: shell/cc-panel-list.ui:159
 msgid "Try a different search"
 msgstr "Feuch lorg eile"
 
@@ -321,13 +300,11 @@ msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:367
 #, fuzzy
-#| msgid "Display Type"
 msgid "File Types"
 msgstr "Seòrsa an uidheim-thaisbeanaidh"
 
 #: panels/applications/cc-applications-panel.ui:373
 #, fuzzy
-#| msgid "Link speed"
 msgid "Link Types"
 msgstr "Astar a’ cheangail"
 
@@ -342,7 +319,6 @@ msgstr ""
 
 #: panels/applications/cc-applications-panel.ui:413
 #, fuzzy
-#| msgid "Applications"
 msgid "Application"
 msgstr "Aplacaidean"
 
@@ -366,7 +342,6 @@ msgstr ""
 msgid "Control various application permissions and settings"
 msgstr ""
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/applications/gnome-applications-panel.desktop.in.in:16
 msgid "application;flatpak;permission;setting;"
@@ -374,7 +349,6 @@ msgstr ""
 
 #: panels/background/cc-background-chooser.c:307
 #, fuzzy
-#| msgid "Select a File…"
 msgid "Select a picture"
 msgstr "Tagh faidhle…"
 
@@ -387,8 +361,8 @@ msgstr "Tagh faidhle…"
 #: panels/network/cc-wifi-hotspot-dialog.ui:123
 #: panels/network/cc-wifi-panel.c:881
 #: panels/network/connection-editor/connection-editor.ui:14
-#: panels/network/connection-editor/vpn-helpers.c:221
-#: panels/network/connection-editor/vpn-helpers.c:341
+#: panels/network/connection-editor/vpn-helpers.c:226
+#: panels/network/connection-editor/vpn-helpers.c:346
 #: panels/network/net-device-wifi.c:860
 #: panels/printers/new-printer-dialog.ui:50
 #: panels/printers/pp-details-dialog.c:263
@@ -410,7 +384,7 @@ msgid "_Cancel"
 msgstr "_Sguir dheth"
 
 #: panels/background/cc-background-chooser.c:311
-#: panels/network/connection-editor/vpn-helpers.c:222
+#: panels/network/connection-editor/vpn-helpers.c:227
 #: panels/printers/pp-details-dialog.c:264
 #: panels/sharing/cc-sharing-panel.c:524
 #: panels/user-accounts/cc-avatar-chooser.c:168
@@ -432,19 +406,17 @@ msgstr "%d × %d"
 msgid "No Desktop Background"
 msgstr "Chan eil cùlaibh aig an deasga"
 
-#: panels/background/cc-background-panel.c:227
+#: panels/background/cc-background-panel.c:240
 msgid "Current background"
 msgstr "An cùlaibh làithreach"
 
 #: panels/background/cc-background-panel.ui:9
 #, fuzzy
-#| msgid "Stylus"
 msgid "Style"
 msgstr "Staidhleas"
 
 #: panels/background/cc-background-panel.ui:45
 #, fuzzy
-#| msgid "Right"
 msgid "Light"
 msgstr "Deas"
 
@@ -458,7 +430,6 @@ msgstr "Cùlaibh"
 
 #: panels/background/cc-background-panel.ui:97
 #, fuzzy
-#| msgid "Add a Printer…"
 msgid "Add Picture…"
 msgstr "Cuir clò-bhualadair ris…"
 
@@ -468,14 +439,12 @@ msgstr ""
 
 #: panels/background/gnome-background-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Change your background image to a wallpaper or photo"
 msgid "Change your background image or the UI colors"
 msgstr "Cleachd pàipear-balla no dealbh mar chùlaibh"
 
 #. Translators: Search terms to find the Appearance panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/background/gnome-background-panel.desktop.in.in:15
 #, fuzzy
-#| msgid "Wallpaper;Screen;Desktop;"
 msgid "Background;Wallpaper;Screen;Desktop;Style;Light;Dark;"
 msgstr "Wallpaper;Screen;Desktop;pàipear-balla;sgrìn;deasg;"
 
@@ -498,7 +467,6 @@ msgstr ""
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:35
 #, fuzzy
-#| msgid "Airplane Mode is on"
 msgid "Airplane Mode is On"
 msgstr "Tha am modh itealain air"
 
@@ -512,7 +480,6 @@ msgstr "Cuir am modh itealain dheth"
 
 #: panels/bluetooth/cc-bluetooth-panel.ui:53
 #, fuzzy
-#| msgid "Hardware Airplane Mode is on"
 msgid "Hardware Airplane Mode is On"
 msgstr "Tha modh itealain a’ bhathair-chruaidh air"
 
@@ -537,13 +504,11 @@ msgstr "share;sharing;bluetooth;obex;co-roinn;co-roinneadh;"
 
 #: panels/camera/cc-camera-panel.ui:21
 #, fuzzy
-#| msgid "Bluetooth Turned Off"
 msgid "Camera is Turned Off"
 msgstr "Tha Bluetooth dheth"
 
 #: panels/camera/cc-camera-panel.ui:22
 #, fuzzy
-#| msgid "No application is currently playing or recording audio."
 msgid "No applications can capture photos or video."
 msgstr ""
 "Chan eil aplacaid sam bith a’ cluich no a’ clàradh fuaime an-dràsta fhèin."
@@ -562,11 +527,9 @@ msgstr ""
 
 #: panels/camera/gnome-camera-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Browse for more pictures"
 msgid "Protect your pictures"
 msgstr "Brabhsaich airson barrachd dhealbhan"
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/camera/gnome-camera-panel.desktop.in.in:20
 #: panels/microphone/gnome-microphone-panel.desktop.in.in:20
@@ -784,7 +747,7 @@ msgid "Save Profile"
 msgstr "Sàbhail a’ phròifil"
 
 #: panels/color/cc-color-panel.c:845
-#: panels/network/connection-editor/vpn-helpers.c:342
+#: panels/network/connection-editor/vpn-helpers.c:347
 #: panels/wwan/cc-wwan-apn-dialog.ui:43
 msgid "_Save"
 msgstr "_Sàbhail"
@@ -814,7 +777,7 @@ msgstr ""
 msgid "The device type is not currently supported."
 msgstr "Chan eil taic ris an t-seòrsa seo a dh’uidheam aig an àm seo."
 
-#: panels/color/cc-color-panel.ui:4 panels/wacom/calibrator/calibrator.ui:40
+#: panels/color/cc-color-panel.ui:4
 msgid "Screen Calibration"
 msgstr "Cailbhreachadh na sgrìn"
 
@@ -934,9 +897,9 @@ msgstr "Feumaidh seo meadhan as urrainnear sgrìobhadh air"
 
 #: panels/color/cc-color-panel.ui:313
 msgid ""
-"You may find these instructions on how to use the profile on <a href=\"linux"
-"\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a href=\"windows"
-"\">Microsoft Windows</a> systems useful."
+"You may find these instructions on how to use the profile on <a "
+"href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> and <a "
+"href=\"windows\">Microsoft Windows</a> systems useful."
 msgstr ""
 "Dh’fhaoidte gum bi an stiùireadh seo a thaobh mar a chleachdar na pròifilean "
 "seo air <a href=\"linux\">GNU/Linux</a>, <a href=\"osx\">Apple OS X</a> agus "
@@ -1209,7 +1172,6 @@ msgstr "Eile…"
 
 #: panels/common/cc-language-chooser.ui:5
 #, fuzzy
-#| msgid "Language"
 msgid "Select Language"
 msgstr "Cànan"
 
@@ -1228,7 +1190,6 @@ msgstr "Barrachd…"
 
 #: panels/common/cc-permission-infobar.c:109
 #, fuzzy
-#| msgid "Bluetooth Settings"
 msgid "Unlock to Change Settings"
 msgstr "Roghainnean Bluetooth"
 
@@ -1238,7 +1199,6 @@ msgstr ""
 
 #: panels/common/cc-permission-infobar.ui:57
 #, fuzzy
-#| msgid "_Unlock"
 msgid "Unlock…"
 msgstr "_Thoir a’ ghlas dheth"
 
@@ -1284,8 +1244,6 @@ msgstr "%e %b %Y"
 
 #: panels/common/cc-util.c:165
 #, fuzzy, c-format
-#| msgid "%i hour"
-#| msgid_plural "%i hours"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%i uair a thìde"
@@ -1296,8 +1254,6 @@ msgstr[3] "%i uair a thìde"
 #. Translators: Option for "Blank Screen" in "Power" panel
 #: panels/common/cc-util.c:166 panels/power/cc-power-panel.c:846
 #, fuzzy, c-format
-#| msgid "%i minute"
-#| msgid_plural "%i minutes"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%i mhionaid"
@@ -1307,7 +1263,6 @@ msgstr[3] "%i mionaid"
 
 #: panels/common/cc-util.c:167
 #, fuzzy, c-format
-#| msgid "30 seconds"
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "30 diog"
@@ -1318,7 +1273,6 @@ msgstr[3] "30 diog"
 #. 5 hours 2 minutes 12 seconds
 #: panels/common/cc-util.c:174
 #, fuzzy, c-format
-#| msgid "%i %s %i %s"
 msgctxt "hours minutes seconds"
 msgid "%s %s %s"
 msgstr "%i %s %i %s"
@@ -1326,7 +1280,6 @@ msgstr "%i %s %i %s"
 #. 5 hours 2 minutes
 #: panels/common/cc-util.c:179
 #, fuzzy, c-format
-#| msgid "%i %s %i %s"
 msgctxt "hours minutes"
 msgid "%s %s"
 msgstr "%i %s %i %s"
@@ -1341,7 +1294,6 @@ msgstr ""
 #. 2 minutes 12 seconds
 #: panels/common/cc-util.c:192
 #, fuzzy, c-format
-#| msgid "%i %s %i %s"
 msgctxt "minutes seconds"
 msgid "%s %s"
 msgstr "%i %s %i %s"
@@ -1356,7 +1308,6 @@ msgstr ""
 #. 0 seconds
 #: panels/common/cc-util.c:208
 #, fuzzy
-#| msgid "30 seconds"
 msgid "0 seconds"
 msgstr "30 diog"
 
@@ -1498,7 +1449,6 @@ msgstr "Lorg baile"
 
 #: panels/datetime/cc-datetime-panel.ui:164
 #, fuzzy
-#| msgid "Automatic _Date & Time"
 msgid "Automatic _Date &amp; Time"
 msgstr "Ceann-là ⁊ an t-àm gu _fèin-obrachail"
 
@@ -1508,7 +1458,6 @@ msgstr "Tha feum air an eadar-lìon"
 
 #: panels/datetime/cc-datetime-panel.ui:177
 #, fuzzy
-#| msgid "Date & _Time"
 msgid "Date &amp; _Time"
 msgstr "Ceann-là ⁊ an t-àm"
 
@@ -1518,7 +1467,6 @@ msgstr "An _roinn-tìde gu fèin-obrachail"
 
 #: panels/datetime/cc-datetime-panel.ui:202
 #, fuzzy
-#| msgid "Requires internet access"
 msgid "Requires location services enabled and internet access"
 msgstr "Tha feum air an eadar-lìon"
 
@@ -1592,9 +1540,6 @@ msgstr ""
 #. translators: The first '%s' is the distributor's name, such as 'Fedora', the second '%s' is a link to the privacy policy
 #: panels/diagnostics/cc-diagnostics-panel.c:139
 #, fuzzy, c-format
-#| msgid ""
-#| "Sending reports of technical problems helps us improve %s. Reports are "
-#| "sent anonymously and are scrubbed of personal data."
 msgid ""
 "Sending reports of technical problems helps us improve %s. Reports are sent "
 "anonymously and are scrubbed of personal data. %s"
@@ -1619,16 +1564,12 @@ msgstr ""
 msgid "Report your problems"
 msgstr ""
 
-#. FIXME
 #. Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/diagnostics/gnome-diagnostics-panel.desktop.in.in:20
 #: panels/location/gnome-location-panel.desktop.in.in:20
 #: panels/lock/gnome-lock-panel.desktop.in.in:20
 #: panels/usage/gnome-usage-panel.desktop.in.in:20
 #, fuzzy
-#| msgid ""
-#| "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
-#| "network;identity;"
 msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;privacy;"
@@ -1640,22 +1581,22 @@ msgstr ""
 #: panels/display/cc-display-panel.c:512
 #: panels/notifications/cc-notifications-panel.c:217
 #: panels/power/cc-power-panel.c:734 panels/power/cc-power-panel.c:741
-#: panels/universal-access/cc-ua-panel.c:336
-#: panels/universal-access/cc-ua-panel.c:468
-#: panels/universal-access/cc-ua-panel.c:478
-#: panels/universal-access/cc-ua-panel.c:490
-#: panels/universal-access/cc-ua-panel.c:526
+#: panels/universal-access/cc-ua-panel.c:337
+#: panels/universal-access/cc-ua-panel.c:469
+#: panels/universal-access/cc-ua-panel.c:479
+#: panels/universal-access/cc-ua-panel.c:491
+#: panels/universal-access/cc-ua-panel.c:527
 msgid "On"
 msgstr "Air"
 
 #: panels/display/cc-display-panel.c:514 panels/network/net-proxy.c:69
 #: panels/notifications/cc-notifications-panel.c:217
 #: panels/power/cc-power-panel.c:728 panels/power/cc-power-panel.c:739
-#: panels/universal-access/cc-ua-panel.c:336
-#: panels/universal-access/cc-ua-panel.c:468
-#: panels/universal-access/cc-ua-panel.c:478
-#: panels/universal-access/cc-ua-panel.c:490
-#: panels/universal-access/cc-ua-panel.c:526
+#: panels/universal-access/cc-ua-panel.c:337
+#: panels/universal-access/cc-ua-panel.c:469
+#: panels/universal-access/cc-ua-panel.c:479
+#: panels/universal-access/cc-ua-panel.c:491
+#: panels/universal-access/cc-ua-panel.c:527
 msgid "Off"
 msgstr "Dheth"
 
@@ -1678,7 +1619,6 @@ msgstr "Cuir _an sàs"
 
 #: panels/display/cc-display-panel.ui:97
 #, fuzzy
-#| msgid "Bluetooth is disabled"
 msgid "Display Settings Disabled"
 msgstr "Tha Bluetooth à comas"
 
@@ -1688,7 +1628,6 @@ msgstr "Rian nan uidheaman-taisbeanaidh"
 
 #: panels/display/cc-display-panel.ui:124
 #, fuzzy
-#| msgid "Single Display"
 msgid "Multiple Displays"
 msgstr "Mar aon uidheam-taisbeanaidh"
 
@@ -1743,14 +1682,12 @@ msgstr "%.2lf Hz"
 
 #: panels/display/cc-display-settings.ui:40
 #, fuzzy
-#| msgid "Orientation"
 msgctxt "display setting"
 msgid "Orientation"
 msgstr "Comhair"
 
 #: panels/display/cc-display-settings.ui:47
 #, fuzzy
-#| msgid "Resolution"
 msgctxt "display setting"
 msgid "Resolution"
 msgstr "Dùmhlachd-bhreacaidh"
@@ -1766,7 +1703,6 @@ msgstr "Gleus airson TBh"
 #: panels/display/cc-display-settings.ui:75
 #: panels/display/cc-display-settings.ui:90
 #, fuzzy
-#| msgid "Scale"
 msgctxt "display setting"
 msgid "Scale"
 msgstr "Sgèile"
@@ -1799,7 +1735,6 @@ msgstr "O laighe gu èirigh na grèine"
 
 #: panels/display/cc-night-light-page.ui:100
 #, fuzzy
-#| msgid "Schedule"
 msgid "Manual Schedule"
 msgstr "Sgeideal"
 
@@ -1868,9 +1803,9 @@ msgstr ""
 "solar;oidhche;gorm;dearg;dath;laighe na grèine;èirigh na grèine;"
 
 #: panels/info-overview/cc-info-overview-panel.c:411
-#: panels/info-overview/cc-info-overview-panel.c:435
-#: panels/info-overview/cc-info-overview-panel.c:481
-#: panels/info-overview/cc-info-overview-panel.c:511
+#: panels/info-overview/cc-info-overview-panel.c:441
+#: panels/info-overview/cc-info-overview-panel.c:487
+#: panels/info-overview/cc-info-overview-panel.c:517
 #: panels/wwan/cc-wwan-details-dialog.c:100
 msgid "Unknown"
 msgstr "Chan eil fhios"
@@ -1879,54 +1814,50 @@ msgstr "Chan eil fhios"
 #. * example:
 #. * "Fedora 25 (Workstation Edition); Build ID: xyz" or
 #. * "Ubuntu 16.04 LTS; Build ID: jki"
-#: panels/info-overview/cc-info-overview-panel.c:443
+#: panels/info-overview/cc-info-overview-panel.c:449
 #, c-format
 msgid "%s; Build ID: %s"
 msgstr "%s; ID na togail: %s"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:458
+#: panels/info-overview/cc-info-overview-panel.c:464
 #, c-format
 msgid "64-bit"
 msgstr "64-biod"
 
 #. translators: This is the type of architecture for the OS
-#: panels/info-overview/cc-info-overview-panel.c:461
+#: panels/info-overview/cc-info-overview-panel.c:467
 #, c-format
 msgid "32-bit"
 msgstr "32-biod"
 
-#: panels/info-overview/cc-info-overview-panel.c:720
+#: panels/info-overview/cc-info-overview-panel.c:726
 msgid "X11"
 msgstr ""
 
-#: panels/info-overview/cc-info-overview-panel.c:724
+#: panels/info-overview/cc-info-overview-panel.c:730
 msgid "Wayland"
 msgstr "Wayland"
 
-#: panels/info-overview/cc-info-overview-panel.c:726
+#: panels/info-overview/cc-info-overview-panel.c:732
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Windowing system (Wayland, X11, or Unknown)"
 msgid "Unknown"
 msgstr "Chan eil fhios"
 
 #: panels/info-overview/cc-info-overview-panel.ui:17
 #, fuzzy
-#| msgid "System"
 msgid "System Logo"
 msgstr "Siostam"
 
 #: panels/info-overview/cc-info-overview-panel.ui:32
 #: panels/sharing/cc-sharing-panel.ui:299
 #, fuzzy
-#| msgid "Device name"
 msgid "Device Name"
 msgstr "Ainm an uidheim"
 
 #: panels/info-overview/cc-info-overview-panel.ui:50
 #, fuzzy
-#| msgid "Hardware Address"
 msgid "Hardware Model"
 msgstr "Seòladh bathair-chruaidh"
 
@@ -1953,25 +1884,20 @@ msgstr "’Ga àireamhachadh…"
 #. translators: this field contains the distro name and version
 #: panels/info-overview/cc-info-overview-panel.ui:98
 #, fuzzy
-#| msgid "Name"
-msgid "OS Name"
-msgstr "Ainm"
+msgid "tauOS Version"
+msgstr "Tionndadh 0"
 
 #: panels/info-overview/cc-info-overview-panel.ui:106
-#, fuzzy
-#| msgid "VPN Type"
-msgid "OS Type"
-msgstr "Seòrsa an VPN"
+msgid "System Architecture"
+msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:114
 #, fuzzy
-#| msgid "Version 0"
 msgid "GNOME Version"
 msgstr "Tionndadh 0"
 
 #: panels/info-overview/cc-info-overview-panel.ui:123
 #, fuzzy
-#| msgid "Windows software"
 msgid "Windowing System"
 msgstr "Bathar-bog Windows"
 
@@ -1981,13 +1907,11 @@ msgstr "Biortaileachadh"
 
 #: panels/info-overview/cc-info-overview-panel.ui:139
 #, fuzzy
-#| msgid "Software Usage"
 msgid "Software Updates"
 msgstr "Cleachdadh bathair-bhog"
 
 #: panels/info-overview/cc-info-overview-panel.ui:158
 #, fuzzy
-#| msgid "Remove Device"
 msgid "Rename Device"
 msgstr "Thoirt an t-uidheam air falbh"
 
@@ -1999,7 +1923,6 @@ msgstr ""
 
 #: panels/info-overview/cc-info-overview-panel.ui:190
 #, fuzzy
-#| msgid "_Username"
 msgid "_Rename"
 msgstr "_Ainm-cleachdaiche"
 
@@ -2018,9 +1941,6 @@ msgstr "Seall fiosrachadh mun t-siostam agad"
 #. sure that you use the same "translation" for those keywords
 #: panels/info-overview/gnome-info-overview-panel.desktop.in.in:23
 #, fuzzy
-#| msgid ""
-#| "device;system;information;memory;processor;version;default;application;"
-#| "preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgid ""
 "device;system;information;hostname;memory;processor;version;default;"
 "application;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -2036,7 +1956,6 @@ msgstr "Fuaim agus meadhanan"
 
 #: panels/keyboard/00-multimedia.xml.in:4
 #, fuzzy
-#| msgid "Volume mute"
 msgid "Volume mute/unmute"
 msgstr "Mùch an fhuaim"
 
@@ -2206,7 +2125,6 @@ msgstr "Roghainnean"
 
 #: panels/keyboard/cc-input-row.ui:45
 #, fuzzy
-#| msgid "Keyboard Shortcuts"
 msgid "View Keyboard Layout"
 msgstr "Ath-ghoiridean a’ mheur-chlàir"
 
@@ -2224,7 +2142,6 @@ msgstr "Ath-ghoiridean gnàthaichte"
 #: panels/keyboard/cc-keyboard-panel.c:64
 #: panels/keyboard/cc-keyboard-panel.ui:62
 #, fuzzy
-#| msgid "Alternative Characters Key"
 msgid "Alternate Characters Key"
 msgstr "Roghainn eile de dh’iuchair caractair"
 
@@ -2237,7 +2154,6 @@ msgstr ""
 #: panels/keyboard/cc-keyboard-panel.c:67
 #: panels/keyboard/cc-keyboard-panel.c:85
 #, fuzzy
-#| msgid "Left+Right Alt"
 msgctxt "keyboard key"
 msgid "Left Alt"
 msgstr "Alt clì + deas"
@@ -2245,7 +2161,6 @@ msgstr "Alt clì + deas"
 #: panels/keyboard/cc-keyboard-panel.c:68
 #: panels/keyboard/cc-keyboard-panel.c:86
 #, fuzzy
-#| msgid "Left+Right Alt"
 msgctxt "keyboard key"
 msgid "Right Alt"
 msgstr "Alt clì + deas"
@@ -2253,7 +2168,6 @@ msgstr "Alt clì + deas"
 #: panels/keyboard/cc-keyboard-panel.c:69
 #: panels/keyboard/cc-keyboard-panel.c:87
 #, fuzzy
-#| msgid "Left thumb"
 msgctxt "keyboard key"
 msgid "Left Super"
 msgstr "An òrdag chlì"
@@ -2261,7 +2175,6 @@ msgstr "An òrdag chlì"
 #: panels/keyboard/cc-keyboard-panel.c:70
 #: panels/keyboard/cc-keyboard-panel.c:88
 #, fuzzy
-#| msgid "Right thumb"
 msgctxt "keyboard key"
 msgid "Right Super"
 msgstr "An òrdag dheas"
@@ -2269,7 +2182,6 @@ msgstr "An òrdag dheas"
 #: panels/keyboard/cc-keyboard-panel.c:71
 #: panels/keyboard/cc-keyboard-panel.c:89
 #, fuzzy
-#| msgid "Security key"
 msgctxt "keyboard key"
 msgid "Menu key"
 msgstr "An iuchair tèarainteachd"
@@ -2277,7 +2189,6 @@ msgstr "An iuchair tèarainteachd"
 #: panels/keyboard/cc-keyboard-panel.c:72
 #: panels/keyboard/cc-keyboard-panel.c:90
 #, fuzzy
-#| msgid "Right Half"
 msgctxt "keyboard key"
 msgid "Right Ctrl"
 msgstr "An leth dheas"
@@ -2302,21 +2213,18 @@ msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.c:92
 #, fuzzy
-#| msgid "Scroll Left"
 msgctxt "keyboard key"
 msgid "Scroll Lock"
 msgstr "Sgrolaich dhan taobh chlì"
 
 #: panels/keyboard/cc-keyboard-panel.c:93
 #, fuzzy
-#| msgid "Login _Screen"
 msgctxt "keyboard key"
 msgid "Print Screen"
 msgstr "_Sgrìn a’ chlàraidh a-steach"
 
 #: panels/keyboard/cc-keyboard-panel.c:217
 #, fuzzy, c-format
-#| msgid "You can change these shortcuts in the keyboard settings"
 msgid ""
 "Input sources can be switched using the %s keyboard shortcut.\n"
 "This can be changed in the keyboard shortcut settings."
@@ -2334,7 +2242,6 @@ msgstr ""
 
 #: panels/keyboard/cc-keyboard-panel.ui:28
 #, fuzzy
-#| msgid "Input Source Options"
 msgid "Input Source Switching"
 msgstr "Roghainnean nan tùsan ion-chuir"
 
@@ -2344,7 +2251,6 @@ msgstr "Cleachd an aon tù_s airson gach uinneag"
 
 #: panels/keyboard/cc-keyboard-panel.ui:43
 #, fuzzy
-#| msgid "Allow _different sources for each window"
 msgid "Switch input sources _individually for each window"
 msgstr "Ceadaich _diofar tùsan airson gach uinneag"
 
@@ -2364,7 +2270,6 @@ msgstr "Ath-ghoiridean a’ mheur-chlàir"
 
 #: panels/keyboard/cc-keyboard-panel.ui:100
 #, fuzzy
-#| msgid "Custom Shortcuts"
 msgid "View and Customize Shortcuts"
 msgstr "Ath-ghoiridean gnàthaichte"
 
@@ -2412,7 +2317,6 @@ msgstr "Ath-shuidhich na h-ath-ghoiridean uile air an luachan tùsail"
 
 #: panels/keyboard/cc-keyboard-shortcut-dialog.ui:143
 #, fuzzy
-#| msgid "Add Custom Shortcut"
 msgid "Add Custom Shortcuts"
 msgstr "Cuir ath-ghoirid ghnàthaichte ris"
 
@@ -2430,9 +2334,6 @@ msgstr "Cha deach ath-ghoirid a’ mheur-chlàir a lorg"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:392
 #, fuzzy, c-format
-#| msgid ""
-#| "%s is already being used for <b>%s</b>. If you replace it, %s will be "
-#| "disabled"
 msgid "%s is already being used for %s. If you replace it, %s will be disabled"
 msgstr ""
 "Tha %s ’ga chleachdadh airson <b>%s</b> mar-thà. Ma chuireas tu rud ’na "
@@ -2453,7 +2354,6 @@ msgstr "Suidhich ath-ghoirid"
 #. TRANSLATORS: %s is replaced with a description of the keyboard shortcut
 #: panels/keyboard/cc-keyboard-shortcut-editor.c:562
 #, fuzzy, c-format
-#| msgid "Enter new shortcut to change <b>%s</b>."
 msgid "Enter new shortcut to change %s."
 msgstr "Cuir a-steach an ath-ghoirid a dh’atharrachadh <b>%s</b>."
 
@@ -2476,7 +2376,6 @@ msgstr "Suidhich"
 
 #: panels/keyboard/cc-keyboard-shortcut-editor.ui:98
 #, fuzzy
-#| msgid "Press Esc to cancel or Backspace to reset the keyboard shortcut."
 msgid "Press Esc to cancel or Backspace to disable the keyboard shortcut."
 msgstr ""
 "Brùth air Esc airson sgud dheth no air Backspace gus ath-ghoirid a’ mheur-"
@@ -2516,7 +2415,6 @@ msgstr "Meur-chlàr"
 
 #: panels/keyboard/gnome-keyboard-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "View and change keyboard shortcuts and set your typing preferences"
 msgid ""
 "Change keyboard shortcuts and set your typing preferences, keyboard layouts "
 "and input sources"
@@ -2535,13 +2433,11 @@ msgstr ""
 
 #: panels/location/cc-location-panel.ui:20
 #, fuzzy
-#| msgid "Location Services"
 msgid "Location Services Turned Off"
 msgstr "Seirbheisean ionaid"
 
 #: panels/location/cc-location-panel.ui:21
 #, fuzzy
-#| msgid "No application is currently playing or recording audio."
 msgid "No applications can obtain location information."
 msgstr ""
 "Chan eil aplacaid sam bith a’ cluich no a’ clàradh fuaime an-dràsta fhèin."
@@ -2565,11 +2461,9 @@ msgstr ""
 msgid "Protect your location information"
 msgstr ""
 
-#. FIXME
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:62
 #, fuzzy
-#| msgid "Screen Turns Off"
 msgctxt "lock_screen"
 msgid "Screen Turns Off"
 msgstr "Thèid na sgrìnichean dheth"
@@ -2577,7 +2471,6 @@ msgstr "Thèid na sgrìnichean dheth"
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:65
 #, fuzzy
-#| msgid "30 seconds"
 msgctxt "lock_screen"
 msgid "30 seconds"
 msgstr "30 diog"
@@ -2585,7 +2478,6 @@ msgstr "30 diog"
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:68
 #, fuzzy
-#| msgid "1 minute"
 msgctxt "lock_screen"
 msgid "1 minute"
 msgstr "1 mhionaid"
@@ -2593,31 +2485,20 @@ msgstr "1 mhionaid"
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:71
 #, fuzzy
-#| msgid "2 minutes"
 msgctxt "lock_screen"
 msgid "2 minutes"
 msgstr "2 mhionaid"
 
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
-#: panels/lock/cc-lock-panel.c:74
+#: panels/lock/cc-lock-panel.c:74 panels/lock/cc-lock-panel.c:77
 #, fuzzy
-#| msgid "3 minutes"
 msgctxt "lock_screen"
 msgid "3 minutes"
 msgstr "3 mionaidean"
 
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
-#: panels/lock/cc-lock-panel.c:77
-#, fuzzy
-#| msgid "5 minutes"
-msgctxt "lock_screen"
-msgid "5 minutes"
-msgstr "5 mionaidean"
-
-#. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:80
 #, fuzzy
-#| msgid "30 minutes"
 msgctxt "lock_screen"
 msgid "30 minutes"
 msgstr "Leth-uair a thìde"
@@ -2625,7 +2506,6 @@ msgstr "Leth-uair a thìde"
 #. Translators: Option for "Lock screen after blank" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:83
 #, fuzzy
-#| msgid "1 hour"
 msgctxt "lock_screen"
 msgid "1 hour"
 msgstr "1 uair a thìde"
@@ -2633,7 +2513,6 @@ msgstr "1 uair a thìde"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:126
 #, fuzzy
-#| msgid "1 minute"
 msgctxt "blank_screen"
 msgid "1 minute"
 msgstr "1 mhionaid"
@@ -2641,7 +2520,6 @@ msgstr "1 mhionaid"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:129
 #, fuzzy
-#| msgid "2 minutes"
 msgctxt "blank_screen"
 msgid "2 minutes"
 msgstr "2 mhionaid"
@@ -2649,7 +2527,6 @@ msgstr "2 mhionaid"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:132
 #, fuzzy
-#| msgid "3 minutes"
 msgctxt "blank_screen"
 msgid "3 minutes"
 msgstr "3 mionaidean"
@@ -2657,7 +2534,6 @@ msgstr "3 mionaidean"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:135
 #, fuzzy
-#| msgid "4 minutes"
 msgctxt "blank_screen"
 msgid "4 minutes"
 msgstr "4 mionaidean"
@@ -2665,7 +2541,6 @@ msgstr "4 mionaidean"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:138
 #, fuzzy
-#| msgid "5 minutes"
 msgctxt "blank_screen"
 msgid "5 minutes"
 msgstr "5 mionaidean"
@@ -2673,7 +2548,6 @@ msgstr "5 mionaidean"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:141
 #, fuzzy
-#| msgid "8 minutes"
 msgctxt "blank_screen"
 msgid "8 minutes"
 msgstr "8 mionaidean"
@@ -2681,7 +2555,6 @@ msgstr "8 mionaidean"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:144
 #, fuzzy
-#| msgid "10 minutes"
 msgctxt "blank_screen"
 msgid "10 minutes"
 msgstr "10 mionaidean"
@@ -2689,7 +2562,6 @@ msgstr "10 mionaidean"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:147
 #, fuzzy
-#| msgid "12 minutes"
 msgctxt "blank_screen"
 msgid "12 minutes"
 msgstr "12 mhionaid"
@@ -2697,7 +2569,6 @@ msgstr "12 mhionaid"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:150
 #, fuzzy
-#| msgid "15 minutes"
 msgctxt "blank_screen"
 msgid "15 minutes"
 msgstr "Cairteal na h-uarach"
@@ -2705,7 +2576,6 @@ msgstr "Cairteal na h-uarach"
 #. Translators: Option for "Blank screen" in "Screen Lock" panel
 #: panels/lock/cc-lock-panel.c:153
 #, fuzzy
-#| msgid "Never"
 msgctxt "blank_screen"
 msgid "Never"
 msgstr "Chan ann idir"
@@ -2718,7 +2588,6 @@ msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:13
 #, fuzzy
-#| msgid "_Blank screen"
 msgid "Blank Screen Delay"
 msgstr "Sgrìn _bhàn"
 
@@ -2732,7 +2601,6 @@ msgstr "G_las fhèin-obrachail na sgrìn"
 
 #: panels/lock/cc-lock-panel.ui:46
 #, fuzzy
-#| msgid "Automatic Screen _Lock"
 msgid "Automatic _Screen Lock Delay"
 msgstr "G_las fhèin-obrachail na sgrìn"
 
@@ -2742,7 +2610,6 @@ msgstr ""
 
 #: panels/lock/cc-lock-panel.ui:65
 #, fuzzy
-#| msgid "Show _Notifications"
 msgid "Show _Notifications on Lock Screen"
 msgstr "Seall _na brathan"
 
@@ -2762,20 +2629,16 @@ msgstr "Glas na sgrìn"
 
 #: panels/lock/gnome-lock-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Lock screen"
 msgid "Lock your screen"
 msgstr "Glais an sgrìn"
 
-#. FIXME
 #: panels/microphone/cc-microphone-panel.ui:20
 #, fuzzy
-#| msgid "Screen Turns Off"
 msgid "Microphone Turned Off"
 msgstr "Thèid na sgrìnichean dheth"
 
 #: panels/microphone/cc-microphone-panel.ui:21
 #, fuzzy
-#| msgid "No applications found"
 msgid "No applications can record sound."
 msgstr "Cha deach aplacaid sam bith a lorg"
 
@@ -2796,7 +2659,6 @@ msgstr ""
 msgid "Protect your conversations"
 msgstr ""
 
-#. FIXME
 #: panels/mouse/cc-mouse-panel.ui:9 panels/wacom/cc-wacom-panel.ui:9
 msgid "Test Your _Settings"
 msgstr "Cuir na roghainnean agad fo dheuchainn"
@@ -2861,6 +2723,39 @@ msgstr "Sgroladh dà-chorragach"
 #: panels/mouse/cc-mouse-panel.ui:159
 msgid "Edge Scrolling"
 msgstr "Sgroladh oir"
+
+#: panels/mouse/cc-mouse-panel.ui:170
+#, fuzzy
+msgid "Disable while Typing"
+msgstr "Cuir an dealbh à comas"
+
+#: panels/mouse/cc-mouse-panel.ui:184
+msgid "Touchpad Mouse Click Emulation"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:190
+msgid "Fingers"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:191
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:206
+msgid "Area"
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:207
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: panels/mouse/cc-mouse-panel.ui:224
+msgid "Don’t use mouse click emulation."
+msgstr ""
 
 #: panels/mouse/cc-mouse-test.c:131 panels/mouse/cc-mouse-test.ui:62
 msgid "Try clicking, double clicking, scrolling"
@@ -2931,7 +2826,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:70
 #, fuzzy
-#| msgid "Colorspace: "
 msgid "Workspaces"
 msgstr "Spàs nan dathan: "
 
@@ -2941,7 +2835,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:77
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically removes empty workspaces."
 msgstr "Fa_lamhaich an sgudal gu fèin-obrachail"
 
@@ -2959,7 +2852,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:124
 #, fuzzy
-#| msgid "%s Monitor"
 msgid "Multi-Monitor"
 msgstr "Monatair %s"
 
@@ -2973,8 +2865,6 @@ msgstr ""
 
 #: panels/multitasking/cc-multitasking-panel.ui:184
 #, fuzzy
-#| msgctxt "Wacom action-type"
-#| msgid "Application defined"
 msgid "Application Switching"
 msgstr "A-rèir na h-aplacaid"
 
@@ -3010,7 +2900,6 @@ msgstr "Feumaidh NetworkManager a bhith a’ ruith."
 
 #: panels/network/cc-network-panel.ui:21 panels/network/cc-network-panel.ui:26
 #, fuzzy
-#| msgid "Devices"
 msgid "Other Devices"
 msgstr "Innleadan"
 
@@ -3026,8 +2915,6 @@ msgstr "Cha deach seo a shuidheachadh"
 #. TRANSLATORS: This happens when the connection name does not contain the SSID.
 #: panels/network/cc-wifi-connection-row.c:207
 #, fuzzy, c-format
-#| msgctxt "timezone desc"
-#| msgid "%s (%s)"
 msgctxt "Wi-Fi Connection"
 msgid "%s (SSID: %s)"
 msgstr "%s (%s)"
@@ -3113,13 +3000,11 @@ msgstr "Facal-faire"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:86
 #, fuzzy
-#| msgid "Group Password"
 msgid "Generate Random Password"
 msgstr "Facal-faire a' bhuidhinn"
 
 #: panels/network/cc-wifi-hotspot-dialog.ui:87
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Autogenerate Password"
 msgstr "Am _facal-faire làithreach"
 
@@ -3162,19 +3047,16 @@ msgstr ""
 
 #: panels/network/cc-wifi-panel.ui:152 panels/wwan/cc-wwan-panel.ui:135
 #, fuzzy
-#| msgid "Airplane Mode"
 msgid "Airplane Mode On"
 msgstr "Modh itealain"
 
 #: panels/network/cc-wifi-panel.ui:162
 #, fuzzy
-#| msgid "Turn off Wi-Fi to save power."
 msgid "Turn off to use Wi-Fi"
 msgstr "Cuir WiFi dheth gus cumhachd a chaomhnadh."
 
 #: panels/network/cc-wifi-panel.ui:199
 #, fuzzy
-#| msgid "Wi-Fi Hotspot"
 msgid "Wi-Fi Hotspot Active"
 msgstr "WiFi Hotspot"
 
@@ -3184,7 +3066,6 @@ msgstr ""
 
 #: panels/network/cc-wifi-panel.ui:217
 #, fuzzy
-#| msgid "_Turn On Wi-Fi Hotspot…"
 msgid "Turn Off Hotspot…"
 msgstr "Cuir air WiFi Ho_tspot…"
 
@@ -3208,7 +3089,6 @@ msgstr "Tèarainteachd"
 
 #: panels/network/connection-editor/ce-page.c:234
 #, fuzzy
-#| msgid "reset"
 msgid "Preserve"
 msgstr "ath-shuidhich"
 
@@ -3222,7 +3102,6 @@ msgstr ""
 
 #: panels/network/connection-editor/ce-page.c:237
 #, fuzzy
-#| msgid "Tablet"
 msgid "Stable"
 msgstr "Tablaid"
 
@@ -3402,6 +3281,7 @@ msgid "Remove VPN"
 msgstr "Thoir air falbh a’ VPN"
 
 #: panels/network/connection-editor/ce-page-details.c:495
+#: shell/cc-panel-list.ui:70 shell/cc-window.c:246
 msgid "Details"
 msgstr "Mion-fhiosrachadh"
 
@@ -3466,8 +3346,6 @@ msgstr "WPA ⁊ WPA2 Enterprise"
 
 #: panels/network/connection-editor/ce-page-security.c:376
 #, fuzzy
-#| msgctxt "category"
-#| msgid "Personal"
 msgid "WPA3 Personal"
 msgstr "Pearsanta"
 
@@ -3487,7 +3365,6 @@ msgstr "Seòladh bathair-chruaidh"
 
 #: panels/network/connection-editor/details-page.ui:142
 #, fuzzy
-#| msgid "Supported ICC profiles"
 msgid "Supported Frequencies"
 msgstr "Pròifilean ICC ris a bheil taic"
 
@@ -3570,7 +3447,6 @@ msgstr "Cuir à comas"
 #: panels/network/connection-editor/ip4-page.ui:75
 #: panels/network/connection-editor/ip6-page.ui:85
 #, fuzzy
-#| msgid "Shared with other computers"
 msgid "Shared to other computers"
 msgstr "Co-roinnte le coimpiutairean eile"
 
@@ -3674,11 +3550,11 @@ msgstr "Cuir ris VPN"
 msgid "S_ecurity"
 msgstr "Tèaraint_eachd"
 
-#: panels/network/connection-editor/vpn-helpers.c:186
+#: panels/network/connection-editor/vpn-helpers.c:191
 msgid "Cannot import VPN connection"
 msgstr "Chan urrainn dhuinn an ceangal VPN ion-phortadh"
 
-#: panels/network/connection-editor/vpn-helpers.c:188
+#: panels/network/connection-editor/vpn-helpers.c:193
 #, c-format
 msgid ""
 "The file “%s” could not be read or does not contain recognized VPN "
@@ -3691,30 +3567,30 @@ msgstr ""
 "\n"
 "Mearachd: %s."
 
-#: panels/network/connection-editor/vpn-helpers.c:218
+#: panels/network/connection-editor/vpn-helpers.c:223
 msgid "Select file to import"
 msgstr "Tagh faidhle a thèid ion-phortadh"
 
-#: panels/network/connection-editor/vpn-helpers.c:271
+#: panels/network/connection-editor/vpn-helpers.c:276
 #, c-format
 msgid "A file named “%s” already exists."
 msgstr "Tha faidhle air a bheil “%s” ann mu thràth."
 
-#: panels/network/connection-editor/vpn-helpers.c:273
+#: panels/network/connection-editor/vpn-helpers.c:278
 msgid "_Replace"
 msgstr "Cui_r ’na àite"
 
-#: panels/network/connection-editor/vpn-helpers.c:275
+#: panels/network/connection-editor/vpn-helpers.c:280
 #, c-format
 msgid "Do you want to replace %s with the VPN connection you are saving?"
 msgstr ""
 "A bheil thu airson an ceangal VPN a tha thu a’ sàbhaladh a chur an àite “%s”?"
 
-#: panels/network/connection-editor/vpn-helpers.c:310
+#: panels/network/connection-editor/vpn-helpers.c:315
 msgid "Cannot export VPN connection"
 msgstr "Chan urrainn dhuinn an ceangal VPN às-phortadh"
 
-#: panels/network/connection-editor/vpn-helpers.c:312
+#: panels/network/connection-editor/vpn-helpers.c:317
 #, c-format
 msgid ""
 "The VPN connection “%s” could not be exported to %s.\n"
@@ -3725,7 +3601,7 @@ msgstr ""
 "\n"
 "Mearachd: %s."
 
-#: panels/network/connection-editor/vpn-helpers.c:338
+#: panels/network/connection-editor/vpn-helpers.c:343
 msgid "Export VPN connection"
 msgstr "Às-phortaich ceangal VPN"
 
@@ -3749,9 +3625,6 @@ msgstr "Stiùirich an dòigh a cheanglas tu ris an eadar-lìon"
 #. Translators: Search terms to find the Network panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-network-panel.desktop.in.in:19
 #, fuzzy
-#| msgid ""
-#| "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;"
-#| "vpn;DNS;"
 msgid "Network;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;DNS;"
 msgstr ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;"
@@ -3764,7 +3637,6 @@ msgstr "Stiùirich an dòigh a cheanglas tu ri lìonraidhean WiFi"
 #. Translators: Search terms to find the Wi-Fi panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/network/gnome-wifi-panel.desktop.in.in:19
 #, fuzzy
-#| msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;"
 msgid "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;Hotspot;"
 msgstr ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Broadband;DNS;lìonra;uèirleas,bann-"
@@ -3911,21 +3783,18 @@ msgstr "Cuir an ceangal VPN dheth"
 
 #: panels/network/network-wifi.ui:34
 #, fuzzy
-#| msgid "Network Name"
 msgctxt "Wi-Fi Hotspot"
 msgid "Network Name"
 msgstr "Ainm an lìonraidh"
 
 #: panels/network/network-wifi.ui:40
 #, fuzzy
-#| msgid "Security type"
 msgctxt "Wi-Fi Hotspot"
 msgid "Security type"
 msgstr "Seòrsa na tèarainteachd"
 
 #: panels/network/network-wifi.ui:46
 #, fuzzy
-#| msgid "Password"
 msgctxt "Wi-Fi Hotspot"
 msgid "Password"
 msgstr "Facal-faire"
@@ -4500,7 +4369,6 @@ msgstr "D_earbhadh"
 
 #: panels/network/wireless-security/ws-file-chooser-button.c:49
 #, fuzzy
-#| msgid "Select a File…"
 msgid "Select a file"
 msgstr "Tagh faidhle…"
 
@@ -4514,7 +4382,6 @@ msgstr "tha facal-faire leap a dhìth"
 
 #: panels/network/wireless-security/ws-sae.c:77
 #, fuzzy
-#| msgid "invalid EAP-TLS password: missing"
 msgid "Wi-Fi password is missing."
 msgstr "facal-faire EAP-TLS mì-dhligheach: chan eil gin ann"
 
@@ -4666,7 +4533,6 @@ msgstr ""
 #.
 #: panels/online-accounts/cc-online-accounts-panel.c:277
 #, fuzzy, c-format
-#| msgid "<b>%s</b> removed"
 msgid "%s removed"
 msgstr "Chaidh <b>%s</b> a toirt air falbh"
 
@@ -4803,7 +4669,6 @@ msgstr "Air a làn-teairrdseadh"
 #. TRANSLATORS: primary battery
 #: panels/power/cc-battery-row.c:138 panels/power/cc-battery-row.c:168
 #, fuzzy
-#| msgid "Charging"
 msgid "Not charging"
 msgstr "A’ teairrdseadh"
 
@@ -4917,7 +4782,6 @@ msgstr "Nuair a bhios e air a phlugadh a-steach"
 
 #: panels/power/cc-power-panel.c:853
 #, fuzzy
-#| msgid "Never"
 msgctxt "Idle time"
 msgid "Never"
 msgstr "Chan ann idir"
@@ -4962,7 +4826,6 @@ msgstr ""
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:12
 #, fuzzy
-#| msgid "15 minutes"
 msgctxt "automatic_suspend"
 msgid "15 minutes"
 msgstr "Cairteal na h-uarach"
@@ -4970,7 +4833,6 @@ msgstr "Cairteal na h-uarach"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:16
 #, fuzzy
-#| msgid "20 minutes"
 msgctxt "automatic_suspend"
 msgid "20 minutes"
 msgstr "20 mionaid"
@@ -4978,7 +4840,6 @@ msgstr "20 mionaid"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:20
 #, fuzzy
-#| msgid "25 minutes"
 msgctxt "automatic_suspend"
 msgid "25 minutes"
 msgstr "25 mionaid"
@@ -4986,7 +4847,6 @@ msgstr "25 mionaid"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:24
 #, fuzzy
-#| msgid "30 minutes"
 msgctxt "automatic_suspend"
 msgid "30 minutes"
 msgstr "Leth-uair a thìde"
@@ -4994,7 +4854,6 @@ msgstr "Leth-uair a thìde"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:28
 #, fuzzy
-#| msgid "45 minutes"
 msgctxt "automatic_suspend"
 msgid "45 minutes"
 msgstr "Trì cairtealan na h-uarach"
@@ -5002,7 +4861,6 @@ msgstr "Trì cairtealan na h-uarach"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:32
 #, fuzzy
-#| msgid "1 hour"
 msgctxt "automatic_suspend"
 msgid "1 hour"
 msgstr "1 uair a thìde"
@@ -5010,7 +4868,6 @@ msgstr "1 uair a thìde"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:36
 #, fuzzy
-#| msgid "80 minutes"
 msgctxt "automatic_suspend"
 msgid "80 minutes"
 msgstr "80 mionaid"
@@ -5018,7 +4875,6 @@ msgstr "80 mionaid"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:40
 #, fuzzy
-#| msgid "90 minutes"
 msgctxt "automatic_suspend"
 msgid "90 minutes"
 msgstr "90 mionaid"
@@ -5026,7 +4882,6 @@ msgstr "90 mionaid"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:44
 #, fuzzy
-#| msgid "100 minutes"
 msgctxt "automatic_suspend"
 msgid "100 minutes"
 msgstr "100 mionaid"
@@ -5034,14 +4889,12 @@ msgstr "100 mionaid"
 #. Translators: Option for "Delay" in "Automatic suspend" dialog.
 #: panels/power/cc-power-panel.ui:48
 #, fuzzy
-#| msgid "2 hours"
 msgctxt "automatic_suspend"
 msgid "2 hours"
 msgstr "2 uair a thìde"
 
 #: panels/power/cc-power-panel.ui:93
 #, fuzzy
-#| msgid "Power"
 msgid "Power Mode"
 msgstr "Cumhachd"
 
@@ -5051,13 +4904,11 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:123
 #, fuzzy
-#| msgid "Power Saving"
 msgid "Power Saving Options"
 msgstr "Caomhnadh cumhachd"
 
 #: panels/power/cc-power-panel.ui:126
 #, fuzzy
-#| msgid "Automatic brightness"
 msgid "Automatic Screen Brightness"
 msgstr "Soilleireachd fhèin-obrachail"
 
@@ -5067,7 +4918,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:138
 #, fuzzy
-#| msgid "Screen"
 msgid "Dim Screen"
 msgstr "Sgrìn"
 
@@ -5077,7 +4927,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:150
 #, fuzzy
-#| msgid "Screen _Reader"
 msgid "Screen _Blank"
 msgstr "Leughadai_r-sgrìn"
 
@@ -5087,7 +4936,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:159
 #, fuzzy
-#| msgid "_Automatic Problem Reporting"
 msgid "Automatic Power Saver"
 msgstr "_Aithrisean fèin-obrachail air duilgheadasan"
 
@@ -5097,7 +4945,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:173
 #, fuzzy
-#| msgid "Automatic Suspend"
 msgid "_Automatic Suspend"
 msgstr "Cuir ’na dhàil gu fèin-obrachail"
 
@@ -5107,7 +4954,6 @@ msgstr ""
 
 #: panels/power/cc-power-panel.ui:199
 #, fuzzy
-#| msgid "Lower Button"
 msgid "Po_wer Button Behavior"
 msgstr "Am putan aig a’ bhonn"
 
@@ -5143,7 +4989,6 @@ msgstr ""
 
 #: panels/power/cc-power-profile-row.c:136
 #, fuzzy
-#| msgid "_Balance:"
 msgctxt "Power profile"
 msgid "Balanced"
 msgstr "Cothro_m:"
@@ -5154,7 +4999,6 @@ msgstr ""
 
 #: panels/power/cc-power-profile-row.c:140
 #, fuzzy
-#| msgid "Power Saving"
 msgctxt "Power profile"
 msgid "Power Saver"
 msgstr "Caomhnadh cumhachd"
@@ -5175,9 +5019,6 @@ msgstr ""
 #. Translators: Search terms to find the Power panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/power/gnome-power-panel.desktop.in.in:19
 #, fuzzy
-#| msgid ""
-#| "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;"
-#| "Idle;"
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 "Energy;"
@@ -5551,7 +5392,6 @@ msgstr "Treidhe às-chuir"
 
 #: panels/printers/pp-options-dialog.c:91
 #, fuzzy
-#| msgid "Resolution"
 msgctxt "printing option"
 msgid "Resolution"
 msgstr "Dùmhlachd-bhreacaidh"
@@ -5845,7 +5685,6 @@ msgstr "Ath-thòisich"
 #. Translators: This button adds new printer.
 #: panels/printers/printers.ui:10
 #, fuzzy
-#| msgid "Add a Printer…"
 msgid "Add Printer…"
 msgstr "Cuir clò-bhualadair ris…"
 
@@ -5861,9 +5700,6 @@ msgstr "Cuir clò-bhualadair ris…"
 #. Translators: The CUPS server is not running (we can not connect to it).
 #: panels/printers/printers.ui:204
 #, fuzzy
-#| msgid ""
-#| "Sorry! The system printing service\n"
-#| "doesn’t seem to be available."
 msgid ""
 "Sorry! The system printing service\n"
 "    doesn’t seem to be available."
@@ -5882,25 +5718,21 @@ msgstr "Air ais"
 
 #: panels/region/cc-format-chooser.ui:76
 #, fuzzy
-#| msgid "Search Locations"
 msgid "Search locales…"
 msgstr "Ionadan luirg"
 
 #: panels/region/cc-format-chooser.ui:113
 #, fuzzy
-#| msgid "Formats"
 msgid "Common Formats"
 msgstr "Fòrmatan"
 
 #: panels/region/cc-format-chooser.ui:140
 #, fuzzy
-#| msgid "Formats"
 msgid "All Formats"
 msgstr "Fòrmatan"
 
 #: panels/region/cc-format-chooser.ui:188
 #, fuzzy
-#| msgid "No results found"
 msgid "No Search Results"
 msgstr "Cha deach toradh a lorg"
 
@@ -5958,7 +5790,6 @@ msgstr ""
 
 #: panels/region/cc-region-panel.ui:51
 #, fuzzy
-#| msgid "Your account"
 msgid "Your Account"
 msgstr "An cunntas agad"
 
@@ -5973,7 +5804,6 @@ msgstr "_Fòrmatan"
 
 #: panels/region/cc-region-panel.ui:90
 #, fuzzy
-#| msgid "Login _Screen"
 msgid "Login Screen"
 msgstr "_Sgrìn a’ chlàraidh a-steach"
 
@@ -5983,8 +5813,6 @@ msgstr "Roinn-dùthcha ⁊ cànan"
 
 #: panels/region/gnome-region-panel.desktop.in.in:4
 #, fuzzy
-#| msgid ""
-#| "Select your display language, formats, keyboard layouts and input sources"
 msgid "Select your display language and formats"
 msgstr "Tagh an cànan-taisbeanaidh, fòrmatan, meur-chlàran is tùsan ion-chuir"
 
@@ -6171,13 +5999,11 @@ msgstr "Comharran-lìn"
 
 #: panels/search/cc-search-locations-dialog.ui:48
 #, fuzzy
-#| msgid "Other"
 msgid "Others"
 msgstr "Eile"
 
 #: panels/search/cc-search-locations-dialog.ui:55
 #, fuzzy
-#| msgid "Location"
 msgid "Add Location"
 msgstr "Ionad"
 
@@ -6187,7 +6013,6 @@ msgstr "Cha deach aplacaid sam bith a lorg"
 
 #: panels/search/cc-search-panel.ui:10
 #, fuzzy
-#| msgid "Applications"
 msgid "Application Search"
 msgstr "Aplacaidean"
 
@@ -6201,7 +6026,6 @@ msgstr ""
 
 #: panels/search/cc-search-panel.ui:37
 #, fuzzy
-#| msgid "Search Locations"
 msgid "Search Results"
 msgstr "Ionadan luirg"
 
@@ -6259,24 +6083,17 @@ msgstr "Tagh pasgan"
 #. TRANSLATORS: %s is replaced with a link to a dav://<hostname> URL
 #: panels/sharing/cc-sharing-panel.c:748
 #, fuzzy, c-format
-#| msgid ""
-#| "File Sharing allows you to share your Public folder with others on your "
-#| "current network using: <a href=\"dav://%s\">dav://%s</a>"
 msgid ""
 "File Sharing allows you to share your Public folder with others on your "
 "current network using: %s"
 msgstr ""
 "Bheir co-roinneadh fhaidhlichean comas dhut am pasgan poblach agad a cho-"
-"roinneadh le daoine eile air an lìonra làithreach agad slighe: <a href="
-"\"dav://%s\">dav://%s</a>"
+"roinneadh le daoine eile air an lìonra làithreach agad slighe: <a "
+"href=\"dav://%s\">dav://%s</a>"
 
 #. TRANSLATORS: %s is replaced with a link to a "ssh <hostname>" command to run
 #: panels/sharing/cc-sharing-panel.c:754
 #, fuzzy, c-format
-#| msgid ""
-#| "When remote login is enabled, remote users can connect using the Secure "
-#| "Shell command:\n"
-#| "<a href=\"ssh %s\">ssh %s</a>"
 msgid ""
 "When remote login is enabled, remote users can connect using the Secure "
 "Shell command:\n"
@@ -6327,7 +6144,6 @@ msgstr "Clàradh a-steach cèin"
 #: panels/sharing/cc-sharing-panel.ui:250
 #: panels/sharing/cc-sharing-panel.ui:267
 #, fuzzy
-#| msgid "Remote Login"
 msgid "Remote Desktop"
 msgstr "Clàradh a-steach cèin"
 
@@ -6339,25 +6155,21 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:268
 #, fuzzy
-#| msgid "Enable or disable remote login"
 msgid "Enable or disable remote desktop connections to this computer."
 msgstr "Cuir an comas no à comas clàradh a-steach cèin"
 
 #: panels/sharing/cc-sharing-panel.ui:280
 #, fuzzy
-#| msgid "_Allow Remote Control"
 msgid "Remote Control"
 msgstr "Ce_adaich smachd cèin"
 
 #: panels/sharing/cc-sharing-panel.ui:281
 #, fuzzy
-#| msgid "_Allow connections to control the screen"
 msgid "Allows remote connections to control the screen."
 msgstr "Leig le ce_anglaichean an sgrìn a stiùireadh"
 
 #: panels/sharing/cc-sharing-panel.ui:294
 #, fuzzy
-#| msgid "Not connected"
 msgid "How to Connect"
 msgstr "Chan eil ceangal ann"
 
@@ -6368,13 +6180,11 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:323
 #, fuzzy
-#| msgid "Delete Address"
 msgid "Remote Desktop Address"
 msgstr "Sguab às an seòladh"
 
 #: panels/sharing/cc-sharing-panel.ui:350
 #, fuzzy
-#| msgid "Au_thentication"
 msgid "Authentication"
 msgstr "D_earbhadh"
 
@@ -6384,7 +6194,6 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:355
 #, fuzzy
-#| msgid "Username"
 msgid "User Name"
 msgstr "Ainm-cleachdaiche"
 
@@ -6394,7 +6203,6 @@ msgstr ""
 
 #: panels/sharing/cc-sharing-panel.ui:430
 #, fuzzy
-#| msgid "Enrolling fingerprints"
 msgid "Encryption Fingerprint"
 msgstr "A’ clàradh nam meur-lorgan"
 
@@ -6461,21 +6269,16 @@ msgstr "Sònar"
 
 #: panels/sound/cc-fade-slider.ui:13
 #, fuzzy
-#| msgctxt "balance"
-#| msgid "Rear"
 msgid "Rear"
 msgstr "Deireadh"
 
 #: panels/sound/cc-fade-slider.ui:15
 #, fuzzy
-#| msgctxt "balance"
-#| msgid "Front"
 msgid "Front"
 msgstr "Beulaibh"
 
 #: panels/sound/cc-output-test-dialog.c:134
 #, fuzzy, c-format
-#| msgid "Settings"
 msgid "Testing %s"
 msgstr "Roghainnean"
 
@@ -6485,13 +6288,11 @@ msgstr ""
 
 #: panels/sound/cc-sound-panel.ui:8
 #, fuzzy
-#| msgid "System Sounds"
 msgid "System Volume"
 msgstr "Fuaimean an t-siostaim"
 
 #: panels/sound/cc-sound-panel.ui:25
 #, fuzzy
-#| msgid "Volume mute"
 msgid "Volume Levels"
 msgstr "Mùch an fhuaim"
 
@@ -6501,7 +6302,6 @@ msgstr "Às-chur"
 
 #: panels/sound/cc-sound-panel.ui:56
 #, fuzzy
-#| msgid "_Output volume:"
 msgid "Output Device"
 msgstr "Àirde fuaim a_n às-chuir:"
 
@@ -6511,19 +6311,16 @@ msgstr "Cuir fo dheuchainn"
 
 #: panels/sound/cc-sound-panel.ui:104 panels/sound/cc-sound-panel.ui:263
 #, fuzzy
-#| msgid "_Configuration URL"
 msgid "Configuration"
 msgstr "An URL _rèiteachaidh"
 
 #: panels/sound/cc-sound-panel.ui:135
 #, fuzzy
-#| msgid "_Balance:"
 msgid "Balance"
 msgstr "Cothro_m:"
 
 #: panels/sound/cc-sound-panel.ui:161
 #, fuzzy
-#| msgid "_Fade:"
 msgid "Fade"
 msgstr "_Crìonadh:"
 
@@ -6537,19 +6334,16 @@ msgstr "Ion-chur"
 
 #: panels/sound/cc-sound-panel.ui:226
 #, fuzzy
-#| msgid "Input level:"
 msgid "Input Device"
 msgstr "Ìre an ion-chuir:"
 
 #: panels/sound/cc-sound-panel.ui:294
 #, fuzzy
-#| msgid "Volume up"
 msgid "Volume"
 msgstr "Cuir an fhuaim an àirde"
 
 #: panels/sound/cc-sound-panel.ui:312
 #, fuzzy
-#| msgid "_Alert volume:"
 msgid "Alert Sound"
 msgstr "Àirde _fuaim nan rabhadh:"
 
@@ -6570,7 +6364,6 @@ msgstr ""
 #. Translators: Search terms to find the Sound panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/sound/gnome-sound-panel.desktop.in.in:20
 #, fuzzy
-#| msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgid ""
 "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;Output;Input;"
 msgstr ""
@@ -6579,7 +6372,6 @@ msgstr ""
 #: panels/thunderbolt/cc-bolt-device-dialog.c:92
 #: panels/thunderbolt/cc-bolt-device-entry.c:123
 #, fuzzy
-#| msgid "Disconnecting"
 msgctxt "Thunderbolt Device Status"
 msgid "Disconnected"
 msgstr "A’ briseadh a’ cheangail"
@@ -6587,7 +6379,6 @@ msgstr "A’ briseadh a’ cheangail"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:95
 #: panels/thunderbolt/cc-bolt-device-entry.c:126
 #, fuzzy
-#| msgid "Connecting"
 msgctxt "Thunderbolt Device Status"
 msgid "Connecting"
 msgstr "A’ ceangal"
@@ -6596,14 +6387,12 @@ msgstr "A’ ceangal"
 #: panels/thunderbolt/cc-bolt-device-entry.c:130
 #: panels/thunderbolt/cc-bolt-device-entry.c:142
 #, fuzzy
-#| msgid "Connected"
 msgctxt "Thunderbolt Device Status"
 msgid "Connected"
 msgstr "Ceangailte"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:101
 #, fuzzy
-#| msgid "Authentication required"
 msgctxt "Thunderbolt Device Status"
 msgid "Authorization Error"
 msgstr "Tha feum air dearbhadh"
@@ -6621,7 +6410,6 @@ msgstr ""
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:113
 #, fuzzy
-#| msgid "Connected Devices"
 msgctxt "Thunderbolt Device Status"
 msgid "Connected & Authorized"
 msgstr "Uidheaman a tha ceangailte ris"
@@ -6629,7 +6417,6 @@ msgstr "Uidheaman a tha ceangailte ris"
 #: panels/thunderbolt/cc-bolt-device-dialog.c:119
 #: panels/thunderbolt/cc-bolt-device-entry.c:150
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Thunderbolt Device Status"
 msgid "Unknown"
 msgstr "Chan eil fhios"
@@ -6642,7 +6429,6 @@ msgstr ""
 #. Translators: The time point the device was connected.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:181
 #, fuzzy
-#| msgid "Connected"
 msgid "Connected at:"
 msgstr "Ceangailte"
 
@@ -6650,19 +6436,16 @@ msgstr "Ceangailte"
 #. * i.e. authorized and stored in the device database.
 #: panels/thunderbolt/cc-bolt-device-dialog.c:188
 #, fuzzy
-#| msgid "_Enroll"
 msgid "Enrolled at:"
 msgstr "_Clàraich"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:262
 #, fuzzy
-#| msgid "Failed to upload file: %s"
 msgid "Failed to authorize device: "
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.c:329
 #, fuzzy
-#| msgid "Failed to upload file: %s"
 msgid "Failed to forget device: "
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
@@ -6677,7 +6460,6 @@ msgstr[3] ""
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:84
 #, fuzzy
-#| msgid "_Name:"
 msgid "Name:"
 msgstr "_Ainm:"
 
@@ -6691,26 +6473,22 @@ msgstr ""
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:247
 #, fuzzy
-#| msgid "Automatic _Connect"
 msgid "Authorize and Connect"
 msgstr "_Ceangail gu fèin-obrachail"
 
 #: panels/thunderbolt/cc-bolt-device-dialog.ui:263
 #, fuzzy
-#| msgid "Remove Device"
 msgid "Forget Device"
 msgstr "Thoirt an t-uidheam air falbh"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:133
 #, fuzzy
-#| msgid "Mirror"
 msgctxt "Thunderbolt Device Status"
 msgid "Error"
 msgstr "Sgàthanaich"
 
 #: panels/thunderbolt/cc-bolt-device-entry.c:144
 #, fuzzy
-#| msgid "Authenticated"
 msgctxt "Thunderbolt Device Status"
 msgid "Authorized"
 msgstr "Air a dhearbhadh"
@@ -6742,7 +6520,6 @@ msgstr ""
 
 #: panels/thunderbolt/cc-bolt-panel.c:509
 #, fuzzy
-#| msgid "The profile could not be generated."
 msgid "Thunderbolt security level could not be determined."
 msgstr "Cha b’ urrainn dhuinn a’ phròifil a ghintinn."
 
@@ -6757,19 +6534,16 @@ msgstr ""
 
 #: panels/thunderbolt/cc-bolt-panel.ui:104
 #, fuzzy
-#| msgid "Couldn’t connect to the %s domain: %s"
 msgid "Could not connect to the thunderbolt subsystem."
 msgstr "Cha b’ urrainn ceangal ris an àrainn %s: %s"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:153
 #, fuzzy
-#| msgid "Universal Access"
 msgid "Direct Access"
 msgstr "Inntrigeadh uile-choitcheann"
 
 #: panels/thunderbolt/cc-bolt-panel.ui:225
 #, fuzzy
-#| msgid "Add Device"
 msgid "Pending Devices"
 msgstr "Cuir uidheam ris"
 
@@ -6992,32 +6766,32 @@ msgstr ""
 
 #. translators: the labels will read:
 #. * Cursor Size: Default
-#: panels/universal-access/cc-ua-panel.c:356
+#: panels/universal-access/cc-ua-panel.c:357
 msgctxt "cursor size"
 msgid "Default"
 msgstr "Bun-roghainn"
 
-#: panels/universal-access/cc-ua-panel.c:359
+#: panels/universal-access/cc-ua-panel.c:360
 msgctxt "cursor size"
 msgid "Medium"
 msgstr "Meadhanach"
 
-#: panels/universal-access/cc-ua-panel.c:362
+#: panels/universal-access/cc-ua-panel.c:363
 msgctxt "cursor size"
 msgid "Large"
 msgstr "Mòr"
 
-#: panels/universal-access/cc-ua-panel.c:365
+#: panels/universal-access/cc-ua-panel.c:366
 msgctxt "cursor size"
 msgid "Larger"
 msgstr "Nas motha"
 
-#: panels/universal-access/cc-ua-panel.c:368
+#: panels/universal-access/cc-ua-panel.c:369
 msgctxt "cursor size"
 msgid "Largest"
 msgstr "As motha"
 
-#: panels/universal-access/cc-ua-panel.c:372
+#: panels/universal-access/cc-ua-panel.c:373
 #, c-format
 msgid "%d pixel"
 msgid_plural "%d pixels"
@@ -7028,7 +6802,6 @@ msgstr[3] "%d piogsail"
 
 #: panels/universal-access/cc-ua-panel.ui:17
 #, fuzzy
-#| msgid "_Always Show Universal Access Menu"
 msgid "_Always Show Accessibility Menu"
 msgstr "Se_all clàr-taice an inntrigidh uile-choitchinn an-còmhnaidh"
 
@@ -7101,17 +6874,15 @@ msgstr "_Cuidiche sgrìobhaidh (AccessX)"
 
 #: panels/universal-access/cc-ua-panel.ui:240
 #, fuzzy
-#| msgid "Pointing & Clicking"
 msgid "Pointing &amp; Clicking"
 msgstr "Tomhadh ⁊ briogadh"
 
 #: panels/universal-access/cc-ua-panel.ui:243
 msgid "_Mouse Keys"
-msgstr "I_uchraichean an luch-chlàir"
+msgstr "I_uchraichean luchaige"
 
 #: panels/universal-access/cc-ua-panel.ui:255
 #, fuzzy
-#| msgid "Remove Printer"
 msgid "_Locate Pointer"
 msgstr "Thoir air falbh an clò-bhualadair"
 
@@ -7145,7 +6916,6 @@ msgstr "Boillsg an _sgrìn gu lèir"
 
 #: panels/universal-access/cc-visual-alerts-dialog.ui:86
 #, fuzzy
-#| msgid "Flash the entire _screen"
 msgid "Flash the entire _window"
 msgstr "Boillsg an _sgrìn gu lèir"
 
@@ -7334,10 +7104,6 @@ msgstr ""
 #. Translators: Search terms to find the Accessibility panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/universal-access/gnome-universal-access-panel.desktop.in.in:19
 #, fuzzy
-#| msgid ""
-#| "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;"
-#| "size;AccessX;Sticky;Keys;Slow;Bounce;Mouse;Double;click;Delay;Assist;"
-#| "Repeat;Blink;"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Universal Access;Contrast;Cursor;Sound;"
 "Zoom;Screen;Reader;big;high;large;text;font;size;AccessX;Sticky;Keys;Slow;"
@@ -7353,7 +7119,6 @@ msgstr ""
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:55
 #, fuzzy
-#| msgid "1 hour"
 msgctxt "purge_files"
 msgid "1 hour"
 msgstr "1 uair a thìde"
@@ -7361,7 +7126,6 @@ msgstr "1 uair a thìde"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:58
 #, fuzzy
-#| msgid "1 day"
 msgctxt "purge_files"
 msgid "1 day"
 msgstr "1 latha"
@@ -7369,7 +7133,6 @@ msgstr "1 latha"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:61
 #, fuzzy
-#| msgid "2 days"
 msgctxt "purge_files"
 msgid "2 days"
 msgstr "2 latha"
@@ -7377,7 +7140,6 @@ msgstr "2 latha"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:64
 #, fuzzy
-#| msgid "3 days"
 msgctxt "purge_files"
 msgid "3 days"
 msgstr "3 làithean"
@@ -7385,7 +7147,6 @@ msgstr "3 làithean"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:67
 #, fuzzy
-#| msgid "4 days"
 msgctxt "purge_files"
 msgid "4 days"
 msgstr "4 làithean"
@@ -7393,7 +7154,6 @@ msgstr "4 làithean"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:70
 #, fuzzy
-#| msgid "5 days"
 msgctxt "purge_files"
 msgid "5 days"
 msgstr "5 làithean"
@@ -7401,7 +7161,6 @@ msgstr "5 làithean"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:73
 #, fuzzy
-#| msgid "6 days"
 msgctxt "purge_files"
 msgid "6 days"
 msgstr "6 làithean"
@@ -7409,7 +7168,6 @@ msgstr "6 làithean"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:76
 #, fuzzy
-#| msgid "7 days"
 msgctxt "purge_files"
 msgid "7 days"
 msgstr "7 làithean"
@@ -7417,7 +7175,6 @@ msgstr "7 làithean"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:79
 #, fuzzy
-#| msgid "14 days"
 msgctxt "purge_files"
 msgid "14 days"
 msgstr "Cola-deug"
@@ -7425,7 +7182,6 @@ msgstr "Cola-deug"
 #. Translators: Option for "Automatically Delete Period" in "Trash & Temporary Files" group
 #: panels/usage/cc-usage-panel.c:82
 #, fuzzy
-#| msgid "30 days"
 msgctxt "purge_files"
 msgid "30 days"
 msgstr "30 latha"
@@ -7457,7 +7213,6 @@ msgstr "_Purgaidich na faidhlichean sealach"
 #. Translators: Option for "File History Duration" in "File History" group
 #: panels/usage/cc-usage-panel.c:247
 #, fuzzy
-#| msgid "1 day"
 msgctxt "retain_history"
 msgid "1 day"
 msgstr "1 latha"
@@ -7465,7 +7220,6 @@ msgstr "1 latha"
 #. Translators: Option for "File History Duration" in "File History" group
 #: panels/usage/cc-usage-panel.c:250
 #, fuzzy
-#| msgid "7 days"
 msgctxt "retain_history"
 msgid "7 days"
 msgstr "7 làithean"
@@ -7473,7 +7227,6 @@ msgstr "7 làithean"
 #. Translators: Option for "File History Duration" in "File History" group
 #: panels/usage/cc-usage-panel.c:253
 #, fuzzy
-#| msgid "30 days"
 msgctxt "retain_history"
 msgid "30 days"
 msgstr "30 latha"
@@ -7481,14 +7234,12 @@ msgstr "30 latha"
 #. Translators: Option for "File History Duration" in "File History" group
 #: panels/usage/cc-usage-panel.c:256
 #, fuzzy
-#| msgid "Forever"
 msgctxt "retain_history"
 msgid "Forever"
 msgstr "Gu buan"
 
 #: panels/usage/cc-usage-panel.ui:9
 #, fuzzy
-#| msgid "History"
 msgid "File History"
 msgstr "An eachdraidh"
 
@@ -7501,7 +7252,6 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:13
 #, fuzzy
-#| msgid "History"
 msgid "File H_istory"
 msgstr "An eachdraidh"
 
@@ -7511,13 +7261,11 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:48
 #, fuzzy
-#| msgid "Cl_ear Recent History"
 msgid "_Clear History…"
 msgstr "Falamhaich an _eachdraidh faisg ort"
 
 #: panels/usage/cc-usage-panel.ui:63
 #, fuzzy
-#| msgid "Purge Trash & Temporary Files"
 msgid "Trash &amp; Temporary Files"
 msgstr "Purgaidich an sgudal ⁊ na faidhlichean sealach"
 
@@ -7529,19 +7277,16 @@ msgstr ""
 
 #: panels/usage/cc-usage-panel.ui:67
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically Delete _Trash Content"
 msgstr "Fa_lamhaich an sgudal gu fèin-obrachail"
 
 #: panels/usage/cc-usage-panel.ui:79
 #, fuzzy
-#| msgid "Automatically purge Temporary _Files"
 msgid "Automatically Delete Temporary _Files"
 msgstr "P_urgaidich faidhlichean sealach gu fèin-obrachail"
 
 #: panels/usage/cc-usage-panel.ui:91
 #, fuzzy
-#| msgid "Automatically empty _Trash"
 msgid "Automatically Delete _Period"
 msgstr "Fa_lamhaich an sgudal gu fèin-obrachail"
 
@@ -7551,7 +7296,6 @@ msgstr "_Falamhaich an sgudal…"
 
 #: panels/usage/cc-usage-panel.ui:126
 #, fuzzy
-#| msgid "_Purge Temporary Files…"
 msgid "_Delete Temporary Files…"
 msgstr "_Purgaidich na faidhlichean sealach…"
 
@@ -7563,7 +7307,6 @@ msgstr ""
 msgid "Don't leave traces"
 msgstr ""
 
-#. FIXME
 #: panels/user-accounts/cc-add-user-dialog.c:35
 msgid "Should match the web address of your login provider."
 msgstr ""
@@ -7638,7 +7381,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-add-user-dialog.ui:149
 #, fuzzy
-#| msgid "Allow user to change their password on next login"
 msgid "User sets password on first login"
 msgstr ""
 "Leig leis a’ chleachdaiche am facal-faire atharrachadh nuair a chlàraicheas "
@@ -7646,19 +7388,16 @@ msgstr ""
 
 #: panels/user-accounts/cc-add-user-dialog.ui:161
 #, fuzzy
-#| msgid "Set a password now"
 msgid "Set password now"
 msgstr "Suidhich facal-faire an-dràsta"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:224
 #, fuzzy
-#| msgid "_Confirm"
 msgid "Confirm"
 msgstr "_Dearbhaich"
 
 #: panels/user-accounts/cc-add-user-dialog.ui:278
 #, fuzzy
-#| msgid "_Enterprise Login"
 msgid "Enterprise Login"
 msgstr "Clàradh a-steach _Enterprise"
 
@@ -7691,19 +7430,16 @@ msgstr "Tagh faidhle…"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:8
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Manager"
 msgstr "Clàradh a-steach le _meur-lorg"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:20
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint"
 msgstr "Clàradh a-steach le _meur-lorg"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:88
 #, fuzzy
-#| msgid "No"
 msgid "_No"
 msgstr "Chan eil"
 
@@ -7721,14 +7457,12 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:172
 #, fuzzy
-#| msgid "Gaming input device"
 msgid "No fingerprint device"
 msgstr "Uidheam ion-chuir geama"
 
 #. Translators: This is the empty state page label which states that there are no devices ready.
 #: panels/user-accounts/cc-fingerprint-dialog.ui:187
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "No Fingerprint device"
 msgstr "Clàradh a-steach le _meur-lorg"
 
@@ -7738,7 +7472,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:204
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Device"
 msgstr "Clàradh a-steach le _meur-lorg"
 
@@ -7748,7 +7481,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:243
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Login"
 msgstr "Clàradh a-steach le _meur-lorg"
 
@@ -7764,7 +7496,6 @@ msgstr "_Sguab às na meur-lorgan"
 
 #: panels/user-accounts/cc-fingerprint-dialog.ui:290
 #, fuzzy
-#| msgid "_Fingerprint Login"
 msgid "Fingerprint Enroll"
 msgstr "Clàradh a-steach le _meur-lorg"
 
@@ -7774,7 +7505,6 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:237
 #, fuzzy
-#| msgid "The device is already in use."
 msgid "the device is already claimed by another process"
 msgstr "Tha an t-uidheam seo ’ga chleachdadh mu thràth."
 
@@ -7788,13 +7518,11 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:250
 #, fuzzy
-#| msgid "Failed to register with the requested network"
 msgid "Failed to communicate with the device during enrollment"
 msgstr "Cha b’ urrainn dhuinn clàradh aig an lìonra a dh’iarr thu"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:254
 #, fuzzy
-#| msgid "Could not access any fingerprint readers"
 msgid "Failed to communicate with the fingerprint reader"
 msgstr ""
 "Cha b’ urrainn dhuinn cothrom fhaighinn air leughadair mheur-lorgan sam bith"
@@ -7805,13 +7533,11 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:539
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to list fingerprints: %s"
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:606
 #, fuzzy, c-format
-#| msgid "Failed to delete user"
 msgid "Failed to delete saved fingerprints: %s"
 msgstr "Cha b’ urrainn dhuinn an cleachdaiche a sguabadh às"
 
@@ -7857,20 +7583,17 @@ msgstr "An lùdag bheag dheas"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:657
 #, fuzzy
-#| msgid "Unknown time"
 msgid "Unknown Finger"
 msgstr "Chan eil fhios dè cho fad"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:791
 #, fuzzy
-#| msgid "Complete!"
 msgctxt "Fingerprint enroll state"
 msgid "Complete"
 msgstr "Deiseil!"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:802
 #, fuzzy
-#| msgid "PPP service disconnected"
 msgid "Fingerprint device disconnected"
 msgstr "Chaidh an ceangal ris an t-seirbheis PPP a bhriseadh"
 
@@ -7880,26 +7603,22 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:812
 #, fuzzy
-#| msgid "Failed to add new printer."
 msgid "Failed to enroll new fingerprint"
 msgstr "Cha b’ urrainn dhuinn an clò-bhualadair ùr a chur ris."
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:843
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to start enrollment: %s"
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:851
 #, fuzzy
-#| msgid "Failed to add new printer."
 msgctxt "Fingerprint enroll state"
 msgid "Failed to enroll new fingerprint"
 msgstr "Cha b’ urrainn dhuinn an clò-bhualadair ùr a chur ris."
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:882
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to stop enrollment: %s"
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
@@ -7916,7 +7635,6 @@ msgstr ""
 #. TRANSLATORS: This is the label for the button to enroll a new finger
 #: panels/user-accounts/cc-fingerprint-dialog.c:1062
 #, fuzzy
-#| msgid "Enrolling fingerprints"
 msgid "Scan new fingerprint"
 msgstr "A’ clàradh nam meur-lorgan"
 
@@ -7927,20 +7645,17 @@ msgstr ""
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1172
 #, fuzzy
-#| msgid "Problem Reporting"
 msgctxt "Fingerprint enroll state"
 msgid "Problem Reading Device"
 msgstr "Ag aithris air duilgheadasan"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1207
 #, fuzzy, c-format
-#| msgid "Failed to upload file: %s"
 msgid "Failed to claim fingerprint device %s: %s"
 msgstr "Cha b’ urrainn dhuinn am faidhle a leanas a luchdadh suas: %s"
 
 #: panels/user-accounts/cc-fingerprint-dialog.c:1358
 #, fuzzy, c-format
-#| msgid "Failed to add new printer."
 msgid "Failed to get fingerprint devices: %s"
 msgstr "Cha b’ urrainn dhuinn an clò-bhualadair ùr a chur ris."
 
@@ -8031,19 +7746,16 @@ msgstr "_Atharraich"
 
 #: panels/user-accounts/cc-password-dialog.ui:51
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Current Password"
 msgstr "Am _facal-faire làithreach"
 
 #: panels/user-accounts/cc-password-dialog.ui:76
 #, fuzzy
-#| msgid "_New Password"
 msgid "New Password"
 msgstr "Facal-faire ù_r"
 
 #: panels/user-accounts/cc-password-dialog.ui:121
 #, fuzzy
-#| msgid "Change Password"
 msgid "Confirm Password"
 msgstr "Atharraich am facal-faire"
 
@@ -8222,13 +7934,11 @@ msgstr "Clàradh a-steach fèin-_obrachail"
 
 #: panels/user-accounts/cc-user-panel.ui:231
 #, fuzzy
-#| msgid "%s — Account Activity"
 msgid "Account Activity"
 msgstr "%s – Gnìomhachd a’ chunntais"
 
 #: panels/user-accounts/cc-user-panel.ui:259
 #, fuzzy
-#| msgid "Administrator"
 msgid "_Administrator"
 msgstr "Rianaire"
 
@@ -8252,13 +7962,11 @@ msgstr "Thoir air falbh an cleachdaiche…"
 
 #: panels/user-accounts/cc-user-panel.ui:340
 #, fuzzy
-#| msgid "_Other finger:"
 msgid "Other Users"
 msgstr "Corrag _eile:"
 
 #: panels/user-accounts/cc-user-panel.ui:353
 #, fuzzy
-#| msgid "_Add User…"
 msgid "Add User…"
 msgstr "Cuir cle_achdaiche ris…"
 
@@ -8482,9 +8190,6 @@ msgstr "Mearachd neo-aithnichte"
 
 #: panels/user-accounts/user-utils.c:144
 #, fuzzy
-#| msgid ""
-#| "The username should only consist of upper and lower case letters from a-"
-#| "z, digits and the following characters: . - _"
 msgid ""
 "The username should usually only consist of lower case letters from a-z, "
 "digits and the following characters: - _"
@@ -8523,18 +8228,6 @@ msgstr ""
 msgid "_Close"
 msgstr "_Dùin"
 
-#: panels/wacom/calibrator/calibrator.ui:51
-msgid ""
-"Please tap the target markers as they appear on screen to calibrate the "
-"tablet."
-msgstr ""
-"Thoir gnogag air na comharran targaide mar a nochdas iad air an sgrìn gus an "
-"tablaid a chailbhreachadh."
-
-#: panels/wacom/calibrator/calibrator.ui:63
-msgid "Mis-click detected, restarting…"
-msgstr "Mhothaich sinn do bhriogadh claon, ag ath-thòiseachadh…"
-
 #: panels/wacom/cc-wacom-button-row.c:244
 #, c-format
 msgid "Button %d"
@@ -8570,20 +8263,17 @@ msgstr ""
 
 #: panels/wacom/cc-wacom-device.c:435
 #, fuzzy
-#| msgid "No tablet detected"
 msgid "External tablet device"
 msgstr "Cha deach tablaid a lorg"
 
 #. All displays item
 #: panels/wacom/cc-wacom-page.c:608
 #, fuzzy
-#| msgid "Displays"
 msgid "All Displays"
 msgstr "Uidheaman-taisbeanaidh"
 
 #: panels/wacom/cc-wacom-page.ui:16
 #, fuzzy
-#| msgid "Tablet"
 msgid "Tablet Mode"
 msgstr "Tablaid"
 
@@ -8593,7 +8283,6 @@ msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:27
 #, fuzzy
-#| msgid "Left-Handed Orientation"
 msgid "Left Hand Orientation"
 msgstr "An comhair na làimhe chlì"
 
@@ -8603,14 +8292,12 @@ msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:56
 #, fuzzy
-#| msgid "Map to Monitor…"
 msgctxt "display setting"
 msgid "Map to Monitor"
 msgstr "Mapaich ri monatair…"
 
 #: panels/wacom/cc-wacom-page.ui:62
 #, fuzzy
-#| msgid "Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "Co-mheas an deilbh"
 
@@ -8620,7 +8307,6 @@ msgstr ""
 
 #: panels/wacom/cc-wacom-page.ui:73
 #, fuzzy
-#| msgid "Calibrate…"
 msgid "Calibrate"
 msgstr "Cailbhrich…"
 
@@ -8630,7 +8316,6 @@ msgstr "Cha deach tablaid a lorg"
 
 #: panels/wacom/cc-wacom-panel.ui:57
 #, fuzzy
-#| msgid "Please plug in or turn on your Wacom tablet"
 msgid "Please plug in or turn on your Wacom tablet."
 msgstr "Plug a-steach an tablaid Wacom agad no cuir air e"
 
@@ -8640,21 +8325,18 @@ msgstr "Faireachdainn brùthadh a’ chinn"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:54
 #, fuzzy
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 1"
 msgstr "Putan"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:62
 #, fuzzy
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 2"
 msgstr "Putan"
 
 #: panels/wacom/cc-wacom-stylus-page.ui:70
 #, fuzzy
-#| msgid "Button"
 msgctxt "display setting"
 msgid "Button 3"
 msgstr "Putan"
@@ -8700,13 +8382,11 @@ msgstr "Ath-ghoirid ùr…"
 
 #: panels/wwan/cc-wwan-apn-dialog.ui:8
 #, fuzzy
-#| msgid "Access Options"
 msgid "Access Points"
 msgstr "Roghainnean inntrigidh"
 
 #: panels/wwan/cc-wwan-apn-dialog.ui:122
 #, fuzzy
-#| msgid "VPN"
 msgid "APN"
 msgstr "VPN"
 
@@ -8728,7 +8408,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.c:84
 #, fuzzy
-#| msgid "Yesterday"
 msgid "Registered"
 msgstr "An-dè"
 
@@ -8738,7 +8417,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.c:92
 #, fuzzy
-#| msgid "Search"
 msgid "Searching"
 msgstr "Lorg"
 
@@ -8748,7 +8426,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.ui:5
 #, fuzzy
-#| msgid "Details"
 msgid "Modem Details"
 msgstr "Mion-fhiosrachadh"
 
@@ -8762,31 +8439,26 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-details-dialog.ui:49
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network Type"
 msgstr "Ainm an lìonraidh"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:97
 #, fuzzy
-#| msgid "Networks"
 msgid "Network Status"
 msgstr "Lìonraidhean"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:122
 #, fuzzy
-#| msgid "Numbers"
 msgid "Own Number"
 msgstr "Àireamhan"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:151
 #, fuzzy
-#| msgid "Printer Details"
 msgid "Device Details"
 msgstr "Fiosrachadh a’ chlò-bhualadair"
 
 #: panels/wwan/cc-wwan-details-dialog.ui:210
 #, fuzzy
-#| msgid "Firmware missing"
 msgid "Firmware Version"
 msgstr "Tha bathar-an-sàs a dhìth"
 
@@ -8856,7 +8528,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device.c:1043
 #, fuzzy
-#| msgid "Unknown"
 msgctxt "Network mode"
 msgid "Unknown"
 msgstr "Chan eil fhios"
@@ -8867,7 +8538,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.c:188 panels/wwan/cc-wwan-device-page.c:236
 #, fuzzy
-#| msgid "_Unlock"
 msgid "Unlock"
 msgstr "_Thoir a’ ghlas dheth"
 
@@ -8925,7 +8595,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.c:316
 #, fuzzy
-#| msgid "_Unlock"
 msgid "Unlocking…"
 msgstr "_Thoir a’ ghlas dheth"
 
@@ -8943,7 +8612,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:77
 #, fuzzy
-#| msgid "_Mobile broadband"
 msgid "_Mobile Data"
 msgstr "Bann-leathann _mobile"
 
@@ -8961,32 +8629,26 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:115
 #, fuzzy
-#| msgid "Network Name"
 msgid "_Network Mode"
 msgstr "Ainm an lìonraidh"
 
 #: panels/wwan/cc-wwan-device-page.ui:122
 #, fuzzy
-#| msgid "Network"
 msgid "N_etwork"
 msgstr "Lìonra"
 
 #: panels/wwan/cc-wwan-device-page.ui:132
 #, fuzzy
-#| msgctxt "Printer Option Group"
-#| msgid "Advanced"
 msgid "Advanced"
 msgstr "Adhartach"
 
 #: panels/wwan/cc-wwan-device-page.ui:146
 #, fuzzy
-#| msgid "Access Options"
 msgid "_Access Point Names"
 msgstr "Roghainnean inntrigidh"
 
 #: panels/wwan/cc-wwan-device-page.ui:155
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "_SIM Lock"
 msgstr "Glas na sgrìn"
 
@@ -8996,19 +8658,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-device-page.ui:165
 #, fuzzy
-#| msgid "%s Details"
 msgid "M_odem Details"
 msgstr "Fiosrachadh air %s"
 
 #: panels/wwan/cc-wwan-errors-private.h:40
 #, fuzzy
-#| msgid "PIN check failed"
 msgid "Phone failure"
 msgstr "Dh’fhàillig sgrùdadh a’ PIN"
 
 #: panels/wwan/cc-wwan-errors-private.h:41
 #, fuzzy
-#| msgid "Not connected"
 msgid "No connection to phone"
 msgstr "Chan eil ceangal ann"
 
@@ -9022,19 +8681,16 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:48
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM not inserted"
 msgstr "Cha deach cairt SIM a chur a-steach"
 
 #: panels/wwan/cc-wwan-errors-private.h:49
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN required"
 msgstr "Tha feum air PIN an SIM"
 
 #: panels/wwan/cc-wwan-errors-private.h:50
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK required"
 msgstr "Tha feum air PIN an SIM"
 
@@ -9048,43 +8704,36 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:54
 #, fuzzy
-#| msgid "Current _Password"
 msgid "Incorrect password"
 msgstr "Am _facal-faire làithreach"
 
 #: panels/wwan/cc-wwan-errors-private.h:55
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PIN2 required"
 msgstr "Tha feum air PIN an SIM"
 
 #: panels/wwan/cc-wwan-errors-private.h:56
 #, fuzzy
-#| msgid "SIM Pin required"
 msgid "SIM PUK2 required"
 msgstr "Tha feum air PIN an SIM"
 
 #: panels/wwan/cc-wwan-errors-private.h:59
 #, fuzzy
-#| msgid "No stylus found"
 msgid "Not found"
 msgstr "Cha deach peann a lorg"
 
 #: panels/wwan/cc-wwan-errors-private.h:61
 #, fuzzy
-#| msgid "Networks"
 msgid "No network service"
 msgstr "Lìonraidhean"
 
 #: panels/wwan/cc-wwan-errors-private.h:62
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network timeout"
 msgstr "Ainm an lìonraidh"
 
 #: panels/wwan/cc-wwan-errors-private.h:75
 #, fuzzy
-#| msgid "AutoIP service failed"
 msgid "GPRS services not allowed"
 msgstr "Dh’fhàillig an t-seirbheis AutoIP"
 
@@ -9098,8 +8747,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:91
 #, fuzzy
-#| msgctxt "print job"
-#| msgid "Canceled"
 msgid "Action Cancelled"
 msgstr "Sguireadh dheth"
 
@@ -9109,13 +8756,11 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-errors-private.h:103
 #, fuzzy
-#| msgid "Unknown error"
 msgid "Unknown Error"
 msgstr "Mearachd neo-aithnichte"
 
 #: panels/wwan/cc-wwan-mode-dialog.ui:5
 #, fuzzy
-#| msgid "Network Name"
 msgid "Network Mode"
 msgstr "Ainm an lìonraidh"
 
@@ -9132,13 +8777,11 @@ msgstr "Dùin"
 
 #: panels/wwan/cc-wwan-network-dialog.ui:69
 #, fuzzy
-#| msgid "Automatic"
 msgid "_Automatic"
 msgstr "Fèin-obrachail"
 
 #: panels/wwan/cc-wwan-network-dialog.ui:84
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Choose Network"
 msgstr "An lìonra-dhachaidh agam"
 
@@ -9153,50 +8796,42 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-panel.ui:10
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Enable Mobile Network"
 msgstr "An lìonra-dhachaidh agam"
 
 #: panels/wwan/cc-wwan-panel.ui:94
 #, fuzzy
-#| msgid "No Wi-Fi Adapter Found"
 msgid "No WWAN Adapter Found"
 msgstr "Cha deach adaptar WiFi a lorg"
 
 #: panels/wwan/cc-wwan-panel.ui:104
 #, fuzzy
-#| msgid "Make sure you have a Wi-Fi adapter plugged and turned on"
 msgid "Make sure you have a Wireless Wan/Cellular device"
 msgstr ""
 "Dèan cinnteach gu bheil adaptar WiFi agad ceangailte agus air a chur air"
 
 #: panels/wwan/cc-wwan-panel.ui:145
 #, fuzzy
-#| msgid "Bluetooth is disabled when airplane mode is on."
 msgid "Wireless Wan is disabled when airplane mode is on"
 msgstr "Tha Bluetooth à comas fhad ’s a tha am modh itealain air."
 
 #: panels/wwan/cc-wwan-panel.ui:153
 #, fuzzy
-#| msgid "Turn Off Airplane Mode"
 msgid "_Turn off Airplane Mode"
 msgstr "Cuir am modh itealain dheth"
 
 #: panels/wwan/cc-wwan-panel.ui:184
 #, fuzzy
-#| msgid "Forget Connection"
 msgid "Data Connection"
 msgstr "Dìochuimhnich an ceangal"
 
 #: panels/wwan/cc-wwan-panel.ui:185
 #, fuzzy
-#| msgid "SIM Card not inserted"
 msgid "SIM card used for internet"
 msgstr "Cha deach cairt SIM a chur a-steach"
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:9
 #, fuzzy
-#| msgid "Screen Lock"
 msgid "SIM Lock"
 msgstr "Glas na sgrìn"
 
@@ -9210,7 +8845,6 @@ msgstr ""
 
 #: panels/wwan/cc-wwan-sim-lock-dialog.ui:138
 #, fuzzy
-#| msgid "Ch_ange"
 msgid "Change PIN"
 msgstr "_Atharraich"
 
@@ -9220,17 +8854,14 @@ msgstr ""
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:3
 #, fuzzy
-#| msgid "My Home Network"
 msgid "Mobile Network"
 msgstr "An lìonra-dhachaidh agam"
 
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:4
 #, fuzzy
-#| msgid "Configure Removable Media settings"
 msgid "Configure Telephony and mobile data connections"
 msgstr "Rèitich roghainnean nam meadhanan so-ghiùlain"
 
-#. FIXME
 #. Translators: Search terms to find the WWAN panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: panels/wwan/gnome-wwan-panel.desktop.in.in:16
 msgid "cellular;wwan;telephony;sim;mobile;"
@@ -9238,7 +8869,6 @@ msgstr ""
 
 #: shell/appdata/org.gnome.Settings.appdata.xml.in:8
 #, fuzzy
-#| msgid "Utilities to configure the GNOME desktop"
 msgid "Utility to configure the GNOME desktop"
 msgstr "Goireasan gus an deasg GNOME a rèiteachadh"
 
@@ -9278,7 +8908,7 @@ msgstr "[PANEL] [ARGUMENT…]"
 msgid "Privacy"
 msgstr "Prìobhaideachd"
 
-#: shell/cc-panel-loader.c:301
+#: shell/cc-panel-loader.c:303
 msgid "Available panels:"
 msgstr "Panailean a tha ri fhaighinn:"
 
@@ -9288,7 +8918,6 @@ msgstr "Na h-uile roghainn"
 
 #: shell/cc-window.ui:54
 #, fuzzy
-#| msgid "Primary"
 msgid "Primary Menu"
 msgstr "Prìomh-phanail"
 
@@ -9329,8 +8958,6 @@ msgstr "Panailean"
 
 #: shell/help-overlay.ui:41 shell/help-overlay.ui:49
 #, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Go back to the overview"
 msgctxt "shortcut window"
 msgid "Go back to previous panel"
 msgstr "Till dhan fhoir-shealladh"
@@ -9379,7 +9006,7 @@ msgstr ""
 
 #. translators:
 #. * The number of sound outputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1915
+#: subprojects/gvc/gvc-mixer-control.c:1907
 #, c-format
 msgid "%u Output"
 msgid_plural "%u Outputs"
@@ -9390,7 +9017,7 @@ msgstr[3] "%u às-chur"
 
 #. translators:
 #. * The number of sound inputs on a particular device
-#: subprojects/gvc/gvc-mixer-control.c:1925
+#: subprojects/gvc/gvc-mixer-control.c:1917
 #, c-format
 msgid "%u Input"
 msgid_plural "%u Inputs"
@@ -9399,7 +9026,7 @@ msgstr[1] "%u ion-chur"
 msgstr[2] "%u ion-chuir"
 msgstr[3] "%u ion-chur"
 
-#: subprojects/gvc/gvc-mixer-control.c:2876
+#: subprojects/gvc/gvc-mixer-control.c:2867
 msgid "System Sounds"
 msgstr "Fuaimean an t-siostaim"
 
@@ -9448,6 +9075,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "No Pictures Found"
 #~ msgstr "Cha deach dealbh a lorg"
 
+#, c-format
 #~ msgid "You can add images to your %s folder and they will show up here"
 #~ msgstr ""
 #~ "’S urrainn dhut dealbhan a chur ris a’ phasgan %s agad agus nochdaidh iad "
@@ -9512,6 +9140,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "preferences-desktop-display"
 #~ msgstr "preferences-desktop-display"
 
+#, c-format
 #~ msgid "Version %s"
 #~ msgstr "Tionndadh %s"
 
@@ -9575,6 +9204,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "Network proxy"
 #~ msgstr "Progsaidh lìonraidh"
 
+#, c-format
 #~ msgid "%s VPN"
 #~ msgstr "%s VPN"
 
@@ -9625,6 +9255,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "network-wireless"
 #~ msgstr "network-wireless"
 
+#, c-format
 #~ msgid ""
 #~ "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 #~ msgstr ""
@@ -9961,13 +9592,14 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "preferences-system-search"
 #~ msgstr "preferences-system-search"
 
+#, c-format
 #~ msgid ""
 #~ "Screen sharing allows remote users to view or control your screen by "
 #~ "connecting to <a href=\"vnc://%s\">vnc://%s</a>"
 #~ msgstr ""
 #~ "Bheir co-roinneadh na sgrìn cead do chleachdaichean an sgrìn agad a "
-#~ "shealltainn no a stiùireadh on taobh a-muigh slighe <a href=\"vnc://%s"
-#~ "\">vnc://%s</a>"
+#~ "shealltainn no a stiùireadh on taobh a-muigh slighe <a href=\"vnc://"
+#~ "%s\">vnc://%s</a>"
 
 #~ msgid "Copy"
 #~ msgstr "Dèan lethbhreac"
@@ -10036,6 +9668,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "Device"
 #~ msgstr "Uidheam"
 
+#, c-format
 #~ msgid "Speaker Testing for %s"
 #~ msgstr "Cuir na glaodhairean airson %s fo dheuchainn"
 
@@ -10165,9 +9798,11 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "Done!"
 #~ msgstr "Deiseil!"
 
+#, c-format
 #~ msgid "Could not access “%s” device"
 #~ msgstr "Cha b’ urrainn dhuinn cothrom fhaighinn air an uidheam “%s”"
 
+#, c-format
 #~ msgid "Could not start finger capture on “%s” device"
 #~ msgstr ""
 #~ "Cha b’ urrainn dhuinn glacadh a’ mheòir a thòiseachadh air an uidheam “%s”"
@@ -10175,6 +9810,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "Please contact your system administrator for help."
 #~ msgstr "Cuir fios gu rianaire an t-siostaim agad airson cuideachadh."
 
+#, c-format
 #~ msgid ""
 #~ "To enable fingerprint login, you need to save one of your fingerprints, "
 #~ "using the “%s” device."
@@ -10210,6 +9846,16 @@ msgstr "Fuaimean an t-siostaim"
 #~ "Thèid seo a chleachdadh gus ainm a chur air a’ phasgan dachaigh agad is "
 #~ "cha ghabh atharrachadh."
 
+#~ msgid ""
+#~ "Please tap the target markers as they appear on screen to calibrate the "
+#~ "tablet."
+#~ msgstr ""
+#~ "Thoir gnogag air na comharran targaide mar a nochdas iad air an sgrìn gus "
+#~ "an tablaid a chailbhreachadh."
+
+#~ msgid "Mis-click detected, restarting…"
+#~ msgstr "Mhothaich sinn do bhriogadh claon, ag ath-thòiseachadh…"
+
 #~ msgid "Output:"
 #~ msgstr "Às-chur:"
 
@@ -10219,6 +9865,7 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgid "Map to single monitor"
 #~ msgstr "Mapaich ri monatair singilte"
 
+#, c-format
 #~ msgid "%d of %d"
 #~ msgstr "%d de %d"
 
@@ -10346,9 +9993,6 @@ msgstr "Fuaimean an t-siostaim"
 
 #~ msgid "Uni­ver­sal Access"
 #~ msgstr "Inntrigeadh uile-choitcheann"
-
-#~ msgid "Disable image"
-#~ msgstr "Cuir an dealbh à comas"
 
 #~ msgid "Browse for more pictures…"
 #~ msgstr "Brabhsaich airson barrachd dhealbhan…"
@@ -10503,6 +10147,9 @@ msgstr "Fuaimean an t-siostaim"
 #~ msgctxt "proxy method"
 #~ msgid "Automatic"
 #~ msgstr "Gu fèin-obrachail"
+
+#~ msgid "VPN Type"
+#~ msgstr "Seòrsa an VPN"
 
 #~ msgid "Group Name"
 #~ msgstr "Ainm a' bhuidhinn"
