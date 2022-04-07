@@ -58,7 +58,7 @@
                     </style>
                   </object>
                 </child>
-
+                
                 <child>
                   <object class="GtkLabel" id="offline_label">
                     <property name="margin-top">24</property>
