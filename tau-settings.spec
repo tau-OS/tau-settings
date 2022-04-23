@@ -143,10 +143,6 @@ utilities.
 %setup -q
  
 %build
-git init
-rm -r subprojects/gvc
-git submodule add $(cat .gitmodules | grep "url = " | sed 's/url = //g') subprojects/gvc
-
 %meson \
   -Ddocumentation=true \
 %if 0%{?fedora}
