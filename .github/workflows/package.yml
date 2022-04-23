@@ -10,14 +10,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      version: "1.1"
-      arch: "*"
-      extraBuildPackages: chrpath cups-devel desktop-file-utils docbook-style-xsl libxslt gcc gettext meson git
-                          accountsservice-devel clutter-gtk-devel colord-devel colord-gtk4-devel gcr-devel gdk-pixbuf2-devel wayland-devel
-                          gtk4-devel gnome-desktop4-devel gnome-settings-daemon-devel gnome-online-accounts-devel  gsettings-desktop-schemas-devel
-                          gsound-devel libgudev-devel ibus-devel libadwaita-devel libgtop2-devel NetworkManager-libnm-devel libnma-gtk4-devel
-                          pulseaudio-libs-devel libsecret-devel libxml2-devel malcontent-devel ModemManager-devel ModemManager-glib-devel
-                          polkit-devel libpwquality-devel libsmbclient-devel upower-devel libudisks2-devel gnome-bluetooth-libs-devel libwacom-devel
+      archs: x86_64 noarch
   sign :
     needs:
       - build
@@ -25,8 +18,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     with:
       name: "tau-settings"
-      version: "1.1"
-      arch: "*"
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
   upload:
@@ -35,8 +26,6 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
     with:
       name: "tau-settings"
-      version: "1.1"
-      arch: "*"
       tauOSVersion: "1.1"
     secrets:
       privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
