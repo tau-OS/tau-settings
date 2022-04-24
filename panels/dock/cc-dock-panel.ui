@@ -33,7 +33,7 @@
                   <object class="GtkBox">
                     <property name="spacing">32</property>
                     <child>
-                      <object class="GtkRadioButton" id="icon_size_32">
+                      <object class="GtkCheckButton" id="icon_size_32">
                         <child type="image">
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
@@ -43,7 +43,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkRadioButton" id="icon_size_48">
+                      <object class="GtkCheckButton" id="icon_size_48">
                         <property name="active" translatable="yes">1</property>
                         <property name="group" translatable="yes">icon_size_32</property>
                         <child type="image">
@@ -55,7 +55,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkRadioButton" id="icon_size_64">
+                      <object class="GtkCheckButton" id="icon_size_64">
                         <property name="active" translatable="yes">1</property>
                         <property name="group" translatable="yes">icon_size_32</property>
                         <child type="image">
