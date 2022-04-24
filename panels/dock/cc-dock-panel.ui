@@ -17,8 +17,8 @@
             </property>
             <child>
               <object class="AdwActionRow">
-                <property name="title" translatable="yes">Intelligent autohide</property>
-                <property name="subtitle" translatable="yes">Hide the dock when it obstructs a window of the current application.</property>
+                <property name="title" translatable="yes">Intelligent Hiding</property>
+                <property name="subtitle" translatable="yes">Hide the Dock when it obstructs a window of the current app.</property>
                 <child>
                   <object class="GtkSwitch" id="dock_autohide_switch">
                     <property name="valign">center</property>
@@ -30,22 +30,49 @@
               <object class="AdwActionRow">
                 <property name="title" translatable="yes">Icon Size</property>
                 <child>
-                  <object class="GtkScale" id="icon_size_scale">
-                    <property name="draw-value">1</property>
-                    <property name="valign">baseline</property>
-                    <property name="hexpand">1</property>
-                    <property name="adjustment">icon_size_adjustment</property>
-                    <property name="round_digits">1</property>
-                    <property name="digits">0</property>
-                    <property name="value_pos">right</property>
-                    <property name="valign">center</property>
+                  <object class="GtkBox">
+                    <property name="spacing">32</property>
+                    <child>
+                      <object class="GtkRadioButton" id="icon_size_32">
+                        <child type="image">
+                          <object class="GtkImage">
+                            <property name="icon-name">application-default-icon-symbolic</property>
+                            <property name="pixel-size">32</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkRadioButton" id="icon_size_48">
+                        <property name="active" translatable="yes">1</property>
+                        <property name="group" translatable="yes">icon_size_32</property>
+                        <child type="image">
+                          <object class="GtkImage">
+                            <property name="icon-name">application-default-icon-symbolic</property>
+                            <property name="pixel-size">48</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkRadioButton" id="icon_size_64">
+                        <property name="active" translatable="yes">1</property>
+                        <property name="group" translatable="yes">icon_size_32</property>
+                        <child type="image">
+                          <object class="GtkImage">
+                            <property name="icon-name">application-default-icon-symbolic</property>
+                            <property name="pixel-size">64</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
             </child>
             <child>
               <object class="AdwComboRow" id="dock_position_combo">
-                <property name="title" translatable="yes">Position on screen</property>
+                <property name="title" translatable="yes">Screen Position</property>
                 <property name="model">
                   <object class="GtkStringList">
                     <items>
@@ -62,13 +89,5 @@
         </child>
       </object>
     </child>
-
-    <object class="GtkAdjustment" id="icon_size_adjustment">
-      <property name="lower">16</property>
-      <property name="upper">128</property>
-      <property name="step-increment">1</property>
-      <property name="page-increment">10</property>
-      <signal name="value-changed" handler="on_icon_size_adjustment_value_changed" object="CcDockPanel" swapped="yes"/>
-    </object>
   </template>
 </interface>
