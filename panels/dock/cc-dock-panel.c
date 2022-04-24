@@ -36,9 +36,9 @@ struct _CcDockPanel {
   CcPanel                 parent_instance;
 
   GtkSwitch               *dock_autohide_switch;
-  GtkRadioButton           *icon_size_32;
-  GtkRadioButton           *icon_size_48;
-  GtkRadioButton           *icon_size_64;
+  GtkCheckButton           *icon_size_32;
+  GtkCheckButton           *icon_size_48;
+  GtkCheckButton           *icon_size_64;
   GtkScale                *icon_size_scale;
   AdwComboRow             *dock_position_combo;
 
@@ -97,7 +97,7 @@ on_view_dock_settings_clicked_cb (CcDockPanel *self)
 }
 
 static void
-on_icon_size_32_changed (CcDockPanel *self)
+on_icon_size_32_toggled (CcDockPanel *self)
 {
   gint value = 32;
   if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
@@ -105,7 +105,7 @@ on_icon_size_32_changed (CcDockPanel *self)
 }
 
 static void
-on_icon_size_48_changed (CcDockPanel *self)
+on_icon_size_48_toggled (CcDockPanel *self)
 {
   gint value = 48;
   if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
@@ -113,7 +113,7 @@ on_icon_size_48_changed (CcDockPanel *self)
 }
 
 static void
-on_icon_size_64_changed (CcDockPanel *self)
+on_icon_size_64_toggled (CcDockPanel *self)
 {
   gint value = 64;
   if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
