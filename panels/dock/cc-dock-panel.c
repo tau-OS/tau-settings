@@ -100,39 +100,33 @@ static void
 icon_size_widget_refresh (CcDockPanel *self)
 {
   gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
-  if (value == 32) {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), true);
-  } else if (value == 48)
-  {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), true);
-  } else if (value = 64)
-  {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), true);
-  }
+  if (value == 32)
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
+  else if (value == 48)
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
+  else if (value = 64)
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), TRUE);
 }
 
 static void
 on_icon_size_32_toggled (CcDockPanel *self)
 {
   gint value = 32;
-  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_48_toggled (CcDockPanel *self)
 {
   gint value = 48;
-  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_64_toggled (CcDockPanel *self)
 {
   gint value = 64;
-  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
@@ -178,6 +172,9 @@ cc_dock_panel_init (CcDockPanel *self)
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
 
   icon_size_widget_refresh (self);
+  g_signal_connect(self->icon_size_32, "toggled", G_CALLBACK(on_icon_size_32_toggled), self);
+  g_signal_connect(self->icon_size_48, "toggled", G_CALLBACK(on_icon_size_48_toggled), self);
+  g_signal_connect(self->icon_size_64, "toggled", G_CALLBACK(on_icon_size_64_toggled), self);
 
   g_settings_bind (self->dock_settings, "dock-position",
                    self->dock_position_combo, "selected",
