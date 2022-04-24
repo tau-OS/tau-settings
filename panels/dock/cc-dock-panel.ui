@@ -44,8 +44,8 @@
                     </child>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_48">
-                        <property name="active" translatable="yes">1</property>
-                        <property name="group" translatable="yes">icon_size_32</property>
+                        <property name="active">1</property>
+                        <property name="group">icon_size_32</property>
                         <child type="image">
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
@@ -56,8 +56,7 @@
                     </child>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_64">
-                        <property name="active" translatable="yes">1</property>
-                        <property name="group" translatable="yes">icon_size_32</property>
+                        <property name="group">icon_size_32</property>
                         <child type="image">
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
