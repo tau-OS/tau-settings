@@ -101,13 +101,13 @@ icon_size_widget_refresh (CcDockPanel *self)
 {
   gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
   if (value == 32) {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (icon_size_32), true);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), true);
   } else if (value == 48)
   {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (icon_size_48), true);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), true);
   } else if (value = 64)
   {
-    gtk_check_button_set_active (GTK_CHECK_BUTTON (icon_size_64), true);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), true);
   }
 }
 
