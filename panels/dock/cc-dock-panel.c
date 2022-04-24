@@ -97,6 +97,21 @@ on_view_dock_settings_clicked_cb (CcDockPanel *self)
 }
 
 static void
+icon_size_widget_refresh (CcDockPanel *self)
+{
+  gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
+  if (value == 32) {
+    gtk_check_button_set_active (icon_size_32, true);
+  } else if (value == 48)
+  {
+    gtk_check_button_set_active (icon_size_48, true);
+  } else if (value = 64)
+  {
+    gtk_check_button_set_active (icon_size_64, true);
+  }
+}
+
+static void
 on_icon_size_32_toggled (CcDockPanel *self)
 {
   gint value = 32;
@@ -162,10 +177,12 @@ cc_dock_panel_init (CcDockPanel *self)
   g_signal_connect_object (self->dock_settings, "changed::" ICONSIZE_KEY,
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
 
+  icon_size_widget_refresh (self);
+
   g_settings_bind (self->dock_settings, "dock-position",
                    self->dock_position_combo, "selected",
                    G_SETTINGS_BIND_DEFAULT);
-  
+
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
                    G_SETTINGS_BIND_INVERT_BOOLEAN);
