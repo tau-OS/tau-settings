@@ -15,7 +15,7 @@
             <child>
               <object class="AdwActionRow">
                 <property name="title" translatable="yes">Intelligent Hiding</property>
-                <property name="subtitle" translatable="yes">Hide the Dock when it obstructs a window of the current app.</property>
+                <property name="subtitle" translatable="yes">Hide the dock when a window is below it.</property>
                 <child>
                   <object class="GtkSwitch" id="dock_autohide_switch">
                     <property name="valign">center</property>
