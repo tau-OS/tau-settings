@@ -6,13 +6,16 @@
 .dock-size-row checkbutton label:dir(rtl) {
   margin-right: 6px;
 }
-.dock-size-row checkbutton.image-button:checked {
+.dock-size-row checkbutton {
+  padding: 6px;
+}
+.dock-size-row checkbutton:checked {
   background: alpha(@accent_bg_color, 0.4);
   border-color: @accent_bg_color;
-  border-radius: 6px;
+  border-radius: 8px;
   color: @accent_fg_color;
 }
-.dock-size-row checkbutton.image-button:checked:backdrop {
+.dock-size-row checkbutton:checked:backdrop {
   background: alpha(@window_fg_color, 0.05);
   border-color: alpha(@window_fg_color, 0.25);
   color: inherit;
