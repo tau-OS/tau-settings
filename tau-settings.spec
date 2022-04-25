@@ -203,6 +203,5 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 * Mon Apr 25 2022 Lains <lainsce@airmail.cc> - 1.1-2
 - Redesign the Dock subpanel
 
-%changelog
 * Sun Apr 3 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-1
 - Initial Release
