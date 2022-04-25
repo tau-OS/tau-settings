@@ -31,15 +31,17 @@
 #include "shell/cc-object-storage.h"
 
 #define ICONSIZE_KEY "dash-max-icon-size"
+#define ICONSIZE_KEY_SMALL 32
+#define ICONSIZE_KEY_MEDIUM 48
+#define ICONSIZE_KEY_LARGE 64
 
 struct _CcDockPanel {
   CcPanel                 parent_instance;
 
   GtkSwitch               *dock_autohide_switch;
-  GtkCheckButton           *icon_size_32;
-  GtkCheckButton           *icon_size_48;
-  GtkCheckButton           *icon_size_64;
-  GtkScale                *icon_size_scale;
+  GtkCheckButton          *icon_size_32;
+  GtkCheckButton          *icon_size_48;
+  GtkCheckButton          *icon_size_64;
   AdwComboRow             *dock_position_combo;
 
   GSettings               *dock_settings;
@@ -100,32 +102,37 @@ static void
 icon_size_widget_refresh (CcDockPanel *self)
 {
   gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
-  if (value == 32)
+
+  if (value == ICONSIZE_KEY_SMALL) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
-  else if (value == 48)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  } else if (value == ICONSIZE_KEY_MEDIUM) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
-  else if (value = 64)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  } else if (value = ICONSIZE_KEY_LARGE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), TRUE);
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  }
 }
 
 static void
 on_icon_size_32_toggled (CcDockPanel *self)
 {
-  gint value = 32;
+  gint value = ICONSIZE_KEY_SMALL;
   g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_48_toggled (CcDockPanel *self)
 {
-  gint value = 48;
+  gint value = ICONSIZE_KEY_MEDIUM;
   g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_64_toggled (CcDockPanel *self)
 {
-  gint value = 64;
+  gint value = ICONSIZE_KEY_LARGE;
   g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
@@ -137,13 +144,13 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
 
   object_class->dispose = cc_dock_panel_dispose;
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/dock/cc-dock-panel.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, 
+                                               "/org/gnome/control-center/dock/cc-dock-panel.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, dock_autohide_switch);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_32);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_48);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_64);
-  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_scale);
 
   gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_32_toggled);
@@ -155,17 +162,17 @@ static void
 cc_dock_panel_init (CcDockPanel *self)
 {
   g_autoptr(GSettingsSchema) schema = NULL;
-
   g_resources_register (cc_dock_get_resource ());
-
   gtk_widget_init_template (GTK_WIDGET (self));
+
   /* Only load if we have dash to dock installed */
-  schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (), "org.gnome.shell.extensions.dash-to-dock", TRUE);
-  if (!schema)
-    {
-      g_warning ("No dock is installed here. Panel disabled. Please fix your installation.");
-      return;
-    }
+  schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                            "org.gnome.shell.extensions.dash-to-dock", 
+                                            TRUE);
+  if (!schema) {
+    g_warning ("No dock is installed here. Panel disabled. Please fix your installation.");
+    return;
+  }
 
   self->dock_settings = g_settings_new_full (schema, NULL, NULL);
   g_signal_connect_object (self->dock_settings, "changed::" ICONSIZE_KEY,

@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/org/gnome/control-center/dock">
     <file preprocess="xml-stripblanks">cc-dock-panel.ui</file>
+    <file>dock.css</file>
   </gresource>
 </gresources>
