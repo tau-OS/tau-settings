@@ -26,18 +26,18 @@
             <child>
               <object class="AdwActionRow">
                 <property name="title" translatable="yes">Icon Size</property>
-                <property name="margin-top">6</property>
-                <property name="margin-bottom">6</property>
                 <child>
                   <object class="GtkBox">
                     <property name="spacing">32</property>
                     <property name="valign">center</property>
+                    <property name="margin-top">6</property>
+                    <property name="margin-bottom">6</property>
                     <style>
                       <class name="dock-size-row"/>
                     </style>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_32">
-                        <child type="image">
+                        <child>
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">32</property>
@@ -49,7 +49,7 @@
                       <object class="GtkCheckButton" id="icon_size_48">
                         <property name="active">1</property>
                         <property name="group">icon_size_32</property>
-                        <child type="image">
+                        <child>
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">48</property>
@@ -60,7 +60,7 @@
                     <child>
                       <object class="GtkCheckButton" id="icon_size_64">
                         <property name="group">icon_size_32</property>
-                        <child type="image">
+                        <child>
                           <object class="GtkImage">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">64</property>
@@ -75,7 +75,6 @@
             <child>
               <object class="AdwComboRow" id="dock_position_combo">
                 <property name="title" translatable="yes">Screen Position</property>
-                <property name="selected">3</property>
                 <property name="model">
                   <object class="GtkStringList">
                     <items>
