@@ -116,21 +116,24 @@ static void
 on_icon_size_32_toggled (CcDockPanel *self)
 {
   gint value = ICONSIZE_KEY_SMALL;
-  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_48_toggled (CcDockPanel *self)
 {
   gint value = ICONSIZE_KEY_MEDIUM;
-  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
 on_icon_size_64_toggled (CcDockPanel *self)
 {
   gint value = ICONSIZE_KEY_LARGE;
-  g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+  if (g_settings_get_int (self->dock_settings, ICONSIZE_KEY) != value)
+    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
 }
 
 static void
@@ -184,6 +187,7 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_32_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_48_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_64_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_dock_position_combo_selected);
 }
 
 static void
