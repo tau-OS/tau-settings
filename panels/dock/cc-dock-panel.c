@@ -103,7 +103,7 @@ icon_size_widget_refresh (CcDockPanel *self)
 {
   gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
 
-  if ((value == ICONSIZE_KEY_SMALL) {
+  if (value == ICONSIZE_KEY_SMALL) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
   } else if (value == ICONSIZE_KEY_MEDIUM) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
