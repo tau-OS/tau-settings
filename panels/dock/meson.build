@@ -20,16 +20,16 @@ resource_data = files(
   'cc-dock-panel.ui',
 )
 
-common_sources += gnome.compile_resources(
-  'cc-@0@-resources'.format(cappletname),
+sources =  files(
+  'cc-dock-panel.c'
+)
+
+sources += gnome.compile_resources(
+  'cc-' + cappletname + '-resources',
   cappletname + '.gresource.xml',
   c_name: 'cc_' + cappletname,
   dependencies: resource_data,
   export: true
-)
-
-sources = common_sources + files(
-  'cc-dock-panel.c'
 )
 
 cflags += [
