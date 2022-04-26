@@ -37,9 +37,9 @@
                     </style>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_32">
-			<signal name="toggled" handler="on_icon_size_32_toggled" object="CcDockPanel" swapped="yes" />
+			                  <signal name="toggled" handler="on_icon_size_32_toggled" object="CcDockPanel" />
                         <child>
-                          <object class="GtkImage">
+                          <object class="GtkImage" id="icon_size_32_img">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">32</property>
                           </object>
@@ -48,11 +48,11 @@
                     </child>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_48">
-			<signal name="toggled" handler="on_icon_size_48_toggled" object="CcDockPanel" swapped="yes" />
+			                  <signal name="toggled" handler="on_icon_size_48_toggled" object="CcDockPanel" />
                         <property name="active">1</property>
                         <property name="group">icon_size_32</property>
                         <child>
-                          <object class="GtkImage">
+                          <object class="GtkImage" id="icon_size_48_img">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">48</property>
                           </object>
@@ -61,10 +61,10 @@
                     </child>
                     <child>
                       <object class="GtkCheckButton" id="icon_size_64">
-			<signal name="toggled" handler="on_icon_size_64_toggled" object="CcDockPanel" swapped="yes" />
+			                  <signal name="toggled" handler="on_icon_size_64_toggled" object="CcDockPanel" />
                         <property name="group">icon_size_32</property>
                         <child>
-                          <object class="GtkImage">
+                          <object class="GtkImage" id="icon_size_64_img">
                             <property name="icon-name">application-default-icon-symbolic</property>
                             <property name="pixel-size">64</property>
                           </object>
