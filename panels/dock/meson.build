@@ -32,14 +32,6 @@ sources = common_sources + files(
   'cc-dock-panel.c'
 )
 
-sources += gnome.compile_resources(
-  'cc-' + cappletname + '-resources',
-  cappletname + '.gresource.xml',
-  c_name: 'cc_' + cappletname,
-  dependencies: resource_data,
-  export: true
-)
-
 cflags += [
   '-DDATADIR="@0@"'.format(control_center_datadir),
   '-DGNOME_DESKTOP_USE_UNSTABLE_API'
