@@ -60,14 +60,6 @@ cc_dock_panel_dispose (GObject *object)
 
   g_clear_object (&self->dock_settings);
   g_clear_object (&self->extension_proxy);
-  g_clear_object (&self->dock_autohide_switch);
-  g_clear_object (&self->icon_size_32);
-  g_clear_object (&self->icon_size_48);
-  g_clear_object (&self->icon_size_64);
-  g_clear_object (&self->icon_size_32_img);
-  g_clear_object (&self->icon_size_48_img);
-  g_clear_object (&self->icon_size_64_img);
-  g_clear_object (&self->dock_position_combo);
 
   G_OBJECT_CLASS (cc_dock_panel_parent_class)->dispose (object);
 }
@@ -154,13 +146,12 @@ on_dock_position_combo_selected (CcDockPanel *self)
 
   switch(value) {
     case 1:
-      g_settings_set_string (self->dock_settings, "dock-position", "'TOP'");
+      g_settings_set_string (self->dock_settings, "dock-position", "RIGHT");
+    default:
     case 2:
-      g_settings_set_string (self->dock_settings, "dock-position", "'RIGHT'");
+      g_settings_set_string (self->dock_settings, "dock-position", "BOTTOM");
     case 3:
-      g_settings_set_string (self->dock_settings, "dock-position", "'BOTTOM'");
-    case 4:
-      g_settings_set_string (self->dock_settings, "dock-position", "'LEFT'");
+      g_settings_set_string (self->dock_settings, "dock-position", "LEFT");
   }
 }
 
@@ -228,7 +219,6 @@ cc_dock_panel_init (CcDockPanel *self)
   icon_size_widget_refresh (self);
 
   g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
-  adw_combo_row_set_selected (self->dock_position_combo, 3);
 
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
