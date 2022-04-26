@@ -103,11 +103,11 @@ icon_size_widget_refresh (CcDockPanel *self)
 {
   gint value = g_settings_get_int (self->dock_settings, ICONSIZE_KEY);
 
-  if (value == ICONSIZE_KEY_SMALL) {
+  if ((value == ICONSIZE_KEY_SMALL) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
   } else if (value == ICONSIZE_KEY_MEDIUM) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
-  } else if (value = ICONSIZE_KEY_LARGE) {
+  } else if (value == ICONSIZE_KEY_LARGE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), TRUE);
   }
 }
@@ -151,7 +151,7 @@ on_dock_position_combo_selected (CcDockPanel *self)
 }
 
 static void
-load_custom_css (CcPowerPanel *self,
+load_custom_css (CcDockPanel *self,
                  const char   *path)
 {
   g_autoptr(GtkCssProvider) provider = NULL;
@@ -204,7 +204,7 @@ cc_dock_panel_init (CcDockPanel *self)
     return;
   }
 
-  self->dock_settings = g_settings_new (schema);
+  self->dock_settings = g_settings_new_full (schema, NULL, NULL);
   g_signal_connect_object (self->dock_settings, "changed::dash-max-icon-size",
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
   icon_size_widget_refresh (self);
