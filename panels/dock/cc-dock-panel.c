@@ -42,6 +42,9 @@ struct _CcDockPanel {
   GtkCheckButton          *icon_size_32;
   GtkCheckButton          *icon_size_48;
   GtkCheckButton          *icon_size_64;
+  GtkImage                *icon_size_32_img;
+  GtkImage                *icon_size_48_img;
+  GtkImage                *icon_size_64_img;
   AdwComboRow             *dock_position_combo;
 
   GSettings               *dock_settings;
@@ -57,6 +60,14 @@ cc_dock_panel_dispose (GObject *object)
 
   g_clear_object (&self->dock_settings);
   g_clear_object (&self->extension_proxy);
+  g_clear_object (&self->dock_autohide_switch);
+  g_clear_object (&self->icon_size_32);
+  g_clear_object (&self->icon_size_48);
+  g_clear_object (&self->icon_size_64);
+  g_clear_object (&self->icon_size_32_img);
+  g_clear_object (&self->icon_size_48_img);
+  g_clear_object (&self->icon_size_64_img);
+  g_clear_object (&self->dock_position_combo);
 
   G_OBJECT_CLASS (cc_dock_panel_parent_class)->dispose (object);
 }
@@ -182,6 +193,9 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_32);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_48);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_64);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_32_img);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_48_img);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_64_img);
 
   gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_32_toggled);
@@ -212,6 +226,7 @@ cc_dock_panel_init (CcDockPanel *self)
   g_signal_connect_object (self->dock_settings, "changed::dash-max-icon-size",
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
   icon_size_widget_refresh (self);
+
   g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
   adw_combo_row_set_selected (self->dock_position_combo, 3);
 
