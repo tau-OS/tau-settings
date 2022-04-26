@@ -200,7 +200,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
-* Mon Apr 26 2022 Lains <lainsce@airmail.cc> - 1.1-3
+* Tue Apr 26 2022 Lains <lainsce@airmail.cc> - 1.1-3
 - Fix the Dock subpanel functionality
 
 * Mon Apr 25 2022 Lains <lainsce@airmail.cc> - 1.1-2
