@@ -105,13 +105,10 @@ icon_size_widget_refresh (CcDockPanel *self)
 
   if (value == ICONSIZE_KEY_SMALL) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
   } else if (value == ICONSIZE_KEY_MEDIUM) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
   } else if (value = ICONSIZE_KEY_LARGE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), TRUE);
-    g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
   }
 }
 
@@ -134,6 +131,37 @@ on_icon_size_64_toggled (CcDockPanel *self)
 {
   gint value = ICONSIZE_KEY_LARGE;
   g_settings_set_int (self->dock_settings, ICONSIZE_KEY, value);
+}
+
+static void
+on_dock_position_combo_selected (CcDockPanel *self)
+{
+  gint value = adw_combo_row_get_selected (self->dock_position_combo);
+
+  switch(value) {
+    case 1:
+      g_settings_set_string (self->dock_settings, "dock-position", "'TOP'");
+    case 2:
+      g_settings_set_string (self->dock_settings, "dock-position", "'RIGHT'");
+    case 3:
+      g_settings_set_string (self->dock_settings, "dock-position", "'BOTTOM'");
+    case 4:
+      g_settings_set_string (self->dock_settings, "dock-position", "'LEFT'");
+  }
+}
+
+static void
+load_custom_css (CcPowerPanel *self,
+                 const char   *path)
+{
+  g_autoptr(GtkCssProvider) provider = NULL;
+
+  /* use custom CSS */
+  provider = gtk_css_provider_new ();
+  gtk_css_provider_load_from_resource (provider, path);
+  gtk_style_context_add_provider_for_display (gdk_display_get_default (),
+                                              GTK_STYLE_PROVIDER (provider),
+                                              GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 }
 
 static void
@@ -164,6 +192,8 @@ cc_dock_panel_init (CcDockPanel *self)
   g_autoptr(GSettingsSchema) schema = NULL;
   g_resources_register (cc_dock_get_resource ());
   gtk_widget_init_template (GTK_WIDGET (self));
+  
+  load_custom_css (self, "/org/gnome/control-center/dock/dock.css");
 
   /* Only load if we have dash to dock installed */
   schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
@@ -174,18 +204,16 @@ cc_dock_panel_init (CcDockPanel *self)
     return;
   }
 
-  self->dock_settings = g_settings_new_full (schema, NULL, NULL);
-  g_signal_connect_object (self->dock_settings, "changed::" ICONSIZE_KEY,
+  self->dock_settings = g_settings_new (schema);
+  g_signal_connect_object (self->dock_settings, "changed::dash-max-icon-size",
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
-
   icon_size_widget_refresh (self);
-  g_signal_connect(self->icon_size_32, "toggled", G_CALLBACK(on_icon_size_32_toggled), self);
-  g_signal_connect(self->icon_size_48, "toggled", G_CALLBACK(on_icon_size_48_toggled), self);
-  g_signal_connect(self->icon_size_64, "toggled", G_CALLBACK(on_icon_size_64_toggled), self);
-
-  g_settings_bind (self->dock_settings, "dock-position",
-                   self->dock_position_combo, "selected",
-                   G_SETTINGS_BIND_DEFAULT);
+  g_signal_connect(self->icon_size_32, "activate", G_CALLBACK(on_icon_size_32_toggled), self);
+  g_signal_connect(self->icon_size_48, "activate", G_CALLBACK(on_icon_size_48_toggled), self);
+  g_signal_connect(self->icon_size_64, "activate", G_CALLBACK(on_icon_size_64_toggled), self);
+  
+  g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
+  adw_combo_row_set_selected (self->dock_position_combo, 3);
 
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
