@@ -196,7 +196,7 @@ cc_dock_panel_init (CcDockPanel *self)
   g_autoptr(GSettingsSchema) schema = NULL;
   g_resources_register (cc_dock_get_resource ());
   gtk_widget_init_template (GTK_WIDGET (self));
-  
+
   load_custom_css (self, "/org/gnome/control-center/dock/dock.css");
 
   /* Only load if we have dash to dock installed */
@@ -212,10 +212,6 @@ cc_dock_panel_init (CcDockPanel *self)
   g_signal_connect_object (self->dock_settings, "changed::dash-max-icon-size",
                            G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
   icon_size_widget_refresh (self);
-  g_signal_connect(self->icon_size_32, "activate", G_CALLBACK(on_icon_size_32_toggled), self);
-  g_signal_connect(self->icon_size_48, "activate", G_CALLBACK(on_icon_size_48_toggled), self);
-  g_signal_connect(self->icon_size_64, "activate", G_CALLBACK(on_icon_size_64_toggled), self);
-  
   g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
   adw_combo_row_set_selected (self->dock_position_combo, 3);
 
