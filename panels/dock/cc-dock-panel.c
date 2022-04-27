@@ -108,10 +108,30 @@ icon_size_widget_refresh (CcDockPanel *self)
 
   if (value == ICONSIZE_KEY_SMALL) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), FALSE);
   } else if (value == ICONSIZE_KEY_MEDIUM) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), FALSE);
   } else if (value == ICONSIZE_KEY_LARGE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_64), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_32), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->icon_size_48), FALSE);
+  }
+}
+
+static void
+dock_position_widget_refresh (CcDockPanel *self)
+{
+  gint value = g_settings_get_int (self->dock_settings, "dock-position");
+
+  if (value == 1) {
+    adw_combo_row_set_selected (self->dock_position_combo, 1);
+  } else if (value == 0 || value == 2) {
+    adw_combo_row_set_selected (self->dock_position_combo, 2);
+  } else if (value == 3) {
+    adw_combo_row_set_selected (self->dock_position_combo, 3);
   }
 }
 
@@ -148,8 +168,10 @@ on_dock_position_combo_selected (CcDockPanel *self)
     case 1:
       if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
         g_settings_set_enum (self->dock_settings, "dock-position", 1);
+    case 0: // let's force top to be bottom
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+        g_settings_set_enum (self->dock_settings, "dock-position", 2);
     default:
-    case 4: // let's force top to be bottom
     case 2:
       if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
         g_settings_set_enum (self->dock_settings, "dock-position", 2);
@@ -223,6 +245,7 @@ cc_dock_panel_init (CcDockPanel *self)
   icon_size_widget_refresh (self);
 
   g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
+  dock_position_widget_refresh (self);
 
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",

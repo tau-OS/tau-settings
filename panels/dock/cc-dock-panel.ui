@@ -78,6 +78,7 @@
             <child>
               <object class="AdwComboRow" id="dock_position_combo">
                 <property name="title" translatable="yes">Screen Position</property>
+                <signal name="notify::selected" handler="on_dock_position_combo_selected" object="CcDockPanel" />
                 <property name="model">
                   <object class="GtkStringList">
                     <items>
