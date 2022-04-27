@@ -14,17 +14,6 @@
             </property>
             <child>
               <object class="AdwActionRow">
-                <property name="title" translatable="yes">Intelligent Hiding</property>
-                <property name="subtitle" translatable="yes">Hide the dock when a window is below it.</property>
-                <child>
-                  <object class="GtkSwitch" id="dock_autohide_switch">
-                    <property name="valign">center</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Icon Size</property>
                 <child>
                   <object class="GtkBox">
@@ -76,18 +65,58 @@
               </object>
             </child>
             <child>
-              <object class="AdwComboRow" id="dock_position_combo">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Screen Position</property>
-                <signal name="notify::selected" handler="on_dock_position_combo_selected" object="CcDockPanel" />
-                <property name="model">
-                  <object class="GtkStringList">
-                    <items>
-                      <item>Right</item>
-                      <item>Bottom</item>
-                      <item>Left</item>
-                    </items>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">12</property>
+                    <property name="orientation">vertical</property>
+                    <property name="valign">center</property>
+                    <property name="margin-top">6</property>
+                    <property name="margin-bottom">6</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="spacing">12</property>
+                        <child>
+                          <object class="GtkCheckButton" id="position_left">
+                            <signal name="toggled" handler="on_pos_left_toggled" object="CcDockPanel" />
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage" id="icon_pos_img">
+                            <property name="icon-name">dock-bottom-symbolic</property>
+                            <property name="pixel-size">64</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkCheckButton" id="position_right">
+                            <signal name="toggled" handler="on_pos_right_toggled" object="CcDockPanel" />
+                            <property name="group">position_left</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="position_bottom">
+                        <signal name="toggled" handler="on_pos_bottom_toggled" object="CcDockPanel" />
+                        <property name="group">position_left</property>
+                        <property name="active">1</property>
+                        <property name="halign">center</property>
+                      </object>
+                    </child>
                   </object>
-                </property>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Intelligent Hiding</property>
+                <property name="subtitle" translatable="yes">Hide the dock when a window is below it.</property>
+                <child>
+                  <object class="GtkSwitch" id="dock_autohide_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>

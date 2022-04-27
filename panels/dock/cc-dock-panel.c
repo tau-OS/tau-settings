@@ -45,7 +45,10 @@ struct _CcDockPanel {
   GtkImage                *icon_size_32_img;
   GtkImage                *icon_size_48_img;
   GtkImage                *icon_size_64_img;
-  AdwComboRow             *dock_position_combo;
+  GtkCheckButton          *position_right;
+  GtkCheckButton          *position_bottom;
+  GtkCheckButton          *position_left;
+  GtkImage                *icon_pos_img;
 
   GSettings               *dock_settings;
   GDBusProxy              *extension_proxy;
@@ -149,39 +152,53 @@ on_icon_size_64_toggled (CcDockPanel *self)
 }
 
 static void
-on_dock_position_combo_selected (CcDockPanel *self)
+dock_position_widget_refresh (CcDockPanel *self)
 {
-  gint vp = adw_combo_row_get_selected (self->dock_position_combo);
+  gint value = g_settings_get_int (self->dock_settings, "dock-position");
 
-  switch(vp) {
-    case 0:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
-        g_settings_set_enum (self->dock_settings, "dock-position", 1);
-    case 1:
-    default:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
-        g_settings_set_enum (self->dock_settings, "dock-position", 2);
-    case 2:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
-        g_settings_set_enum (self->dock_settings, "dock-position", 3);
+  if (value == 1) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_right), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_bottom), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_left), FALSE);
+  } else if (value == 2) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_bottom), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_right), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_left), FALSE);
+  } else if (value == 3) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_left), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_right), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_bottom), FALSE);
   }
 }
 
 static void
-dock_position_widget_refresh (CcDockPanel *self)
+on_pos_right_toggled (CcDockPanel *self)
 {
-  gint value = g_settings_get_int (self->dock_settings, "dock-position");
+  gint value = 1;
+  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
+    g_settings_set_int (self->dock_settings, "dock-position", value);
   
-  switch(value) {
-    case 1:
-      adw_combo_row_set_selected (self->dock_position_combo, 0);
-    case 0: // let's force top to be bottom
-    case 2:
-    default:
-      adw_combo_row_set_selected (self->dock_position_combo, 1);
-    case 3:
-      adw_combo_row_set_selected (self->dock_position_combo, 2);
-  }
+  gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-right-symbolic");
+}
+
+static void
+on_pos_bottom_toggled (CcDockPanel *self)
+{
+  gint value = 2;
+  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
+    g_settings_set_int (self->dock_settings, "dock-position", value);
+  
+  gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-bottom-symbolic");
+}
+
+static void
+on_pos_left_toggled (CcDockPanel *self)
+{
+  gint value = 3;
+  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
+    g_settings_set_int (self->dock_settings, "dock-position", value);
+  
+  gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-left-symbolic");
 }
 
 static void
@@ -216,12 +233,18 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_32_img);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_48_img);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_64_img);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, position_right);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, position_bottom);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, position_left);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_pos_img);
 
   gtk_widget_class_bind_template_callback (widget_class, on_view_dock_settings_clicked_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_32_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_48_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_icon_size_64_toggled);
-  gtk_widget_class_bind_template_callback (widget_class, on_dock_position_combo_selected);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_right_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_bottom_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_left_toggled);
 }
 
 static void
@@ -250,10 +273,11 @@ cc_dock_panel_init (CcDockPanel *self)
                            G_CONNECT_SWAPPED);
   icon_size_widget_refresh (self);
 
-  g_signal_connect(self->dock_position_combo,
-                   "selected",
-                   G_CALLBACK(on_dock_position_combo_selected),
-                   self);
+  g_signal_connect_object (self->dock_settings,
+                           "changed::dock-position",
+                           G_CALLBACK (dock_position_widget_refresh),
+                           self,
+                           G_CONNECT_SWAPPED);
   dock_position_widget_refresh (self);
 
   g_settings_bind (self->dock_settings, "dock-fixed",
