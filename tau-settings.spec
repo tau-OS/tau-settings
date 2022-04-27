@@ -200,7 +200,10 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
-* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-7
+* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-9
+- Fix the position option always putting the dock on the left
+
+* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-8
 - Finally fix the Dock position option and make the subpane ready
 
 * Tue Apr 26 2022 Lains <lainsce@airmail.cc> - 1.1-7

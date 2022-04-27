@@ -91,7 +91,10 @@ on_view_dock_settings_clicked_cb (CcDockPanel *self)
 
   g_dbus_proxy_call_sync (self->extension_proxy,
                           "OpenExtensionPrefs",
-                          g_variant_new("(ssa{sv})", "dash-to-dock@tauos.co", "", NULL),
+                          g_variant_new("(ssa{sv})",
+                                        "dash-to-dock@tauos.co",
+                                        "",
+                                        NULL),
                           0,
                           -1,
                           NULL,
@@ -122,20 +125,6 @@ icon_size_widget_refresh (CcDockPanel *self)
 }
 
 static void
-dock_position_widget_refresh (CcDockPanel *self)
-{
-  gint value = g_settings_get_int (self->dock_settings, "dock-position");
-
-  if (value == 1) {
-    adw_combo_row_set_selected (self->dock_position_combo, 1);
-  } else if (value == 0 || value == 2) {
-    adw_combo_row_set_selected (self->dock_position_combo, 2);
-  } else if (value == 3) {
-    adw_combo_row_set_selected (self->dock_position_combo, 3);
-  }
-}
-
-static void
 on_icon_size_32_toggled (CcDockPanel *self)
 {
   gint value = ICONSIZE_KEY_SMALL;
@@ -162,22 +151,40 @@ on_icon_size_64_toggled (CcDockPanel *self)
 static void
 on_dock_position_combo_selected (CcDockPanel *self)
 {
-  gint value = adw_combo_row_get_selected (self->dock_position_combo);
+  gint vp = adw_combo_row_get_selected (self->dock_position_combo);
 
-  switch(value) {
+  switch(vp) {
     case 1:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 1);
     case 0: // let's force top to be bottom
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 2);
     default:
     case 2:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 2);
     case 3:
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 3);
+  }
+}
+
+static void
+dock_position_widget_refresh (CcDockPanel *self)
+{
+  gint value = g_settings_get_int (self->dock_settings, "dock-position");
+  
+  switch(value) {
+    case 1:
+      adw_combo_row_set_selected (self->dock_position_combo, 0);
+    case 0: // let's force top to be bottom
+      adw_combo_row_set_selected (self->dock_position_combo, 1);
+    default:
+    case 2:
+      adw_combo_row_set_selected (self->dock_position_combo, 1);
+    case 3:
+      adw_combo_row_set_selected (self->dock_position_combo, 2);
   }
 }
 
@@ -235,16 +242,22 @@ cc_dock_panel_init (CcDockPanel *self)
                                             "org.gnome.shell.extensions.dash-to-dock", 
                                             TRUE);
   if (!schema) {
-    g_warning ("No dock is installed here. Panel disabled. Please fix your installation.");
+    g_warning ("No dock is installed here. Please fix your installation.");
     return;
   }
 
   self->dock_settings = g_settings_new_full (schema, NULL, NULL);
-  g_signal_connect_object (self->dock_settings, "changed::dash-max-icon-size",
-                           G_CALLBACK (icon_size_widget_refresh), self, G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->dock_settings,
+                           "changed::dash-max-icon-size",
+                           G_CALLBACK (icon_size_widget_refresh),
+                           self,
+                           G_CONNECT_SWAPPED);
   icon_size_widget_refresh (self);
 
-  g_signal_connect(self->dock_position_combo, "selected", G_CALLBACK(on_dock_position_combo_selected), self);
+  g_signal_connect(self->dock_position_combo,
+                   "selected",
+                   G_CALLBACK(on_dock_position_combo_selected),
+                   self);
   dock_position_widget_refresh (self);
 
   g_settings_bind (self->dock_settings, "dock-fixed",
