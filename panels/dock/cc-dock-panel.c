@@ -154,7 +154,7 @@ on_icon_size_64_toggled (CcDockPanel *self)
 static void
 dock_position_widget_refresh (CcDockPanel *self)
 {
-  gint value = g_settings_get_int (self->dock_settings, "dock-position");
+  gint value = g_settings_get_enum (self->dock_settings, "dock-position");
 
   if (value == 1) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->position_right), TRUE);
@@ -174,9 +174,8 @@ dock_position_widget_refresh (CcDockPanel *self)
 static void
 on_pos_right_toggled (CcDockPanel *self)
 {
-  gint value = 1;
-  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
-    g_settings_set_int (self->dock_settings, "dock-position", value);
+  if (g_settings_get_enum (self->dock_settings, "dock-position") != 1)
+    g_settings_set_enum (self->dock_settings, "dock-position", 1);
   
   gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-right-symbolic");
 }
@@ -184,9 +183,8 @@ on_pos_right_toggled (CcDockPanel *self)
 static void
 on_pos_bottom_toggled (CcDockPanel *self)
 {
-  gint value = 2;
-  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
-    g_settings_set_int (self->dock_settings, "dock-position", value);
+  if (g_settings_get_enum (self->dock_settings, "dock-position") != 2)
+    g_settings_set_enum (self->dock_settings, "dock-position", 2);
   
   gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-bottom-symbolic");
 }
@@ -194,9 +192,8 @@ on_pos_bottom_toggled (CcDockPanel *self)
 static void
 on_pos_left_toggled (CcDockPanel *self)
 {
-  gint value = 3;
-  if (g_settings_get_int (self->dock_settings, "dock-position") != value)
-    g_settings_set_int (self->dock_settings, "dock-position", value);
+  if (g_settings_get_enum (self->dock_settings, "dock-position") != 3)
+    g_settings_set_enum (self->dock_settings, "dock-position", 3);
   
   gtk_image_set_from_icon_name (GTK_IMAGE (self->icon_pos_img), "dock-left-symbolic");
 }
