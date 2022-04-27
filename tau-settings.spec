@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        7
+Release:        8
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-7
+- Finally fix the Dock position option and make the subpane ready
+
 * Tue Apr 26 2022 Lains <lainsce@airmail.cc> - 1.1-7
 - Fix the Dock position option
 
