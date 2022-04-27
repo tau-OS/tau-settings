@@ -285,7 +285,7 @@ cc_dock_panel_init (CcDockPanel *self)
   
   g_settings_bind (self->dock_settings, "extend-height",
                    self->dock_extend_switch, "active",
-                   G_SETTINGS_BIND_INVERT_BOOLEAN);
+                   G_SETTINGS_BIND_DEFAULT);
 
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                             G_DBUS_PROXY_FLAGS_NONE,
