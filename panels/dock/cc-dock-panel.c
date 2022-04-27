@@ -146,12 +146,16 @@ on_dock_position_combo_selected (CcDockPanel *self)
 
   switch(value) {
     case 1:
-      g_settings_set_string (self->dock_settings, "dock-position", "RIGHT");
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+        g_settings_set_enum (self->dock_settings, "dock-position", 1);
     default:
+    case 4: // let's force top to be bottom
     case 2:
-      g_settings_set_string (self->dock_settings, "dock-position", "BOTTOM");
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+        g_settings_set_enum (self->dock_settings, "dock-position", 2);
     case 3:
-      g_settings_set_string (self->dock_settings, "dock-position", "LEFT");
+      if (g_settings_get_enum (self->dock_settings, "dock-position") != value)
+        g_settings_set_enum (self->dock_settings, "dock-position", 3);
   }
 }
 
