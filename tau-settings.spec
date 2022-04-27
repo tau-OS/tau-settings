@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        12
+Release:        13
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-13
+- Fix the appearance of the selection in Icon Size
+
 * Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-12
 - Position is an enum not int
 
