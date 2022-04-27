@@ -39,6 +39,7 @@ struct _CcDockPanel {
   CcPanel                 parent_instance;
 
   GtkSwitch               *dock_autohide_switch;
+  GtkSwitch               *dock_extend_switch;
   GtkCheckButton          *icon_size_32;
   GtkCheckButton          *icon_size_48;
   GtkCheckButton          *icon_size_64;
@@ -224,6 +225,7 @@ cc_dock_panel_class_init (CcDockPanelClass *klass)
                                                "/org/gnome/control-center/dock/cc-dock-panel.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, dock_autohide_switch);
+  gtk_widget_class_bind_template_child (widget_class, CcDockPanel, dock_extend_switch);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_32);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_48);
   gtk_widget_class_bind_template_child (widget_class, CcDockPanel, icon_size_64);
@@ -279,6 +281,10 @@ cc_dock_panel_init (CcDockPanel *self)
 
   g_settings_bind (self->dock_settings, "dock-fixed",
                    self->dock_autohide_switch, "active",
+                   G_SETTINGS_BIND_INVERT_BOOLEAN);
+  
+  g_settings_bind (self->dock_settings, "extend-height",
+                   self->dock_extend_switch, "active",
                    G_SETTINGS_BIND_INVERT_BOOLEAN);
 
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,

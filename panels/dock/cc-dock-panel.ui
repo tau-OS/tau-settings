@@ -119,6 +119,17 @@
                 </child>
               </object>
             </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Panel Mode</property>
+                <property name="subtitle" translatable="yes">Extend the dock to the screen borders.</property>
+                <child>
+                  <object class="GtkSwitch" id="dock_extend_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
       </object>
