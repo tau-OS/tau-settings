@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        10
+Release:        11
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-11
+- Redesign the whole subpanel, better design idea
+
 * Wed Apr 27 2022 Lains <lainsce@airmail.cc> - 1.1-10
 - Off-by-one errors are no joke
 
