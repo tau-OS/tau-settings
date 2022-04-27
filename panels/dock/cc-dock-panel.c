@@ -154,17 +154,14 @@ on_dock_position_combo_selected (CcDockPanel *self)
   gint vp = adw_combo_row_get_selected (self->dock_position_combo);
 
   switch(vp) {
-    case 1:
+    case 0:
       if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 1);
-    case 0: // let's force top to be bottom
-      if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
-        g_settings_set_enum (self->dock_settings, "dock-position", 2);
+    case 1:
     default:
-    case 2:
       if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 2);
-    case 3:
+    case 2:
       if (g_settings_get_enum (self->dock_settings, "dock-position") != vp)
         g_settings_set_enum (self->dock_settings, "dock-position", 3);
   }
@@ -179,9 +176,8 @@ dock_position_widget_refresh (CcDockPanel *self)
     case 1:
       adw_combo_row_set_selected (self->dock_position_combo, 0);
     case 0: // let's force top to be bottom
-      adw_combo_row_set_selected (self->dock_position_combo, 1);
-    default:
     case 2:
+    default:
       adw_combo_row_set_selected (self->dock_position_combo, 1);
     case 3:
       adw_combo_row_set_selected (self->dock_position_combo, 2);
