@@ -38,7 +38,6 @@
                     <child>
                       <object class="GtkCheckButton" id="icon_size_48">
 			                  <signal name="toggled" handler="on_icon_size_48_toggled" object="CcDockPanel" />
-                        <property name="active">1</property>
                         <property name="group">icon_size_32</property>
                         <child>
                           <object class="GtkImage" id="icon_size_48_img">
@@ -100,7 +99,6 @@
                       <object class="GtkCheckButton" id="position_bottom">
                         <signal name="toggled" handler="on_pos_bottom_toggled" object="CcDockPanel" />
                         <property name="group">position_left</property>
-                        <property name="active">1</property>
                         <property name="halign">center</property>
                       </object>
                     </child>
