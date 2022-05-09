@@ -11,11 +11,11 @@
 
 # it's like 11pm at night i don't care about adding debug packages
 %global debug_package %{nil}
- 
+
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        16
+Release:        17
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Mon May 9 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-17
+- Change theme to Helium
+
 * Mon May 2 2022 Lains <lainsce@airmail.cc> - 1.1-16
 - Fix bugs and make icons 1px-stroke symbolics
 
