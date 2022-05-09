@@ -49,6 +49,8 @@
 #define INTERFACE_PATH_ID "org.gnome.desktop.interface"
 #define INTERFACE_COLOR_SCHEME_KEY "color-scheme"
 #define INTERFACE_GTK_THEME_KEY "gtk-theme"
+#define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
+#define INTERFACE_SHELL_THEME_KEY "name"
 
 struct _CcBackgroundPanel
 {
@@ -59,6 +61,7 @@ struct _CcBackgroundPanel
   GSettings *settings;
   GSettings *lock_settings;
   GSettings *interface_settings;
+  GSettings *theme_settings;
 
   GnomeDesktopThumbnailFactory *thumb_factory;
   GDBusProxy *proxy;
@@ -160,12 +163,18 @@ on_light_dark_toggle_active_cb (CcBackgroundPanel *self)
       g_settings_set_string (self->interface_settings,
                              INTERFACE_GTK_THEME_KEY,
                              "Helium");
+      g_settings_set_string (self->theme_settings,
+                             INTERFACE_SHELL_THEME_KEY,
+                             "Helium");
     }
   else if (gtk_toggle_button_get_active (self->dark_toggle))
     {
       set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_PREFER_DARK);
       g_settings_set_string (self->interface_settings,
                              INTERFACE_GTK_THEME_KEY,
+                             "Helium-dark");
+      g_settings_set_string (self->theme_settings,
+                             INTERFACE_SHELL_THEME_KEY,
                              "Helium-dark");
     }
 }
@@ -368,6 +377,7 @@ cc_background_panel_dispose (GObject *object)
   g_clear_object (&panel->settings);
   g_clear_object (&panel->lock_settings);
   g_clear_object (&panel->interface_settings);
+  g_clear_object (&panel->theme_settings);
   g_clear_object (&panel->thumb_factory);
   g_clear_object (&panel->proxy);
 
@@ -432,11 +442,12 @@ cc_background_panel_init (CcBackgroundPanel *panel)
 
   panel->settings = g_settings_new (WP_PATH_ID);
   g_settings_delay (panel->settings);
- 
+
   panel->lock_settings = g_settings_new (WP_LOCK_PATH_ID);
   g_settings_delay (panel->lock_settings);
 
   panel->interface_settings = g_settings_new (INTERFACE_PATH_ID);
+  panel->theme_settings = g_settings_new (SHELL_PATH_ID);
 
   /* Load the background */
   reload_current_bg (panel);

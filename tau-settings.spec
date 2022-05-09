@@ -202,6 +202,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %changelog
 * Mon May 9 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-17
 - Change theme to Helium
+- Add shell theme
 
 * Mon May 2 2022 Lains <lainsce@airmail.cc> - 1.1-16
 - Fix bugs and make icons 1px-stroke symbolics
