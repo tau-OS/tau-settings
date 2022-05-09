@@ -159,14 +159,14 @@ on_color_scheme_toggle_active_cb (CcBackgroundPanel *self)
       set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_DEFAULT);
       g_settings_set_string (self->interface_settings,
                              INTERFACE_GTK_THEME_KEY,
-                             "adw-gtk3");
+                             "Helium");
     }
   else if (gtk_toggle_button_get_active (self->dark_toggle))
     {
       set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_PREFER_DARK);
       g_settings_set_string (self->interface_settings,
                              INTERFACE_GTK_THEME_KEY,
-                             "adw-gtk3-dark");
+                             "Helium-dark");
     }
 }
 
