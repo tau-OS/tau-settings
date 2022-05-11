@@ -34,17 +34,6 @@
                     </style>
                   </object>
                 </child>
-                <child>
-                  <object class="GtkToggleButton" id="search_button">
-                    <property name="icon_name">edit-find-symbolic</property>
-                    <accessibility>
-                      <property name="label" translatable="yes">Search</property>
-                    </accessibility>
-                    <style>
-                      <class name="image-button"/>
-                    </style>
-                  </object>
-                </child>
                 <child type="end">
                   <object class="GtkMenuButton">
                     <property name="icon-name">open-menu-symbolic</property>
@@ -52,6 +41,17 @@
                     <property name="primary">True</property>
                     <accessibility>
                       <property name="label" translatable="yes">Primary Menu</property>
+                    </accessibility>
+                    <style>
+                      <class name="image-button"/>
+                    </style>
+                  </object>
+                </child>
+                <child type="end">
+                  <object class="GtkToggleButton" id="search_button">
+                    <property name="icon_name">edit-find-symbolic</property>
+                    <accessibility>
+                      <property name="label" translatable="yes">Search</property>
                     </accessibility>
                     <style>
                       <class name="image-button"/>
