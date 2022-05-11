@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        17
+Release:        18
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Tue May 10 2022 Lains <lainsce@airmail.cc> - 1.1-18
+- Move search button to tauOS HIG position
+
 * Mon May 9 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-17
 - Change theme to Helium
 - Add shell theme
