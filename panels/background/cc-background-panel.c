@@ -432,6 +432,7 @@ on_settings_changed (CcBackgroundPanel *panel)
 static void
 cc_background_panel_init (CcBackgroundPanel *panel)
 {
+  g_autoptr(GSettingsSchema) schema = NULL;
   g_resources_register (cc_background_get_resource ());
 
   gtk_widget_init_template (GTK_WIDGET (panel));
@@ -446,8 +447,16 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   panel->lock_settings = g_settings_new (WP_LOCK_PATH_ID);
   g_settings_delay (panel->lock_settings);
 
+  schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                            SHELL_PATH_ID, 
+                                            TRUE);
+  if (!schema) {
+    g_warning ("No user theme settings installed here. Please fix your installation.");
+    return;
+  }
+
   panel->interface_settings = g_settings_new (INTERFACE_PATH_ID);
-  panel->theme_settings = g_settings_new (SHELL_PATH_ID);
+  panel->theme_settings = g_settings_new_full (schema, NULL, NULL);
 
   /* Load the background */
   reload_current_bg (panel);
