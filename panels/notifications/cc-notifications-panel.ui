@@ -21,6 +21,99 @@
             </child>
           </object>
         </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Notification Position</property>
+            <property name="header-suffix">
+              <object class="GtkButton" id="test_btn">
+                <property name="label" translatable="yes">Test Position</property>
+                <property name="height_request">35</property>
+                <signal name="clicked" handler="on_test_btn_clicked" object="CcNotificationsPanel" />
+              </object>
+            </property>
+            <child>
+              <object class="AdwActionRow" id="horizontal_row">
+                <property name="title" translatable="yes">Horizontal Position</property>
+                <property name="subtitle" translatable="yes">Sets the horizontal position of notifications.</property>
+                <property name="subtitle-lines">0</property>
+                <child>
+                  <object class="GtkBox" id="horizontal_box">
+                    <property name="valign">center</property>
+                    <property name="homogeneous">True</property>
+                    <property name="margin_top">12</property>
+                    <property name="margin_bottom">12</property>
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkToggleButton" id="horizontal_left">
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">Left</property>
+                        <property name="height_request">35</property>
+                        <signal name="toggled" handler="on_pos_left_toggled" object="CcNotificationsPanel" />
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="horizontal_center">
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">Center</property>
+                        <property name="group">horizontal_left</property>
+                        <property name="height_request">35</property>
+                        <signal name="toggled" handler="on_pos_center_toggled" object="CcNotificationsPanel" />
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="horizontal_right">
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">Right</property>
+                        <property name="group">horizontal_left</property>
+                        <property name="height_request">35</property>
+                        <signal name="toggled" handler="on_pos_right_toggled" object="CcNotificationsPanel" />
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="vertical_row">
+                <property name="title" translatable="yes">Vertical Position</property>
+                <property name="subtitle" translatable="yes">Sets the vertical position of notifications.</property>
+                <property name="subtitle-lines">0</property>
+                <child>
+                  <object class="GtkBox" id="vertical_box">
+                    <property name="valign">center</property>
+                    <property name="homogeneous">True</property>
+                    <property name="margin_top">12</property>
+                    <property name="margin_bottom">12</property>
+                    <style>
+                      <class name="linked" />
+                    </style>
+                    <child>
+                      <object class="GtkToggleButton" id="vertical_top">
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">Top</property>
+                        <property name="height_request">35</property>
+                        <signal name="toggled" handler="on_pos_top_toggled" object="CcNotificationsPanel" />
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="vertical_bottom">
+                        <property name="hexpand">True</property>
+                        <property name="label" translatable="yes">Bottom</property>
+                        <property name="group">vertical_top</property>
+                        <property name="height_request">35</property>
+                        <signal name="toggled" handler="on_pos_bottom_toggled" object="CcNotificationsPanel" />
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
         <child>
           <object class="AdwPreferencesGroup" id="app_group">
             <property name="title" translatable="yes" comments="List of applications.">Applications</property>
@@ -28,9 +121,9 @@
               <object class="GtkListBox" id="app_listbox">
                 <property name="selection_mode">none</property>
                 <signal name="row-activated" handler="select_app" object="CcNotificationsPanel" swapped="yes" />
-                <signal name="keynav-failed" handler="keynav_failed_cb" object="CcNotificationsPanel" swapped="yes"/>
+                <signal name="keynav-failed" handler="keynav_failed_cb" object="CcNotificationsPanel" swapped="yes" />
                 <style>
-                  <class name="boxed-list"/>
+                  <class name="boxed-list" />
                 </style>
                 <accessibility>
                   <relation name="labelled-by">app_group</relation>
