@@ -1,6 +1,7 @@
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /*
  * Copyright (C) 2012 Giovanni Campagna <scampa.giovanni@gmail.com>
+ * Copyright (C) 2022 Fyra Labs
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -26,6 +27,7 @@
 #include <gio/gio.h>
 #include <gio/gdesktopappinfo.h>
 
+#include "shell/cc-application.h"
 #include "cc-list-row.h"
 #include "cc-notifications-panel.h"
 #include "cc-notifications-resources.h"
@@ -34,9 +36,19 @@
 #define MASTER_SCHEMA "org.gnome.desktop.notifications"
 #define APP_SCHEMA MASTER_SCHEMA ".application"
 #define APP_PREFIX "/org/gnome/desktop/notifications/application/"
+#define NOTIF_MANAGER_SCHEMA "org.gnome.shell.extensions.notification-manager"
 
 struct _CcNotificationsPanel {
   CcPanel            parent_instance;
+
+  GtkButton         *test_btn;
+  GtkBox            *horizontal_box;
+  GtkToggleButton   *horizontal_left;
+  GtkToggleButton   *horizontal_center;
+  GtkToggleButton   *horizontal_right;
+  GtkBox            *vertical_box;
+  GtkToggleButton   *vertical_top;
+  GtkToggleButton   *vertical_bottom;
 
   GtkListBox        *app_listbox;
   CcListRow         *lock_screen_row;
@@ -44,6 +56,7 @@ struct _CcNotificationsPanel {
   GtkSizeGroup      *sizegroup1;
 
   GSettings         *master_settings;
+  GSettings         *notif_settings;
 
   GCancellable      *cancellable;
 
@@ -131,8 +144,76 @@ on_perm_store_ready (GObject *source_object,
 }
 
 static void
+notif_position_widget_refresh (CcNotificationsPanel *self)
+{
+  gint horizontal_value = g_settings_get_int (self->notif_settings, "anchor-horizontal");
+  gint vertical_value = g_settings_get_int (self->notif_settings, "anchor-vertical");
+
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_left), FALSE);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_center), FALSE);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_right), FALSE);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->vertical_top), FALSE);
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->vertical_bottom), FALSE);
+
+  // Handle Horizontal Values
+  if (horizontal_value == 0)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_left), TRUE);
+  if (horizontal_value == 1)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_right), TRUE);
+  if (horizontal_value == 2)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->horizontal_center), TRUE);
+  // Handle Vertical Values
+  if (vertical_value == 0)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->vertical_top), TRUE);
+  if (vertical_value == 1)
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->vertical_bottom), TRUE);
+
+}
+
+static void
+on_pos_left_toggled (CcNotificationsPanel *panel)
+{
+  if (g_settings_get_int (panel->notif_settings, "anchor-horizontal") != 0)
+    g_settings_set_int (panel->notif_settings, "anchor-horizontal", 0);
+}
+static void
+on_pos_center_toggled (CcNotificationsPanel *panel)
+{
+  if (g_settings_get_int (panel->notif_settings, "anchor-horizontal") != 2)
+    g_settings_set_int (panel->notif_settings, "anchor-horizontal", 2);
+}
+static void
+on_pos_right_toggled (CcNotificationsPanel *panel)
+{
+  if (g_settings_get_int (panel->notif_settings, "anchor-horizontal") != 1)
+    g_settings_set_int (panel->notif_settings, "anchor-horizontal", 1);
+}
+static void
+on_pos_top_toggled (CcNotificationsPanel *panel)
+{
+  if (g_settings_get_int (panel->notif_settings, "anchor-vertical") != 0)
+    g_settings_set_int (panel->notif_settings, "anchor-vertical", 0);
+}
+static void
+on_pos_bottom_toggled (CcNotificationsPanel *panel)
+{
+  if (g_settings_get_int (panel->notif_settings, "anchor-vertical") != 1)
+    g_settings_set_int (panel->notif_settings, "anchor-vertical", 1);
+}
+static void
+on_test_btn_clicked (CcNotificationsPanel *panel)
+{
+  GApplication *application;
+  application = G_APPLICATION (g_application_get_default ());
+
+  GNotification *notification = g_notification_new ("Hello World!");
+  g_application_send_notification (application, "settings-test-notification", notification);
+}
+
+static void
 cc_notifications_panel_init (CcNotificationsPanel *panel)
 {
+  g_autoptr(GSettingsSchema) notif_schema = NULL;
   g_resources_register (cc_notifications_get_resource ());
 
   gtk_widget_init_template (GTK_WIDGET (panel));
@@ -142,12 +223,36 @@ cc_notifications_panel_init (CcNotificationsPanel *panel)
 
   panel->master_settings = g_settings_new (MASTER_SCHEMA);
 
+  /* Only load if we have Notification Manager installed */
+  notif_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                            NOTIF_MANAGER_SCHEMA, 
+                                            TRUE);
+
+  if (!notif_schema) {
+    g_warning ("No notification manager is installed here. Please fix your installation.");
+    return;
+  }
+
+  panel->notif_settings = g_settings_new_full (notif_schema, NULL, NULL);
+
   g_settings_bind (panel->master_settings, "show-banners",
                    panel->dnd_row,
                    "active", G_SETTINGS_BIND_INVERT_BOOLEAN);
   g_settings_bind (panel->master_settings, "show-in-lock-screen",
                    panel->lock_screen_row,
                    "active", G_SETTINGS_BIND_DEFAULT);
+  
+  g_signal_connect_object (panel->notif_settings,
+                           "changed::anchor-horizontal",
+                           G_CALLBACK (notif_position_widget_refresh),
+                           panel,
+                           G_CONNECT_SWAPPED);
+  g_signal_connect_object (panel->notif_settings,
+                           "changed::anchor-vertical",
+                           G_CALLBACK (notif_position_widget_refresh),
+                           panel,
+                           G_CONNECT_SWAPPED);
+  notif_position_widget_refresh (panel);
 
   gtk_list_box_set_sort_func (panel->app_listbox, (GtkListBoxSortFunc)sort_apps, NULL, NULL);
 
@@ -193,9 +298,21 @@ cc_notifications_panel_class_init (CcNotificationsPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, lock_screen_row);
   gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, dnd_row);
   gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, sizegroup1);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, test_btn);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, horizontal_left);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, horizontal_center);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, horizontal_right);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, vertical_top);
+  gtk_widget_class_bind_template_child (widget_class, CcNotificationsPanel, vertical_bottom);
 
   gtk_widget_class_bind_template_callback (widget_class, select_app);
   gtk_widget_class_bind_template_callback (widget_class, keynav_failed_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_left_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_center_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_right_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_top_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pos_bottom_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_test_btn_clicked);
 }
 
 static inline GQuark
