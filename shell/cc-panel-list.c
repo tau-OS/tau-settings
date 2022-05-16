@@ -429,6 +429,7 @@ static const gchar * const panel_order[] = {
   /* Details page */
   "details",
   "info-overview",
+  "system",
   "datetime",
   "region",
   "universal-access",

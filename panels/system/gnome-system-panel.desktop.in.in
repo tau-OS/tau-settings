@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=About
-Comment=View information about your desktop
-Exec=gnome-control-center info-overview
+Name=System Information
+Comment=View information about your system
+Exec=gnome-control-center system
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=org.gnome.Settings-about-symbolic
+Icon=computer-symbolic
 Terminal=false
 Type=Application
 NoDisplay=true
@@ -19,4 +19,4 @@ X-GNOME-Bugzilla-Version=@VERSION@
 # The list MUST also end with a semicolon!
 # "Preferred Applications" is the old name for the preference, so make
 # sure that you use the same "translation" for those keywords
-Keywords=system;information;hostname;version;default;application;preferred;autorun;
+Keywords=device;system;;memory;processor;cd;dvd;usb;audio;video;disc;removable;media;

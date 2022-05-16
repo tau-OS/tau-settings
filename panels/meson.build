@@ -26,6 +26,7 @@ panels = [
   'search',
   'sharing',
   'sound',
+  'system',
   'universal-access',
   'usage',
   'user-accounts',
