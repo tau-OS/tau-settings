@@ -59,7 +59,6 @@ struct _CcWindow
   GtkToggleButton   *search_button;
   GtkSearchEntry    *search_entry;
   GtkBox            *sidebar_box;
-  AdwWindowTitle    *sidebar_title_widget;
   GtkStack          *stack;
 
   GtkWidget  *old_panel;
@@ -262,9 +261,6 @@ update_list_title (CcWindow *self)
       title = NULL;
       break;
     }
-
-  if (title)
-    adw_window_title_set_title (self->sidebar_title_widget, title);
 
   CC_EXIT;
 }
@@ -826,7 +822,6 @@ cc_window_class_init (CcWindowClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcWindow, search_button);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, search_entry);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, sidebar_box);
-  gtk_widget_class_bind_template_child (widget_class, CcWindow, sidebar_title_widget);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, stack);
 
   gtk_widget_class_bind_template_callback (widget_class, on_main_leaflet_folded_changed_cb);
