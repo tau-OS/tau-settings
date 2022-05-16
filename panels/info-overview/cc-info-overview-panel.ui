@@ -32,55 +32,7 @@
                 <property name="title" translatable="yes">Device Name</property>
                 <property name="secondary-label" bind-source="hostname_entry" bind-property="text" bind-flags="sync-create" />
                 <property name="show-arrow">True</property>
-                <signal name="activated" handler="cc_info_panel_row_activated_cb" swapped="yes"/>
-              </object>
-            </child>
-
-          </object>
-        </child>
-
-        <child>
-          <object class="AdwPreferencesGroup">
-
-            <!-- Hardware Model -->
-            <child>
-              <object class="CcListRow" id="hardware_model_row">
-                <property name="visible">False</property>
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">Hardware Model</property>
-              </object>
-            </child>
-
-            <!-- Memory -->
-            <child>
-              <object class="CcListRow" id="memory_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">Memory</property>
-              </object>
-            </child>
-
-            <!-- Processor -->
-            <child>
-              <object class="CcListRow" id="processor_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">Processor</property>
-              </object>
-            </child>
-
-            <!-- Graphics -->
-            <child>
-              <object class="CcListRow" id="graphics_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">Graphics</property>
-              </object>
-            </child>
-
-            <!-- Disk Capacity -->
-            <child>
-              <object class="CcListRow" id="disk_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">Disk Capacity</property>
-                <property name="secondary-label" translatable="yes">Calculating…</property>
+                <signal name="activated" handler="cc_info_panel_row_activated_cb" swapped="yes" />
               </object>
             </child>
 
@@ -94,25 +46,7 @@
             <child>
               <object class="CcListRow" id="os_name_row">
                 <property name="activatable">False</property>
-                <property name="title" translatable="yes"
-                          comments="translators: this field contains the distro name and version">tauOS Version</property>
-              </object>
-            </child>
-
-            <!-- OS Build -->
-            <child>
-              <object class="CcListRow" id="os_build_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes"
-                          comments="translators: this field contains the distro build ID">OS Build ID</property>
-              </object>
-            </child>
-
-            <!-- OS Type -->
-            <child>
-              <object class="CcListRow" id="os_type_row">
-                <property name="activatable">False</property>
-                <property name="title" translatable="yes">System Architecture</property>
+                <property name="title" translatable="yes" comments="translators: this field contains the distro name and version">tauOS Version</property>
               </object>
             </child>
 
@@ -121,8 +55,7 @@
               <object class="CcListRow" id="gnome_version_row">
                 <property name="activatable">False</property>
                 <property name="title" translatable="yes">GNOME Version</property>
-                <property name="secondary-label" translatable="yes"
-                          comments="translators: this is a placeholder while the GNOME version is being fetched">Loading…</property>
+                <property name="secondary-label">3.0</property>
               </object>
             </child>
 
@@ -145,16 +78,10 @@
 
             <!-- Software Updates -->
             <child>
-              <object class="AdwActionRow" id="software_updates_row">
-                <property name="activatable">True</property>
+              <object class="CcListRow" id="software_updates_row">
                 <property name="title" translatable="yes">Software Updates</property>
-                <signal name="activated" handler="cc_info_panel_row_activated_cb" swapped="yes"/>
-                <child type="suffix">
-                  <object class="GtkImage">
-                    <property name="valign">center</property>
-                    <property name="icon-name">adw-external-link-symbolic</property>
-                  </object>
-                </child>
+                <property name="show-arrow">True</property>
+                <signal name="activated" handler="cc_info_panel_row_activated_cb" swapped="yes" />
               </object>
             </child>
 
@@ -182,7 +109,7 @@
         <property name="margin-bottom">18</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkLabel" id="device_name_description">
+          <object class="GtkLabel">
             <property name="margin-bottom">18</property>
             <property name="wrap">True</property>
             <property name="max-width-chars">35</property>
@@ -192,11 +119,7 @@
         </child>
         <child>
           <object class="GtkEntry" id="device_name_entry">
-            <accessibility>
-              <property name="label" translatable="yes">Device name</property>
-              <relation name="described-by">device_name_description</relation>
-            </accessibility>
-            <signal name="changed" handler="on_device_name_entry_changed" swapped="yes"/>
+            <signal name="changed" handler="on_device_name_entry_changed" swapped="yes" />
             <signal name="activate" handler="on_device_name_entry_activated_cb" swapped="yes" />
           </object>
         </child>

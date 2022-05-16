@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="CcSystemPanel" parent="CcPanel">
+    <child type="content">
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <child>
+              <object class="AdwClamp">
+                <property name="orientation">vertical</property>
+                <property name="maximum-size">192</property>
+                <property name="tightening-threshold">192</property>
+                <property name="child">
+                  <object class="GtkPicture" id="os_logo">
+                    <property name="can-shrink">False</property>
+                    <property name="alternative-text" translatable="yes">System Logo</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup">
+
+            <!-- Hardware Model -->
+            <child>
+              <object class="CcListRow" id="hardware_model_row">
+                <property name="visible">False</property>
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">Hardware Model</property>
+              </object>
+            </child>
+
+            <!-- Memory -->
+            <child>
+              <object class="CcListRow" id="memory_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">Memory</property>
+              </object>
+            </child>
+
+            <!-- Processor -->
+            <child>
+              <object class="CcListRow" id="processor_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">Processor</property>
+              </object>
+            </child>
+
+             <!-- OS Type -->
+             <child>
+              <object class="CcListRow" id="os_type_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">System Architecture</property>
+              </object>
+            </child>
+
+            <!-- Graphics -->
+            <child>
+              <object class="CcListRow" id="graphics_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">Graphics</property>
+              </object>
+            </child>
+
+            <!-- Disk Capacity -->
+            <child>
+              <object class="CcListRow" id="disk_row">
+                <property name="activatable">False</property>
+                <property name="title" translatable="yes">Disk Capacity</property>
+                <property name="secondary-label" translatable="yes">Calculating…</property>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </template>
+
+</interface>

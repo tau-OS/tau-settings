@@ -22,8 +22,7 @@ cflags += [
 ]
 
 sources = files(
-  'cc-info-overview-panel.c',
-  'info-cleanup.c'
+  'cc-info-overview-panel.c'
 )
 
 resource_data = files(
@@ -38,34 +37,12 @@ sources += gnome.compile_resources(
   export: true
 )
 
-deps = common_deps + [
-  dependency('udisks2', version: '>= 2.8.2'),
-  dependency('libgtop-2.0'),
-  gudev_dep,
-]
-
-info_panel_lib = static_library(
+panels_libs += static_library(
   cappletname,
   sources: sources,
   include_directories: [ top_inc, common_inc ],
   dependencies: deps,
   c_args: cflags
-)
-panels_libs += info_panel_lib
-
-print_renderer_deps = [
-  dependency('gtk4'),
-  epoxy_dep
-]
-
-executable(
-  'gnome-control-center-print-renderer',
-  'gnome-control-center-print-renderer.c',
-  include_directories: [ top_inc ],
-  dependencies: [ print_renderer_deps ],
-  c_args: cflags,
-  install: true,
-  install_dir: control_center_libexecdir,
 )
 
 install_data(
