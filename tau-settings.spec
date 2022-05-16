@@ -146,8 +146,8 @@ utilities.
 %meson \
   -Ddocumentation=true \
 %if 0%{?fedora}
-  -Ddistributor_logo=%{_datadir}/pixmaps/tau-banner.png \
-  -Ddark_mode_distributor_logo=%{_datadir}/pixmaps/tau-banner.png \
+  -Ddistributor_logo=%{_datadir}/pixmaps/fedora_logo.png \
+  -Ddark_mode_distributor_logo=%{_datadir}/pixmaps/fedora_whitelogo.png \
   -Dmalcontent=true \
 %endif
   %{nil}
@@ -204,6 +204,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 - Add System Panel
 - Move Hardware info to System panel
 - Add OEM configuration
+- Remove banner
 
 * Sat May 14 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-19
 - Add Notification Position settings
