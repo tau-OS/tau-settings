@@ -19,7 +19,6 @@
                 <property name="show-end-title-buttons" bind-source="main_leaflet" bind-property="folded" bind-flags="sync-create"/>
                 <property name="title-widget">
                   <object class="AdwWindowTitle" id="sidebar_title_widget">
-                    <property name="title" translatable="yes">Settings</property>
                   </object>
                 </property>
                 <child>
