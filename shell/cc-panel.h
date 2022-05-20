@@ -99,9 +99,4 @@ GtkWidget*    cc_panel_get_content        (CcPanel     *panel);
 void          cc_panel_set_content        (CcPanel     *panel,
                                            GtkWidget   *content);
 
-GtkWidget*    cc_panel_get_titlebar       (CcPanel     *panel);
-
-void          cc_panel_set_titlebar       (CcPanel     *panel,
-                                           GtkWidget   *titlebar);
-
 G_END_DECLS

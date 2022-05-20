@@ -58,7 +58,6 @@ struct _CcApplicationsPanel
   GtkBox          *sidebar_box;
   GtkListBox      *sidebar_listbox;
   GtkEntry        *sidebar_search_entry;
-  AdwWindowTitle  *header_title;
   GAppInfoMonitor *monitor;
   gulong           monitor_id;
 #ifdef HAVE_MALCONTENT
@@ -1118,7 +1117,6 @@ static void
 update_handler_dialog (CcApplicationsPanel *self,
                        GAppInfo            *info)
 {
-  g_autofree gchar *header_title = NULL;
   g_autoptr(GHashTable) hash = NULL;
   const gchar **types;
   guint n_associations = 0;
@@ -1167,10 +1165,6 @@ update_handler_dialog (CcApplicationsPanel *self,
                                   n_associations);
       adw_action_row_set_subtitle (ADW_ACTION_ROW (self->handler_row), subtitle);
     }
-
-  header_title = g_strdup_printf (_("<b>%s</b> is used to open the following types of files and links."),
-                                  g_app_info_get_display_name (info));
-  gtk_label_set_markup (self->handler_title_label, header_title);
 }
 
 /* --- usage section --- */
@@ -1384,7 +1378,6 @@ update_panel (CcApplicationsPanel *self,
 
   if (row == NULL)
     {
-      adw_window_title_set_title (self->header_title, _("Applications"));
       gtk_stack_set_visible_child (self->stack, self->empty_box);
       gtk_widget_hide (GTK_WIDGET (GTK_WIDGET (self->view_details_button)));
       return;
@@ -1392,7 +1385,6 @@ update_panel (CcApplicationsPanel *self,
 
   info = cc_applications_row_get_info (CC_APPLICATIONS_ROW (row));
 
-  adw_window_title_set_title (self->header_title, g_app_info_get_display_name (info));
   gtk_stack_set_visible_child (self->stack, self->settings_box);
   gtk_widget_set_visible (GTK_WIDGET (self->view_details_button), gnome_software_is_installed ());
 
@@ -1737,7 +1729,6 @@ cc_applications_panel_class_init (CcApplicationsPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, handler_row);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, handler_reset);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, handler_title_label);
-  gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, header_title);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, install_button);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, integration_section);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, launch_button);
