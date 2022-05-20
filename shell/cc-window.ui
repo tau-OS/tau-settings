@@ -17,6 +17,9 @@
               <object class="AdwHeaderBar" id="header">
                 <property name="show-start-title-buttons">True</property>
                 <property name="show-end-title-buttons" bind-source="main_leaflet" bind-property="folded" bind-flags="sync-create"/>
+                <style>
+                  <class name="flat"/>
+                </style>
                 <property name="title-widget">
                   <object class="AdwWindowTitle" id="sidebar_title_widget">
                   </object>
@@ -59,6 +62,19 @@
                 </child>
               </object>
             </child>
+            
+            <child>
+              <object class="GtkLabel" id="header_label">
+                <property name="label" translatable="yes">Settings</property>
+                <property name="xalign">0</property>
+                <property name="margin-start">18</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <style>
+                  <class name="view-title"/>
+                </style>
+              </object>
+            </child>
 
             <child>
               <object class="GtkSearchBar" id="search_bar">
@@ -77,6 +93,8 @@
               <object class="GtkScrolledWindow">
                 <property name="vexpand">True</property>
                 <property name="width-request">200</property>
+                <property name="margin-start">12</property>
+                <property name="margin-end">12</property>
                 <property name="hscrollbar_policy">never</property>
                 <child>
                   <object class="GtkViewport">

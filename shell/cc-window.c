@@ -52,6 +52,7 @@ struct _CcWindow
 
   GtkMessageDialog  *development_warning_dialog;
   AdwHeaderBar      *header;
+  GtkLabel          *header_label;
   AdwLeaflet        *main_leaflet;
   CcPanelList       *panel_list;
   GtkButton         *previous_button;
@@ -128,7 +129,6 @@ static gboolean
 activate_panel (CcWindow          *self,
                 const gchar       *id,
                 GVariant          *parameters,
-                const gchar       *name,
                 GIcon             *gicon,
                 CcPanelVisibility  visibility)
 {
@@ -153,7 +153,7 @@ activate_panel (CcWindow          *self,
 
   if (self->current_panel)
     g_signal_handlers_disconnect_by_data (self->current_panel, self);
-  self->current_panel = GTK_WIDGET (cc_panel_loader_load_by_name (CC_SHELL (self), id, name, parameters));
+  self->current_panel = GTK_WIDGET (cc_panel_loader_load_by_name (CC_SHELL (self), id, parameters));
   cc_panel_set_folded (CC_PANEL (self->current_panel), adw_leaflet_get_folded (self->main_leaflet));
   cc_shell_set_active_panel (CC_SHELL (self), CC_PANEL (self->current_panel));
 
@@ -174,7 +174,7 @@ activate_panel (CcWindow          *self,
 
   ellapsed_time = g_timer_elapsed (timer, NULL);
 
-  g_debug ("Time to open panel '%s': %lfs", name, ellapsed_time);
+  g_debug ("Time to open panel: %lfs", ellapsed_time);
 
   CC_RETURN (TRUE);
 }
@@ -416,7 +416,7 @@ set_active_panel_from_id (CcWindow     *self,
                       -1);
 
   /* Activate the panel */
-  activated = activate_panel (self, start_id, parameters, name, gicon, visibility);
+  activated = activate_panel (self, start_id, parameters, gicon, visibility);
 
   /* Failed to activate the panel for some reason, let's keep the old
    * panel around instead */

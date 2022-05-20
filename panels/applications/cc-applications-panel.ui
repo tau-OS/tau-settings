@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="CcApplicationsPanel" parent="CcPanel">
-
-    <child type="titlebar">
-      <object class="AdwHeaderBar">
-        <property name="show-end-title-buttons">True</property>
-        <property name="show-start-title-buttons">False</property>
-        <child type="start">
-          <object class="GtkButton">
-            <property name="visible" bind-source="CcApplicationsPanel" bind-property="folded" bind-flags="default|sync-create" />
-            <property name="icon-name">go-previous-symbolic</property>
-            <property name="action-name">window.navigate</property>
-            <property name="action-target">0</property> <!-- 0: ADW_NAVIGATION_DIRECTION_BACK -->
-          </object>
-        </child>
-        <property name="title-widget">
-          <object class="AdwWindowTitle" id="header_title">
-            <property name="title" translatable="yes">Applications</property>
-          </object>
-        </property>
-      </object>
-    </child>
-
     <child type="content">
       <object class="GtkStack" id="stack">
 
@@ -255,10 +234,9 @@
     <property name="orientation">vertical</property>
     <child>
       <object class="GtkSearchEntry" id="sidebar_search_entry">
-        <property name="margin-top">12</property>
         <property name="margin-bottom">6</property>
-        <property name="margin-start">12</property>
-        <property name="margin-end">12</property>
+        <property name="margin-start">6</property>
+        <property name="margin-end">6</property>
         <signal name="activate" handler="on_sidebar_search_entry_activated_cb" object="CcApplicationsPanel" swapped="yes" />
         <signal name="search-changed" handler="on_sidebar_search_entry_search_changed_cb" object="CcApplicationsPanel" swapped="yes" />
         <signal name="stop-search" handler="on_sidebar_search_entry_search_stopped_cb" object="CcApplicationsPanel" swapped="yes" />

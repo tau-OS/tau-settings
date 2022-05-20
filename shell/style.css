@@ -5,3 +5,16 @@
 .drag-handle:backdrop {
   color: alpha(@theme_unfocused_fg_color, 0.4);
 }
+
+.view-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 400;
+}
