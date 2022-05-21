@@ -25,6 +25,9 @@
                 <child type="title">
                   <object class="GtkBox" />
                 </child>
+                <style>
+                  <class name="flat" />
+                </style>
               </object>
             </child>
           </object>
