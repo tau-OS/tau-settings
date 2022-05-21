@@ -93,8 +93,6 @@
               <object class="GtkScrolledWindow">
                 <property name="vexpand">True</property>
                 <property name="width-request">200</property>
-                <property name="margin-start">12</property>
-                <property name="margin-end">12</property>
                 <property name="hscrollbar_policy">never</property>
                 <child>
                   <object class="GtkViewport">
