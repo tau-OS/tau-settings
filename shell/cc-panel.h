@@ -29,7 +29,7 @@
  *
  * use: CC_PANEL_REGISTER (PluginName, plugin_name)
  */
-#define CC_PANEL_REGISTER(PluginName, plugin_name) G_DEFINE_TYPE (PluginName, plugin_name, CC_TYPE_PANEL)
+#define CC_PANEL_REGISTER(PluginName, plugin_name) G_DEFINE_TYPE(PluginName, plugin_name, CC_TYPE_PANEL)
 
 /**
  * CcPanelStaticInitFunc:
@@ -42,11 +42,10 @@
  * show or hide themselves without needing to have an instance
  * created and running.
  */
-typedef void (*CcPanelStaticInitFunc) (void);
-
+typedef void (*CcPanelStaticInitFunc)(void);
 
 #define CC_TYPE_PANEL (cc_panel_get_type())
-G_DECLARE_DERIVABLE_TYPE (CcPanel, cc_panel, CC, PANEL, AdwBin)
+G_DECLARE_DERIVABLE_TYPE(CcPanel, cc_panel, CC, PANEL, AdwBin)
 
 /**
  * CcPanelVisibility:
@@ -75,28 +74,33 @@ G_BEGIN_DECLS
 struct _CcPanelClass
 {
   /*< private >*/
-  AdwBinClass   parent_class;
+  AdwBinClass parent_class;
 
-  const gchar* (*get_help_uri)       (CcPanel *panel);
+  const gchar *(*get_help_uri)(CcPanel *panel);
 
-  GtkWidget*   (*get_sidebar_widget) (CcPanel *panel);
+  GtkWidget *(*get_sidebar_widget)(CcPanel *panel);
 };
 
-CcShell*      cc_panel_get_shell          (CcPanel     *panel);
+CcShell *cc_panel_get_shell(CcPanel *panel);
 
-GPermission*  cc_panel_get_permission     (CcPanel     *panel);
+GPermission *cc_panel_get_permission(CcPanel *panel);
 
-const gchar*  cc_panel_get_help_uri       (CcPanel     *panel);
+const gchar *cc_panel_get_help_uri(CcPanel *panel);
 
-GtkWidget*    cc_panel_get_sidebar_widget (CcPanel     *panel);
+GtkWidget *cc_panel_get_sidebar_widget(CcPanel *panel);
 
-GCancellable *cc_panel_get_cancellable    (CcPanel     *panel);
+GCancellable *cc_panel_get_cancellable(CcPanel *panel);
 
-gboolean      cc_panel_get_folded         (CcPanel     *panel);
+gboolean cc_panel_get_folded(CcPanel *panel);
 
-GtkWidget*    cc_panel_get_content        (CcPanel     *panel);
+GtkWidget *cc_panel_get_content(CcPanel *panel);
 
-void          cc_panel_set_content        (CcPanel     *panel,
-                                           GtkWidget   *content);
+void cc_panel_set_content(CcPanel *panel,
+                          GtkWidget *content);
+
+GtkWidget *cc_panel_get_titlebar(CcPanel *panel);
+
+void cc_panel_set_titlebar(CcPanel *panel,
+                           GtkWidget *titlebar);
 
 G_END_DECLS
