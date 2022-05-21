@@ -1335,6 +1335,5 @@ Please check your installation");
 
   widget = (GtkWidget*)
     gtk_builder_get_object (self->builder, "top-right-buttons");
-  adw_header_bar_pack_end (ADW_HEADER_BAR (cc_panel_get_titlebar (CC_PANEL (self))),
-                           widget);
+  cc_panel_set_title_end (CC_PANEL (self), widget);
 }
