@@ -31,6 +31,25 @@
         </child>
 
         <child>
+          <object class="AdwClamp">
+            <property name="margin_start">12</property>
+            <property name="margin_end">12</property>
+            <property name="margin_top">32</property>
+            <child>
+              <object class="GtkLabel" id="view_title">
+                <property name="label" translatable="yes">Settings</property>
+                <property name="halign">start</property>
+                <style>
+                  <class name="view-subtitle" />
+                </style>
+              </object>
+              
+            </child>
+          </object>
+        </child>
+
+
+        <child>
           <object class="AdwBin" id="content_bin">
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>

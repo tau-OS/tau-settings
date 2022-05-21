@@ -12,6 +12,11 @@
   font-weight: 300;
 }
 
+.view-subtitle {
+  font-size: 20pt;
+  line-height: 26pt;
+}
+
 .heading {
   font-size: 10pt;
   line-height: 12pt;
