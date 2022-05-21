@@ -261,6 +261,8 @@ update_list_title (CcWindow *self)
       title = NULL;
       break;
     }
+  
+  gtk_label_set_label (self->header_label, title);
 
   CC_EXIT;
 }
@@ -813,6 +815,7 @@ cc_window_class_init (CcWindowClass *klass)
 
   gtk_widget_class_bind_template_child (widget_class, CcWindow, development_warning_dialog);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, header);
+  gtk_widget_class_bind_template_child (widget_class, CcWindow, header_label);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, main_leaflet);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, panel_list);
   gtk_widget_class_bind_template_child (widget_class, CcWindow, previous_button);
