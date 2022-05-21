@@ -852,6 +852,8 @@ update_header_section (CcApplicationsPanel *self,
 
   gtk_label_set_label (self->app_name_label,
                        g_app_info_get_display_name (info));
+
+  cc_panel_set_title (self, g_app_info_get_display_name (info));
 }
 
 
