@@ -53,8 +53,6 @@ struct _CcWifiPanel
   GtkWidget          *rfkill_widget;
 
   /* Main widgets */
-  GtkStack           *center_stack;
-  GtkStack           *header_stack;
   GtkBox             *hotspot_box;
   GtkLabel           *list_label;
   GtkStack           *main_stack;
@@ -373,7 +371,6 @@ static void
 add_wifi_device (CcWifiPanel *self,
                  NMDevice    *device)
 {
-  GtkWidget *header_widget;
   NetDeviceWifi *net_device;
 
   /* Create the NetDevice */
@@ -381,11 +378,6 @@ add_wifi_device (CcWifiPanel *self,
                                     self->client,
                                     device);
   gtk_widget_show (GTK_WIDGET (net_device));
-
-  /* And add to the header widgets */
-  header_widget = net_device_wifi_get_header_widget (net_device);
-
-  gtk_stack_add_named (self->header_stack, header_widget, nm_device_get_udi (device));
 
   /* Setup custom title properties */
   g_ptr_array_add (self->devices, net_device);
@@ -427,9 +419,6 @@ remove_wifi_device (CcWifiPanel *self,
   /* Destroy all stack pages related to this device */
   child = gtk_stack_get_child_by_name (self->stack, id);
   gtk_stack_remove (self->stack, child);
-
-  child = gtk_stack_get_child_by_name (self->header_stack, id);
-  gtk_stack_remove (self->header_stack, child);
 
   /* Update the title widget */
   update_devices_names (self);
@@ -532,20 +521,14 @@ update_devices_names (CcWifiPanel *self)
 
   if (number_of_devices == 1)
     {
-      GtkWidget *title_widget;
       NetDeviceWifi *net_device;
 
       net_device = g_ptr_array_index (self->devices, 0);
-      title_widget = net_device_wifi_get_title_widget (net_device);
-
-      gtk_stack_add_named (self->center_stack, title_widget, "single");
-      gtk_stack_set_visible_child_name (self->center_stack, "single");
 
       net_device_wifi_set_title (net_device, _("Wi-Fi"));
     }
   else
     {
-      GtkWidget *single_page_widget;
       guint i;
 
       for (i = 0; i < number_of_devices; i++)
@@ -558,19 +541,6 @@ update_devices_names (CcWifiPanel *self)
 
           net_device_wifi_set_title (net_device, nm_device_get_description (device));
         }
-
-      /* Remove the widget at the "single" page */
-      single_page_widget = gtk_stack_get_child_by_name (self->center_stack, "single");
-
-      if (single_page_widget)
-        {
-          g_object_ref (single_page_widget);
-          gtk_stack_remove (self->center_stack, single_page_widget);
-          g_object_unref (single_page_widget);
-        }
-
-      /* Show the stack-switcher page */
-      gtk_stack_set_visible_child_name (self->center_stack, "many");
     }
 }
 
@@ -992,8 +962,6 @@ cc_wifi_panel_class_init (CcWifiPanelClass *klass)
 
   gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/network/cc-wifi-panel.ui");
 
-  gtk_widget_class_bind_template_child (widget_class, CcWifiPanel, center_stack);
-  gtk_widget_class_bind_template_child (widget_class, CcWifiPanel, header_stack);
   gtk_widget_class_bind_template_child (widget_class, CcWifiPanel, hotspot_box);
   gtk_widget_class_bind_template_child (widget_class, CcWifiPanel, list_label);
   gtk_widget_class_bind_template_child (widget_class, CcWifiPanel, main_stack);
