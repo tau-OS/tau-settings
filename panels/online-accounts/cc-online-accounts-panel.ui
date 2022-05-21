@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="CcOnlineAccountsPanel" parent="CcPanel">
+  <template class="CcGoaPanel" parent="CcPanel">
+    <child type="titlebar">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="halign">start</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="GtkLabel" id="title_label">
+            <property name="label" translatable="yes">Online Accounts</property>
+            <property name="xalign">0</property>
+            <style>
+              <class name="view-subtitle" />
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="accounts_label">
+            <property name="wrap">True</property>
+            <property name="justify">center</property>
+            <property name="label" translatable="yes">Connect to your data in the cloud</property>
+            <style>
+              <class name="body" />
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="offline_label">
+            <property name="margin-top">24</property>
+            <property name="wrap">True</property>
+            <property name="label" translatable="yes">No internet connection — connect to set up new online accounts</property>
+            <style>
+              <class name="body" />
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+
     <child type="content">
       <object class="GtkOverlay">
         <child type="overlay">
@@ -48,30 +85,6 @@
 
         <child>
           <object class="AdwPreferencesPage">
-
-            <child>
-              <object class="AdwPreferencesGroup">
-                <child>
-                  <object class="GtkLabel" id="accounts_label">
-                    <property name="wrap">True</property>
-                    <property name="justify">center</property>
-                    <property name="label" translatable="yes">Connect to your data in the cloud</property>
-                    <style>
-                      <class name="title-1" />
-                    </style>
-                  </object>
-                </child>
-                
-                <child>
-                  <object class="GtkLabel" id="offline_label">
-                    <property name="margin-top">24</property>
-                    <property name="wrap">True</property>
-                    <property name="label" translatable="yes">No internet connection — connect to set up new online accounts</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-
             <child>
               <object class="AdwPreferencesGroup" id="accounts_frame">
                 <property name="visible">False</property>
