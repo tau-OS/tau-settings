@@ -39,16 +39,25 @@
             <property name="margin_end">12</property>
             <property name="margin_top">32</property>
             <child>
-              <object class="AdwBin" id="view_title_bin">
+              <object class="GtkBox">
                 <child>
-                  <object class="GtkLabel" id="view_title">
-                    <property name="label" translatable="yes">Settings</property>
-                    <property name="halign">start</property>
-                    <style>
-                      <class name="view-subtitle" />
-                    </style>
+                  <object class="AdwBin" id="view_title_bin">
+                    <property name="hexpand">true</property>
+                    <child>
+                      <object class="GtkLabel" id="view_title">
+                        <property name="label" translatable="yes">Settings</property>
+                        <property name="halign">start</property>
+                        <style>
+                          <class name="view-subtitle" />
+                        </style>
+                      </object>
+    
+                    </child>
                   </object>
-
+                </child>
+                <child>
+                  <object class="AdwBin" id="titlebar_end_bin">
+                  </object>
                 </child>
               </object>
             </child>
