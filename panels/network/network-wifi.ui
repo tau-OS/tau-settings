@@ -64,15 +64,16 @@
     <child>
       <object class="GtkLabel" id="title_label">
         <property name="label" translatable="yes">Wi-Fi</property>
+        <property name="xalign">0</property>
         <style>
-          <class name="title" />
+          <class name="view-subtitle" />
         </style>
       </object>
     </child>
     <child>
       <object class="GtkLabel" id="status_label">
         <style>
-          <class name="subtitle" />
+          <class name="body" />
         </style>
       </object>
     </child>
@@ -80,7 +81,7 @@
 
   <!-- Box with the On/Off switch + menu button -->
   <object class="GtkBox" id="header_box">
-    <property name="spacing">6</property>
+    <property name="spacing">12</property>
     <property name="halign">end</property>
     <child>
       <object class="GtkSwitch" id="device_off_switch">
@@ -94,6 +95,7 @@
     <child>
       <object class="GtkMenuButton" id="header_button">
         <property name="popover">header_button_popover</property>
+        <property name="valign">center</property>
         <child>
           <object class="GtkImage">
             <property name="icon_name">view-more-symbolic</property>
