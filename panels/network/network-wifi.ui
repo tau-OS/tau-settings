@@ -96,9 +96,12 @@
       <object class="GtkMenuButton" id="header_button">
         <property name="popover">header_button_popover</property>
         <property name="valign">center</property>
+        <style>
+          <class name="circular" />
+        </style>
         <child>
           <object class="GtkImage">
-            <property name="icon_name">view-more-symbolic</property>
+            <property name="icon_name">applications-system-symbolic</property>
           </object>
         </child>
       </object>
