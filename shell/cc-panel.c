@@ -450,3 +450,14 @@ void cc_panel_set_title_end(CcPanel *panel,
   priv = cc_panel_get_instance_private(panel);
   adw_bin_set_child(priv->titlebar_end_bin, widget);
 }
+
+void cc_panel_set_title(CcPanel *panel,
+                        gchar *title)
+{
+  CcPanelPrivate *priv;
+
+  g_return_if_fail(CC_IS_PANEL(panel));
+
+  priv = cc_panel_get_instance_private(panel);
+  gtk_label_set_label(priv->view_title, title);
+}
