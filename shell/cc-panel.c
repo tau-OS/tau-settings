@@ -60,8 +60,8 @@ typedef struct
 {
   AdwBin *content_bin;
   GtkBox *main_box;
-  AdwBin *titlebar_bin;
   AdwHeaderBar *titlebar;
+  AdwBin *view_title_bin;
   GtkLabel *view_title;
 
   CcShell *shell;
@@ -120,6 +120,9 @@ cc_panel_buildable_add_child(GtkBuildable *buildable,
     adw_header_bar_pack_start(priv->titlebar, GTK_WIDGET(child));
   else if (g_strcmp0(type, "titlebar-end") == 0)
     adw_header_bar_pack_end(priv->titlebar, GTK_WIDGET(child));
+  // this is name titlebar for backwards compatibility
+  else if (g_strcmp0(type, "titlebar") == 0)
+    adw_bin_set_child (priv->view_title_bin, GTK_WIDGET(child));
   else
     parent_buildable_iface->add_child(buildable, builder, child, type);
 }
@@ -276,9 +279,9 @@ cc_panel_class_init(CcPanelClass *klass)
 
   gtk_widget_class_bind_template_child_private(widget_class, CcPanel, content_bin);
   gtk_widget_class_bind_template_child_private(widget_class, CcPanel, main_box);
-  gtk_widget_class_bind_template_child_private(widget_class, CcPanel, titlebar_bin);
   gtk_widget_class_bind_template_child_private(widget_class, CcPanel, titlebar);
   gtk_widget_class_bind_template_child_private(widget_class, CcPanel, view_title);
+  gtk_widget_class_bind_template_child_private(widget_class, CcPanel, view_title_bin);
 }
 
 static void
@@ -410,7 +413,7 @@ cc_panel_get_titlebar(CcPanel *panel)
   g_return_val_if_fail(CC_IS_PANEL(panel), NULL);
 
   priv = cc_panel_get_instance_private(panel);
-  return adw_bin_get_child(priv->titlebar_bin);
+  return adw_bin_get_child(priv->view_title_bin);
 }
 
 void cc_panel_set_titlebar(CcPanel *panel,
@@ -421,7 +424,7 @@ void cc_panel_set_titlebar(CcPanel *panel,
   g_return_if_fail(CC_IS_PANEL(panel));
 
   priv = cc_panel_get_instance_private(panel);
-  adw_bin_set_child(priv->titlebar_bin, titlebar);
+  adw_bin_set_child(priv->view_title_bin, titlebar);
 }
 
 void
