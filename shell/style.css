@@ -17,6 +17,10 @@
   line-height: 26pt;
 }
 
+.body {
+  font-size: 10pt;
+}
+
 .heading {
   font-size: 10pt;
   line-height: 12pt;
