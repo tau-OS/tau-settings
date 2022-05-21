@@ -29,14 +29,14 @@
             </child>
           </object>
         </child>
-        <child>
-          <object class="GtkStack" id="header_stack">
-            <property name="halign">end</property>
-            <property name="hexpand">true</property>
-          </object>
-        </child>
-
       </object>
+    </child>
+
+    <child type="titlebar-end">
+        <object class="GtkStack" id="header_stack">
+          <property name="halign">end</property>
+          <property name="hexpand">true</property>
+        </object>
     </child>
 
     <child type="content">
