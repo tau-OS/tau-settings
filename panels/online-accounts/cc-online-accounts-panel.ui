@@ -9,9 +9,10 @@
         <child>
           <object class="GtkLabel" id="title_label">
             <property name="label" translatable="yes">Online Accounts</property>
+            <property name="margin-bottom">12</property>
             <property name="xalign">0</property>
             <style>
-              <class name="view-subtitle" />
+              <class name="view-title" />
             </style>
           </object>
         </child>

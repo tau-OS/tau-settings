@@ -37,7 +37,7 @@
           <object class="AdwClamp">
             <property name="margin_start">12</property>
             <property name="margin_end">12</property>
-            <property name="margin_top">12</property>
+            <property name="margin_top">6</property>
             <child>
               <object class="GtkBox">
                 <child>
@@ -48,7 +48,7 @@
                         <property name="label" translatable="yes">Settings</property>
                         <property name="halign">start</property>
                         <style>
-                          <class name="view-subtitle" />
+                          <class name="view-title" />
                         </style>
                       </object>
     

@@ -31,11 +31,15 @@
                 <child>
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
-                    <property name="spacing">18</property>
+                    <property name="spacing">12</property>
+                    <style>
+                      <class name="content-block" />
+                    </style>
                     <child>
                       <object class="GtkImage" id="app_icon_image">
                         <property name="icon-name">org.gnome.Software</property>
-                        <property name="pixel-size">96</property>
+                        <property name="pixel-size">64</property>
+                        <property name="halign">start</property>
                         <style>
                           <class name="icon-dropshadow" />
                         </style>
@@ -45,18 +49,26 @@
                     <child>
                       <object class="GtkLabel" id="app_name_label">
                         <property name="wrap">True</property>
+                        <property name="halign">start</property>
                         <style>
-                          <class name="title" />
-                          <class name="title-1" />
+                          <class name="cb-title" />
+                        </style>
+                      </object>
+                    </child>
+                    
+                    <child>
+                      <object class="GtkLabel" id="app_description_label">
+                        <property name="wrap">True</property>
+                        <property name="halign">start</property>
+                        <style>
+                          <class name="cb-subtitle" />
                         </style>
                       </object>
                     </child>
 
                     <child>
                       <object class="GtkBox">
-                        <property name="halign">center</property>
-                        <property name="margin-top">12</property>
-                        <property name="margin-bottom">12</property>
+                        <property name="halign">end</property>
                         <property name="spacing">18</property>
                         <child>
                           <object class="GtkButton" id="launch_button">
@@ -240,6 +252,9 @@
         <signal name="activate" handler="on_sidebar_search_entry_activated_cb" object="CcApplicationsPanel" swapped="yes" />
         <signal name="search-changed" handler="on_sidebar_search_entry_search_changed_cb" object="CcApplicationsPanel" swapped="yes" />
         <signal name="stop-search" handler="on_sidebar_search_entry_search_stopped_cb" object="CcApplicationsPanel" swapped="yes" />
+        <style>
+          <class name="search-bar-entry" />
+        </style>
       </object>
     </child>
     <child>
@@ -251,47 +266,13 @@
         </style>
 
         <child type="placeholder">
-          <object class="GtkBox" id="empty_search_placeholder">
-            <property name="can_focus">False</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-            <property name="margin-top">18</property>
-            <property name="margin-bottom">18</property>
-            <property name="margin-start">18</property>
-            <property name="margin-end">18</property>
-            <property name="orientation">vertical</property>
-            <property name="spacing">6</property>
-            <child>
-              <object class="GtkImage">
-                <property name="can_focus">False</property>
-                <property name="pixel_size">64</property>
-                <property name="icon_name">edit-find-symbolic</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">No results found</property>
-                <attributes>
-                  <attribute name="weight" value="bold"/>
-                  <attribute name="scale" value="1.44"/>
-                </attributes>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel">
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Try a different search</property>
-                <style>
-                  <class name="dim-label"/>
-                </style>
-              </object>
-            </child>
+          <object class="AdwStatusPage">
+            <property name="icon-name">edit-find-symbolic</property>
+            <property name="title" translatable="yes">No Results Found</property>
+            <property name="description" translatable="yes">Try a different search.</property>
+            <style>
+              <class name="compact" />
+            </style>
           </object>
         </child>
 
