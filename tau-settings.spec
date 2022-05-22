@@ -200,10 +200,10 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
-* Sun May 21 2022 Lains <lainsce@airmail.cc> - 1.1-24
+* Sun May 22 2022 Lains <lainsce@airmail.cc> - 1.1-24
 - Do some last minute HIG compliance
 
-* Sun May 21 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-23
+* Sat May 21 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-23
 - Fix titlebars
 - Update almost all panels to provide support for new UI
 
