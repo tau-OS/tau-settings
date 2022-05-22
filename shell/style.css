@@ -7,18 +7,19 @@
 }
 
 .view-title {
-  font-size: 24pt;
-  line-height: 26pt;
+  font-size: 18pt;
+  line-height: 20pt;
   font-weight: 300;
 }
 
 .view-subtitle {
-  font-size: 20pt;
-  line-height: 26pt;
+  font-size: 15pt;
+  line-height: 17pt;
 }
 
 .body {
   font-size: 10pt;
+  line-height: 12pt;
 }
 
 .heading {
