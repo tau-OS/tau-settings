@@ -17,6 +17,18 @@
   line-height: 17pt;
 }
 
+.cb-title {
+  font-size: 13.5pt;
+  line-height: 15.5pt;
+  font-weight: 700;
+}
+
+.cb-subtitle {
+  font-size: 11.25pt;
+  line-height: 13.25pt;
+  font-weight: 400;
+}
+
 .body {
   font-size: 10pt;
   line-height: 12pt;
@@ -33,4 +45,44 @@
   font-weight: 400;
   font-size: 10pt;
   line-height: 12pt;
+}
+
+.search-bar box {
+  background: none;
+  box-shadow: none;
+  margin: 0 18px;
+  padding: 0px;
+}
+
+.search-bar entry,
+.search-bar-entry {
+  border-radius: 99px;
+}
+
+.content-block {
+  background: @view_bg_color;
+  padding: 18px;
+  margin: 0px;
+}
+
+.banner {
+  background: @view_bg_color;
+  box-shadow: 0 0 8px 4px alpha(#000, 0.10);
+  padding: 18px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.banner image {
+  -gtk-icon-size: 32px;
+}
+
+.banner.info {
+  background: #EDF6FE;
+  color: #0453A4;
+}
+
+.banner.error {
+  background: #F8D8E2;
+  color: #90183D;
 }

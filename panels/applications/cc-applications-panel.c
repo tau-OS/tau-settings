@@ -77,6 +77,7 @@ struct _CcApplicationsPanel
 
   GtkImage        *app_icon_image;
   GtkLabel        *app_name_label;
+  GtkLabel        *app_description_label;
   GtkButton       *launch_button;
   GtkButton       *view_details_button;
 
@@ -852,6 +853,8 @@ update_header_section (CcApplicationsPanel *self,
 
   gtk_label_set_label (self->app_name_label,
                        g_app_info_get_display_name (info));
+  gtk_label_set_label (self->app_description_label
+                       g_app_info_get_description (info));
 
   cc_panel_set_title (self, g_app_info_get_display_name (info));
 }
@@ -1716,6 +1719,7 @@ cc_applications_panel_class_init (CcApplicationsPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, app);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, app_icon_image);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, app_name_label);
+  gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, app_description_label);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, builtin);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, builtin_dialog);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, builtin_group);
