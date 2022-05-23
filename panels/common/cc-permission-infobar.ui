@@ -8,6 +8,10 @@
         <property name="reveal-child">True</property>
         <child>
           <object class="GtkInfoBar">
+            <style>
+              <class name="banner" />
+              <class name="info" />
+            </style>
             <child>
               <object class="GtkBox">
                 <property name="margin-top">10</property>
@@ -15,10 +19,6 @@
                 <property name="margin-start">10</property>
                 <property name="margin-end">10</property>
                 <property name="spacing">12</property>
-                <style>
-                  <class name="banner" />
-                  <class name="info" />
-                </style>
                 <child>
                   <object class="GtkImage">
                     <property name="icon-name">system-lock-screen-symbolic</property>
