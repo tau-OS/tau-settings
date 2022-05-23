@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/control-center/fyra-accounts">
+    <file preprocess="xml-stripblanks">cc-fyra-accounts-panel.ui</file>
+  </gresource>
+</gresources>

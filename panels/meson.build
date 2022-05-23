@@ -10,6 +10,7 @@ panels = [
   'diagnostics',
   'display',
   'dock',
+  'fyra-accounts',
   'info-overview',
   'keyboard',
   'location',
