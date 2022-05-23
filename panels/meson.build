@@ -11,6 +11,7 @@ panels = [
   'display',
   'firmware-security',
   'dock',
+  'fyra-accounts',
   'info-overview',
   'keyboard',
   'location',

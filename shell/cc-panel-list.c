@@ -413,6 +413,7 @@ static const gchar * const panel_order[] = {
   "multitasking",
   "applications",
   "privacy",
+  "fyra-accounts",
   "online-accounts",
   "sharing",
 
