@@ -214,6 +214,57 @@ get_windowing_system (void)
   return C_("Windowing system (Wayland, X11, or Unknown)", "Unknown");
 }
 
+static char *
+get_gnome_version (GDBusProxy *proxy)
+{
+  g_autoptr(GVariant) variant = NULL;
+  const char *gnome_version = NULL;
+  if (!proxy)
+    return NULL;
+
+  variant = g_dbus_proxy_get_cached_property (proxy, "ShellVersion");
+  if (!variant)
+    return NULL;
+
+  gnome_version = g_variant_get_string (variant, NULL);
+  if (!gnome_version || *gnome_version == '\0')
+    return NULL;
+  return g_strdup (gnome_version);
+}
+
+static void
+shell_proxy_ready (GObject             *source,
+                   GAsyncResult        *res,
+                   CcInfoOverviewPanel *self)
+{
+  g_autoptr(GDBusProxy) proxy = NULL;
+  g_autoptr(GError) error = NULL;
+  g_autoptr(GVariant) variant = NULL;
+  g_autofree char *gnome_version = NULL;
+
+  proxy = cc_object_storage_create_dbus_proxy_finish (res, &error);
+  if (!proxy)
+    {
+      if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+        return;
+      g_warning ("Failed to contact gnome-shell: %s", error->message);
+    }
+
+  gnome_version = get_gnome_version (proxy);
+
+  if (!gnome_version)
+    {
+      /* translators: this is the placeholder string when the GNOME Shell
+       * version couldn't be loaded, eg. “GNOME Version: Not Available” */
+      cc_list_row_set_secondary_label (self->gnome_version_row, _("Not Available"));
+    }
+  else
+    {
+      cc_list_row_set_secondary_label (self->gnome_version_row, gnome_version);
+    }
+}
+
+
 static void
 info_overview_panel_setup_overview (CcInfoOverviewPanel *self)
 {
