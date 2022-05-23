@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="CcGoaPanel" parent="CcPanel">
-    <child type="titlebar">
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
-        <property name="halign">start</property>
-        <property name="hexpand">true</property>
-        <child>
-          <object class="GtkLabel" id="title_label">
-            <property name="label" translatable="yes">Online Accounts</property>
-            <property name="margin-bottom">12</property>
-            <property name="xalign">0</property>
-            <style>
-              <class name="view-title" />
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="accounts_label">
-            <property name="wrap">True</property>
-            <property name="justify">center</property>
-            <property name="label" translatable="yes">Connect to your data in the cloud</property>
-            <style>
-              <class name="body" />
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="offline_label">
-            <property name="margin-top">24</property>
-            <property name="wrap">True</property>
-            <property name="label" translatable="yes">No internet connection — connect to set up new online accounts</property>
-            <style>
-              <class name="body" />
-            </style>
-          </object>
-        </child>
-      </object>
-    </child>
-
+  <template class="CcOnlineAccountsPanel" parent="CcPanel">
     <child type="content">
       <object class="GtkOverlay">
         <child type="overlay">
@@ -59,13 +21,16 @@
                     <child>
                       <object class="GtkButton" id="undo_button">
                         <property name="label" translatable="yes">Undo</property>
-                        <signal name="clicked" handler="on_undo_button_clicked_cb" object="CcGoaPanel" swapped="no" />
+                        <signal name="clicked" handler="on_undo_button_clicked_cb" object="CcOnlineAccountsPanel" swapped="no" />
                       </object>
                     </child>
                     <child>
                       <object class="GtkButton" id="close_notification_button">
                         <property name="icon-name">window-close-symbolic</property>
-                        <signal name="clicked" handler="on_notification_closed_cb" object="CcGoaPanel" swapped="no" />
+                        <accessibility>
+                          <property name="label" translatable="yes">Close the notification</property>
+                        </accessibility>
+                        <signal name="clicked" handler="on_notification_closed_cb" object="CcOnlineAccountsPanel" swapped="no" />
                         <style>
                           <class name="flat" />
                         </style>
@@ -90,7 +55,7 @@
                   <object class="GtkListBox" id="accounts_listbox">
                     <property name="hexpand">True</property>
                     <property name="selection_mode">none</property>
-                    <signal name="row-activated" handler="on_accounts_listbox_row_activated" object="CcGoaPanel" swapped="yes" />
+                    <signal name="row-activated" handler="on_accounts_listbox_row_activated" object="CcOnlineAccountsPanel" swapped="yes" />
                     <style>
                       <class name="boxed-list" />
                     </style>
@@ -108,7 +73,7 @@
                 <child>
                   <object class="GtkListBox" id="providers_listbox">
                     <property name="selection_mode">none</property>
-                    <signal name="row-activated" handler="on_provider_row_activated_cb" object="CcGoaPanel" swapped="yes" />
+                    <signal name="row-activated" handler="on_provider_row_activated_cb" object="CcOnlineAccountsPanel" swapped="yes" />
                     <style>
                       <class name="boxed-list" />
                     </style>

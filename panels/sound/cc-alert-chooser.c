@@ -29,7 +29,6 @@ struct _CcAlertChooser
 {
   GtkBox         parent_instance;
 
-  GtkToggleButton *bark_button;
   GtkToggleButton *drip_button;
   GtkToggleButton *glass_button;
   GtkToggleButton *sonar_button;
@@ -127,17 +126,20 @@ static void
 set_custom_theme (CcAlertChooser *self,
                   const gchar    *name)
 {
-  g_autofree gchar *dir = NULL;
+  g_autofree gchar *dir_path = NULL;
   g_autofree gchar *theme_path = NULL;
+  g_autoptr(GDateTime) now = NULL;
+  g_autoptr(GFile) dir = NULL;
   g_autoptr(GKeyFile) theme_file = NULL;
   g_autoptr(GVariant) default_theme = NULL;
   g_autoptr(GError) load_error = NULL;
   g_autoptr(GError) save_error = NULL;
+  g_autoptr(GError) mtime_error = NULL;
 
-  dir = get_theme_dir ();
-  g_mkdir_with_parents (dir, USER_DIR_MODE);
+  dir_path = get_theme_dir ();
+  g_mkdir_with_parents (dir_path, USER_DIR_MODE);
 
-  theme_path = g_build_filename (dir, "index.theme", NULL);
+  theme_path = g_build_filename (dir_path, "index.theme", NULL);
 
   default_theme = g_settings_get_default_value (self->sound_settings, "theme-name");
 
@@ -159,6 +161,22 @@ set_custom_theme (CcAlertChooser *self,
 
   set_sound_symlink ("bell-terminal", name);
   set_sound_symlink ("bell-window-system", name);
+
+  /* Ensure the g-s-d sound plugin which does non-recursive monitoring
+   * notices the change even if the theme directory already existed.
+   */
+  now = g_date_time_new_now_utc ();
+  dir = g_file_new_for_path (dir_path);
+  if (!g_file_set_attribute_uint64 (dir,
+                                    G_FILE_ATTRIBUTE_TIME_MODIFIED,
+                                    g_date_time_to_unix (now),
+                                    G_FILE_QUERY_INFO_NONE,
+                                    NULL,
+                                    &mtime_error))
+    {
+      g_warning ("Failed to update theme directory modification time for %s: %s",
+                 dir_path, mtime_error->message);
+    }
 
   g_settings_set_boolean (self->sound_settings, "event-sounds", TRUE);
   g_settings_set_string (self->sound_settings, "theme-name", CUSTOM_THEME_NAME);
@@ -196,9 +214,7 @@ static void
 clicked_cb (CcAlertChooser *self,
             GtkToggleButton  *button)
 {
-  if (button == self->bark_button)
-    select_sound (self, "bark");
-  else if (button == self->drip_button)
+  if (button == self->drip_button)
     select_sound (self, "drip");
   else if (button == self->glass_button)
     select_sound (self, "glass");
@@ -206,8 +222,6 @@ clicked_cb (CcAlertChooser *self,
     select_sound (self, "sonar");
 
   set_button (self, button, TRUE);
-  if (button != self->bark_button)
-    set_button (self, self->bark_button, FALSE);
   if (button != self->drip_button)
     set_button (self, self->drip_button, FALSE);
   if (button != self->glass_button)
@@ -237,7 +251,6 @@ cc_alert_chooser_class_init (CcAlertChooserClass *klass)
 
   gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/sound/cc-alert-chooser.ui");
 
-  gtk_widget_class_bind_template_child (widget_class, CcAlertChooser, bark_button);
   gtk_widget_class_bind_template_child (widget_class, CcAlertChooser, drip_button);
   gtk_widget_class_bind_template_child (widget_class, CcAlertChooser, glass_button);
   gtk_widget_class_bind_template_child (widget_class, CcAlertChooser, sonar_button);
@@ -262,9 +275,16 @@ cc_alert_chooser_init (CcAlertChooser *self)
   self->sound_settings = g_settings_new (KEY_SOUNDS_SCHEMA);
 
   alert_name = get_alert_name ();
+
+  /* If user has selected the old dog bark theme, migrate them to drip. */
   if (g_strcmp0 (alert_name, "bark") == 0)
-    set_button (self, self->bark_button, TRUE);
-  else if (g_strcmp0 (alert_name, "drip") == 0)
+    {
+      set_custom_theme (self, "drip");
+      g_free (alert_name);
+      alert_name = g_strdup ("drip");
+    }
+
+  if (g_strcmp0 (alert_name, "drip") == 0)
     set_button (self, self->drip_button, TRUE);
   else if (g_strcmp0 (alert_name, "glass") == 0)
     set_button (self, self->glass_button, TRUE);

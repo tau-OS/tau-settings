@@ -99,6 +99,9 @@
         <style>
           <class name="circular" />
         </style>
+        <accessibility>
+          <property name="label" translatable="yes">More options…</property>
+        </accessibility>
         <child>
           <object class="GtkImage">
             <property name="icon_name">applications-system-symbolic</property>

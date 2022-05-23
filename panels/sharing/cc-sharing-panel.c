@@ -45,6 +45,9 @@
 
 #include <config.h>
 
+#include <unistd.h>
+#include <pwd.h>
+
 static void cc_sharing_panel_setup_label_with_hostname (CcSharingPanel *self, GtkWidget *label);
 static GtkWidget *cc_sharing_panel_new_media_sharing_row (const char     *uri_or_path,
                                                           CcSharingPanel *self);
@@ -82,7 +85,9 @@ struct _CcSharingPanel
   GtkWidget *remote_login_row;
   GtkWidget *remote_login_switch;
 
+  GtkWidget *remote_control_switch;
   GtkWidget *remote_control_checkbutton;
+  GtkWidget *remote_desktop_toast_overlay;
   GtkWidget *remote_desktop_password_entry;
   GtkWidget *remote_desktop_password_copy;
   GtkWidget *remote_desktop_username_entry;
@@ -243,12 +248,6 @@ remote_desktop_show_encryption_fingerprint (CcSharingPanel *self)
 }
 
 static void
-remote_desktop_hide_encryption_fingerprint (CcSharingPanel *self)
-{
-  gtk_widget_hide (self->remote_desktop_fingerprint_dialog);
-}
-
-static void
 cc_sharing_panel_class_init (CcSharingPanelClass *klass)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
@@ -281,8 +280,9 @@ cc_sharing_panel_class_init (CcSharingPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_login_row);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_login_switch);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_dialog);
+  gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_toast_overlay);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_switch);
-  gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_control_checkbutton);
+  gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_control_switch);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_username_entry);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_username_copy);
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, remote_desktop_password_entry);
@@ -299,7 +299,6 @@ cc_sharing_panel_class_init (CcSharingPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcSharingPanel, shared_folders_listbox);
 
   gtk_widget_class_bind_template_callback (widget_class, remote_desktop_show_encryption_fingerprint);
-  gtk_widget_class_bind_template_callback (widget_class, remote_desktop_hide_encryption_fingerprint);
 
   g_type_ensure (CC_TYPE_LIST_ROW);
   g_type_ensure (CC_TYPE_HOSTNAME_ENTRY);
@@ -979,37 +978,6 @@ cc_sharing_panel_check_schema_available (CcSharingPanel *self,
   return TRUE;
 }
 
-#define MAX_PASSWORD_SIZE 8
-static void
-remote_desktop_password_insert_text_cb (CcSharingPanel *self,
-                                        gchar          *new_text,
-                                        gint            new_text_length,
-                                        gpointer        position)
-{
-  int l, available_size;
-
-  l = gtk_entry_buffer_get_bytes (gtk_entry_get_buffer (GTK_ENTRY (self->remote_desktop_password_entry)));
-
-  if (l + new_text_length <= MAX_PASSWORD_SIZE)
-    return;
-
-  g_signal_stop_emission_by_name (self->remote_desktop_password_entry, "insert-text");
-  gtk_widget_error_bell (GTK_WIDGET (self->remote_desktop_password_entry));
-
-  available_size = g_utf8_strlen (new_text, MAX_PASSWORD_SIZE - l);
-  if (available_size == 0)
-    return;
-
-  g_signal_handlers_block_by_func (self->remote_desktop_password_entry,
-                                   (gpointer) remote_desktop_password_insert_text_cb,
-                                   self);
-  gtk_editable_insert_text (GTK_EDITABLE (self->remote_desktop_password_entry), new_text, available_size, position);
-  g_signal_handlers_unblock_by_func (self->remote_desktop_password_entry,
-                                     (gpointer) remote_desktop_password_insert_text_cb,
-                                     self);
-}
-#undef MAX_PASSWORD_SIZE
-
 static gboolean
 store_remote_desktop_credentials_timeout (gpointer user_data)
 {
@@ -1045,6 +1013,13 @@ remote_desktop_credentials_changed (CcSharingPanel *self)
 static gboolean
 is_remote_desktop_enabled (CcSharingPanel *self)
 {
+  g_autoptr(GSettings) rdp_settings = NULL;
+
+  rdp_settings = g_settings_new (GNOME_REMOTE_DESKTOP_RDP_SCHEMA_ID);
+
+  if (!g_settings_get_boolean (rdp_settings, "enable"))
+    return FALSE;
+
   return cc_is_service_active (REMOTE_DESKTOP_SERVICE, G_BUS_TYPE_SESSION);
 }
 
@@ -1066,6 +1041,11 @@ static void
 disable_gnome_remote_desktop_service (CcSharingPanel *self)
 {
   g_autoptr(GError) error = NULL;
+  g_autoptr(GSettings) rdp_settings = NULL;
+
+  rdp_settings = g_settings_new (GNOME_REMOTE_DESKTOP_RDP_SCHEMA_ID);
+
+  g_settings_set_boolean (rdp_settings, "enable", FALSE);
 
   if (!cc_disable_service (REMOTE_DESKTOP_SERVICE,
                            G_BUS_TYPE_SESSION,
@@ -1298,19 +1278,55 @@ get_hostname (void)
 }
 
 static void
-on_copy_clicked_label (GtkButton *button,
-                       GtkLabel  *label)
+add_toast (CcSharingPanel *self,
+           const char     *message)
 {
-  gdk_clipboard_set_text (gtk_widget_get_clipboard (GTK_WIDGET (button)),
-                          gtk_label_get_text (label));
+  adw_toast_overlay_add_toast (ADW_TOAST_OVERLAY (self->remote_desktop_toast_overlay),
+                               adw_toast_new (message));
 }
 
 static void
-on_copy_clicked_editable (GtkButton   *button,
-                          GtkEditable *editable)
+on_device_name_copy_clicked (GtkButton      *button,
+                             CcSharingPanel *self)
 {
+  GtkLabel *label = GTK_LABEL (self->remote_desktop_device_name_label);
+
+  gdk_clipboard_set_text (gtk_widget_get_clipboard (GTK_WIDGET (button)),
+                          gtk_label_get_text (label));
+  add_toast (self, _("Device name copied"));
+}
+
+static void
+on_device_address_copy_clicked (GtkButton      *button,
+                                CcSharingPanel *self)
+{
+  GtkLabel *label = GTK_LABEL (self->remote_desktop_address_label);
+
+  gdk_clipboard_set_text (gtk_widget_get_clipboard (GTK_WIDGET (button)),
+                          gtk_label_get_text (label));
+  add_toast (self, _("Device address copied"));
+}
+
+static void
+on_username_copy_clicked (GtkButton      *button,
+                          CcSharingPanel *self)
+{
+  GtkEditable *editable = GTK_EDITABLE (self->remote_desktop_username_entry);
+
   gdk_clipboard_set_text (gtk_widget_get_clipboard (GTK_WIDGET (button)),
                           gtk_editable_get_text (editable));
+  add_toast (self, _("Username copied"));
+}
+
+static void
+on_password_copy_clicked (GtkButton      *button,
+                          CcSharingPanel *self)
+{
+  GtkEditable *editable = GTK_EDITABLE (self->remote_desktop_password_entry);
+
+  gdk_clipboard_set_text (gtk_widget_get_clipboard (GTK_WIDGET (button)),
+                          gtk_editable_get_text (editable));
+  add_toast (self, _("Password copied"));
 }
 
 static pwquality_settings_t *
@@ -1376,11 +1392,11 @@ cc_sharing_panel_setup_remote_desktop_dialog (CcSharingPanel *self)
 
   g_settings_bind (rdp_settings,
                    "view-only",
-                   self->remote_control_checkbutton,
+                   self->remote_control_switch,
                    "active",
                    G_SETTINGS_BIND_DEFAULT | G_SETTINGS_BIND_INVERT_BOOLEAN);
   g_object_bind_property (self->remote_desktop_switch, "state",
-                          self->remote_control_checkbutton, "sensitive",
+                          self->remote_control_switch, "sensitive",
                           G_BINDING_SYNC_CREATE);
 
   hostname = get_hostname ();
@@ -1402,26 +1418,36 @@ cc_sharing_panel_setup_remote_desktop_dialog (CcSharingPanel *self)
                             "notify::text",
                             G_CALLBACK (remote_desktop_credentials_changed),
                             self);
-
   if (username == NULL)
-    gtk_editable_set_text (GTK_EDITABLE (self->remote_desktop_username_entry),
-                           getlogin ());
+    {
+      struct passwd *pw = getpwuid (getuid ());
+      if (pw != NULL)
+        {
+          gtk_editable_set_text (GTK_EDITABLE (self->remote_desktop_username_entry),
+                                 pw->pw_name);
+        }
+      else
+        {
+          g_warning ("Failed to get username: %s", g_strerror (errno));
+        }
+    }
+
   if (password == NULL)
     gtk_editable_set_text (GTK_EDITABLE (self->remote_desktop_password_entry),
                            pw_generate ());
 
   g_signal_connect (self->remote_desktop_device_name_copy,
-                    "clicked", G_CALLBACK (on_copy_clicked_label),
-                    self->remote_desktop_device_name_label);
+                    "clicked", G_CALLBACK (on_device_name_copy_clicked),
+                    self);
   g_signal_connect (self->remote_desktop_address_copy,
-                    "clicked", G_CALLBACK (on_copy_clicked_label),
-                    self->remote_desktop_address_label);
+                    "clicked", G_CALLBACK (on_device_address_copy_clicked),
+                    self);
   g_signal_connect (self->remote_desktop_username_copy,
-                    "clicked", G_CALLBACK (on_copy_clicked_editable),
-                    self->remote_desktop_username_entry);
+                    "clicked", G_CALLBACK (on_username_copy_clicked),
+                    self);
   g_signal_connect (self->remote_desktop_password_copy,
-                    "clicked", G_CALLBACK (on_copy_clicked_editable),
-                    self->remote_desktop_password_entry);
+                    "clicked", G_CALLBACK (on_password_copy_clicked),
+                    self);
 
   g_signal_connect (self->remote_desktop_switch, "notify::state",
                     G_CALLBACK (on_remote_desktop_state_changed), self);

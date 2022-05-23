@@ -23,6 +23,7 @@
 #include <config.h>
 
 #include "cc-hostname-entry.h"
+#include "shell/cc-object-storage.h"
 
 #include "cc-info-overview-resources.h"
 
@@ -61,123 +62,7 @@ struct _CcInfoOverviewPanel
   CcListRow       *windowing_system_row;
 };
 
-typedef struct
-{
-  char *major;
-  char *minor;
-  char *distributor;
-  char *date;
-  char **current;
-} VersionData;
-
-static void
-version_data_free (VersionData *data)
-{
-  g_free (data->major);
-  g_free (data->minor);
-  g_free (data->distributor);
-  g_free (data->date);
-  g_free (data);
-}
-
-G_DEFINE_AUTOPTR_CLEANUP_FUNC (VersionData, version_data_free);
-
 G_DEFINE_TYPE (CcInfoOverviewPanel, cc_info_overview_panel, CC_TYPE_PANEL)
-
-static void
-version_start_element_handler (GMarkupParseContext      *ctx,
-                               const char               *element_name,
-                               const char              **attr_names,
-                               const char              **attr_values,
-                               gpointer                  user_data,
-                               GError                  **error)
-{
-  VersionData *data = user_data;
-  if (g_str_equal (element_name, "platform"))
-    data->current = &data->major;
-  else if (g_str_equal (element_name, "minor"))
-    data->current = &data->minor;
-  else if (g_str_equal (element_name, "distributor"))
-    data->current = &data->distributor;
-  else if (g_str_equal (element_name, "date"))
-    data->current = &data->date;
-  else
-    data->current = NULL;
-}
-
-static void
-version_end_element_handler (GMarkupParseContext      *ctx,
-                             const char               *element_name,
-                             gpointer                  user_data,
-                             GError                  **error)
-{
-  VersionData *data = user_data;
-  data->current = NULL;
-}
-
-static void
-version_text_handler (GMarkupParseContext *ctx,
-                      const char          *text,
-                      gsize                text_len,
-                      gpointer             user_data,
-                      GError             **error)
-{
-  VersionData *data = user_data;
-  if (data->current != NULL)
-    {
-      g_autofree char *stripped = NULL;
-
-      stripped = g_strstrip (g_strdup (text));
-      g_free (*data->current);
-      *data->current = g_strdup (stripped);
-    }
-}
-
-static gboolean
-load_gnome_version (char **version,
-                    char **distributor,
-                    char **date)
-{
-  GMarkupParser version_parser = {
-    version_start_element_handler,
-    version_end_element_handler,
-    version_text_handler,
-    NULL,
-    NULL,
-  };
-  g_autoptr(GError) error = NULL;
-  g_autoptr(GMarkupParseContext) ctx = NULL;
-  g_autofree char *contents = NULL;
-  gsize length;
-  g_autoptr(VersionData) data = NULL;
-
-  if (!g_file_get_contents (DATADIR "/gnome/gnome-version.xml",
-                            &contents,
-                            &length,
-                            &error))
-    return FALSE;
-
-  data = g_new0 (VersionData, 1);
-  ctx = g_markup_parse_context_new (&version_parser, 0, data, NULL);
-
-  if (!g_markup_parse_context_parse (ctx, contents, length, &error))
-    {
-      g_warning ("Invalid version file: '%s'", error->message);
-    }
-  else
-    {
-      if (version != NULL)
-        *version = g_strdup_printf ("%s.%s", data->major, data->minor);
-      if (distributor != NULL)
-        *distributor = g_strdup (data->distributor);
-      if (date != NULL)
-        *date = g_strdup (data->date);
-
-      return TRUE;
-    }
-
-  return FALSE;
-};
 
 static char *
 get_os_name (void)
@@ -335,8 +220,15 @@ info_overview_panel_setup_overview (CcInfoOverviewPanel *self)
   g_autofree gchar *gnome_version = NULL;
   g_autofree char *os_name_text = NULL;
 
-  if (load_gnome_version (&gnome_version, NULL, NULL))
-    cc_list_row_set_secondary_label (self->gnome_version_row, gnome_version);
+  cc_object_storage_create_dbus_proxy (G_BUS_TYPE_SESSION,
+                                       G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS |
+                                       G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START,
+                                       "org.gnome.Shell",
+                                       "/org/gnome/Shell",
+                                       "org.gnome.Shell",
+                                       cc_panel_get_cancellable (CC_PANEL (self)),
+                                       (GAsyncReadyCallback) shell_proxy_ready,
+                                       self);
 
   cc_list_row_set_secondary_label (self->windowing_system_row, get_windowing_system ());
 
@@ -469,12 +361,12 @@ open_hostname_edit_dialog (CcInfoOverviewPanel *self)
 
 static void
 cc_info_panel_row_activated_cb (CcInfoOverviewPanel *self,
-                                CcListRow           *row)
+                                AdwActionRow        *row)
 {
   g_assert (CC_IS_INFO_OVERVIEW_PANEL (self));
-  g_assert (CC_IS_LIST_ROW (row));
+  g_assert (ADW_IS_ACTION_ROW (row));
 
-  if (row == self->hostname_row)
+  if (row == ADW_ACTION_ROW (self->hostname_row))
     open_hostname_edit_dialog (self);
   else if (row == self->software_updates_row)
     open_software_update (self);

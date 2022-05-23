@@ -541,7 +541,7 @@ set_shortcuts_allowed (CcApplicationsPanel *self,
 
   /* "GRANTED" and "DENIED" here match the values set by the "inhibit shortcut
    * dialog" is GNOME Shell:
-   * https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/js/ui/inhibitShortcutsDialog.js
+   * https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/ui/inhibitShortcutsDialog.js
    */
   perms[0] = granted ? "GRANTED" : "DENIED";
   perms[1] = NULL;
@@ -846,7 +846,7 @@ static void
 update_header_section (CcApplicationsPanel *self,
                        GAppInfo            *info)
 {
-  g_autoptr(GIcon) icon = NULL;
+  GIcon *icon;
 
   icon = g_app_info_get_icon (info);
   gtk_image_set_from_gicon (self->app_icon_image, icon);
