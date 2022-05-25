@@ -5,7 +5,6 @@
     <file preprocess="xml-stripblanks">cc-panel-list.ui</file>
     <file preprocess="xml-stripblanks">cc-window.ui</file>
     <file preprocess="xml-stripblanks">help-overlay.ui</file>
-    <file>style.css</file>
   </gresource>
 
   <!-- Panel icons -->
@@ -13,5 +12,6 @@
     <file preprocess="xml-stripblanks">icons/external-link-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/multitasking-symbolic.svg</file>
     <file>style.css</file>
+    <file>style-dark.css</file>
   </gresource>
 </gresources>

@@ -1,0 +1,9 @@
+.banner.info {
+  background: #120901;
+  color: #0453a4;
+}
+
+.banner.error {
+  background: #f8d8e2;
+  color: #90183d;
+}
