@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        26
+Release:        27
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -63,7 +63,7 @@ BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(udisks2)
 BuildRequires:  pkgconfig(gnome-bluetooth-3.0) >= %{gnome_bluetooth_version}
 BuildRequires:  pkgconfig(libwacom)
-BuildArch: x86_64
+ExclusiveArch: x86_64
  
 # Versioned library deps
 Requires: libadwaita%{?_isa} >= %{libadwaita_version}
@@ -200,6 +200,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Tues May 24 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-27
+- Damn Connection Editor
+
 * Mon May 23 2022 Lains <lainsce@airmail.cc> - 1.1-26
 - Fix styling of banners, pesky box
 
