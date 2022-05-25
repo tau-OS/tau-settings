@@ -15,7 +15,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        27
+Release:        28
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -200,7 +200,10 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
-* Tues May 24 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-27
+* Tue May 24 2022 Lains <lainsce@airmail.cc> - 1.1-28
+- Dark Theme Banner theming fixes
+
+* Tue May 24 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-27
 - Damn Connection Editor
 - Dark Theme Banner
 
