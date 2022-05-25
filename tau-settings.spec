@@ -202,6 +202,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %changelog
 * Tues May 24 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-27
 - Damn Connection Editor
+- Dark Theme Banner
 
 * Mon May 23 2022 Lains <lainsce@airmail.cc> - 1.1-26
 - Fix styling of banners, pesky box
