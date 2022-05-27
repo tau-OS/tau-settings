@@ -442,6 +442,7 @@ static const gchar * const panel_order[] = {
   "details",
   "info-overview",
   "system",
+  "firmware-updates",
   "datetime",
   "region",
   "universal-access",
