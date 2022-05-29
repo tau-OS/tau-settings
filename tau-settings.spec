@@ -63,7 +63,6 @@ BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(udisks2)
 BuildRequires:  pkgconfig(gnome-bluetooth-3.0) >= %{gnome_bluetooth_version}
 BuildRequires:  pkgconfig(libwacom)
-BuildArch: x86_64
  
 # Versioned library deps
 Requires: libadwaita%{?_isa} >= %{libadwaita_version}
