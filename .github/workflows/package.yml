@@ -6,26 +6,57 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
+  build-x86_64:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      archs: x86_64 aarch64 noarch
-  sign :
+      archs: x86_64 noarch
+      primaryArch: x86_64
+  sign-x86_64:
     needs:
       - build
     uses: tau-OS/github-actions/.github/workflows/sign-rpm.yml@main
     if: github.ref == 'refs/heads/main'
     with:
       name: "tau-settings"
+      primaryArch: x86_64
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
-  upload:
+  upload-x86_64:
     needs:
       - sign
     uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
     with:
       name: "tau-settings"
       tauOSVersion: "1.1"
+      primaryArch: x86_64
+    secrets:
+      teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
+
+  build-aarch64:
+    uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
+    with:
+      name: "tau-settings"
+      archs: aarch64 noarch
+      primaryArch: aarch64
+      runsOn: ARM64
+  sign-aarch64:
+    needs:
+      - build
+    uses: tau-OS/github-actions/.github/workflows/sign-rpm.yml@main
+    if: github.ref == 'refs/heads/main'
+    with:
+      name: "tau-settings"
+      primaryArch: aarch64
+    secrets:
+      signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
+  upload-aarch64:
+    needs:
+      - sign
+    uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
+    with:
+      name: "tau-settings"
+      tauOSVersion: "1.1"
+      primaryArch: aarch64
     secrets:
       teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
