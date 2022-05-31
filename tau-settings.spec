@@ -68,6 +68,8 @@ BuildRequires:  pkgconfig(libwacom)
 BuildArch: x86_64
 %elifarch aarch64
 BuildArch: aarch64
+%else
+BuildArch: x86_64
 %endif
  
 # Versioned library deps
