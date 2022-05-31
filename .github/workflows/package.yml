@@ -10,7 +10,6 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      archs: x86_64 noarch
       primaryArch: x86_64
   sign-x86_64:
     needs:
@@ -37,7 +36,6 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      archs: aarch64 noarch
       primaryArch: aarch64
       runsOn: ARM64
   sign-aarch64:
