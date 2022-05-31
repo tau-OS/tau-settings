@@ -10,7 +10,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      primaryArch: x86_64
+      buildVariant: x86_64
   sign-x86_64:
     needs:
       - build-x86_64
@@ -18,7 +18,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     with:
       name: "tau-settings"
-      primaryArch: x86_64
+      buildVariant: x86_64
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
   upload-x86_64:
@@ -28,7 +28,7 @@ jobs:
     with:
       name: "tau-settings"
       tauOSVersion: "1.1"
-      primaryArch: x86_64
+      buildVariant: x86_64
     secrets:
       teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
 
@@ -36,7 +36,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
       name: "tau-settings"
-      primaryArch: aarch64
+      buildVariant: aarch64
       runsOn: ARM64
   sign-aarch64:
     needs:
@@ -45,7 +45,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     with:
       name: "tau-settings"
-      primaryArch: aarch64
+      buildVariant: aarch64
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
   upload-aarch64:
@@ -55,6 +55,6 @@ jobs:
     with:
       name: "tau-settings"
       tauOSVersion: "1.1"
-      primaryArch: aarch64
+      buildVariant: aarch64
     secrets:
       teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
