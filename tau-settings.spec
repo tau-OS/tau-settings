@@ -7,6 +7,7 @@
 %define gtk4_version 4.6.2
 %define gnome_bluetooth_version 42.0
 %define libadwaita_version 1.1.0
+%define libhelium_version 1.0
 %define nm_version 1.36.4
 
 # it's like 11pm at night i don't care about adding debug packages
@@ -45,6 +46,7 @@ BuildRequires:  pkgconfig(gtk4) >= %{gtk4_version}
 BuildRequires:  pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(ibus-1.0)
 BuildRequires:  pkgconfig(libadwaita-1) >= %{libadwaita_version}
+BuildRequires:  pkgconfig(libhelium-1) >= %{libhelium_version}
 BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(libnm) >= %{nm_version}
 BuildRequires:  pkgconfig(libnma-gtk4)
@@ -66,6 +68,7 @@ BuildRequires:  pkgconfig(libwacom)
  
 # Versioned library deps
 Requires: libadwaita%{?_isa} >= %{libadwaita_version}
+Requires: libhelium%{?_isa} >= %{libhelium_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
 Requires: gnome-desktop4%{?_isa} >= %{gnome_desktop_version}
 Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}
