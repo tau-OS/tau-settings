@@ -141,6 +141,7 @@ xi_dep = dependency('xi', version: '>= 1.2')
 epoxy_dep = dependency('epoxy')
 gcr_dep = dependency('gcr-base-3')
 pwquality_dep = dependency('pwquality', version: '>= 1.2.2')
+libhelium_dep = dependency('libhelium-1', version: '>= 1')
 
 m_dep = cc.find_library('m')
 
@@ -149,6 +150,7 @@ common_deps = [
   glib_dep,
   gsettings_desktop_dep,
   libadwaita_dep,
+  libhelium_dep,
   dependency('gio-unix-2.0'),
   dependency('gthread-2.0'),
   dependency('gtk4', version: '>= 4.4'),

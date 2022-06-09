@@ -24,7 +24,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <adwaita.h>
+#include <libhelium-1.h>
 
 #include "cc-application.h"
 #include "cc-log.h"
@@ -34,7 +34,7 @@
 
 struct _CcApplication
 {
-  AdwApplication  parent;
+  HeApplication  parent;
 
   CcShellModel   *model;
 
@@ -53,7 +53,7 @@ static void help_activated         (GSimpleAction *action,
                                     GVariant      *parameter,
                                     gpointer       user_data);
 
-G_DEFINE_TYPE (CcApplication, cc_application, ADW_TYPE_APPLICATION)
+G_DEFINE_TYPE (CcApplication, cc_application, HE_TYPE_APPLICATION)
 
 const GOptionEntry all_options[] = {
   { "version", 0, 0, G_OPTION_ARG_NONE, NULL, N_("Display version number"), NULL },

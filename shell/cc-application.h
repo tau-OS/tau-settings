@@ -21,13 +21,13 @@
 
 #include "cc-shell-model.h"
 
-#include <adwaita.h>
+#include <libhelium-1.h>
 
 G_BEGIN_DECLS
 
 #define CC_TYPE_APPLICATION (cc_application_get_type())
 
-G_DECLARE_FINAL_TYPE (CcApplication, cc_application, CC, APPLICATION, AdwApplication)
+G_DECLARE_FINAL_TYPE (CcApplication, cc_application, CC, APPLICATION, HeApplication)
 
 GtkApplication        *cc_application_new                    (void);
 
