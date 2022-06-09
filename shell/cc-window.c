@@ -48,7 +48,7 @@
 
 struct _CcWindow
 {
-  AdwApplicationWindow parent;
+  HeApplicationWindow parent;
 
   GtkMessageDialog *development_warning_dialog;
   AdwHeaderBar *header;
@@ -81,7 +81,7 @@ struct _CcWindow
 
 static void cc_shell_iface_init(CcShellInterface *iface);
 
-G_DEFINE_TYPE_WITH_CODE(CcWindow, cc_window, ADW_TYPE_APPLICATION_WINDOW,
+G_DEFINE_TYPE_WITH_CODE(CcWindow, cc_window, HE_TYPE_APPLICATION_WINDOW,
                         G_IMPLEMENT_INTERFACE(CC_TYPE_SHELL, cc_shell_iface_init))
 
 enum
@@ -880,7 +880,6 @@ cc_window_new(GtkApplication *application,
                       "resizable", TRUE,
                       "title", _("Settings"),
                       "icon-name", DEFAULT_WINDOW_ICON_NAME,
-                      "show-menubar", FALSE,
                       "model", model,
                       NULL);
 }
