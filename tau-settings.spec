@@ -45,8 +45,7 @@ BuildRequires:  pkgconfig(gsound)
 BuildRequires:  pkgconfig(gtk4) >= %{gtk4_version}
 BuildRequires:  pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(ibus-1.0)
-BuildRequires:  pkgconfig(libadwaita-1) >= %{libadwaita_version}
-BuildRequires:  pkgconfig(libhelium-1) >= %{libhelium_version}
+BuildRequires:  libhelium-devel
 BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(libnm) >= %{nm_version}
 BuildRequires:  pkgconfig(libnma-gtk4)
