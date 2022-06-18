@@ -28,7 +28,7 @@
 G_BEGIN_DECLS
 
 #define CC_TYPE_COLOR_BUTTON (cc_color_button_get_type ())
-G_DECLARE_FINAL_TYPE (CcColorButton, cc_color_button, CC, COLOR_BUTTON, GtkCheckButton)
+G_DECLARE_FINAL_TYPE (CcColorButton, cc_color_button, CC, COLOR_BUTTON, GtkFlowBoxChild)
 
 const gchar *cc_color_button_get_color (CcColorButton *self);
 void         cc_color_button_set_color (CcColorButton *self,

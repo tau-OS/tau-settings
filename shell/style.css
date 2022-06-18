@@ -93,3 +93,7 @@
   background: #F8D8E2;
   color: #90183D;
 }
+
+.color-btn {
+  border-radius: 9999px;
+}
