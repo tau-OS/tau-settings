@@ -27,6 +27,7 @@ struct _CcColorButton
     GtkFlowBoxChild  parent;
 
     gchar           *color;
+    GtkBox          *hidden_box_fuck_me;
 };
 
 G_DEFINE_TYPE (CcColorButton, cc_color_button, GTK_TYPE_FLOW_BOX_CHILD)
@@ -105,6 +106,11 @@ static void
 cc_color_button_init (CcColorButton *self)
 {
     self->color = "meson-red";
+    self->hidden_box_fuck_me = GTK_BOX (gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0));
+
+    gtk_widget_set_visible (GTK_WIDGET (self->hidden_box_fuck_me), false);
+
+    gtk_flow_box_child_set_child (GTK_FLOW_BOX_CHILD (self), GTK_WIDGET (self->hidden_box_fuck_me));
 
     gtk_widget_set_size_request (GTK_WIDGET (self), 24, 24);
 }
@@ -123,9 +129,12 @@ cc_color_button_set_color (CcColorButton *self,
 {
   g_return_if_fail (CC_IS_COLOR_BUTTON (self));
 
-  gtk_widget_add_css_class (GTK_WIDGET (self), "color-btn");
   gtk_widget_add_css_class (GTK_WIDGET (self), "fill-button");
+  gtk_widget_add_css_class (GTK_WIDGET (self), "color-btn");
   gtk_widget_add_css_class (GTK_WIDGET (self), color);
+
+  gtk_widget_add_css_class (GTK_WIDGET (self->hidden_box_fuck_me), "outline-button");
+  gtk_widget_add_css_class (GTK_WIDGET (self->hidden_box_fuck_me), color);
 
   self->color = g_strdup(color);
 
