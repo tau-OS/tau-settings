@@ -74,6 +74,7 @@ sources = common_sources + files(
   'cc-background-panel.c',
   'cc-background-preview.c',
   'cc-background-xml.c',
+  'cc-color-button.c'
 )
 
 deps = common_deps + [
