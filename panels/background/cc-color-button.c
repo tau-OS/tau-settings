@@ -24,12 +24,12 @@
 
 struct _CcColorButton
 {
-    GtkCheckButton  parent;
+    GtkFlowBoxChild  parent;
 
-    gchar          *color;
+    gchar           *color;
 };
 
-G_DEFINE_TYPE (CcColorButton, cc_color_button, GTK_TYPE_CHECK_BUTTON)
+G_DEFINE_TYPE (CcColorButton, cc_color_button, GTK_TYPE_FLOW_BOX_CHILD)
 
 enum
 {
@@ -106,7 +106,7 @@ cc_color_button_init (CcColorButton *self)
 {
     self->color = "meson-red";
 
-    gtk_widget_set_size_request (gtk_widget_get_first_child (GTK_WIDGET (self)), 24, 24);
+    gtk_widget_set_size_request (GTK_WIDGET (self), 24, 24);
 }
 
 const gchar *
@@ -123,8 +123,11 @@ cc_color_button_set_color (CcColorButton *self,
 {
   g_return_if_fail (CC_IS_COLOR_BUTTON (self));
 
-  gtk_widget_add_css_class (gtk_widget_get_first_child (GTK_WIDGET (self)), "fill-button");
-  gtk_widget_add_css_class (gtk_widget_get_first_child (GTK_WIDGET (self)), color);
+  gtk_widget_add_css_class (GTK_WIDGET (self), "color-btn");
+  gtk_widget_add_css_class (GTK_WIDGET (self), "fill-button");
+  gtk_widget_add_css_class (GTK_WIDGET (self), color);
+
+  self->color = g_strdup(color);
 
   g_object_notify_by_pspec (G_OBJECT (self), props[PROP_COLOR]);
 }
