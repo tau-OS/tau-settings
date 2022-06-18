@@ -74,6 +74,20 @@ struct _CcBackgroundPanel
   CcBackgroundPreview *dark_preview;
   GtkToggleButton *default_toggle;
   GtkToggleButton *dark_toggle;
+  
+  // Buttons
+  GtkFlowBox    *color_box;
+  CcColorButton *red;
+  CcColorButton *orange;
+  CcColorButton *yellow;
+  CcColorButton *green;
+  CcColorButton *blue;
+  CcColorButton *indigo;
+  CcColorButton *purple;
+  CcColorButton *pink;
+  CcColorButton *mint;
+  CcColorButton *brown;
+
 };
 
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
@@ -364,6 +378,32 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
   cc_background_chooser_select_file (self->background_chooser);
 }
 
+static void
+on_accent_colour_toggled (CcBackgroundPanel *self)
+{
+  GtkWidget *selected_item = NULL;
+  GtkStyleContext *context = NULL;
+  GdkRGBA rgba;
+  g_autoptr(GList) selected = NULL;
+
+  selected = gtk_flow_box_get_selected_children (self->color_box);
+
+  if (selected)
+    selected_item = GTK_WIDGET (GTK_FLOW_BOX_CHILD (g_list_nth_data (selected, 0)));
+  
+
+  gtk_widget_set_state_flags (GTK_WIDGET (selected_item), GTK_STATE_FLAG_SELECTED | GTK_STATE_FLAG_ACTIVE, false);
+
+  context = gtk_widget_get_style_context (GTK_WIDGET (gtk_widget_get_first_child (selected_item)));
+  gtk_style_context_get_color (context, &rgba);
+  printf ("%f\n", rgba.red);
+  printf ("%f\n", rgba.green);
+  printf ("%f\n", rgba.blue);
+  // g_settings_set_string (self->interface_settings, "accent-color", cc_color_button_get_color (selected_item));
+
+  printf ("%s", cc_color_button_get_color (CC_COLOR_BUTTON (selected_item)));
+}
+
 static const char *
 cc_background_panel_get_help_uri (CcPanel *panel)
 {
@@ -420,8 +460,22 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, dark_toggle);
 
   gtk_widget_class_bind_template_callback (widget_class, on_color_scheme_toggle_active_cb);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, color_box);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, red);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, orange);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, yellow);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, green);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, blue);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, indigo);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, purple);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, pink);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mint);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, brown);
+
+  gtk_widget_class_bind_template_callback (widget_class, on_light_dark_toggle_active_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_chooser_background_chosen_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_add_picture_button_clicked_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_accent_colour_toggled);
 }
 
 static void
