@@ -93,71 +93,81 @@
               <object class="AdwActionRow">
                 <property name="title" translatable="yes">Accent Color</property>
                 <child>
-                  <object class="GtkBox">
-                    <property name="spacing">6</property>
+                  <object class="GtkFlowBox" id="color_box">
+                    <property name="max-children-per-line">10</property>
+                    <property name="min-children-per-line">10</property>
+                    <property name="column-spacing">6</property>
                     <property name="valign">center</property>
                     <property name="margin-top">6</property>
                     <property name="margin-bottom">6</property>
                     <style>
                       <class name="dock-size-row" />
                     </style>
+                    <signal name="selected-children-changed" handler="on_accent_colour_toggled" object="CcBackgroundPanel" swapped="yes" />
                     <child>
                       <object class="CcColorButton" id="red">
+
                         <property name="color">meson-red</property>
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="orange">
                         <property name="color">lepton-orange</property>
-                        <property name="group">red</property>
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="yellow">
+
                         <property name="color">electron-yellow</property>
-                        <property name="group">red</property>
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="green">
+
                         <property name="color">muon-green</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="blue">
+
                         <property name="color">proton-blue</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="indigo">
+
                         <property name="color">photon-indigo</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="purple">
+
                         <property name="color">tau-purple</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="pink">
+
                         <property name="color">fermion-pink</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="mint">
+
                         <property name="color">baryon-mint</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                     <child>
                       <object class="CcColorButton" id="brown">
+
                         <property name="color">gluon-brown</property>
-                        <property name="group">red</property>
+                        
                       </object>
                     </child>
                   </object>
