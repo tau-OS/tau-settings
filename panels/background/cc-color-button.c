@@ -109,6 +109,8 @@ static void
 cc_color_button_init (CcColorButton *self)
 {
     self->color = "meson-red";
+
+    gtk_widget_set_size_request (gtk_widget_get_first_child (GTK_WIDGET (self)), 24, 24);
 }
 
 const gchar *
