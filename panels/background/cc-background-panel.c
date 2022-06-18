@@ -36,6 +36,7 @@
 #include "cc-background-preview.h"
 #include "cc-background-resources.h"
 #include "cc-background-xml.h"
+#include "cc-color-button.h"
 
 #define WP_PATH_ID "org.gnome.desktop.background"
 #define WP_LOCK_PATH_ID "org.gnome.desktop.screensaver"
@@ -403,6 +404,7 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
 
   g_type_ensure (CC_TYPE_BACKGROUND_CHOOSER);
   g_type_ensure (CC_TYPE_BACKGROUND_PREVIEW);
+  g_type_ensure (CC_TYPE_COLOR_BUTTON);
 
   panel_class->get_help_uri = cc_background_panel_get_help_uri;
 
