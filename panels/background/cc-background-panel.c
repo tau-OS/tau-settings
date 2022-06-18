@@ -386,6 +386,8 @@ on_accent_colour_toggled (CcBackgroundPanel *self)
   GdkRGBA rgba;
   g_autoptr(GList) selected = NULL;
 
+  g_autoptr(GVariant) tuple = NULL;
+
   selected = gtk_flow_box_get_selected_children (self->color_box);
 
   if (selected)
@@ -396,12 +398,13 @@ on_accent_colour_toggled (CcBackgroundPanel *self)
 
   context = gtk_widget_get_style_context (GTK_WIDGET (gtk_widget_get_first_child (selected_item)));
   gtk_style_context_get_color (context, &rgba);
-  printf ("%f\n", rgba.red);
-  printf ("%f\n", rgba.green);
-  printf ("%f\n", rgba.blue);
-  // g_settings_set_string (self->interface_settings, "accent-color", cc_color_button_get_color (selected_item));
+  
+  tuple = g_variant_new ("(ddd)",
+                         (double) rgba.red,
+                         (double) rgba.green,
+                         (double) rgba.blue);
 
-  printf ("%s", cc_color_button_get_color (CC_COLOR_BUTTON (selected_item)));
+  g_settings_set_value (self->interface_settings, "accent-color", tuple);
 }
 
 static const char *
