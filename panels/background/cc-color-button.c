@@ -79,10 +79,6 @@ cc_color_button_set_property (GObject          *object,
 static void
 cc_color_button_dispose (GObject *object)
 {
-    CcColorButton *self = CC_COLOR_BUTTON (object);
-
-    g_clear_pointer (&self->color, g_free);
-
     G_OBJECT_CLASS (cc_color_button_parent_class)->dispose (object);
 }
 
