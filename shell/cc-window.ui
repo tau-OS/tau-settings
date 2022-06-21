@@ -4,8 +4,7 @@
     <property name="default-width">980</property>
     <property name="default-height">640</property>
     <child>
-      <object class="AdwLeaflet" id="main_leaflet">
-        <property name="can-navigate-back">True</property>
+      <object class="HeAlbum" id="main_leaflet">
         <signal name="notify::folded" handler="on_main_leaflet_folded_changed_cb" object="CcWindow" swapped="yes" />
 
         <child>
@@ -14,14 +13,12 @@
             <property name="orientation">vertical</property>
 
             <child>
-              <object class="AdwHeaderBar" id="header">
-                <property name="show-start-title-buttons">True</property>
-                <property name="show-end-title-buttons" bind-source="main_leaflet" bind-property="folded" bind-flags="sync-create"/>
+              <object class="HeAppBar" id="header">
                 <style>
                   <class name="flat"/>
                 </style>
                 <property name="title-widget">
-                  <object class="AdwWindowTitle" id="sidebar_title_widget">
+                  <object class="GtkLabel" id="sidebar_title_widget">
                   </object>
                 </property>
                 <child>
@@ -117,7 +114,7 @@
         </child>
 
         <child>
-          <object class="AdwLeafletPage">
+          <object class="HeAlbumPage">
             <property name="navigatable">False</property>
             <property name="child">
               <object class="GtkSeparator" id="panel_separator">

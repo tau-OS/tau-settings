@@ -16,7 +16,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        30
+Release:        31
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -66,8 +66,6 @@ BuildRequires:  pkgconfig(gnome-bluetooth-3.0) >= %{gnome_bluetooth_version}
 BuildRequires:  pkgconfig(libwacom)
  
 # Versioned library deps
-Requires: libadwaita%{?_isa} >= %{libadwaita_version}
-Requires: libhelium%{?_isa} >= %{libhelium_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
 Requires: gnome-desktop4%{?_isa} >= %{gnome_desktop_version}
 Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}

@@ -113,13 +113,6 @@ libgvc_dep = libgvc.get_variable('libgvc_dep')
 goa_req_version = '>= 3.25.3'
 pulse_req_version = '>= 2.0'
 
-libadwaita_dep = dependency(
-  'libadwaita-1',
-  version: '>= 1.1',
-  fallback: ['libadwaita', 'libadwaita_dep'],
-  default_options: ['examples=false', 'introspection=disabled', 'tests=false', 'vapi=false'],
-)
-
 accounts_dep = dependency('accountsservice', version: '>= 0.6.39')
 colord_dep = dependency('colord', version: '>= 0.1.34')
 gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.23.0')
@@ -149,7 +142,7 @@ common_deps = [
   gio_dep,
   glib_dep,
   gsettings_desktop_dep,
-  libadwaita_dep,
+  libhelium_dep,
   libhelium_dep,
   dependency('gio-unix-2.0'),
   dependency('gthread-2.0'),

@@ -5,7 +5,7 @@
       <object class="GtkStack" id="stack">
 
         <child>
-          <object class="AdwStatusPage" id="empty_box">
+          <object class="HeEmptyPage" id="empty_box">
             <property name="icon-name">org.gnome.Software-symbolic</property>
             <property name="title" translatable="yes">No applications</property>
             <child>
@@ -22,11 +22,11 @@
         </child>
 
         <child>
-          <object class="AdwPreferencesPage" id="settings_box">
+          <object class="GtkBox" id="settings_box">
 
             <!-- App icon & buttons -->
             <child>
-              <object class="AdwPreferencesGroup">
+              <object class="HeContentList">
 
                 <child>
                   <object class="GtkBox">
@@ -97,7 +97,7 @@
             </child>
 
             <child>
-              <object class="AdwPreferencesGroup" id="integration_section">
+              <object class="HeContentList" id="integration_section">
                 <child>
                   <object class="CcToggleRow" id="search">
                     <property name="title" translatable="yes">Search</property>
@@ -200,7 +200,7 @@
             </child>
 
             <child>
-              <object class="AdwPreferencesGroup" id="usage_section">
+              <object class="HeContentList" id="usage_section">
                 <child>
                   <object class="CcInfoRow" id="builtin">
                     <property name="title" translatable="yes">Built-in Permissions</property>
@@ -259,7 +259,7 @@
         </style>
 
         <child type="placeholder">
-          <object class="AdwStatusPage">
+          <object class="HeEmptyPage">
             <property name="icon-name">edit-find-symbolic</property>
             <property name="title" translatable="yes">No Results Found</property>
             <property name="description" translatable="yes">Try a different search.</property>
@@ -281,9 +281,9 @@
     <property name="resizable">True</property>
     <property name="hide-on-close">True</property>
     <child>
-      <object class="AdwPreferencesPage">
+      <object class="GtkBox">
         <child>
-          <object class="AdwPreferencesGroup" id="builtin_group">
+          <object class="HeContentList" id="builtin_group">
             <child>
               <object class="GtkListBox" id="builtin_list">
                 <property name="selection-mode">none</property>
@@ -308,10 +308,10 @@
     <property name="default-width">500</property>
     <property name="default-height">400</property>
     <child>
-      <object class="AdwPreferencesPage">
+      <object class="GtkBox">
 
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <child>
               <object class="GtkLabel" id="handler_title_label">
                 <property name="wrap">True</property>
@@ -322,19 +322,19 @@
         </child>
 
         <child>
-          <object class="AdwPreferencesGroup" id="handler_file_group">
+          <object class="HeContentList" id="handler_file_group">
             <property name="title" translatable="yes">File Types</property>
           </object>
         </child>
 
         <child>
-          <object class="AdwPreferencesGroup" id="handler_link_group">
+          <object class="HeContentList" id="handler_link_group">
             <property name="title" translatable="yes">Link Types</property>
           </object>
         </child>
 
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <child>
               <object class="GtkButton" id="handler_reset">
                 <property name="valign">center</property>
@@ -363,9 +363,9 @@
     <property name="default-width">420</property>
     <property name="default-height">420</property>
     <child>
-      <object class="AdwPreferencesPage">
+      <object class="GtkBox">
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <property name="description" translatable="yes">How much disk space this application is occupying with app data and caches.</property>
             <child>
               <object class="CcInfoRow" id="app">
@@ -394,7 +394,7 @@
           </object>
         </child>
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <child>
               <object class="GtkButton" id="clear_cache_button">
                 <property name="label" translatable="yes">Clear Cache…</property>
