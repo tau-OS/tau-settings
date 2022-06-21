@@ -31,8 +31,8 @@ jobs:
       buildVariant: x86_64
     secrets:
       repoIP: ${{ secrets.REPO_IP }}
-repoKnownHosts: ${{ secrets.REPO_KNOWN_HOSTS }}
-repoPrivateKey: ${{ secrets.REPO_PRIVATE_KEY }}
+      repoKnownHosts: ${{ secrets.REPO_KNOWN_HOSTS }}
+      repoPrivateKey: ${{ secrets.REPO_PRIVATE_KEY }}
 
   build-aarch64:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
