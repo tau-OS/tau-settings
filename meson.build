@@ -143,7 +143,6 @@ common_deps = [
   glib_dep,
   gsettings_desktop_dep,
   libhelium_dep,
-  libhelium_dep,
   dependency('gio-unix-2.0'),
   dependency('gthread-2.0'),
   dependency('gtk4', version: '>= 4.4'),
