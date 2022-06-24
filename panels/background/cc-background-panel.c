@@ -50,8 +50,18 @@
 #define INTERFACE_PATH_ID "org.gnome.desktop.interface"
 #define INTERFACE_COLOR_SCHEME_KEY "color-scheme"
 #define INTERFACE_GTK_THEME_KEY "gtk-theme"
+#define INTERFACE_ACCENT_COLOR_KEY "accent-color"
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
+
+const double red[] = {1.0, 2.0, 3.0};
+const double orange[] = {1.0, 2.0, 3.0};
+const double yellow[] = {1.0, 2.0, 3.0};
+const double green[] = {1.0, 2.0, 3.0};
+const double mint[] = {1.0, 2.0, 3.0};
+const double blue[] = {1.0, 2.0, 3.0};
+const double purple[] = {1.0, 2.0, 3.0};
+const double pink[] = {1.0, 2.0, 3.0};
 
 struct _CcBackgroundPanel
 {
@@ -75,19 +85,18 @@ struct _CcBackgroundPanel
   GtkToggleButton *light_toggle;
   GtkToggleButton *dark_toggle;
   
-  // Buttons
-  GtkFlowBox    *color_box;
-  CcColorButton *red;
-  CcColorButton *orange;
-  CcColorButton *yellow;
-  CcColorButton *green;
-  CcColorButton *blue;
-  CcColorButton *indigo;
-  CcColorButton *purple;
-  CcColorButton *pink;
-  CcColorButton *mint;
-  CcColorButton *brown;
-
+  // Accent Buttons
+  GtkBox         *color_box;
+  GtkCheckButton *red;
+  GtkCheckButton *orange;
+  GtkCheckButton *yellow;
+  GtkCheckButton *green;
+  GtkCheckButton *blue;
+  GtkCheckButton *indigo;
+  GtkCheckButton *purple;
+  GtkCheckButton *pink;
+  GtkCheckButton *mint;
+  GtkCheckButton *brown;
 };
 
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
@@ -379,32 +388,139 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
 }
 
 static void
-on_accent_colour_toggled (CcBackgroundPanel *self)
+on_red_toggled (CcPanel *self)
 {
-  GtkWidget *selected_item = NULL;
-  GtkStyleContext *context = NULL;
-  GdkRGBA rgba;
-  g_autoptr(GList) selected = NULL;
+  double[] value = red[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_orange_toggled (CcPanel *self)
+{
+  double[] value = orange[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_yellow_toggled (CcPanel *self)
+{
+  double[] value = yellow[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_green_toggled (CcPanel *self)
+{
+  double[] value = green[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_mint_toggled (CcPanel *self)
+{
+  double[] value = mint[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_blue_toggled (CcPanel *self)
+{
+  double[] value = blue[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_purple_toggled (CcPanel *self)
+{
+  double[] value = purple[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+on_pink_toggled (CcPanel *self)
+{
+  double[] value = pink[];
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
+}
+static void
+accent_refresh (CcPanel *self)
+{
+  double[] value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
 
-  g_autoptr(GVariant) tuple = NULL;
-
-  selected = gtk_flow_box_get_selected_children (self->color_box);
-
-  if (selected)
-    selected_item = GTK_WIDGET (GTK_FLOW_BOX_CHILD (g_list_nth_data (selected, 0)));
-  
-
-  gtk_widget_set_state_flags (GTK_WIDGET (selected_item), GTK_STATE_FLAG_SELECTED | GTK_STATE_FLAG_ACTIVE, false);
-
-  context = gtk_widget_get_style_context (GTK_WIDGET (gtk_widget_get_first_child (selected_item)));
-  gtk_style_context_get_color (context, &rgba);
-  
-  tuple = g_variant_new ("(ddd)",
-                         (double) rgba.red,
-                         (double) rgba.green,
-                         (double) rgba.blue);
-
-  g_settings_set_value (self->interface_settings, "accent-color", tuple);
+  if (value == red[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == orange[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == yellow[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == green[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == mint[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == blue[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == purple[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+  } else if (value == pink[]) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), TRUE);
+  }
 }
 
 static const char *
@@ -468,16 +584,21 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, yellow);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, green);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, blue);
-  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, indigo);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, purple);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, pink);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mint);
-  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, brown);
 
   gtk_widget_class_bind_template_callback (widget_class, on_light_dark_toggle_active_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_chooser_background_chosen_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_add_picture_button_clicked_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_accent_colour_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_red_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_orange_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_yellow_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_green_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_mint_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_blue_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_purple_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_pink_toggled);
 }
 
 static void
@@ -531,6 +652,12 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                            G_CALLBACK (reload_light_dark_toggles),
                            panel,
                            G_CONNECT_SWAPPED);
+  g_signal_connect_object (panel->interface_settings,
+                           "changed::" INTERFACE_ACCENT_COLOR_KEY,
+                           G_CALLBACK (accent_refresh),
+                           panel,
+                           G_CONNECT_SWAPPED);
+  accent_refresh ();
 
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                             G_DBUS_PROXY_FLAGS_NONE,
