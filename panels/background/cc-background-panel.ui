@@ -93,81 +93,81 @@
               <object class="AdwActionRow">
                 <property name="title" translatable="yes">Accent Color</property>
                 <child>
-                  <object class="GtkFlowBox" id="color_box">
-                    <property name="max-children-per-line">10</property>
-                    <property name="min-children-per-line">10</property>
-                    <property name="column-spacing">6</property>
+                  <object class="GtkBox" id="color_box">
+                    <property name="spacing">12</property>
                     <property name="valign">center</property>
-                    <property name="margin-top">6</property>
-                    <property name="margin-bottom">6</property>
                     <style>
-                      <class name="dock-size-row" />
+                      <class name="accent-row" />
                     </style>
-                    <signal name="selected-children-changed" handler="on_accent_colour_toggled" object="CcBackgroundPanel" swapped="yes" />
                     <child>
-                      <object class="CcColorButton" id="red">
-
-                        <property name="color">meson-red</property>
+                      <object class="GtkCheckButton" id="purple">
+                        <signal name="toggled" handler="on_purple_toggled" object="CcPanel" />
+                        <style>
+                          <class name="tau-purple" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="orange">
-                        <property name="color">lepton-orange</property>
+                      <object class="GtkCheckButton" id="red">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_red_toggled" object="CcPanel" />
+                        <style>
+                          <class name="meson-red" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="yellow">
-
-                        <property name="color">electron-yellow</property>
+                      <object class="GtkCheckButton" id="orange">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_orange_toggled" object="CcPanel" />
+                        <style>
+                          <class name="lepton-orange" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="green">
-
-                        <property name="color">muon-green</property>
-                        
+                      <object class="GtkCheckButton" id="yellow">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_yellow_toggled" object="CcPanel" />
+                        <style>
+                          <class name="electron-yellow" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="blue">
-
-                        <property name="color">proton-blue</property>
-                        
+                      <object class="GtkCheckButton" id="green">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_green_toggled" object="CcPanel" />
+                        <style>
+                          <class name="muon-green" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="indigo">
-
-                        <property name="color">photon-indigo</property>
-                        
+                      <object class="GtkCheckButton" id="mint">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_mint_toggled" object="CcPanel" />
+                        <style>
+                          <class name="baryon-mint" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="purple">
-
-                        <property name="color">tau-purple</property>
-                        
+                      <object class="GtkCheckButton" id="blue">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_blue_toggled" object="CcPanel" />
+                        <style>
+                          <class name="proton-blue" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="pink">
-
-                        <property name="color">fermion-pink</property>
-                        
-                      </object>
-                    </child>
-                    <child>
-                      <object class="CcColorButton" id="mint">
-
-                        <property name="color">baryon-mint</property>
-                        
-                      </object>
-                    </child>
-                    <child>
-                      <object class="CcColorButton" id="brown">
-
-                        <property name="color">gluon-brown</property>
-                        
+                      <object class="GtkCheckButton" id="pink">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_pink_toggled" object="CcPanel" />
+                        <style>
+                          <class name="fermion-pink" />
+                        </style>
                       </object>
                     </child>
                   </object>

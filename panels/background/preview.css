@@ -75,22 +75,9 @@ background-preview .window.front.dark .header-bar {
   margin: 8px;
 }
 
-.selected-check {
+.accent-row radio {
   color: @accent_fg_color;
-  background: @accent_bg_color;
-  border-radius: 100px;
-  padding: 2px;
-  opacity: 0;
-  margin: 6px;
-}
-
-flowboxchild:selected .selected-check {
-  opacity: 1;
-}
-
-.remove-button {
-  padding: 2px;
-  min-width: 0;
-  min-height: 0;
-  margin: 6px;
+  min-height: 24px;
+  min-width: 24px;
+  margin: 8px;
 }
