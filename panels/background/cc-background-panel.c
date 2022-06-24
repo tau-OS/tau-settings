@@ -54,14 +54,14 @@
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
 
-const double red[] = {1.0, 2.0, 3.0};
-const double orange[] = {1.0, 2.0, 3.0};
-const double yellow[] = {1.0, 2.0, 3.0};
-const double green[] = {1.0, 2.0, 3.0};
-const double mint[] = {1.0, 2.0, 3.0};
-const double blue[] = {1.0, 2.0, 3.0};
-const double purple[] = {1.0, 2.0, 3.0};
-const double pink[] = {1.0, 2.0, 3.0};
+const double red[] = {1.0, 1.0, 1.0};
+const double orange[] = {1.0, 1.0, 1.0};
+const double yellow[] = {1.0, 1.0, 1.0};
+const double green[] = {1.0, 1.0, 1.0};
+const double mint[] = {1.0, 1.0, 1.0};
+const double blue[] = {1.0, 1.0, 1.0};
+const double purple[] = {1.0, 1.0, 1.0};
+const double pink[] = {1.0, 1.0, 1.0};
 
 struct _CcBackgroundPanel
 {
