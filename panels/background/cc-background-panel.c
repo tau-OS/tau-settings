@@ -53,14 +53,14 @@
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
 
-const double red[] = {1.0, 1.0, 1.0};
-const double orange[] = {1.0, 1.0, 1.0};
-const double yellow[] = {1.0, 1.0, 1.0};
-const double green[] = {1.0, 1.0, 1.0};
-const double mint[] = {1.0, 1.0, 1.0};
-const double blue[] = {1.0, 1.0, 1.0};
-const double purple[] = {1.0, 1.0, 1.0};
-const double pink[] = {1.0, 1.0, 1.0};
+const double redarr[] = {1.0, 1.0, 1.0};
+const double orangearr[] = {1.0, 1.0, 1.0};
+const double yellowarr[] = {1.0, 1.0, 1.0};
+const double greenarr[] = {1.0, 1.0, 1.0};
+const double mintarr[] = {1.0, 1.0, 1.0};
+const double bluearr[] = {1.0, 1.0, 1.0};
+const double purplearr[] = {1.0, 1.0, 1.0};
+const double pinkarr[] = {1.0, 1.0, 1.0};
 
 struct _CcBackgroundPanel
 {
@@ -91,11 +91,9 @@ struct _CcBackgroundPanel
   GtkCheckButton *yellow;
   GtkCheckButton *green;
   GtkCheckButton *blue;
-  GtkCheckButton *indigo;
   GtkCheckButton *purple;
   GtkCheckButton *pink;
   GtkCheckButton *mint;
-  GtkCheckButton *brown;
 };
 
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
@@ -387,63 +385,63 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
 }
 
 static void
-on_red_toggled (CcPanel *self)
+on_red_toggled (CcBackgroundPanel *self)
 {
-  double[] value = red[];
+  double[] value = redarr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_orange_toggled (CcPanel *self)
+on_orange_toggled (CcBackgroundPanel *self)
 {
-  double[] value = orange[];
+  double[] value = orangearr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_yellow_toggled (CcPanel *self)
+on_yellow_toggled (CcBackgroundPanel *self)
 {
-  double[] value = yellow[];
+  double[] value = yellowarr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_green_toggled (CcPanel *self)
+on_green_toggled (CcBackgroundPanel *self)
 {
-  double[] value = green[];
+  double[] value = greenarr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_mint_toggled (CcPanel *self)
+on_mint_toggled (CcBackgroundPanel *self)
 {
-  double[] value = mint[];
+  double[] value = mintarr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_blue_toggled (CcPanel *self)
+on_blue_toggled (CcBackgroundPanel *self)
 {
-  double[] value = blue[];
+  double[] value = bluearr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_purple_toggled (CcPanel *self)
+on_purple_toggled (CcBackgroundPanel *self)
 {
-  double[] value = purple[];
+  double[] value = purplearr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-on_pink_toggled (CcPanel *self)
+on_pink_toggled (CcBackgroundPanel *self)
 {
-  double[] value = pink[];
+  double[] value = pinkarr;
   if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != value)
     g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, value);
 }
 static void
-accent_refresh (CcPanel *self)
+accent_refresh (CcBackgroundPanel *self)
 {
   double[] value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
 
