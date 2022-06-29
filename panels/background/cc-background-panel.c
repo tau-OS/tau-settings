@@ -510,6 +510,15 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), TRUE);
+  } else {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
   }
 }
 
