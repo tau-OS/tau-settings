@@ -55,28 +55,28 @@
 
 // Constants for each accent color
 const double redd[] = {0.8588, 0.1568, 0.3764};
-GVariant * redarr = g_variant_new ("(ddd)", redd);
+const GVariant * redarr = g_variant_new ("(ddd)", redd);
 
 const double oranged[] = {0.9686, 0.5058, 0.168};
-GVariant * orangearr = g_variant_new ("(ddd)", oranged);
+const GVariant * orangearr = g_variant_new ("(ddd)", oranged);
 
 const double yellowd[] = {0.8784, 0.6313, 0.0039};
-GVariant * yellowarr = g_variant_new ("(ddd)", yellowd);
+const GVariant * yellowarr = g_variant_new ("(ddd)", yellowd);
 
 const double greend[] = {0.2862, 0.8156, 0.3686};
-GVariant * greenarr = g_variant_new ("(ddd)", greend);
+const GVariant * greenarr = g_variant_new ("(ddd)", greend);
 
 const double mintd[] = {0.3372, 0.7490, 0.6509};
-GVariant * mintarr = g_variant_new ("(ddd)", mintd);
+const GVariant * mintarr = g_variant_new ("(ddd)", mintd);
 
 const double blued[] = {0.1490, 0.5568, 0.9764};
-GVariant * bluearr = g_variant_new ("(ddd)", blued);
+const GVariant * bluearr = g_variant_new ("(ddd)", blued);
 
 const double purpled[] = {0.5490, 0.3372, 0.7490};
-GVariant * purplearr = g_variant_new ("(ddd)", purpled);
+const GVariant * purplearr = g_variant_new ("(ddd)", purpled);
 
 const double pinkd[] = {0.7490, 0.3372, 0.6588};
-GVariant * pinkarr = g_variant_new ("(ddd)", pinkd);
+const GVariant * pinkarr = g_variant_new ("(ddd)", pinkd);
 
 struct _CcBackgroundPanel
 {
@@ -451,7 +451,7 @@ on_pink_toggled (CcBackgroundPanel *self)
 static void
 accent_refresh (CcBackgroundPanel *self)
 {
-  double[] value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
+  GVariant value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
 
   if (value == redarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), TRUE);
