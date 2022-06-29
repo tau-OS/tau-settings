@@ -562,7 +562,6 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
 
   g_type_ensure (CC_TYPE_BACKGROUND_CHOOSER);
   g_type_ensure (CC_TYPE_BACKGROUND_PREVIEW);
-  g_type_ensure (CC_TYPE_COLOR_BUTTON);
 
   panel_class->get_help_uri = cc_background_panel_get_help_uri;
 
@@ -657,7 +656,7 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                            G_CALLBACK (accent_refresh),
                            panel,
                            G_CONNECT_SWAPPED);
-  accent_refresh ();
+  accent_refresh (panel);
 
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                             G_DBUS_PROXY_FLAGS_NONE,
