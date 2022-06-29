@@ -451,7 +451,7 @@ on_pink_toggled (CcBackgroundPanel *self)
 static void
 accent_refresh (CcBackgroundPanel *self)
 {
-  GVariant double[] value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
+  double[] value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
 
   if (value == redarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), TRUE);
