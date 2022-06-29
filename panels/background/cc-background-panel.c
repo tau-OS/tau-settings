@@ -55,28 +55,28 @@
 
 // Constants for each accent color
 const double redd[] = {0.8588, 0.1568, 0.3764};
-GVariant * redarr;
+GVariant* redarr;
 
 const double oranged[] = {0.9686, 0.5058, 0.168};
-GVariant * orangearr;
+GVariant* orangearr;
 
 const double yellowd[] = {0.8784, 0.6313, 0.0039};
-GVariant * yellowarr;
+GVariant* yellowarr;
 
 const double greend[] = {0.2862, 0.8156, 0.3686};
-GVariant * greenarr;
+GVariant* greenarr;
 
 const double mintd[] = {0.3372, 0.7490, 0.6509};
-GVariant * mintarr;
+GVariant* mintarr;
 
 const double blued[] = {0.1490, 0.5568, 0.9764};
-GVariant * bluearr;
+GVariant* bluearr;
 
 const double purpled[] = {0.5490, 0.3372, 0.7490};
-GVariant * purplearr;
+GVariant* purplearr;
 
 const double pinkd[] = {0.7490, 0.3372, 0.6588};
-GVariant * pinkarr;
+GVariant* pinkarr;
 
 struct _CcBackgroundPanel
 {
@@ -667,14 +667,14 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                            panel,
                            G_CONNECT_SWAPPED);
 	
-  panel->redarr = g_variant_new ("(ddd)", redd);
-  panel->orangearr = g_variant_new ("(ddd)", oranged);
-  panel->yellowarr = g_variant_new ("(ddd)", yellowd);
-  panel->greenarr = g_variant_new ("(ddd)", greend);
-  panel->mintarr = g_variant_new ("(ddd)", mintd);
-  panel->bluearr = g_variant_new ("(ddd)", blued);
-  panel->purplearr = g_variant_new ("(ddd)", purpled);
-  panel->pinkarr = g_variant_new ("(ddd)", pinkd);
+  redarr = g_variant_new ("(ddd)", redd);
+  orangearr = g_variant_new ("(ddd)", oranged);
+  yellowarr = g_variant_new ("(ddd)", yellowd);
+  greenarr = g_variant_new ("(ddd)", greend);
+  mintarr = g_variant_new ("(ddd)", mintd);
+  bluearr = g_variant_new ("(ddd)", blued);
+  purplearr = g_variant_new ("(ddd)", purpled);
+  pinkarr = g_variant_new ("(ddd)", pinkd);
 
   g_signal_connect_object (panel->interface_settings,
                            "changed::" INTERFACE_ACCENT_COLOR_KEY,
