@@ -54,14 +54,14 @@
 #define INTERFACE_SHELL_THEME_KEY "name"
 
 // Constants for each accent color
-const double redarr[] = {0.8588, 0.1568, 0.3764};
-const double orangearr[] = {0.9686, 0.5058, 0.168};
-const double yellowarr[] = {0.8784, 0.6313, 0.0039};
-const double greenarr[] = {0.2862, 0.8156, 0.3686};
-const double mintarr[] = {0.3372, 0.7490, 0.6509};
-const double bluearr[] = {0.1490, 0.5568, 0.9764};
-const double purplearr[] = {0.5490, 0.3372, 0.7490};
-const double pinkarr[] = {0.7490, 0.3372, 0.6588};
+struct _GVariant * redarr[] = {0.8588, 0.1568, 0.3764};
+struct _GVariant * orangearr[] = {0.9686, 0.5058, 0.168};
+struct _GVariant * yellowarr[] = {0.8784, 0.6313, 0.0039};
+struct _GVariant * greenarr[] = {0.2862, 0.8156, 0.3686};
+struct _GVariant * mintarr[] = {0.3372, 0.7490, 0.6509};
+struct _GVariant * bluearr[] = {0.1490, 0.5568, 0.9764};
+struct _GVariant * purplearr[] = {0.5490, 0.3372, 0.7490};
+struct _GVariant * pinkarr[] = {0.7490, 0.3372, 0.6588};
 
 struct _CcBackgroundPanel
 {
