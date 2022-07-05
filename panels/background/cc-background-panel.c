@@ -87,6 +87,7 @@ struct _CcBackgroundPanel
   GSettings *settings;
   GSettings *lock_settings;
   GSettings *interface_settings;
+  GSettings *interface_settings2;
   GSettings *theme_settings;
 
   GnomeDesktopThumbnailFactory *thumb_factory;
@@ -619,6 +620,7 @@ on_settings_changed (CcBackgroundPanel *panel)
 {
   reload_current_bg (panel);
   update_preview (panel);
+  accent_refresh (panel);
 }
 
 static void
@@ -665,7 +667,9 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                            G_CALLBACK (reload_light_dark_toggles),
                            panel,
                            G_CONNECT_SWAPPED);
-	
+  
+  panel->interface_settings2 = g_settings_new (INTERFACE_PATH_ID);
+  
   redarr = g_variant_new ("(ddd)", redd);
   orangearr = g_variant_new ("(ddd)", oranged);
   yellowarr = g_variant_new ("(ddd)", yellowd);
@@ -674,13 +678,14 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   bluearr = g_variant_new ("(ddd)", blued);
   purplearr = g_variant_new ("(ddd)", purpled);
   pinkarr = g_variant_new ("(ddd)", pinkd);
+  
+  accent_refresh (panel);
 
-  g_signal_connect_object (panel->interface_settings,
+  g_signal_connect_object (panel->interface_settings2,
                            "changed::" INTERFACE_ACCENT_COLOR_KEY,
                            G_CALLBACK (accent_refresh),
                            panel,
                            G_CONNECT_SWAPPED);
-  accent_refresh (panel);
 
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                             G_DBUS_PROXY_FLAGS_NONE,
