@@ -105,6 +105,15 @@
                       </object>
                     </child>
                     <child>
+                      <object class="GtkCheckButton" id="pink">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_pink_toggled" />
+                        <style>
+                          <class name="fermion-pink" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
                       <object class="GtkCheckButton" id="red">
                         <property name="group">purple</property>
                         <signal name="toggled" handler="on_red_toggled" />
@@ -155,15 +164,6 @@
                         <signal name="toggled" handler="on_blue_toggled" />
                         <style>
                           <class name="proton-blue" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkCheckButton" id="pink">
-                        <property name="group">purple</property>
-                        <signal name="toggled" handler="on_pink_toggled" />
-                        <style>
-                          <class name="fermion-pink" />
                         </style>
                       </object>
                     </child>
