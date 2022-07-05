@@ -93,14 +93,12 @@
                 <child>
                   <object class="GtkBox" id="color_box">
                     <property name="valign">center</property>
-                    <style>
-                      <class name="accent-row" />
-                    </style>
                     <child>
                       <object class="GtkCheckButton" id="purple">
                         <signal name="toggled" handler="on_purple_toggled" />
                         <style>
                           <class name="tau-purple" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -110,6 +108,7 @@
                         <signal name="toggled" handler="on_pink_toggled" />
                         <style>
                           <class name="fermion-pink" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -119,6 +118,7 @@
                         <signal name="toggled" handler="on_red_toggled" />
                         <style>
                           <class name="meson-red" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -128,6 +128,7 @@
                         <signal name="toggled" handler="on_orange_toggled" />
                         <style>
                           <class name="lepton-orange" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -137,6 +138,7 @@
                         <signal name="toggled" handler="on_yellow_toggled" />
                         <style>
                           <class name="electron-yellow" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -146,6 +148,7 @@
                         <signal name="toggled" handler="on_green_toggled" />
                         <style>
                           <class name="muon-green" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -155,6 +158,7 @@
                         <signal name="toggled" handler="on_mint_toggled" />
                         <style>
                           <class name="baryon-mint" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
@@ -164,6 +168,7 @@
                         <signal name="toggled" handler="on_blue_toggled" />
                         <style>
                           <class name="proton-blue" />
+                          <class name="selection-mode" />
                         </style>
                       </object>
                     </child>
