@@ -53,31 +53,6 @@
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
 
-// Constants for each accent color
-const double redd[] = {0.8588, 0.1568, 0.3764};
-GVariant* redarr;
-
-const double oranged[] = {0.9686, 0.5058, 0.168};
-GVariant* orangearr;
-
-const double yellowd[] = {0.8784, 0.6313, 0.0039};
-GVariant* yellowarr;
-
-const double greend[] = {0.2862, 0.8156, 0.3686};
-GVariant* greenarr;
-
-const double mintd[] = {0.3372, 0.7490, 0.6509};
-GVariant* mintarr;
-
-const double blued[] = {0.1490, 0.5568, 0.9764};
-GVariant* bluearr;
-
-const double purpled[] = {0.5490, 0.3372, 0.7490};
-GVariant* purplearr;
-
-const double pinkd[] = {0.7490, 0.3372, 0.6588};
-GVariant* pinkarr;
-
 struct _CcBackgroundPanel
 {
   CcPanel parent_instance;
@@ -103,13 +78,21 @@ struct _CcBackgroundPanel
   
   // Accent Buttons
   GtkBox         *color_box;
+  GVariant       *redarr;
   GtkCheckButton *red;
+  GVariant       *orangearr;
   GtkCheckButton *orange;
+  GVariant       *yellowarr;
   GtkCheckButton *yellow;
+  GVariant       *greenarr;
   GtkCheckButton *green;
+  GVariant       *bluearr;
   GtkCheckButton *blue;
+  GVariant       *purplearr;
   GtkCheckButton *purple;
+  GVariant       *pinkarr;
   GtkCheckButton *pink;
+  GVariant       *mintarr;
   GtkCheckButton *mint;
 };
 
@@ -404,57 +387,57 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
 static void
 on_red_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != redarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, redarr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->redarr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->redarr);
 }
 static void
 on_orange_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != orangearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, orangearr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->orangearr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->orangearr);
 }
 static void
 on_yellow_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != yellowarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, yellowarr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->yellowarr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->yellowarr);
 }
 static void
 on_green_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != greenarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, greenarr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->greenarr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->greenarr);
 }
 static void
 on_mint_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != mintarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, mintarr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->mintarr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->mintarr);
 }
 static void
 on_blue_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != bluearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, bluearr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->bluearr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->bluearr);
 }
 static void
 on_purple_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != purplearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, purplearr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->purplearr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->purplearr);
 }
 static void
 on_pink_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != pinkarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, pinkarr);
+  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->pinkarr)
+    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->pinkarr);
 }
 static void
 accent_refresh (CcBackgroundPanel *self)
 {
   GVariant* value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
 
-  if (value == redarr) {
+  if (value == self->redarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -463,7 +446,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == orangearr) {
+  } else if (value == self->orangearr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -472,7 +455,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == yellowarr) {
+  } else if (value == self->yellowarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), TRUE);
@@ -481,7 +464,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == greenarr) {
+  } else if (value == self->greenarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -490,7 +473,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == mintarr) {
+  } else if (value == self->mintarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -499,7 +482,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == bluearr) {
+  } else if (value == self->bluearr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -508,7 +491,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == purplearr) {
+  } else if (value == self->purplearr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -517,7 +500,7 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
-  } else if (value == pinkarr) {
+  } else if (value == self->pinkarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
@@ -670,14 +653,14 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   
   panel->interface_settings2 = g_settings_new (INTERFACE_PATH_ID);
   
-  redarr = g_variant_new ("(ddd)", redd);
-  orangearr = g_variant_new ("(ddd)", oranged);
-  yellowarr = g_variant_new ("(ddd)", yellowd);
-  greenarr = g_variant_new ("(ddd)", greend);
-  mintarr = g_variant_new ("(ddd)", mintd);
-  bluearr = g_variant_new ("(ddd)", blued);
-  purplearr = g_variant_new ("(ddd)", purpled);
-  pinkarr = g_variant_new ("(ddd)", pinkd);
+  panel->redarr = g_variant_new ("(ddd)", {0.8588, 0.1568, 0.3764});
+  panel->orangearr = g_variant_new ("(ddd)", {0.9686, 0.5058, 0.168});
+  panel->yellowarr = g_variant_new ("(ddd)", {0.8784, 0.6313, 0.0039});
+  panel->greenarr = g_variant_new ("(ddd)", {0.2862, 0.8156, 0.3686});
+  panel->mintarr = g_variant_new ("(ddd)", {0.3372, 0.7490, 0.6509});
+  panel->bluearr = g_variant_new ("(ddd)", {0.1490, 0.5568, 0.9764});
+  panel->purplearr = g_variant_new ("(ddd)", {0.5490, 0.3372, 0.7490});
+  panel->pinkarr = g_variant_new ("(ddd)", {0.7490, 0.3372, 0.6588});
   
   accent_refresh (panel);
 
