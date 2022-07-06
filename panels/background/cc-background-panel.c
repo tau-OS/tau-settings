@@ -654,14 +654,22 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   
   panel->interface_settings2 = g_settings_new (INTERFACE_PATH_ID);
   
-  panel->redarr = g_variant_new ("(ddd)", {0.8588, 0.1568, 0.3764});
-  panel->orangearr = g_variant_new ("(ddd)", {0.9686, 0.5058, 0.168});
-  panel->yellowarr = g_variant_new ("(ddd)", {0.8784, 0.6313, 0.0039});
-  panel->greenarr = g_variant_new ("(ddd)", {0.2862, 0.8156, 0.3686});
-  panel->mintarr = g_variant_new ("(ddd)", {0.3372, 0.7490, 0.6509});
-  panel->bluearr = g_variant_new ("(ddd)", {0.1490, 0.5568, 0.9764});
-  panel->purplearr = g_variant_new ("(ddd)", {0.5490, 0.3372, 0.7490});
-  panel->pinkarr = g_variant_new ("(ddd)", {0.7490, 0.3372, 0.6588});
+  double redd[] = {0.8588, 0.1568, 0.3764};
+  double oranged[] = {0.9686, 0.5058, 0.168};
+  double yellowd[] = {0.8784, 0.6313, 0.0039};
+  double greend[] = {0.2862, 0.8156, 0.3686};
+  double mintd[] = {0.3372, 0.7490, 0.6509};
+  double blued[] = {0.1490, 0.5568, 0.9764};
+  double purpled[] = {0.5490, 0.3372, 0.7490};
+  double pinkd[] = {0.7490, 0.3372, 0.6588};
+  panel->redarr = g_variant_new ("(ddd)", redd);
+  panel->orangearr = g_variant_new ("(ddd)", oranged);
+  panel->yellowarr = g_variant_new ("(ddd)", yellowd);
+  panel->greenarr = g_variant_new ("(ddd)", greend);
+  panel->mintarr = g_variant_new ("(ddd)", mintd);
+  panel->bluearr = g_variant_new ("(ddd)", blued);
+  panel->purplearr = g_variant_new ("(ddd)", purpled);
+  panel->pinkarr = g_variant_new ("(ddd)", pinkd);
   
   accent_refresh (panel);
 
