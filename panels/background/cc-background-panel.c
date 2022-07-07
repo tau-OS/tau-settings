@@ -618,6 +618,7 @@ static void
 cc_background_panel_init (CcBackgroundPanel *panel)
 {
   g_autoptr(GSettingsSchema) schema = NULL;
+  g_autoptr(GSettingsSchema) tau_appearance_schema = NULL;
   g_resources_register (cc_background_get_resource ());
 
   gtk_widget_init_template (GTK_WIDGET (panel));
@@ -640,8 +641,16 @@ cc_background_panel_init (CcBackgroundPanel *panel)
     return;
   }
 
+  tau_appearance_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                            TAU_APPEARANCE_PATH_ID, 
+                                            TRUE);
+  if (!tau_appearance_schema) {
+    g_warning ("No Tau schema installed here. Please fix your installation.");
+    return;
+  }
+
   panel->interface_settings = g_settings_new (INTERFACE_PATH_ID);
-  panel->tau_appearance_settings = g_settings_new (TAU_APPEARANCE_PATH_ID);
+  panel->tau_appearance_settings = g_settings_new_full (TAU_APPEARANCE_PATH_ID, NULL, NULL);
   panel->theme_settings = g_settings_new_full (schema, NULL, NULL);
 
   /* Load the background */
