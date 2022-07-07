@@ -635,21 +635,23 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
                                             SHELL_PATH_ID, 
                                             TRUE);
+  tau_appearance_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                            TAU_APPEARANCE_PATH_ID, 
+                                            TRUE);
+
   if (!schema) {
     g_warning ("No user theme settings installed here. Please fix your installation.");
     return;
   }
 
-  tau_appearance_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
-                                            TAU_APPEARANCE_PATH_ID, 
-                                            TRUE);
+
   if (!tau_appearance_schema) {
     g_warning ("No Tau schema installed here. Please fix your installation.");
     return;
   }
 
   panel->interface_settings = g_settings_new (INTERFACE_PATH_ID);
-  panel->tau_appearance_settings = g_settings_new_full (TAU_APPEARANCE_PATH_ID, NULL, NULL);
+  panel->tau_appearance_settings = g_settings_new_full (tau_appearance_schema, NULL, NULL);
   panel->theme_settings = g_settings_new_full (schema, NULL, NULL);
 
   /* Load the background */
