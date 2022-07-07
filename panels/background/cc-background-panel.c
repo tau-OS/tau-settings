@@ -49,9 +49,11 @@
 #define INTERFACE_PATH_ID "org.gnome.desktop.interface"
 #define INTERFACE_COLOR_SCHEME_KEY "color-scheme"
 #define INTERFACE_GTK_THEME_KEY "gtk-theme"
-#define INTERFACE_ACCENT_COLOR_KEY "accent-color"
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
+
+#define TAU_APPEARANCE_PATH_ID "co.tauos.desktop.appearance"
+#define TAU_APPEARANCE_ACCENT_COLOR_KEY "accent-color"
 
 struct _CcBackgroundPanel
 {
@@ -62,7 +64,8 @@ struct _CcBackgroundPanel
   GSettings *settings;
   GSettings *lock_settings;
   GSettings *interface_settings;
-  GSettings *interface_settings2;
+  GSettings *tau_appearance_settings;
+  GSettings *tau_appearance_settings2;
   GSettings *theme_settings;
 
   GnomeDesktopThumbnailFactory *thumb_factory;
@@ -387,55 +390,55 @@ on_add_picture_button_clicked_cb (CcBackgroundPanel *self)
 static void
 on_red_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->redarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->redarr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->redarr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->redarr);
 }
 static void
 on_orange_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->orangearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->orangearr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->orangearr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->orangearr);
 }
 static void
 on_yellow_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->yellowarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->yellowarr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->yellowarr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->yellowarr);
 }
 static void
 on_green_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->greenarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->greenarr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->greenarr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->greenarr);
 }
 static void
 on_mint_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->mintarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->mintarr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->mintarr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->mintarr);
 }
 static void
 on_blue_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->bluearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->bluearr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->bluearr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->bluearr);
 }
 static void
 on_purple_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->purplearr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->purplearr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->purplearr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->purplearr);
 }
 static void
 on_pink_toggled (CcBackgroundPanel *self)
 {
-  if (g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY) != self->pinkarr)
-    g_settings_set_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY, self->pinkarr);
+  if (g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != self->pinkarr)
+    g_settings_set_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, self->pinkarr);
 }
 static void
 accent_refresh (CcBackgroundPanel *self)
 {
-  GVariant* value = g_settings_get_value (self->interface_settings, INTERFACE_ACCENT_COLOR_KEY);
+  GVariant* value = g_settings_get_value (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY);
 
   if (value == self->redarr) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), TRUE);
@@ -535,6 +538,7 @@ cc_background_panel_dispose (GObject *object)
   g_clear_object (&panel->settings);
   g_clear_object (&panel->lock_settings);
   g_clear_object (&panel->interface_settings);
+  g_clear_object (&panel->tau_appearance_settings);
   g_clear_object (&panel->theme_settings);
   g_clear_object (&panel->thumb_factory);
   g_clear_object (&panel->proxy);
@@ -634,6 +638,7 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   }
 
   panel->interface_settings = g_settings_new (INTERFACE_PATH_ID);
+  panel->tau_appearance_settings = g_settings_new (TAU_APPEARANCE_PATH_ID);
   panel->theme_settings = g_settings_new_full (schema, NULL, NULL);
 
   /* Load the background */
@@ -652,29 +657,21 @@ cc_background_panel_init (CcBackgroundPanel *panel)
                            panel,
                            G_CONNECT_SWAPPED);
   
-  panel->interface_settings2 = g_settings_new (INTERFACE_PATH_ID);
+  panel->tau_appearance_settings2 = g_settings_new (TAU_APPEARANCE_PATH_ID);
   
-  double redd[] = {0.8588, 0.1568, 0.3764};
-  double oranged[] = {0.9686, 0.5058, 0.168};
-  double yellowd[] = {0.8784, 0.6313, 0.0039};
-  double greend[] = {0.2862, 0.8156, 0.3686};
-  double mintd[] = {0.3372, 0.7490, 0.6509};
-  double blued[] = {0.1490, 0.5568, 0.9764};
-  double purpled[] = {0.5490, 0.3372, 0.7490};
-  double pinkd[] = {0.7490, 0.3372, 0.6588};
-  panel->redarr = g_variant_new ("(ddd)", redd);
-  panel->orangearr = g_variant_new ("(ddd)", oranged);
-  panel->yellowarr = g_variant_new ("(ddd)", yellowd);
-  panel->greenarr = g_variant_new ("(ddd)", greend);
-  panel->mintarr = g_variant_new ("(ddd)", mintd);
-  panel->bluearr = g_variant_new ("(ddd)", blued);
-  panel->purplearr = g_variant_new ("(ddd)", purpled);
-  panel->pinkarr = g_variant_new ("(ddd)", pinkd);
+  panel->redarr = g_variant_new ("s", "red");
+  panel->orangearr = g_variant_new ("s", "orange");
+  panel->yellowarr = g_variant_new ("s", "yellow");
+  panel->greenarr = g_variant_new ("s", "green");
+  panel->mintarr = g_variant_new ("s", "mint");
+  panel->bluearr = g_variant_new ("s", "blue");
+  panel->purplearr = g_variant_new ("s", "purple");
+  panel->pinkarr = g_variant_new ("s", "pink");
   
   accent_refresh (panel);
 
-  g_signal_connect_object (panel->interface_settings2,
-                           "changed::" INTERFACE_ACCENT_COLOR_KEY,
+  g_signal_connect_object (panel->tau_appearance_settings2,
+                           "changed::" TAU_APPEARANCE_ACCENT_COLOR_KEY,
                            G_CALLBACK (accent_refresh),
                            panel,
                            G_CONNECT_SWAPPED);
