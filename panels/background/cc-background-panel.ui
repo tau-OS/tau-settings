@@ -95,7 +95,7 @@
                     <property name="valign">center</property>
                     <child>
                       <object class="GtkCheckButton" id="purple">
-                        <signal name="toggled" handler="on_purple_toggled" />
+                        <signal name="toggled" handler="on_purple_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="tau-purple" />
                           <class name="selection-mode" />
@@ -105,7 +105,7 @@
                     <child>
                       <object class="GtkCheckButton" id="pink">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_pink_toggled" />
+                        <signal name="toggled" handler="on_pink_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="fermion-pink" />
                           <class name="selection-mode" />
@@ -115,7 +115,7 @@
                     <child>
                       <object class="GtkCheckButton" id="red">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_red_toggled" />
+                        <signal name="toggled" handler="on_red_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="meson-red" />
                           <class name="selection-mode" />
@@ -125,7 +125,7 @@
                     <child>
                       <object class="GtkCheckButton" id="orange">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_orange_toggled" />
+                        <signal name="toggled" handler="on_orange_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="lepton-orange" />
                           <class name="selection-mode" />
@@ -135,7 +135,7 @@
                     <child>
                       <object class="GtkCheckButton" id="yellow">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_yellow_toggled" />
+                        <signal name="toggled" handler="on_yellow_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="electron-yellow" />
                           <class name="selection-mode" />
@@ -145,7 +145,7 @@
                     <child>
                       <object class="GtkCheckButton" id="green">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_green_toggled" />
+                        <signal name="toggled" handler="on_green_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="muon-green" />
                           <class name="selection-mode" />
@@ -155,7 +155,7 @@
                     <child>
                       <object class="GtkCheckButton" id="mint">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_mint_toggled" />
+                        <signal name="toggled" handler="on_mint_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="baryon-mint" />
                           <class name="selection-mode" />
@@ -165,7 +165,7 @@
                     <child>
                       <object class="GtkCheckButton" id="blue">
                         <property name="group">purple</property>
-                        <signal name="toggled" handler="on_blue_toggled" />
+                        <signal name="toggled" handler="on_blue_toggled" object="CcBackgroundPanel" />
                         <style>
                           <class name="proton-blue" />
                           <class name="selection-mode" />
