@@ -3,11 +3,9 @@
   <template class="CcBackgroundPanel" parent="CcPanel">
     <child type="content">
       <object class="GtkBox">
-
         <child>
           <object class="HeContentList">
             <property name="title" translatable="yes">Style</property>
-
             <child>
               <object class="HeContentBlock">
                 <property name="activatable">False</property>
@@ -93,91 +91,93 @@
               <object class="HeContentBlock">
                 <property name="title" translatable="yes">Accent Color</property>
                 <child>
-                  <object class="GtkFlowBox" id="color_box">
-                    <property name="max-children-per-line">10</property>
-                    <property name="min-children-per-line">10</property>
-                    <property name="column-spacing">6</property>
+                  <object class="GtkBox" id="color_box">
                     <property name="valign">center</property>
-                    <property name="margin-top">6</property>
-                    <property name="margin-bottom">6</property>
-                    <style>
-                      <class name="dock-size-row" />
-                    </style>
-                    <signal name="selected-children-changed" handler="on_accent_colour_toggled" object="CcBackgroundPanel" swapped="yes" />
                     <child>
-                      <object class="CcColorButton" id="red">
-
-                        <property name="color">meson-red</property>
+                      <object class="GtkCheckButton" id="purple">
+                        <signal name="toggled" handler="on_purple_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="tau-purple" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="orange">
-                        <property name="color">lepton-orange</property>
+                      <object class="GtkCheckButton" id="pink">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_pink_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="fermion-pink" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="yellow">
-
-                        <property name="color">electron-yellow</property>
+                      <object class="GtkCheckButton" id="red">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_red_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="meson-red" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="green">
-
-                        <property name="color">muon-green</property>
-                        
+                      <object class="GtkCheckButton" id="orange">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_orange_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="lepton-orange" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="blue">
-
-                        <property name="color">proton-blue</property>
-                        
+                      <object class="GtkCheckButton" id="yellow">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_yellow_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="electron-yellow" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="indigo">
-
-                        <property name="color">photon-indigo</property>
-                        
+                      <object class="GtkCheckButton" id="green">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_green_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="muon-green" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="purple">
-
-                        <property name="color">tau-purple</property>
-                        
+                      <object class="GtkCheckButton" id="mint">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_mint_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="baryon-mint" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                     <child>
-                      <object class="CcColorButton" id="pink">
-
-                        <property name="color">fermion-pink</property>
-                        
-                      </object>
-                    </child>
-                    <child>
-                      <object class="CcColorButton" id="mint">
-
-                        <property name="color">baryon-mint</property>
-                        
-                      </object>
-                    </child>
-                    <child>
-                      <object class="CcColorButton" id="brown">
-
-                        <property name="color">gluon-brown</property>
-                        
+                      <object class="GtkCheckButton" id="blue">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_blue_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="proton-blue" />
+                          <class name="selection-mode" />
+                        </style>
                       </object>
                     </child>
                   </object>
                 </child>
               </object>
             </child>
-
           </object>
         </child>
-
         <child>
           <object class="HeContentList">
             <property name="title" translatable="yes">Background</property>
@@ -188,7 +188,6 @@
                 <signal name="clicked" handler="on_add_picture_button_clicked_cb" object="CcBackgroundPanel" swapped="yes" />
               </object>
             </property>
-
             <child>
               <object class="AdwBin">
                 <style>
@@ -202,10 +201,8 @@
                 </child>
               </object>
             </child>
-
           </object>
         </child>
-
       </object>
     </child>
   </template>

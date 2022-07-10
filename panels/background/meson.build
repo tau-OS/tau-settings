@@ -73,8 +73,7 @@ sources = common_sources + files(
   'cc-background-paintable.c',
   'cc-background-panel.c',
   'cc-background-preview.c',
-  'cc-background-xml.c',
-  'cc-color-button.c'
+  'cc-background-xml.c'
 )
 
 deps = common_deps + [

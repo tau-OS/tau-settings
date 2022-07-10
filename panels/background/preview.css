@@ -68,22 +68,34 @@ background-preview .window.front.dark .header-bar {
   margin: 8px;
 }
 
-.selected-check {
+.accent-row radio {
   color: @accent_fg_color;
-  background: @accent_bg_color;
-  border-radius: 100px;
-  padding: 2px;
-  opacity: 0;
-  margin: 6px;
+  min-height: 24px;
+  min-width: 24px;
+  margin: 8px;
 }
 
-flowboxchild:selected .selected-check {
-  opacity: 1;
+.meson-red radio {
+  background: #E25480;
 }
-
-.remove-button {
-  padding: 2px;
-  min-width: 0;
-  min-height: 0;
-  margin: 6px;
+.lepton-orange radio {
+  background: #F99E5C;
+}
+.electron-yellow radio {
+  background: #FEBC16;
+}
+.muon-green radio {
+  background: #72DA82;
+}
+.baryon-mint radio {
+  background: #85D1BF;
+}
+.proton-blue radio {
+  background: #58A8FA;
+}
+.tau-purple radio {
+  background: #A57BCD;
+}
+.fermion-pink radio {
+  background: #CB76B8;
 }
