@@ -111,9 +111,11 @@ load_custom_css (CcBackgroundPanel *self)
 
   provider = gtk_css_provider_new ();
   gtk_css_provider_load_from_resource (provider, "/org/gnome/control-center/background/preview.css");
+  // TODO: libhelium currently loads its own CSS, higher than  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION, so we do this. Maybe we should change this?
+  // NOTE: normally, you would include stylesheets in libhelium using the built in loader using the right priority... which we can't do in this case.
   gtk_style_context_add_provider_for_display (gdk_display_get_default (),
                                               GTK_STYLE_PROVIDER (provider),
-                                              GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+                                              GTK_STYLE_PROVIDER_PRIORITY_APPLICATION + 5);
 }
 
 static void

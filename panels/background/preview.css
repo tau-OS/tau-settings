@@ -5,9 +5,8 @@ background-preview {
 background-preview .window {
   border-radius: 6px;
   box-shadow: 0 1px 4px 1px alpha(black, 0.13),
-              0 1px 10px 5px alpha(black, 0.09),
-              0 3px 16px 8px alpha(black, 0.04),
-              0 0 0 1px alpha(black, .05);
+    0 1px 10px 5px alpha(black, 0.09), 0 3px 16px 8px alpha(black, 0.04),
+    0 0 0 1px alpha(black, 0.05);
 }
 
 background-preview .window .header-bar {
@@ -17,7 +16,7 @@ background-preview .window .header-bar {
 
 background-preview .window.light {
   background-color: #fafafa;
-  color: alpha(black, .8);
+  color: alpha(black, 0.8);
 }
 
 background-preview .window.front.light .header-bar {
@@ -46,11 +45,11 @@ background-preview .window.front.dark .header-bar {
 }
 
 .background-preview-button:focus:focus-visible {
-  box-shadow: 0 0 0 3px alpha(@accent_color, .3);
+  box-shadow: 0 0 0 3px alpha(@accent_color, 0.3);
 }
 
 .background-preview-button:checked:focus:focus-visible {
-  box-shadow: 0 0 0 3px @accent_color, 0 0 0 6px alpha(@accent_color, .3);
+  box-shadow: 0 0 0 3px @accent_color, 0 0 0 6px alpha(@accent_color, 0.3);
 }
 
 .background-flowbox > flowboxchild {
@@ -75,27 +74,31 @@ background-preview .window.front.dark .header-bar {
   margin: 8px;
 }
 
+.accent-row radio:checked {
+  background-color: unset;
+}
+
 .meson-red radio {
-  background: #E25480;
+  background: #e25480;
 }
 .lepton-orange radio {
-  background: #F99E5C;
+  background: #f99e5c;
 }
 .electron-yellow radio {
-  background: #FEBC16;
+  background: #febc16;
 }
 .muon-green radio {
-  background: #72DA82;
+  background: #72da82;
 }
 .baryon-mint radio {
-  background: #85D1BF;
+  background: #85d1bf;
 }
 .proton-blue radio {
-  background: #58A8FA;
+  background: #58a8fa;
 }
 .tau-purple radio {
-  background: #A57BCD;
+  background: #a57bcd;
 }
 .fermion-pink radio {
-  background: #CB76B8;
+  background: #cb76b8;
 }
