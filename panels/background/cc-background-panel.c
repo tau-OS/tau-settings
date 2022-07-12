@@ -56,6 +56,7 @@
 #define TAU_APPEARANCE_ACCENT_COLOR_KEY "accent-color"
 
 typedef enum {
+   MULTI = 0,
    PURPLE = 1,
    PINK = 2,
    RED = 3,
@@ -63,7 +64,8 @@ typedef enum {
    YELLOW = 5,
    GREEN = 6,
    MINT = 7,
-   BLUE = 8
+   BLUE = 8,
+   MONO = 9
  } AccentColor;
 
 struct _CcBackgroundPanel
@@ -100,6 +102,8 @@ struct _CcBackgroundPanel
   GtkCheckButton *purple;
   GtkCheckButton *pink;
   GtkCheckButton *mint;
+  GtkCheckButton *mono;
+  GtkCheckButton *multi;
 };
 
 CC_PANEL_REGISTER (CcBackgroundPanel, cc_background_panel)
@@ -441,6 +445,18 @@ on_pink_toggled (CcBackgroundPanel *self)
     g_settings_set_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, PINK);
 }
 static void
+on_mono_toggled (CcBackgroundPanel *self)
+{
+  if (g_settings_get_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != MONO)
+    g_settings_set_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, MONO);
+}
+static void
+on_multi_toggled (CcBackgroundPanel *self)
+{
+  if (g_settings_get_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY) != MULTI)
+    g_settings_set_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY, MULTI);
+}
+static void
 accent_refresh (CcBackgroundPanel *self)
 {
   AccentColor value = g_settings_get_enum (self->tau_appearance_settings, TAU_APPEARANCE_ACCENT_COLOR_KEY);
@@ -454,6 +470,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == ORANGE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), TRUE);
@@ -463,6 +481,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == YELLOW) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -472,6 +492,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == GREEN) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -481,6 +503,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == MINT) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -490,6 +514,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == BLUE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -499,6 +525,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == PURPLE) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -508,6 +536,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   } else if (value == PINK) {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -517,6 +547,30 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
+  } else if (value == MONO) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), TRUE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
+  } else if (value == MULTI) {
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->yellow), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->green), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mint), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), TRUE);
   } else {
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->red), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->orange), FALSE);
@@ -526,6 +580,8 @@ accent_refresh (CcBackgroundPanel *self)
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->blue), FALSE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->purple), TRUE);
     gtk_check_button_set_active (GTK_CHECK_BUTTON (self->pink), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->mono), FALSE);
+    gtk_check_button_set_active (GTK_CHECK_BUTTON (self->multi), FALSE);
   }
 }
 
@@ -585,6 +641,7 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, dark_toggle);
 
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, color_box);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, multi);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, red);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, orange);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, yellow);
@@ -593,10 +650,12 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, purple);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, pink);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mint);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mono);
 
   gtk_widget_class_bind_template_callback (widget_class, on_light_dark_toggle_active_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_chooser_background_chosen_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_add_picture_button_clicked_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_multi_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_red_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_orange_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_yellow_toggled);
@@ -605,6 +664,7 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_callback (widget_class, on_blue_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_purple_toggled);
   gtk_widget_class_bind_template_callback (widget_class, on_pink_toggled);
+  gtk_widget_class_bind_template_callback (widget_class, on_mono_toggled);
 }
 
 static void

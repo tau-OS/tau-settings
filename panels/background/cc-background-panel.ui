@@ -172,6 +172,26 @@
                         </style>
                       </object>
                     </child>
+                    <child>
+                      <object class="GtkCheckButton" id="mono">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_mono_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="graviton-dark" />
+                          <class name="selection-mode" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="multi">
+                        <property name="group">purple</property>
+                        <signal name="toggled" handler="on_multi_toggled" object="CcBackgroundPanel" />
+                        <style>
+                          <class name="multi-color" />
+                          <class name="selection-mode" />
+                        </style>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
