@@ -1,8 +1,8 @@
 {
     "app-id" : "org.gnome.Settings",
-    "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "master",
-    "sdk" : "org.gnome.Sdk",
+    "runtime" : "co.tauos.Sdk",
+    "runtime-version" : "daily",
+    "sdk" : "co.tauos.Sdk",
     "command" : "gnome-control-center",
     "tags" : [
         "devel"

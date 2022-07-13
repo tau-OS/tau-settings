@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="CcPermissionInfobar" parent="AdwBin">
+  <template class="CcPermissionInfobar" parent="HeBin">
     <property name="valign">start</property>
     <child>
       <object class="GtkRevealer" id="revealer">

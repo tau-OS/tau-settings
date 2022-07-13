@@ -4,3 +4,7 @@ _build/
 
 *.tar.gz
 *.sha1sum
+
+.flatpak
+
+subprojects/gvc

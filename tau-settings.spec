@@ -66,8 +66,6 @@ BuildRequires:  pkgconfig(gnome-bluetooth-3.0) >= %{gnome_bluetooth_version}
 BuildRequires:  pkgconfig(libwacom)
  
 # Versioned library deps
-Requires: libadwaita%{?_isa} >= %{libadwaita_version}
-Requires: libhelium%{?_isa} >= %{libhelium_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
 Requires: gnome-desktop4%{?_isa} >= %{gnome_desktop_version}
 Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}

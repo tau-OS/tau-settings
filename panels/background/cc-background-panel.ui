@@ -2,16 +2,16 @@
 <interface>
   <template class="CcBackgroundPanel" parent="CcPanel">
     <child type="content">
-      <object class="AdwPreferencesPage">
+      <object class="GtkBox">
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <property name="title" translatable="yes">Style</property>
             <child>
-              <object class="AdwPreferencesRow">
+              <object class="HeContentBlock">
                 <property name="activatable">False</property>
                 <property name="focusable">False</property>
                 <child>
-                  <object class="AdwClamp">
+                  <object class="HeLatch">
                     <property name="maximum_size">400</property>
                     <property name="tightening_threshold">300</property>
                     <child>
@@ -88,7 +88,7 @@
               </object>
             </child>
             <child>
-              <object class="AdwActionRow">
+              <object class="HeContentBlock">
                 <property name="title" translatable="yes">Accent Color</property>
                 <child>
                   <object class="GtkBox" id="color_box">
@@ -199,20 +199,13 @@
           </object>
         </child>
         <child>
-          <object class="AdwPreferencesGroup">
+          <object class="HeContentList">
             <property name="title" translatable="yes">Background</property>
             <property name="header-suffix">
-              <object class="GtkButton">
-                <child>
-                  <object class="AdwButtonContent">
-                    <property name="icon-name">list-add-symbolic</property>
-                    <property name="label" translatable="yes">Add Picture…</property>
-                  </object>
-                </child>
+              <object class="HeDisclosureButton">
+                <property name="icon-name">list-add-symbolic</property>
+                <property name="tooltip" translatable="yes">Add Picture…</property>
                 <signal name="clicked" handler="on_add_picture_button_clicked_cb" object="CcBackgroundPanel" swapped="yes" />
-                <style>
-                  <class name="flat" />
-                </style>
               </object>
             </property>
             <child>

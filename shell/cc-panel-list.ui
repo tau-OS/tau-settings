@@ -126,13 +126,10 @@
 
                 <!-- Placeholder -->
                 <child type="placeholder">
-                  <object class="AdwStatusPage">
+                  <object class="HeEmptyPage">
                     <property name="icon-name">edit-find-symbolic</property>
                     <property name="title" translatable="yes">No Results Found</property>
                     <property name="description" translatable="yes">Try a different search.</property>
-                    <style>
-                      <class name="compact" />
-                    </style>
                   </object>
                 </child>
               </object>
