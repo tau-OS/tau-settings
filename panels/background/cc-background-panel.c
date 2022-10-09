@@ -87,9 +87,9 @@ struct _CcBackgroundPanel
   CcBackgroundItem *current_background;
 
   CcBackgroundChooser *background_chooser;
-  CcBackgroundPreview *light_preview;
+  CcBackgroundPreview *default_preview;
   CcBackgroundPreview *dark_preview;
-  GtkToggleButton *light_toggle;
+  GtkToggleButton *default_toggle;
   GtkToggleButton *dark_toggle;
   
   // Accent Buttons
@@ -123,7 +123,7 @@ load_custom_css (CcBackgroundPanel *self)
 }
 
 static void
-reload_light_dark_toggles (CcBackgroundPanel *self)
+reload_color_scheme_toggles (CcBackgroundPanel *self)
 {
   GDesktopColorScheme scheme;
 
@@ -131,7 +131,7 @@ reload_light_dark_toggles (CcBackgroundPanel *self)
 
   if (scheme == G_DESKTOP_COLOR_SCHEME_DEFAULT)
     {
-      gtk_toggle_button_set_active (self->light_toggle, TRUE);
+      gtk_toggle_button_set_active (self->default_toggle, TRUE);
     }
   else if (scheme == G_DESKTOP_COLOR_SCHEME_PREFER_DARK)
     {
@@ -139,7 +139,7 @@ reload_light_dark_toggles (CcBackgroundPanel *self)
     }
   else
     {
-      gtk_toggle_button_set_active (self->light_toggle, FALSE);
+      gtk_toggle_button_set_active (self->default_toggle, FALSE);
       gtk_toggle_button_set_active (self->dark_toggle, FALSE);
     }
 }
@@ -188,9 +188,9 @@ set_color_scheme (CcBackgroundPanel   *self,
 /* Color schemes */
 
 static void
-on_light_dark_toggle_active_cb (CcBackgroundPanel *self)
+on_color_scheme_toggle_active_cb (CcBackgroundPanel *self)
 {
-  if (gtk_toggle_button_get_active (self->light_toggle))
+  if (gtk_toggle_button_get_active (self->default_toggle))
     {
       set_color_scheme (self, G_DESKTOP_COLOR_SCHEME_DEFAULT);
       g_settings_set_string (self->interface_settings,
@@ -237,7 +237,7 @@ update_preview (CcBackgroundPanel *panel)
   CcBackgroundItem *current_background;
 
   current_background = panel->current_background;
-  cc_background_preview_set_item (panel->light_preview, current_background);
+  cc_background_preview_set_item (panel->default_preview, current_background);
   cc_background_preview_set_item (panel->dark_preview, current_background);
 }
 
@@ -635,11 +635,11 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/background/cc-background-panel.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, background_chooser);
-  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, light_preview);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, default_preview);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, dark_preview);
-  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, light_toggle);
+  gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, default_toggle);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, dark_toggle);
-
+  
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, color_box);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, multi);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, red);
@@ -652,7 +652,7 @@ cc_background_panel_class_init (CcBackgroundPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mint);
   gtk_widget_class_bind_template_child (widget_class, CcBackgroundPanel, mono);
 
-  gtk_widget_class_bind_template_callback (widget_class, on_light_dark_toggle_active_cb);
+  gtk_widget_class_bind_template_callback (widget_class, on_color_scheme_toggle_active_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_chooser_background_chosen_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_add_picture_button_clicked_cb);
   gtk_widget_class_bind_template_callback (widget_class, on_multi_toggled);
@@ -714,11 +714,11 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   g_signal_connect_object (panel->settings, "changed", G_CALLBACK (on_settings_changed), panel, G_CONNECT_SWAPPED);
 
   /* Interface settings */
-  reload_light_dark_toggles (panel);
+  reload_color_scheme_toggles (panel);
 
   g_signal_connect_object (panel->interface_settings,
                            "changed::" INTERFACE_COLOR_SCHEME_KEY,
-                           G_CALLBACK (reload_light_dark_toggles),
+                           G_CALLBACK (reload_color_scheme_toggles),
                            panel,
                            G_CONNECT_SWAPPED);
   

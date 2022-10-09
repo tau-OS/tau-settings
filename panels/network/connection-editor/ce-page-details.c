@@ -52,6 +52,7 @@ struct _CEPageDetails
         GtkLabel *mac_heading_label;
         GtkLabel *mac_label;
         GtkCheckButton *restrict_data_check;
+        GtkBox *restrict_data_check_container;
         GtkLabel *route_heading_label;
         GtkLabel *route_label;
         GtkLabel *security_heading_label;
@@ -110,6 +111,11 @@ get_ap_security_string (NMAccessPoint *ap)
 		else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE) {
 			/* TRANSLATORS: this Enhanced Open WiFi security */
                         g_string_append_printf (str, "%s, ", _("Enhanced Open"));
+		}
+#endif
+#if NM_CHECK_VERSION(1,26,0)
+		else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE_TM) {
+                        /* Connected to open OWE-TM network. */
 		}
 #endif
 		else
@@ -222,7 +228,7 @@ update_restrict_data (CEPageDetails *self)
 
         gtk_check_button_set_active (GTK_CHECK_BUTTON (self->restrict_data_check),
                                      metered == NM_METERED_YES || metered == NM_METERED_GUESS_YES);
-        gtk_widget_show (GTK_WIDGET (self->restrict_data_check));
+        gtk_widget_show (GTK_WIDGET (self->restrict_data_check_container));
 
         g_signal_connect_object (self->restrict_data_check, "notify::active", G_CALLBACK (restrict_data_changed), self, G_CONNECT_SWAPPED);
         g_signal_connect_object (self->restrict_data_check, "notify::active", G_CALLBACK (ce_page_changed), self, G_CONNECT_SWAPPED);
@@ -253,13 +259,11 @@ connect_details_page (CEPageDetails *self)
         sc = nm_connection_get_setting_connection (self->connection);
         type = nm_setting_connection_get_connection_type (sc);
 
-        if (NM_IS_DEVICE_WIFI (self->device)) {
+        if (NM_IS_DEVICE_WIFI (self->device))
                 active_ap = nm_device_wifi_get_active_access_point (NM_DEVICE_WIFI (self->device));
-                frequency = nm_access_point_get_frequency (active_ap);
-        } else {
+        else
                 active_ap = NULL;
-                frequency = 0;
-        }
+        frequency = active_ap ? nm_access_point_get_frequency (active_ap) : 0;
 
         state = self->device ? nm_device_get_state (self->device) : NM_DEVICE_STATE_DISCONNECTED;
 
@@ -529,6 +533,7 @@ ce_page_details_class_init (CEPageDetailsClass *klass)
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, mac_heading_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, mac_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, restrict_data_check);
+        gtk_widget_class_bind_template_child (widget_class, CEPageDetails, restrict_data_check_container);
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, route_heading_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, route_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageDetails, security_heading_label);

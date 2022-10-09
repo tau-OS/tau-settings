@@ -15,11 +15,25 @@
     </columns>
   </object>
   <template class="CcUserPanel" parent="CcPanel">
-    <child type="titlebar-start">
-      <object class="GtkButton" id="back_button">
-        <property name="visible">False</property>
-        <property name="icon-name">go-previous-symbolic</property>
-        <signal name="clicked" handler="show_current_user" object="CcUserPanel" swapped="yes" />
+    <child type="titlebar">
+      <object class="AdwHeaderBar">
+        <property name="show-end-title-buttons">True</property>
+        <property name="show-start-title-buttons">False</property>
+        <property name="title-widget">
+          <object class="AdwWindowTitle">
+            <property name="title" translatable="yes">Users</property>
+          </object>
+        </property>
+        <child type="start">
+          <object class="GtkButton" id="back_button">
+            <property name="visible">False</property>
+            <property name="icon-name">go-previous-symbolic</property>
+            <accessibility>
+              <property name="label" translatable="yes">Back</property>
+            </accessibility>
+            <signal name="clicked" handler="on_back_button_clicked_cb" object="CcUserPanel" swapped="yes"/>
+          </object>
+        </child>
       </object>
     </child>
     <child type="content">
@@ -61,15 +75,14 @@
                         <child>
                           <object class="GtkButton" id="dismiss_button">
                             <property name="valign">GTK_ALIGN_CENTER</property>
-                            <signal name="clicked" handler="dismiss_notification" object="CcUserPanel" swapped="yes" />
+                            <property name="icon_name">window-close-symbolic</property>
+                            <accessibility>
+                              <property name="label" translatable="yes">Close</property>
+                            </accessibility>
+                            <signal name="clicked" handler="dismiss_notification" object="CcUserPanel" swapped="yes"/>
                             <style>
                               <class name="flat" />
                             </style>
-                            <child>
-                              <object class="GtkImage">
-                                <property name="icon_name">window-close-symbolic</property>
-                              </object>
-                            </child>
                           </object>
                         </child>
                       </object>
@@ -104,6 +117,9 @@
                                     <property name="popover">
                                       <object class="CcAvatarChooser" id="avatar_chooser" />
                                     </property>
+                                    <accessibility>
+                                      <property name="label" translatable="yes">Edit avatar</property>
+                                    </accessibility>
                                     <style>
                                       <class name="circular" />
                                     </style>
@@ -132,7 +148,10 @@
                                     <property name="width-chars">18</property>
                                     <property name="max-width-chars">30</property>
                                     <property name="valign">GTK_ALIGN_CENTER</property>
-                                    <signal name="activate" handler="full_name_entry_activate" object="CcUserPanel" swapped="yes" />
+                                    <accessibility>
+                                      <property name="label" translatable="yes">Full name</property>
+                                    </accessibility>
+                                    <signal name="activate" handler="full_name_entry_activate" object="CcUserPanel" swapped="yes"/>
                                     <child>
                                       <object class="GtkEventControllerKey">
                                         <property name="propagation-phase">capture</property>
@@ -145,16 +164,15 @@
                             </child>
                             <child>
                               <object class="GtkToggleButton" id="full_name_edit_button">
-                                <signal name="toggled" handler="full_name_edit_button_toggled" object="CcUserPanel" swapped="yes" />
+                                <signal name="toggled" handler="full_name_edit_button_toggled" object="CcUserPanel" swapped="yes"/>
+                                <property name="icon-name">document-edit-symbolic</property>
                                 <property name="valign">GTK_ALIGN_CENTER</property>
+                                <accessibility>
+                                  <property name="label" translatable="yes">Edit</property>
+                                </accessibility>
                                 <style>
                                   <class name="flat" />
                                 </style>
-                                <child>
-                                  <object class="GtkImage">
-                                    <property name="icon-name">document-edit-symbolic</property>
-                                  </object>
-                                </child>
                               </object>
                             </child>
                           </object>

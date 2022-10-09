@@ -120,18 +120,16 @@ set_restart_notification_visible (CcRegionPanel *self,
 
         if (locale) {
                 new_locale = newlocale (LC_MESSAGES_MASK, locale, (locale_t) 0);
-                if (new_locale == (locale_t) 0)
-                        g_warning ("Failed to create locale %s: %s", locale, g_strerror (errno));
-                else
+                if (new_locale != (locale_t) 0) {
                         current_locale = uselocale (new_locale);
+                        uselocale (current_locale);
+                        freelocale (new_locale);
+                } else {
+                        g_warning ("Failed to create locale %s: %s", locale, g_strerror (errno));
+                }
         }
 
         gtk_info_bar_set_revealed (self->infobar, visible);
-
-        if (locale && new_locale != (locale_t) 0) {
-                uselocale (current_locale);
-                freelocale (new_locale);
-        }
 
         file = get_needs_restart_file ();
 
@@ -329,6 +327,13 @@ update_region (CcRegionPanel  *self,
                         g_settings_set_string (self->locale_settings, KEY_REGION, region);
                 if (self->login_auto_apply)
                         set_system_region (self, region);
+
+                if (region == NULL || region[0] == '\0') {
+                        // Formats (region) are being reset as part of changing the language,
+                        // and that already triggers the notification check.
+                        return;
+                }
+
                 maybe_notify (self, LC_TIME, region);
                 break;
 
@@ -462,7 +467,7 @@ permission_acquired (GPermission *permission, GAsyncResult *res, const gchar *ac
                 return FALSE;
         }
 
-        return FALSE;
+        return TRUE;
 }
 
 static void

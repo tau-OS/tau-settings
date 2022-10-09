@@ -461,3 +461,11 @@ void cc_panel_set_title(CcPanel *panel,
   priv = cc_panel_get_instance_private(panel);
   gtk_label_set_label(priv->view_title, title);
 }
+
+void
+cc_panel_deactivate (CcPanel *panel)
+{
+  CcPanelPrivate *priv = cc_panel_get_instance_private (panel);
+
+  g_cancellable_cancel (priv->cancellable);
+}

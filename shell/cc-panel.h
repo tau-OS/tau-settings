@@ -113,4 +113,6 @@ GtkWidget *cc_panel_get_title_end(CcPanel *panel);
 void cc_panel_set_title(CcPanel *panel,
                             gchar *title);
 
+void          cc_panel_deactivate         (CcPanel     *panel);
+
 G_END_DECLS

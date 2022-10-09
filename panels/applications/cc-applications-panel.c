@@ -92,10 +92,11 @@ struct _CcApplicationsPanel
   GtkWidget       *settings_box;
   GtkButton       *install_button;
 
-  GtkWidget       *integration_section;
+  AdwPreferencesGroup *integration_section;
   CcToggleRow     *notification;
   CcToggleRow     *background;
   CcToggleRow     *wallpaper;
+  CcToggleRow     *screenshot;
   CcToggleRow     *sound;
   CcInfoRow       *no_sound;
   CcToggleRow     *search;
@@ -111,6 +112,9 @@ struct _CcApplicationsPanel
   GtkDialog       *builtin_dialog;
   AdwPreferencesGroup *builtin_group;
   GtkListBox      *builtin_list;
+#ifdef HAVE_SNAP
+  GList           *snap_permission_rows;
+#endif
 
   GtkButton       *handler_reset;
   GtkDialog       *handler_dialog;
@@ -512,6 +516,37 @@ wallpaper_cb (CcApplicationsPanel *self)
     set_wallpaper_allowed (self, cc_toggle_row_get_allowed (self->wallpaper));
 }
 
+/* --- screenshot --- */
+
+static void
+get_screenshot_allowed (CcApplicationsPanel *self,
+                        const gchar         *app_id,
+                        gboolean            *set,
+                        gboolean            *allowed)
+{
+  g_auto(GStrv) perms = get_portal_permissions (self, "screenshot", "screenshot", app_id);
+
+  *set = perms != NULL;
+  *allowed = perms == NULL || strcmp (perms[0], "no") != 0;
+}
+
+static void
+set_screenshot_allowed (CcApplicationsPanel *self,
+                        gboolean             allowed)
+{
+  const gchar *perms[2] = { NULL, NULL };
+
+  perms[0] = allowed ? "yes" : "no";
+  set_portal_permissions (self, "screenshot", "screenshot", self->current_app_id, perms);
+}
+
+static void
+screenshot_cb (CcApplicationsPanel *self)
+{
+  if (self->current_app_id)
+    set_screenshot_allowed (self, cc_toggle_row_get_allowed (self->screenshot));
+}
+
 /* --- shortcuts permissions (flatpak) --- */
 
 static void
@@ -650,20 +685,11 @@ location_cb (CcApplicationsPanel *self)
 static void
 remove_snap_permissions (CcApplicationsPanel *self)
 {
-  g_autoptr(GList) rows = NULL;
-  GList *link;
+  GList *l;
 
-  rows = gtk_container_get_children (GTK_CONTAINER (self->permission_list));
-  for (link = rows; link; link = link->next)
-    {
-      GtkWidget *row = link->data;
-
-      if (row == GTK_WIDGET (self->builtin))
-        break;
-
-      if (CC_IS_SNAP_ROW (row))
-        gtk_container_remove (GTK_CONTAINER (self->permission_list), GTK_WIDGET (row));
-    }
+  for (l = self->snap_permission_rows; l; l = l->next)
+    adw_preferences_group_remove (self->integration_section, l->data);
+  g_clear_pointer (&self->snap_permission_rows, g_list_free);
 }
 
 static gboolean
@@ -672,8 +698,6 @@ add_snap_permissions (CcApplicationsPanel *self,
                       const gchar         *app_id)
 {
   const gchar *snap_name;
-  g_autoptr(GList) rows = NULL;
-  gint index;
   g_autoptr(SnapdClient) client = NULL;
   g_autoptr(GPtrArray) interfaces = NULL;
   g_autoptr(GPtrArray) plugs = NULL;
@@ -686,10 +710,6 @@ add_snap_permissions (CcApplicationsPanel *self,
   if (!g_str_has_prefix (app_id, PORTAL_SNAP_PREFIX))
     return FALSE;
   snap_name = app_id + strlen (PORTAL_SNAP_PREFIX);
-
-  rows = gtk_container_get_children (GTK_CONTAINER (self->permission_list));
-  index = g_list_index (rows, self->builtin);
-  g_assert (index >= 0);
 
   client = snapd_client_new ();
 
@@ -753,9 +773,8 @@ add_snap_permissions (CcApplicationsPanel *self,
         }
 
       row = cc_snap_row_new (cc_panel_get_cancellable (CC_PANEL (self)), interface, plug, available_slots);
-      gtk_widget_show (GTK_WIDGET (row));
-      gtk_list_box_insert (GTK_LIST_BOX (self->permission_list), GTK_WIDGET (row), index);
-      index++;
+      adw_preferences_group_add (self->integration_section, GTK_WIDGET (row));
+      self->snap_permission_rows = g_list_prepend (self->snap_permission_rows, row);
       added++;
     }
 
@@ -889,6 +908,10 @@ update_integration_section (CcApplicationsPanel *self,
       gtk_widget_hide (GTK_WIDGET (self->shortcuts));
     }
 
+#ifdef HAVE_SNAP
+  remove_snap_permissions (self);
+#endif
+
   if (portal_app_id != NULL)
     {
       g_clear_object (&self->notification_settings);
@@ -905,6 +928,11 @@ update_integration_section (CcApplicationsPanel *self,
       get_wallpaper_allowed (self, portal_app_id, &set, &allowed);
       cc_toggle_row_set_allowed (self->wallpaper, allowed);
       gtk_widget_set_visible (GTK_WIDGET (self->wallpaper), set);
+      has_any |= set;
+
+      get_screenshot_allowed (self, portal_app_id, &set, &allowed);
+      cc_toggle_row_set_allowed (self->screenshot, allowed);
+      gtk_widget_set_visible (GTK_WIDGET (self->screenshot), set);
       has_any |= set;
 
       disabled = g_settings_get_boolean (self->privacy_settings, "disable-sound-output");
@@ -935,7 +963,6 @@ update_integration_section (CcApplicationsPanel *self,
       has_any |= set;
 
     #ifdef HAVE_SNAP
-      remove_snap_permissions (self);
       has_any |= add_snap_permissions (self, info, portal_app_id);
     #endif
     }
@@ -949,6 +976,7 @@ update_integration_section (CcApplicationsPanel *self,
 
       gtk_widget_hide (GTK_WIDGET (self->background));
       gtk_widget_hide (GTK_WIDGET (self->wallpaper));
+      gtk_widget_hide (GTK_WIDGET (self->screenshot));
       gtk_widget_hide (GTK_WIDGET (self->sound));
       gtk_widget_hide (GTK_WIDGET (self->no_sound));
       gtk_widget_hide (GTK_WIDGET (self->camera));
@@ -959,7 +987,7 @@ update_integration_section (CcApplicationsPanel *self,
       gtk_widget_hide (GTK_WIDGET (self->no_location));
     }
 
-  gtk_widget_set_visible (self->integration_section, has_any);
+  gtk_widget_set_visible (GTK_WIDGET (self->integration_section), has_any);
 }
 
 /* --- handler section --- */
@@ -1219,7 +1247,7 @@ update_total_size (CcApplicationsPanel *self)
   g_object_set (self->total, "info", formatted_size, NULL);
 
   /* Translators: '%s' is the formatted size, e.g. "26.2 MB" */
-  subtitle = g_strdup_printf (_("%s of disk space used"), formatted_size);
+  subtitle = g_strdup_printf (_("%s of disk space used."), formatted_size);
   g_object_set (self->storage, "subtitle", subtitle, NULL);
 }
 
@@ -1607,6 +1635,9 @@ cc_applications_panel_dispose (GObject *object)
   CcApplicationsPanel *self = CC_APPLICATIONS_PANEL (object);
 
   remove_all_handler_rows (self);
+#ifdef HAVE_SNAP
+  remove_snap_permissions (self);
+#endif
   g_clear_object (&self->monitor);
   g_clear_object (&self->perm_store);
 
@@ -1748,6 +1779,7 @@ cc_applications_panel_class_init (CcApplicationsPanelClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, notification);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, background);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, wallpaper);
+  gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, screenshot);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, shortcuts);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, sidebar_box);
   gtk_widget_class_bind_template_child (widget_class, CcApplicationsPanel, sidebar_listbox);
@@ -1769,6 +1801,7 @@ cc_applications_panel_class_init (CcApplicationsPanelClass *klass)
   gtk_widget_class_bind_template_callback (widget_class, notification_cb);
   gtk_widget_class_bind_template_callback (widget_class, background_cb);
   gtk_widget_class_bind_template_callback (widget_class, wallpaper_cb);
+  gtk_widget_class_bind_template_callback (widget_class, screenshot_cb);
   gtk_widget_class_bind_template_callback (widget_class, shortcuts_cb);
   gtk_widget_class_bind_template_callback (widget_class, privacy_link_cb);
   gtk_widget_class_bind_template_callback (widget_class, sound_cb);

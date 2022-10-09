@@ -1,8 +1,8 @@
 project(
   'gnome-control-center', 'c',
-        version : '43.alpha',
+        version : '43.1',
         license : 'GPL2+',
-  meson_version : '>= 0.53.0'
+  meson_version : '>= 0.57.0'
 )
 
 control_center_prefix = get_option('prefix')
@@ -115,7 +115,7 @@ pulse_req_version = '>= 2.0'
 
 libadwaita_dep = dependency(
   'libadwaita-1',
-  version: '>= 1.1',
+  version: '>= 1.2.alpha',
   fallback: ['libadwaita', 'libadwaita_dep'],
   default_options: ['examples=false', 'introspection=disabled', 'tests=false', 'vapi=false'],
 )
@@ -124,7 +124,7 @@ accounts_dep = dependency('accountsservice', version: '>= 0.6.39')
 colord_dep = dependency('colord', version: '>= 0.1.34')
 gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.23.0')
 gio_dep = dependency('gio-2.0')
-glib_dep = dependency('glib-2.0', version: '>= 2.68.0')
+glib_dep = dependency('glib-2.0', version: '>= 2.70.0')
 gnome_desktop_dep = dependency('gnome-desktop-4')
 gnome_bg_dep = dependency('gnome-bg-4')
 gnome_rr_dep = dependency('gnome-rr-4')
@@ -283,7 +283,6 @@ install_subdir(
 top_inc = include_directories('.')
 shell_inc = include_directories('shell')
 
-subdir('build-aux')
 subdir('data/icons')
 subdir('po')
 subdir('panels')
@@ -297,6 +296,11 @@ endif
 if get_option('documentation')
   subdir('man')
 endif
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+)
 
 configure_file(
   output: 'config.h',
