@@ -141,8 +141,13 @@ can install configuration files that are picked up by the control-center
 utilities.
  
 %prep
-%setup -q -n tau-settings-main
- 
+%autosetup -n tau-settings-main -Sgit
+git init
+git remote add origin https://github.com/tau-OS/tau-settings
+# git fetch origin
+git pull -v origin main --force --rebase
+git submodule update --init --recursive
+
 %build
 %meson \
   -Ddocumentation=true \
