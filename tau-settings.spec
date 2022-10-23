@@ -19,7 +19,7 @@ Version:        1.1
 Release:        51
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/tau-OS/tau-settings/archive/refs/heads/main.zip
 BuildRequires:  chrpath
 BuildRequires:  cups-devel
 BuildRequires:  desktop-file-utils
@@ -141,7 +141,7 @@ can install configuration files that are picked up by the control-center
 utilities.
  
 %prep
-%setup -q
+%setup -q -n tau-settings-main
  
 %build
 %meson \
