@@ -42,7 +42,7 @@ struct _CEPageIP4
 
         GtkLabel          *address_label;
         GtkBox            *address_box;
-        GtkLabel          *gateway_label;
+        GtkLabel          *address_gateway_label;
         GtkLabel          *netmask_label;
         GtkSizeGroup      *address_sizegroup;
         GtkSwitch         *auto_dns_switch;
@@ -250,7 +250,7 @@ add_address_row (CEPageIP4   *self,
         gtk_editable_set_width_chars (GTK_EDITABLE (widget), 16);
         gtk_widget_set_hexpand (widget, TRUE);
         gtk_accessible_update_relation (GTK_ACCESSIBLE (widget),
-                                        GTK_ACCESSIBLE_RELATION_LABELLED_BY, self->gateway_label, NULL,
+                                        GTK_ACCESSIBLE_RELATION_LABELLED_BY, self->address_gateway_label, NULL,
                                         -1);
         gtk_box_append (GTK_BOX (row_box), widget);
 
@@ -808,7 +808,7 @@ ce_page_ip4_class_init (CEPageIP4Class *klass)
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, never_default_check);
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, address_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, netmask_label);
-        gtk_widget_class_bind_template_child (widget_class, CEPageIP4, gateway_label);
+        gtk_widget_class_bind_template_child (widget_class, CEPageIP4, address_gateway_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, routes_box);
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, routes_address_label);
         gtk_widget_class_bind_template_child (widget_class, CEPageIP4, routes_netmask_label);
