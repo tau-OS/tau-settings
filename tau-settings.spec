@@ -16,7 +16,7 @@
 Summary:        Utilities to configure the GNOME desktop
 Name:           tau-settings
 Version:        1.1
-Release:        52
+Release:        53
 License:        GPLv2+ and CC-BY-SA
 URL:            https://tauos.co
 Source0:        https://github.com/tau-OS/tau-settings/archive/refs/heads/main.zip
