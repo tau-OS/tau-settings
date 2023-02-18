@@ -52,7 +52,7 @@
 #define SHELL_PATH_ID "org.gnome.shell.extensions.user-theme"
 #define INTERFACE_SHELL_THEME_KEY "name"
 
-#define TAU_APPEARANCE_PATH_ID "co.tauos.desktop.appearance"
+#define TAU_APPEARANCE_PATH_ID "com.fyralabs.desktop.appearance"
 #define TAU_APPEARANCE_ACCENT_COLOR_KEY "accent-color"
 
 typedef enum {
